@@ -169,6 +169,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Class/Attaque.obj: src/Class/Attaque.cpp.obj
+
+.PHONY : src/Class/Attaque.obj
+
+# target to build an object file
+src/Class/Attaque.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.obj
+.PHONY : src/Class/Attaque.cpp.obj
+
+src/Class/Attaque.i: src/Class/Attaque.cpp.i
+
+.PHONY : src/Class/Attaque.i
+
+# target to preprocess a source file
+src/Class/Attaque.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.i
+.PHONY : src/Class/Attaque.cpp.i
+
+src/Class/Attaque.s: src/Class/Attaque.cpp.s
+
+.PHONY : src/Class/Attaque.s
+
+# target to generate assembly for a file
+src/Class/Attaque.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.s
+.PHONY : src/Class/Attaque.cpp.s
+
 src/Class/Carte.obj: src/Class/Carte.cpp.obj
 
 .PHONY : src/Class/Carte.obj
@@ -262,6 +289,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Class/Attaque.obj
+	@echo ... src/Class/Attaque.i
+	@echo ... src/Class/Attaque.s
 	@echo ... src/Class/Carte.obj
 	@echo ... src/Class/Carte.i
 	@echo ... src/Class/Carte.s

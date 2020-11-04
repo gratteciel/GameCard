@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp">
 			<Option target="cardGame"/>
 		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Attaque.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Attaque.h">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Carte.cpp">
 			<Option target="cardGame"/>
 		</Unit>

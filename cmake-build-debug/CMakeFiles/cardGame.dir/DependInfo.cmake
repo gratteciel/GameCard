@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp" "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/CMakeFiles/cardGame.dir/main.cpp.obj"
+  "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Attaque.cpp" "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.obj"
   "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Carte.cpp" "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Carte.cpp.obj"
   "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Creature.cpp" "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Creature.cpp.obj"
   "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Energie.cpp" "C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Energie.cpp.obj"

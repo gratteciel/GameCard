@@ -5,6 +5,5 @@ int main() {
 
     test.push_back(new Energie("Test", "description de folie", 0));
 
-
     return 0;
 }
