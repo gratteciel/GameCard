@@ -4,8 +4,10 @@
 
 #ifndef CARDGAME_BIBLIO_H
 #define CARDGAME_BIBLIO_H
+#include <string>
+#include <iostream>
+#include <vector>
 
-#include "src\Headers\Energie.h"
-#include "src\Headers\Creature.h"
+
 
 #endif //CARDGAME_BIBLIO_H

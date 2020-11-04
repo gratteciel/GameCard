@@ -7,6 +7,7 @@
 
 
 #include "Carte.h"
+#include "Attaque.h"
 
 
 class Creature : public Carte{
@@ -15,13 +16,15 @@ class Creature : public Carte{
         short m_pdvInitial; //pdv initial
         bool m_vivant; //pour savoir la carte est encore en vie
         //Ici il faudra mettre le tableau d'attaque
+        std::vector<Attaque> m_attaques;
+
     public:
         //Constructeur et destructeur
         Creature(std::string _nom, std::string _description, short _pdvInitial);
         ~Creature();
 
         //Méthodes
-
+        void afficheDescription();
         //Accesseurs et mutateurs
         short getPdv() const;
         void setPdv(short _pdv);

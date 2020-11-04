@@ -86,28 +86,43 @@
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Attaque.cpp">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Attaque.h">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Attaque.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Carte.cpp">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Carte.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Creature.cpp">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Creature.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Energie.cpp">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Deck.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Carte.h">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Energie.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Creature.h">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Energie.h">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Attaque.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/CMakeLists.txt">

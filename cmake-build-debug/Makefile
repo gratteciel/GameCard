@@ -169,113 +169,167 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Class/Attaque.obj: src/Class/Attaque.cpp.obj
+src/Class/Cartes/Attaque.obj: src/Class/Cartes/Attaque.cpp.obj
 
-.PHONY : src/Class/Attaque.obj
-
-# target to build an object file
-src/Class/Attaque.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.obj
-.PHONY : src/Class/Attaque.cpp.obj
-
-src/Class/Attaque.i: src/Class/Attaque.cpp.i
-
-.PHONY : src/Class/Attaque.i
-
-# target to preprocess a source file
-src/Class/Attaque.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.i
-.PHONY : src/Class/Attaque.cpp.i
-
-src/Class/Attaque.s: src/Class/Attaque.cpp.s
-
-.PHONY : src/Class/Attaque.s
-
-# target to generate assembly for a file
-src/Class/Attaque.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Attaque.cpp.s
-.PHONY : src/Class/Attaque.cpp.s
-
-src/Class/Carte.obj: src/Class/Carte.cpp.obj
-
-.PHONY : src/Class/Carte.obj
+.PHONY : src/Class/Cartes/Attaque.obj
 
 # target to build an object file
-src/Class/Carte.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Carte.cpp.obj
-.PHONY : src/Class/Carte.cpp.obj
+src/Class/Cartes/Attaque.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj
+.PHONY : src/Class/Cartes/Attaque.cpp.obj
 
-src/Class/Carte.i: src/Class/Carte.cpp.i
+src/Class/Cartes/Attaque.i: src/Class/Cartes/Attaque.cpp.i
 
-.PHONY : src/Class/Carte.i
+.PHONY : src/Class/Cartes/Attaque.i
 
 # target to preprocess a source file
-src/Class/Carte.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Carte.cpp.i
-.PHONY : src/Class/Carte.cpp.i
+src/Class/Cartes/Attaque.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.i
+.PHONY : src/Class/Cartes/Attaque.cpp.i
 
-src/Class/Carte.s: src/Class/Carte.cpp.s
+src/Class/Cartes/Attaque.s: src/Class/Cartes/Attaque.cpp.s
 
-.PHONY : src/Class/Carte.s
+.PHONY : src/Class/Cartes/Attaque.s
 
 # target to generate assembly for a file
-src/Class/Carte.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Carte.cpp.s
-.PHONY : src/Class/Carte.cpp.s
+src/Class/Cartes/Attaque.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.s
+.PHONY : src/Class/Cartes/Attaque.cpp.s
 
-src/Class/Creature.obj: src/Class/Creature.cpp.obj
+src/Class/Cartes/Carte.obj: src/Class/Cartes/Carte.cpp.obj
 
-.PHONY : src/Class/Creature.obj
+.PHONY : src/Class/Cartes/Carte.obj
 
 # target to build an object file
-src/Class/Creature.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Creature.cpp.obj
-.PHONY : src/Class/Creature.cpp.obj
+src/Class/Cartes/Carte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj
+.PHONY : src/Class/Cartes/Carte.cpp.obj
 
-src/Class/Creature.i: src/Class/Creature.cpp.i
+src/Class/Cartes/Carte.i: src/Class/Cartes/Carte.cpp.i
 
-.PHONY : src/Class/Creature.i
+.PHONY : src/Class/Cartes/Carte.i
 
 # target to preprocess a source file
-src/Class/Creature.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Creature.cpp.i
-.PHONY : src/Class/Creature.cpp.i
+src/Class/Cartes/Carte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.i
+.PHONY : src/Class/Cartes/Carte.cpp.i
 
-src/Class/Creature.s: src/Class/Creature.cpp.s
+src/Class/Cartes/Carte.s: src/Class/Cartes/Carte.cpp.s
 
-.PHONY : src/Class/Creature.s
+.PHONY : src/Class/Cartes/Carte.s
 
 # target to generate assembly for a file
-src/Class/Creature.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Creature.cpp.s
-.PHONY : src/Class/Creature.cpp.s
+src/Class/Cartes/Carte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.s
+.PHONY : src/Class/Cartes/Carte.cpp.s
 
-src/Class/Energie.obj: src/Class/Energie.cpp.obj
+src/Class/Cartes/Creature.obj: src/Class/Cartes/Creature.cpp.obj
 
-.PHONY : src/Class/Energie.obj
+.PHONY : src/Class/Cartes/Creature.obj
 
 # target to build an object file
-src/Class/Energie.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Energie.cpp.obj
-.PHONY : src/Class/Energie.cpp.obj
+src/Class/Cartes/Creature.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj
+.PHONY : src/Class/Cartes/Creature.cpp.obj
 
-src/Class/Energie.i: src/Class/Energie.cpp.i
+src/Class/Cartes/Creature.i: src/Class/Cartes/Creature.cpp.i
 
-.PHONY : src/Class/Energie.i
+.PHONY : src/Class/Cartes/Creature.i
 
 # target to preprocess a source file
-src/Class/Energie.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Energie.cpp.i
-.PHONY : src/Class/Energie.cpp.i
+src/Class/Cartes/Creature.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.i
+.PHONY : src/Class/Cartes/Creature.cpp.i
 
-src/Class/Energie.s: src/Class/Energie.cpp.s
+src/Class/Cartes/Creature.s: src/Class/Cartes/Creature.cpp.s
 
-.PHONY : src/Class/Energie.s
+.PHONY : src/Class/Cartes/Creature.s
 
 # target to generate assembly for a file
-src/Class/Energie.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Energie.cpp.s
-.PHONY : src/Class/Energie.cpp.s
+src/Class/Cartes/Creature.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.s
+.PHONY : src/Class/Cartes/Creature.cpp.s
+
+src/Class/Cartes/Deck.obj: src/Class/Cartes/Deck.cpp.obj
+
+.PHONY : src/Class/Cartes/Deck.obj
+
+# target to build an object file
+src/Class/Cartes/Deck.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj
+.PHONY : src/Class/Cartes/Deck.cpp.obj
+
+src/Class/Cartes/Deck.i: src/Class/Cartes/Deck.cpp.i
+
+.PHONY : src/Class/Cartes/Deck.i
+
+# target to preprocess a source file
+src/Class/Cartes/Deck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.i
+.PHONY : src/Class/Cartes/Deck.cpp.i
+
+src/Class/Cartes/Deck.s: src/Class/Cartes/Deck.cpp.s
+
+.PHONY : src/Class/Cartes/Deck.s
+
+# target to generate assembly for a file
+src/Class/Cartes/Deck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.s
+.PHONY : src/Class/Cartes/Deck.cpp.s
+
+src/Class/Cartes/Energie.obj: src/Class/Cartes/Energie.cpp.obj
+
+.PHONY : src/Class/Cartes/Energie.obj
+
+# target to build an object file
+src/Class/Cartes/Energie.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj
+.PHONY : src/Class/Cartes/Energie.cpp.obj
+
+src/Class/Cartes/Energie.i: src/Class/Cartes/Energie.cpp.i
+
+.PHONY : src/Class/Cartes/Energie.i
+
+# target to preprocess a source file
+src/Class/Cartes/Energie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.i
+.PHONY : src/Class/Cartes/Energie.cpp.i
+
+src/Class/Cartes/Energie.s: src/Class/Cartes/Energie.cpp.s
+
+.PHONY : src/Class/Cartes/Energie.s
+
+# target to generate assembly for a file
+src/Class/Cartes/Energie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.s
+.PHONY : src/Class/Cartes/Energie.cpp.s
+
+src/Class/Utilisateur.obj: src/Class/Utilisateur.cpp.obj
+
+.PHONY : src/Class/Utilisateur.obj
+
+# target to build an object file
+src/Class/Utilisateur.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj
+.PHONY : src/Class/Utilisateur.cpp.obj
+
+src/Class/Utilisateur.i: src/Class/Utilisateur.cpp.i
+
+.PHONY : src/Class/Utilisateur.i
+
+# target to preprocess a source file
+src/Class/Utilisateur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.i
+.PHONY : src/Class/Utilisateur.cpp.i
+
+src/Class/Utilisateur.s: src/Class/Utilisateur.cpp.s
+
+.PHONY : src/Class/Utilisateur.s
+
+# target to generate assembly for a file
+src/Class/Utilisateur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.s
+.PHONY : src/Class/Utilisateur.cpp.s
 
 # Help Target
 help:
@@ -289,18 +343,24 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/Class/Attaque.obj
-	@echo ... src/Class/Attaque.i
-	@echo ... src/Class/Attaque.s
-	@echo ... src/Class/Carte.obj
-	@echo ... src/Class/Carte.i
-	@echo ... src/Class/Carte.s
-	@echo ... src/Class/Creature.obj
-	@echo ... src/Class/Creature.i
-	@echo ... src/Class/Creature.s
-	@echo ... src/Class/Energie.obj
-	@echo ... src/Class/Energie.i
-	@echo ... src/Class/Energie.s
+	@echo ... src/Class/Cartes/Attaque.obj
+	@echo ... src/Class/Cartes/Attaque.i
+	@echo ... src/Class/Cartes/Attaque.s
+	@echo ... src/Class/Cartes/Carte.obj
+	@echo ... src/Class/Cartes/Carte.i
+	@echo ... src/Class/Cartes/Carte.s
+	@echo ... src/Class/Cartes/Creature.obj
+	@echo ... src/Class/Cartes/Creature.i
+	@echo ... src/Class/Cartes/Creature.s
+	@echo ... src/Class/Cartes/Deck.obj
+	@echo ... src/Class/Cartes/Deck.i
+	@echo ... src/Class/Cartes/Deck.s
+	@echo ... src/Class/Cartes/Energie.obj
+	@echo ... src/Class/Cartes/Energie.i
+	@echo ... src/Class/Cartes/Energie.s
+	@echo ... src/Class/Utilisateur.obj
+	@echo ... src/Class/Utilisateur.i
+	@echo ... src/Class/Utilisateur.s
 .PHONY : help
 
 

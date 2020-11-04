@@ -2,7 +2,7 @@
 // Created by bemat on 03/11/2020.
 //
 
-#include "../Headers/Creature.h"
+#include "../../Headers/Cartes/Creature.h"
 
 /*
  * Constructeur et destructeur
@@ -51,3 +51,7 @@ void Creature::setVivant(bool _vivant) {
 /*
  * Méthodes
  */
+
+void Creature::afficheDescription() {
+    std::cout << getDescription() <<std::endl;
+}

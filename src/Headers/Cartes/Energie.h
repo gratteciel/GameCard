@@ -17,6 +17,9 @@ class Energie : public Carte{
         Energie(std::string _nom, std::string _descritpion,short _domaine);
         ~Energie();
 
+        //Méthodes
+        void afficheDescription();
+
         //Accesseurs et mutateurs
         short getDomaine() const;
 };

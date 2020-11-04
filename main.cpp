@@ -1,9 +1,10 @@
-#include "biblio.h"
+#include "main.h"
 
 int main() {
-    std::vector<Carte*> test;
+    Utilisateur test = Utilisateur("Mathis");
 
-    test.push_back(new Energie("Test", "description de folie", 0));
+
+
 
     return 0;
 }

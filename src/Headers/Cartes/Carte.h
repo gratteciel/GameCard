@@ -5,12 +5,10 @@
 #ifndef CARDGAME_CARTE_H
 #define CARDGAME_CARTE_H
 
-#include <string>
-#include <iostream>
-#include <vector>
+#include "../../../biblio.h"
 
 class Carte{
-    protected:
+    private:
         std::string m_nom;
         std::string m_description;
     public :
@@ -20,7 +18,7 @@ class Carte{
 
         //Méthodes
         // il va falloir metre une méthode virtuelle = 0
-
+        virtual void afficheDescription() = 0;
         //Accesseurs et mutateurs
         std::string getNom() const;
         std::string getDescription() const;

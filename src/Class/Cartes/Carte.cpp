@@ -2,7 +2,7 @@
 // Created by bemat on 03/11/2020.
 //
 
-#include "../Headers/Carte.h"
+#include "../../Headers/Cartes/Carte.h"
 
 /*
  * Constructeur et destructeur
@@ -19,7 +19,7 @@ Carte::~Carte() {
 }
 
 /*
- * Accesseurs et mutaturs
+ * Accesseurs et mutateurs
  */
 
 std::string Carte::getNom() const{
