@@ -104,6 +104,18 @@
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Energie.cpp">
 			<Option target="cardGame"/>
 		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Collection.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Game.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Joueur.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Pioche.cpp">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
@@ -120,6 +132,18 @@
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Joueur.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Pioche.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h">

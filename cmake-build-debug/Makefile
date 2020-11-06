@@ -304,6 +304,114 @@ src/Class/Cartes/Energie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.s
 .PHONY : src/Class/Cartes/Energie.cpp.s
 
+src/Class/Collection.obj: src/Class/Collection.cpp.obj
+
+.PHONY : src/Class/Collection.obj
+
+# target to build an object file
+src/Class/Collection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj
+.PHONY : src/Class/Collection.cpp.obj
+
+src/Class/Collection.i: src/Class/Collection.cpp.i
+
+.PHONY : src/Class/Collection.i
+
+# target to preprocess a source file
+src/Class/Collection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Collection.cpp.i
+.PHONY : src/Class/Collection.cpp.i
+
+src/Class/Collection.s: src/Class/Collection.cpp.s
+
+.PHONY : src/Class/Collection.s
+
+# target to generate assembly for a file
+src/Class/Collection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Collection.cpp.s
+.PHONY : src/Class/Collection.cpp.s
+
+src/Class/Game.obj: src/Class/Game.cpp.obj
+
+.PHONY : src/Class/Game.obj
+
+# target to build an object file
+src/Class/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj
+.PHONY : src/Class/Game.cpp.obj
+
+src/Class/Game.i: src/Class/Game.cpp.i
+
+.PHONY : src/Class/Game.i
+
+# target to preprocess a source file
+src/Class/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Game.cpp.i
+.PHONY : src/Class/Game.cpp.i
+
+src/Class/Game.s: src/Class/Game.cpp.s
+
+.PHONY : src/Class/Game.s
+
+# target to generate assembly for a file
+src/Class/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Game.cpp.s
+.PHONY : src/Class/Game.cpp.s
+
+src/Class/Joueur.obj: src/Class/Joueur.cpp.obj
+
+.PHONY : src/Class/Joueur.obj
+
+# target to build an object file
+src/Class/Joueur.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj
+.PHONY : src/Class/Joueur.cpp.obj
+
+src/Class/Joueur.i: src/Class/Joueur.cpp.i
+
+.PHONY : src/Class/Joueur.i
+
+# target to preprocess a source file
+src/Class/Joueur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.i
+.PHONY : src/Class/Joueur.cpp.i
+
+src/Class/Joueur.s: src/Class/Joueur.cpp.s
+
+.PHONY : src/Class/Joueur.s
+
+# target to generate assembly for a file
+src/Class/Joueur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.s
+.PHONY : src/Class/Joueur.cpp.s
+
+src/Class/Pioche.obj: src/Class/Pioche.cpp.obj
+
+.PHONY : src/Class/Pioche.obj
+
+# target to build an object file
+src/Class/Pioche.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Pioche.cpp.obj
+.PHONY : src/Class/Pioche.cpp.obj
+
+src/Class/Pioche.i: src/Class/Pioche.cpp.i
+
+.PHONY : src/Class/Pioche.i
+
+# target to preprocess a source file
+src/Class/Pioche.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Pioche.cpp.i
+.PHONY : src/Class/Pioche.cpp.i
+
+src/Class/Pioche.s: src/Class/Pioche.cpp.s
+
+.PHONY : src/Class/Pioche.s
+
+# target to generate assembly for a file
+src/Class/Pioche.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Pioche.cpp.s
+.PHONY : src/Class/Pioche.cpp.s
+
 src/Class/Utilisateur.obj: src/Class/Utilisateur.cpp.obj
 
 .PHONY : src/Class/Utilisateur.obj
@@ -358,6 +466,18 @@ help:
 	@echo ... src/Class/Cartes/Energie.obj
 	@echo ... src/Class/Cartes/Energie.i
 	@echo ... src/Class/Cartes/Energie.s
+	@echo ... src/Class/Collection.obj
+	@echo ... src/Class/Collection.i
+	@echo ... src/Class/Collection.s
+	@echo ... src/Class/Game.obj
+	@echo ... src/Class/Game.i
+	@echo ... src/Class/Game.s
+	@echo ... src/Class/Joueur.obj
+	@echo ... src/Class/Joueur.i
+	@echo ... src/Class/Joueur.s
+	@echo ... src/Class/Pioche.obj
+	@echo ... src/Class/Pioche.i
+	@echo ... src/Class/Pioche.s
 	@echo ... src/Class/Utilisateur.obj
 	@echo ... src/Class/Utilisateur.i
 	@echo ... src/Class/Utilisateur.s

@@ -20,7 +20,7 @@ class Creature : public Carte{
 
     public:
         //Constructeur et destructeur
-        Creature(std::string _nom, std::string _description, short _pdvInitial);
+        Creature(int _id);
         ~Creature();
 
         //Méthodes

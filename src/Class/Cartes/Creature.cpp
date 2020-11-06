@@ -8,8 +8,8 @@
  * Constructeur et destructeur
  */
 
-Creature::Creature(std::string _nom, std::string _description, short _pdvInitial)
-         :Carte(_nom, _description), m_pdvInitial(_pdvInitial), m_pdv(_pdvInitial), m_vivant(true)
+Creature::Creature(int _id)
+         : Carte(_id)
 
 {
 

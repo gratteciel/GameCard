@@ -1,9 +1,9 @@
 #include "main.h"
 
+
+
 int main() {
-    Utilisateur test = Utilisateur("Mathis");
-
-
+    Utilisateur user = Utilisateur("Mathis");
 
 
     return 0;

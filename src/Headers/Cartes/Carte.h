@@ -11,9 +11,10 @@ class Carte{
     private:
         std::string m_nom;
         std::string m_description;
+        int m_id;
     public :
         //Constructeur et destructeur
-        Carte(std::string _nom, std::string _description);
+        Carte(int _id);
         virtual ~Carte();
 
         //Méthodes
@@ -23,6 +24,7 @@ class Carte{
         std::string getNom() const;
         std::string getDescription() const;
 
+        int getId() const;
 };
 
 

@@ -8,8 +8,8 @@
  * Constructeur et destructeur
  */
 
-Carte::Carte(std::string _nom, std::string _description)
-      :m_nom(_nom), m_description(_description)
+Carte::Carte(int _id)
+      :m_id(_id)
 {
 
 }
@@ -31,6 +31,8 @@ std::string Carte::getDescription() const{
     return m_description;
 }
 
-
+int Carte::getId() const{
+    return m_id;
+}
 
 

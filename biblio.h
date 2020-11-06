@@ -7,7 +7,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-
+#include <list>
 
 
 #endif //CARDGAME_BIBLIO_H

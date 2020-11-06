@@ -9,20 +9,19 @@
 
 #include "Energie.h"
 #include "Creature.h"
+#include "../Collection.h"
 
 class Deck {
     private:
-        std::vector<Energie> m_energies;
-        std::vector<Creature> m_creatures;
-        //std::vector<Speciale> m_speciales;
-        bool m_tailleConst; //Si c'est un deck avec une taille constante
+        //vecteur d'id
+        std::vector<int> m_cartes;
     public:
         //Constructeur et destructeur
-        Deck(bool _tailleConst);
+        Deck();
         ~Deck();
 
         //Méthodes
-        unsigned nombreCartes() const;
+
         //Accesseurs et mutateurs
         bool getTailleConst() const;
 

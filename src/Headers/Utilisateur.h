@@ -12,7 +12,10 @@ class Utilisateur {
 private:
     std::string m_pseudo;
     std::vector<Deck> m_decks;
-    Deck m_cartesSeul;
+
+    //Ici sont stockés les Id des cartes qui n'ont pas de deck
+    std::vector<int> m_cartesSeul;
+
 public:
     //Constructeur et destructeur
     Utilisateur(std::string _pseudo);

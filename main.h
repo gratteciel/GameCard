@@ -5,7 +5,7 @@
 #ifndef CARDGAME_MAIN_H
 #define CARDGAME_MAIN_H
 
-#include "src/Headers/Utilisateur.h"
+#include "src/Headers/Joueur.h"
 #include "src/Headers/Cartes/Creature.h"
 #include "src/Headers/Cartes/Energie.h"
 #endif //CARDGAME_MAIN_H
