@@ -5,15 +5,15 @@
 #ifndef CARDGAME_JOUEUR_H
 #define CARDGAME_JOUEUR_H
 
-#include "Utilisateur.h"
+#include "../Utilisateur.h"
+#include "Pioche.h"
 #include <deque>
 
 class Joueur {
 private:
     short m_pdv;
     Utilisateur *m_user;
-    std::deque<int> m_pioche;
-
+    Pioche m_pioche;
 
     int m_numDeck;
 

@@ -6,6 +6,8 @@
 #define CARDGAME_COLLECTION_H
 
 #include "..\..\biblio.h"
+#include "Cartes/Creature.h"
+#include "Cartes/Energie.h"
 
 class Collection {
 private:

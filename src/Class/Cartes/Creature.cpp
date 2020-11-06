@@ -8,8 +8,8 @@
  * Constructeur et destructeur
  */
 
-Creature::Creature(int _id)
-         : Carte(_id)
+Creature::Creature(int _immatriculation)
+         : Carte(_immatriculation)
 
 {
 

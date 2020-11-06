@@ -8,10 +8,11 @@
  * Constructeur et destructeur
  */
 
-Carte::Carte(int _id)
-      :m_id(_id)
+Carte::Carte(int _immatriculation)
+      :m_immatriculation(_immatriculation)
 {
-
+    //génération de l'id automatiquement
+    //Il faut qu'il y ait un systeme qui gere pour pas qu'il y ait deux fois le meme id
 }
 
 Carte::~Carte() {

@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <deque>
 
 
 #endif //CARDGAME_BIBLIO_H

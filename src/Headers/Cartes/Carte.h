@@ -12,9 +12,10 @@ class Carte{
         std::string m_nom;
         std::string m_description;
         int m_id;
+        int m_immatriculation;
     public :
         //Constructeur et destructeur
-        Carte(int _id);
+        Carte(int _immatriculation);
         virtual ~Carte();
 
         //Méthodes

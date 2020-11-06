@@ -13,7 +13,7 @@ private:
     std::string m_pseudo;
     std::vector<Deck> m_decks;
 
-    //Ici sont stockés les Id des cartes qui n'ont pas de deck
+    //Ici sont stockés les immatriculations des cartes qui n'ont pas de deck
     std::vector<int> m_cartesSeul;
 
 public:

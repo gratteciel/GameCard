@@ -6,12 +6,21 @@
 #define CARDGAME_PIOCHE_H
 
 
-#include "..\..\biblio.h"
+#include "../../../biblio.h"
+#include "../Collection.h"
+
+typedef struct t_carte{
+   int key;
+   int id;
+}t_carte;
 
 class Pioche {
     private:
-        std::list<int> m_cartes;
-        
+        //Une unique clé
+        //       clé   id
+        std::deque<t_carte> m_cartesId;
+        Collection m_cartes;
+
     public:
         //Constructeur et destructeur
 

@@ -10,8 +10,8 @@
 
 
 
-Attaque::Attaque(std::string _nom, std::string _description, short _degat)
-        :Carte(_nom, _description), m_degat(_degat)
+Attaque::Attaque(int _immatriculation)
+        :Carte(_immatriculation)
 {
 
 }

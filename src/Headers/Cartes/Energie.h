@@ -14,7 +14,7 @@ class Energie : public Carte{
 
     public:
         //Constructeur et destructeur
-        Energie(std::string _nom, std::string _descritpion,short _domaine);
+        Energie(int _immatriculation);
         ~Energie();
 
         //Méthodes

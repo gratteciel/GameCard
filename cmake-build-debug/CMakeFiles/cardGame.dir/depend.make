@@ -9,7 +9,9 @@ CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Cartes/Carte.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Cartes/Creature.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Cartes/Deck.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Cartes/Energie.h
-CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Joueur.h
+CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Match/Joueur.h
+CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Match/Pioche.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Utilisateur.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj: ../biblio.h
@@ -34,21 +36,52 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Car
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Creature.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Deck.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Collection.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: ../biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: ../src/Class/Cartes/Energie.cpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: ../src/Headers/Cartes/Carte.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: ../src/Headers/Cartes/Energie.h
 
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../biblio.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Class/Joueur.cpp
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Cartes/Attaque.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Cartes/Carte.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Cartes/Creature.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Cartes/Deck.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Cartes/Energie.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Joueur.h
-CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj: ../src/Headers/Utilisateur.h
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../biblio.h
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Class/Collection.cpp
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Headers/Cartes/Attaque.h
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Headers/Collection.h
+
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../biblio.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Class/Game.cpp
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Attaque.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Deck.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Game.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Utilisateur.h
+
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../biblio.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Class/Match/Joueur.cpp
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Cartes/Attaque.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Cartes/Deck.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Match/Joueur.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Match/Pioche.h
+CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Utilisateur.h
+
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../biblio.h
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Class/Match/Pioche.cpp
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Attaque.h
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Match/Pioche.h
 
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../biblio.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Class/Utilisateur.cpp
@@ -57,5 +90,6 @@ CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Car
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Creature.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Deck.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Collection.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Utilisateur.h
 

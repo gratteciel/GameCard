@@ -13,7 +13,7 @@
 
 class Deck {
     private:
-        //vecteur d'id
+        //vecteur d'immatriculation
         std::vector<int> m_cartes;
     public:
         //Constructeur et destructeur

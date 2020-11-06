@@ -110,10 +110,10 @@
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Game.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Joueur.cpp">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Joueur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Pioche.cpp">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Pioche.cpp">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp">
@@ -140,10 +140,10 @@
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Joueur.h">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Pioche.h">
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h">

@@ -20,7 +20,7 @@ class Creature : public Carte{
 
     public:
         //Constructeur et destructeur
-        Creature(int _id);
+        Creature(int _immatriculation);
         ~Creature();
 
         //Méthodes

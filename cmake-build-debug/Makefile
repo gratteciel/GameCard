@@ -358,59 +358,59 @@ src/Class/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Game.cpp.s
 .PHONY : src/Class/Game.cpp.s
 
-src/Class/Joueur.obj: src/Class/Joueur.cpp.obj
+src/Class/Match/Joueur.obj: src/Class/Match/Joueur.cpp.obj
 
-.PHONY : src/Class/Joueur.obj
-
-# target to build an object file
-src/Class/Joueur.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.obj
-.PHONY : src/Class/Joueur.cpp.obj
-
-src/Class/Joueur.i: src/Class/Joueur.cpp.i
-
-.PHONY : src/Class/Joueur.i
-
-# target to preprocess a source file
-src/Class/Joueur.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.i
-.PHONY : src/Class/Joueur.cpp.i
-
-src/Class/Joueur.s: src/Class/Joueur.cpp.s
-
-.PHONY : src/Class/Joueur.s
-
-# target to generate assembly for a file
-src/Class/Joueur.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Joueur.cpp.s
-.PHONY : src/Class/Joueur.cpp.s
-
-src/Class/Pioche.obj: src/Class/Pioche.cpp.obj
-
-.PHONY : src/Class/Pioche.obj
+.PHONY : src/Class/Match/Joueur.obj
 
 # target to build an object file
-src/Class/Pioche.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Pioche.cpp.obj
-.PHONY : src/Class/Pioche.cpp.obj
+src/Class/Match/Joueur.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj
+.PHONY : src/Class/Match/Joueur.cpp.obj
 
-src/Class/Pioche.i: src/Class/Pioche.cpp.i
+src/Class/Match/Joueur.i: src/Class/Match/Joueur.cpp.i
 
-.PHONY : src/Class/Pioche.i
+.PHONY : src/Class/Match/Joueur.i
 
 # target to preprocess a source file
-src/Class/Pioche.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Pioche.cpp.i
-.PHONY : src/Class/Pioche.cpp.i
+src/Class/Match/Joueur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.i
+.PHONY : src/Class/Match/Joueur.cpp.i
 
-src/Class/Pioche.s: src/Class/Pioche.cpp.s
+src/Class/Match/Joueur.s: src/Class/Match/Joueur.cpp.s
 
-.PHONY : src/Class/Pioche.s
+.PHONY : src/Class/Match/Joueur.s
 
 # target to generate assembly for a file
-src/Class/Pioche.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Pioche.cpp.s
-.PHONY : src/Class/Pioche.cpp.s
+src/Class/Match/Joueur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s
+.PHONY : src/Class/Match/Joueur.cpp.s
+
+src/Class/Match/Pioche.obj: src/Class/Match/Pioche.cpp.obj
+
+.PHONY : src/Class/Match/Pioche.obj
+
+# target to build an object file
+src/Class/Match/Pioche.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj
+.PHONY : src/Class/Match/Pioche.cpp.obj
+
+src/Class/Match/Pioche.i: src/Class/Match/Pioche.cpp.i
+
+.PHONY : src/Class/Match/Pioche.i
+
+# target to preprocess a source file
+src/Class/Match/Pioche.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.i
+.PHONY : src/Class/Match/Pioche.cpp.i
+
+src/Class/Match/Pioche.s: src/Class/Match/Pioche.cpp.s
+
+.PHONY : src/Class/Match/Pioche.s
+
+# target to generate assembly for a file
+src/Class/Match/Pioche.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.s
+.PHONY : src/Class/Match/Pioche.cpp.s
 
 src/Class/Utilisateur.obj: src/Class/Utilisateur.cpp.obj
 
@@ -472,12 +472,12 @@ help:
 	@echo ... src/Class/Game.obj
 	@echo ... src/Class/Game.i
 	@echo ... src/Class/Game.s
-	@echo ... src/Class/Joueur.obj
-	@echo ... src/Class/Joueur.i
-	@echo ... src/Class/Joueur.s
-	@echo ... src/Class/Pioche.obj
-	@echo ... src/Class/Pioche.i
-	@echo ... src/Class/Pioche.s
+	@echo ... src/Class/Match/Joueur.obj
+	@echo ... src/Class/Match/Joueur.i
+	@echo ... src/Class/Match/Joueur.s
+	@echo ... src/Class/Match/Pioche.obj
+	@echo ... src/Class/Match/Pioche.i
+	@echo ... src/Class/Match/Pioche.s
 	@echo ... src/Class/Utilisateur.obj
 	@echo ... src/Class/Utilisateur.i
 	@echo ... src/Class/Utilisateur.s

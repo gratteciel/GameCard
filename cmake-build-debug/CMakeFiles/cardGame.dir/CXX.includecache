@@ -15,26 +15,48 @@ vector
 -
 list
 -
+deque
+-
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp
 main.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.h
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.h
-src/Headers/Joueur.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Joueur.h
+src/Headers/Match/Joueur.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
 src/Headers/Cartes/Creature.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
 src/Headers/Cartes/Energie.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
 
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Attaque.cpp
+../../Headers/Cartes/Attaque.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Attaque.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Creature.cpp
+../../Headers/Cartes/Creature.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
+
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Deck.cpp
 ../../Headers/Cartes/Deck.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
 
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Joueur.cpp
-../Headers/Joueur.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Joueur.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Collection.cpp
+../Headers/Collection.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Game.cpp
+../Headers/Game.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Joueur.cpp
+../../Headers/Match/Joueur.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Pioche.cpp
+../../Headers/Match/Pioche.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp
 ../Headers/Utilisateur.h
@@ -63,14 +85,42 @@ Energie.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
 Creature.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
+../Collection.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
 Carte.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
 
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Joueur.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
+../../biblio.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
+Cartes/Creature.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
+Cartes/Energie.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h
+../../biblio.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
 Utilisateur.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
+Collection.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
+../Utilisateur.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
+Pioche.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
+deque
+-
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
+../../../biblio.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
+../Collection.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
 ../../biblio.h

@@ -16,7 +16,7 @@ class Attaque : public Carte{
         std::vector<std::vector<short> > m_nbPoints;
     public:
         //Constructeur et destructeur
-        Attaque(std::string _nom, std::string _description, short _degat);
+        Attaque(int _immatriculation);
         ~Attaque();
         //Méthodes
         void afficheDescription();

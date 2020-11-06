@@ -8,8 +8,8 @@
  * Constructeur et destructeur
  */
 
-Energie::Energie(std::string _nom, std::string _descritpion, short _domaine)
-        :Carte(_nom, _descritpion), m_domaine(_domaine)
+Energie::Energie(int _immatriculation)
+        :Carte(_immatriculation)
 {
 
 
