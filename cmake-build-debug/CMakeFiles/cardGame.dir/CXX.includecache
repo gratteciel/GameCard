@@ -17,6 +17,8 @@ list
 -
 deque
 -
+fstream
+-
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp
 main.h
@@ -29,14 +31,6 @@ src/Headers/Cartes/Creature.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
 src/Headers/Cartes/Energie.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Attaque.cpp
-../../Headers/Cartes/Attaque.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Attaque.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Creature.cpp
-../../Headers/Cartes/Creature.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Deck.cpp
 ../../Headers/Cartes/Deck.h
@@ -92,6 +86,10 @@ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie
 Carte.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
 
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
+Carte.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
+
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
 ../../biblio.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
@@ -99,6 +97,10 @@ Cartes/Creature.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
 Cartes/Energie.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+Cartes/Speciale.h
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
+collection.tpp
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h
 ../../biblio.h
@@ -127,4 +129,6 @@ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
 Cartes/Deck.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
+
+C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 

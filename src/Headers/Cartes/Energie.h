@@ -10,18 +10,18 @@
 
 class Energie : public Carte{
     private:
-        short m_domaine;
-
+        char m_domaine;
     public:
         //Constructeur et destructeur
         Energie(int _immatriculation);
+        Energie(int _immatriculation, int _id, std::string _nom, std::string _description, char _domaine);
         ~Energie();
 
         //Méthodes
         void afficheDescription();
 
         //Accesseurs et mutateurs
-        short getDomaine() const;
+        char getDomaine() const;
 };
 
 

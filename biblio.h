@@ -9,6 +9,6 @@
 #include <vector>
 #include <list>
 #include <deque>
-
+#include <fstream>
 
 #endif //CARDGAME_BIBLIO_H

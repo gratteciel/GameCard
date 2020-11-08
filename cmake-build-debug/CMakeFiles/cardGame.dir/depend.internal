@@ -10,10 +10,12 @@ CMakeFiles/cardGame.dir/main.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Attaque.cpp
@@ -37,12 +39,19 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Energie.cpp
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Speciale.cpp
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Collection.cpp
@@ -50,7 +59,9 @@ CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Game.cpp
@@ -59,9 +70,11 @@ CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Joueur.cpp
@@ -70,10 +83,12 @@ CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Pioche.cpp
@@ -81,8 +96,10 @@ CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp
@@ -91,5 +108,7 @@ CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
  C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp

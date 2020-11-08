@@ -104,6 +104,9 @@
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Energie.cpp">
 			<Option target="cardGame"/>
 		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Speciale.cpp">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Collection.cpp">
 			<Option target="cardGame"/>
 		</Unit>
@@ -132,6 +135,9 @@
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Speciale.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h">

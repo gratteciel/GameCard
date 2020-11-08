@@ -12,9 +12,7 @@
 class Game {
     private:
         Collection m_collec;
-
-
-
+        std::vector<Utilisateur> m_users;
     public:
         //Constructeur et destructeur
         Game();

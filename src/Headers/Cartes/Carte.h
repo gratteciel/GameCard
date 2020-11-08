@@ -16,6 +16,7 @@ class Carte{
     public :
         //Constructeur et destructeur
         Carte(int _immatriculation);
+        Carte(int _immatriculation, int _id, std::string _nom, std::string _description);
         virtual ~Carte();
 
         //Méthodes
@@ -26,6 +27,7 @@ class Carte{
         std::string getDescription() const;
 
         int getId() const;
+        int getImmatriculation() const;
 };
 
 

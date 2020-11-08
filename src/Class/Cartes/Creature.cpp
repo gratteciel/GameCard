@@ -8,8 +8,17 @@
  * Constructeur et destructeur
  */
 
+//Constructeur pour le chargement des cartes au début du jeu
+Creature::Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial)
+        : Carte(_immatriculation,_id,_nom,_description), m_pdvInitial(_pdVInitial),m_pdv(_pdVInitial), m_vivant(true)
+
+{
+
+}
+
+//Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
 Creature::Creature(int _immatriculation)
-         : Carte(_immatriculation)
+         : Carte(_immatriculation), m_vivant(true)
 
 {
 
