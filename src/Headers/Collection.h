@@ -37,6 +37,7 @@ class Collection {
         void chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
         void lectureVar(std::string& _res, std::string line, int &i, int &temp);
 
+        void userCreerCarte();
         template <typename T>
         void creerCarte(T _carte);
         void creerCarteType(Creature _carte,std::ofstream& fileOutput);

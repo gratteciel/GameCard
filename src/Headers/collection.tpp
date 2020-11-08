@@ -24,7 +24,7 @@ void Collection::creerCarte(T _carte){
     std::string _nomFichier = "../database/cartes/";
 
     _nomFichier += _nomClassCarte;
-    _nomFichier+= ".txt";
+    _nomFichier += ".txt";
 
     //1: Ajout dans le fichier creatures.txt
     std::ifstream fileInput(_nomFichier);

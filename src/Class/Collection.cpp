@@ -161,6 +161,37 @@ void Collection::creerCarteType(Speciale c,std::ofstream& fileOutput){
     setNbCartes(getNbCartes().speciale+1,2);//le nombre de carte augmente
 };
 
+/*
+ * Permet à n'importe quel utilisateur d'ajouter une carte dans le jeu:
+ * L'utilisateur clique sur l'interface allegro pour choisir la carte qu'il veut
+ * avec les bons paramètres selon la carte
+ */
+void Collection::userCreerCarte(){
+    int type=0;
+    //La il peut cliquer sur le type qu'il veut
+
+    switch(type){
+        case 1: //Créature
+            //Il choisit les paramètres pour la creature
+            //L'immatriculation est choisi selon le nombre de carte créature dans le jeu + une verif dans le vecteur si jamais l'immatriculation choisi existe
+            //Si elle existe on fait un truc plus compliqué pour la choisir
+            //creerCarte(Creature);
+            break;
+        case 2: //Sépciale
+            //Pareil que pour creature
+            //creerCarte(Speciale);
+            break;
+        case 3: //Energie
+            //Pareil que pour Creature
+            //creerCarte(Energie);
+            break;
+        default :
+            //Beug
+            break;
+    }
+
+
+}
 
 /*
  * Accesseur et mutateur
