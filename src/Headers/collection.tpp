@@ -1,7 +1,7 @@
 /*
- * Permet d'ajouter une carte Créature dans le jeu:
- *  1.ajout dans le fichier creatures.txt
- *  2.ajout dans le vecteur créature
+ * Permet d'ajouter une carte selon son type dans le jeu:
+ *  1.ajout dans le fichier type.txt
+ *  2.ajout dans le vecteur type
  */
 template <typename T>
 void Collection::creerCarte(T _carte){
