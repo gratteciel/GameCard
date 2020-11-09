@@ -10,11 +10,7 @@
 #include "Cartes/Energie.h"
 #include "Cartes/Speciale.h"
 
-typedef struct t_nbCartes{
-    int energie;
-    int creature;
-    int speciale;
-}t_nbCartes;
+
 
 
 class Collection {
@@ -22,7 +18,7 @@ class Collection {
         std::vector<Creature> m_creaturesBase;
         std::vector<Energie> m_energiesBase;
         std::vector<Speciale> m_specialesBase;
-        t_nbCartes m_nbCartes;
+
 
     public:
         //Constructeur et destructeur
@@ -38,15 +34,13 @@ class Collection {
         void lectureVar(std::string& _res, std::string line, int &i, int &temp);
 
         void userCreerCarte();
+
         template <typename T>
-        void creerCarte(T _carte);
-        void creerCarteType(Creature _carte,std::ofstream& fileOutput);
-        void creerCarteType(Energie c,std::ofstream& fileOutput);
-        void creerCarteType(Speciale c,std::ofstream& fileOutput);
+        void creerCarte(T _carte, std::vector<T>& vecteur);
+
+
 
         //Accesseur et mutateur
-        void setNbCartes(int _nb, int type);
-        t_nbCartes getNbCartes() const;
 
 
 

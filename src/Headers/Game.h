@@ -12,13 +12,15 @@
 class Game {
     private:
         Collection m_collec;
-        std::vector<Utilisateur> m_users;
+        std::vector<Utilisateur> m_usersConnectes;
+        std::vector<std::string> m_usersPseudo;
     public:
         //Constructeur et destructeur
         Game();
         ~Game();
         //Méthodes
-
+        void chargerUsersPseudos();
+        void connectionUser(std::string _pseudo);
         //Accesseurs et mutateurs
 };
 

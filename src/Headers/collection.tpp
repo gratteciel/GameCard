@@ -3,8 +3,9 @@
  *  1.ajout dans le fichier type.txt
  *  2.ajout dans le vecteur type
  */
+
 template <typename T>
-void Collection::creerCarte(T _carte){
+void Collection::creerCarte(T _carte, std::vector<T>& vecteur){
     int type = _carte.getImmatriculation()/100;
     std::string _nomClassCarte;
 
@@ -26,12 +27,15 @@ void Collection::creerCarte(T _carte){
     _nomFichier += _nomClassCarte;
     _nomFichier += ".txt";
 
-    //1: Ajout dans le fichier creatures.txt
+
     std::ifstream fileInput(_nomFichier);
     std::ofstream fileOutput(_nomFichier,std::ios::app);
 
     if(fileInput.is_open()){//Si le fichier a réussit à s'ouvrir
-        creerCarteType(_carte,fileOutput);
+
+        _carte.creer(fileOutput);//1: on ajout la carte dans le fichier
+        vecteur.push_back(_carte);//2: on ajoute la carte dans son vecteur
+
         fileOutput.close();//Fermeture du fichier
         fileInput.close();//Fermeture du fichier
 

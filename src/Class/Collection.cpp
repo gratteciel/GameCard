@@ -39,7 +39,7 @@ void Collection::lectureVar(std::string &sImm, std::string line, int &i, int &te
 
 void Collection::chargerCartesFille(const std::string& _nomClassCarte){
     std::string _nomFichier = "../database/cartes/";
-    int type=0,nbCartes=0, _imm=0;
+    int type=0, _imm=0;
 
     _nomFichier += _nomClassCarte;
     _nomFichier+= ".txt";
@@ -82,11 +82,11 @@ void Collection::chargerCartesFille(const std::string& _nomClassCarte){
                 default:
                     break;
             }
-            nbCartes++;
+
         }
 
         file.close(); //fermuture du fichier
-        setNbCartes(nbCartes,type); //On set le nombre de cartes selon le type
+
     }
     else{
         std::cout << "Impossible d'ouvrir le fichier : " << _nomClassCarte << std::endl;
@@ -121,55 +121,16 @@ void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _descri
 
 
 /*
- * Permet d'ajouter une carte Creature dans le jeu:
- *  1.ajout dans le fichier creatures.txt
- *  2.ajout dans le vecteur créature
- */
-void Collection::creerCarteType(Creature c,std::ofstream& fileOutput){
-    //1: Ajout dans le fichier creature
-    fileOutput << std::endl << std::to_string(c.getImmatriculation()) <<"*" << c.getNom() <<"*" << c.getDescription() << "*" << std::to_string(c.getPdvInitial()) << "*";
-    //2: Ajout dans le vecteur créature
-    m_creaturesBase.push_back(Creature(c.getImmatriculation(),0,c.getNom(),c.getDescription(),c.getPdvInitial()));
-    setNbCartes(getNbCartes().creature + 1,1);//le nombre de carte augmente
-};
-
-/*
- * Permet d'ajouter une carte Energie dans le jeu:
- *  1.ajout dans le fichier energies.txt
- *  2.ajout dans le vecteur energie
- */
-void Collection::creerCarteType(Energie c,std::ofstream& fileOutput){
-    //1: Ajout dans le fichier energie
-    fileOutput << std::endl << std::to_string(c.getImmatriculation()) <<"*" << c.getNom() <<"*" << c.getDescription() << "*" << c.getDomaine() << "*";
-
-    //2: Ajout dans le vecteur énergie
-    m_energiesBase.push_back(Energie(c.getImmatriculation(),0,c.getNom(),c.getDescription(),c.getDomaine()));
-    setNbCartes(getNbCartes().energie+1,3);//le nombre de carte augmente
-};
-
-/*
- * Permet d'ajouter une carte Speciale dans le jeu:
- *  1.ajout dans le fichier speciales.txt
- *  2.ajout dans le vecteur speciale
- */
-void Collection::creerCarteType(Speciale c,std::ofstream& fileOutput){
-    //1: Ajout dans le fichier energie
-    fileOutput << std::endl << std::to_string(c.getImmatriculation()) <<"*" << c.getNom() <<"*" << c.getDescription() << "*";
-
-    //2: Ajout dans le vecteur énergie
-    m_specialesBase.push_back(Speciale(c.getImmatriculation(),0,c.getNom(),c.getDescription()));
-    setNbCartes(getNbCartes().speciale+1,2);//le nombre de carte augmente
-};
-
-/*
  * Permet à n'importe quel utilisateur d'ajouter une carte dans le jeu:
  * L'utilisateur clique sur l'interface allegro pour choisir la carte qu'il veut
  * avec les bons paramètres selon la carte
  */
 void Collection::userCreerCarte(){
-    int type=0;
+    //int type=0;
     //La il peut cliquer sur le type qu'il veut
+    creerCarte(Energie(350,0,"Jean", "prout prout", 'A'), m_energiesBase);
 
+/*
     switch(type){
         case 1: //Créature
             //Il choisit les paramètres pour la creature
@@ -189,33 +150,10 @@ void Collection::userCreerCarte(){
             //Beug
             break;
     }
-
+*/
 
 }
 
 /*
  * Accesseur et mutateur
  */
-
-void Collection::setNbCartes(int _nb, int type){
-    if(_nb>=0){
-        switch(type){
-            case 1:
-                m_nbCartes.creature = _nb;
-                break;
-            case 2:
-                m_nbCartes.speciale = _nb;
-                break;
-            case 3:
-                m_nbCartes.energie = _nb;
-                break;
-            default:
-                break;
-        }
-    }
-
-}
-
-t_nbCartes Collection::getNbCartes() const{
-    return m_nbCartes;
-};

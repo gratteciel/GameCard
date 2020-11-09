@@ -41,6 +41,13 @@ char Energie::getDomaine() const{
  * Méthodes
  */
 
-void Energie::afficheDescription() {
-    std::cout << getDescription() <<std::endl;
+
+
+/*
+ * Permet d'ajouter une carte Energie dans le jeu:
+ *  ajout dans le fichier energies.txt
+ */
+void Energie::creer(std::ofstream& fileOutput){
+    // Ajout dans le fichier energie
+    fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*" << getDomaine() << "*";
 }

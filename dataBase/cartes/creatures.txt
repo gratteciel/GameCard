@@ -3,3 +3,6 @@
 105*Bob*oui.*300*
 105*FUN*ptdr t ki*80*
 109*boubezoul*ptdr t ki*80*
+130*Michel*vive la vie*100*
+131*Dimitrov*prout prout*100*
+132*Pierre*prout prout*100*

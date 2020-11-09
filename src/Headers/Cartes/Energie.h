@@ -18,8 +18,8 @@ class Energie : public Carte{
         ~Energie();
 
         //Méthodes
-        void afficheDescription();
 
+        void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
         char getDomaine() const;
 };

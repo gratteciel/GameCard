@@ -20,41 +20,9 @@ deque
 fstream
 -
 
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp
-main.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.h
-src/Headers/Match/Joueur.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
-src/Headers/Cartes/Creature.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h
-src/Headers/Cartes/Energie.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Deck.cpp
-../../Headers/Cartes/Deck.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Collection.cpp
-../Headers/Collection.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
-
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Game.cpp
 ../Headers/Game.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Joueur.cpp
-../../Headers/Match/Joueur.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Pioche.cpp
-../../Headers/Match/Pioche.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp
-../Headers/Utilisateur.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Attaque.h
 ../../../biblio.h
@@ -110,25 +78,13 @@ C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
 Collection.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
 
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h
-../Utilisateur.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
-Pioche.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
-deque
--
-
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h
-../../../biblio.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
-../Collection.h
-C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h
-
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h
 ../../biblio.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h
 Cartes/Deck.h
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h
+sstream
+-
 
 C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/collection.tpp
 

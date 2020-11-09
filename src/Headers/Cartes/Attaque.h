@@ -20,7 +20,7 @@ class Attaque : public Carte{
         ~Attaque();
         //Méthodes
         void afficheDescription();
-
+        void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
         short getDegat() const;
 };

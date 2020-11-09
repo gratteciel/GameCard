@@ -26,7 +26,8 @@ class Creature : public Carte{
         ~Creature();
 
         //Méthodes
-        void afficheDescription();
+
+        void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
         short getPdv() const;
         void setPdv(short _pdv);

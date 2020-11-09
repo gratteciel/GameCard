@@ -36,9 +36,15 @@ Speciale::~Speciale() {
  * Méthodes
  */
 
-void Speciale::afficheDescription() {
-    std::cout << getDescription() <<std::endl;
+
+/*
+ * Permet d'ajouter une carte Speciale dans le jeu:
+ *  ajout dans le fichier speciales.txt
+ */
+void Speciale::creer(std::ofstream& fileOutput){
+    // Ajout dans le fichier energie
+    fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*";
+
+
 }
-
-
 

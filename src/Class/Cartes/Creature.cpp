@@ -61,6 +61,15 @@ void Creature::setVivant(bool _vivant) {
  * Méthodes
  */
 
-void Creature::afficheDescription() {
-    std::cout << getDescription() <<std::endl;
+
+
+/*
+ * Permet d'ajouter une carte Creature dans le jeu:
+ *  ajout dans le fichier creatures.txt
+ */
+void Creature::creer(std::ofstream& fileOutput){
+    // Ajout dans le fichier creature
+    fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*" << std::to_string(getPdvInitial()) << "*";
+
 }
+

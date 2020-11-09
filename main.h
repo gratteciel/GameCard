@@ -8,4 +8,5 @@
 #include "src/Headers/Match/Joueur.h"
 #include "src/Headers/Cartes/Creature.h"
 #include "src/Headers/Cartes/Energie.h"
+#include "src/Headers/Game.h"
 #endif //CARDGAME_MAIN_H

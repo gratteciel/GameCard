@@ -17,7 +17,8 @@ class Speciale : public Carte {
         ~Speciale();
 
         //Méthodes
-        void afficheDescription();
+
+        void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
 };
 

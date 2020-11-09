@@ -20,8 +20,7 @@ class Carte{
         virtual ~Carte();
 
         //Méthodes
-        // il va falloir metre une méthode virtuelle = 0
-        virtual void afficheDescription() = 0;
+        virtual void creer(std::ofstream& fileOutput) = 0;
         //Accesseurs et mutateurs
         std::string getNom() const;
         std::string getDescription() const;
