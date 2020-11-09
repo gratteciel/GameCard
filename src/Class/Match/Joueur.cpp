@@ -8,23 +8,42 @@
  * Constructeur et destructeur
  */
 
-Joueur::Joueur(Utilisateur &_link, int _numDeck)
-       :m_user(&_link), m_numDeck(_numDeck), m_pdv(100)
+Joueur::Joueur(Utilisateur *_user, int _numDeck)
+       :m_user(_user), m_numDeck(_numDeck), m_pdv(100)
 {
 
 }
 
 Joueur::~Joueur(){
 
+
 }
 /*
  * Accesseurs et mutateurs
  */
 
+int Joueur::getNumDeck() const {
+    return m_numDeck;
+}
+int Joueur::getPdv() const {
+    return m_pdv;
+}
+Utilisateur* Joueur::getUser() const {
+    return m_user;
+}
+void Joueur::setNumDeck(int _numDeck) {
+    if(_numDeck>0)
+        m_numDeck=_numDeck;
+}
+
 /*
  * Méthodes
  */
 
+void Joueur::affichageJoueur() {
+    getUser()->affichageUtilisateur();
+    std::cout << " utilise le deck n "<< getNumDeck() <<" avec ses cartes : " /*<< Deck::affichage()*/ <<std::endl;
+}
 
 
 

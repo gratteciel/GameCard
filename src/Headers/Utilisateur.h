@@ -21,7 +21,7 @@ public:
     Utilisateur(std::string _pseudo);
     ~Utilisateur();
     //Méthodes
-
+    void affichageUtilisateur();
     //Accesseurs et mutateurs
     std::string getPseudo() const;
 };

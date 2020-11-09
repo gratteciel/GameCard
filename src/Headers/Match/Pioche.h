@@ -22,6 +22,10 @@ class Pioche {
         Collection m_cartes;
 
     public:
+
+        Pioche();
+        ~Pioche();
+
         //Constructeur et destructeur
 
         //Méthodes

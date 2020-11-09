@@ -11,7 +11,7 @@
 
 class Joueur {
 private:
-    short m_pdv;
+    int m_pdv;
     Utilisateur *m_user;
     Pioche m_pioche;
 
@@ -19,11 +19,20 @@ private:
 
 public:
     //Constructeur et destructeur
-    Joueur(Utilisateur &_link, int _numDeck);
+    Joueur(Utilisateur *_user, int _numDeck);
     ~Joueur();
     //Méthodes
+    void affichageJoueur();//affichage de l'utilisateur avec son deck et les cartes
+
 
     //Accesseurs et mutateurs
+    //à faire, faire les getters et setters pour le user
+    int getNumDeck() const;
+    int getPdv()const;
+    Utilisateur* getUser()const;
+
+    void setNumDeck(int _numDeck);
+
 };
 
 

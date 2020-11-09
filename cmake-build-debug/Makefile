@@ -58,19 +58,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\bemat\Documents\ECOLE\ECE\ING2\Info\cardGame
+CMAKE_SOURCE_DIR = C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\bemat\Documents\ECOLE\ECE\ING2\Info\cardGame\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = C:\Users\bemat\Documents\ECOLE\ECE\ING2\Info\cardGame\cmake-b
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\bemat\Documents\ECOLE\ECE\ING2\Info\cardGame\cmake-build-debug\CMakeFiles C:\Users\bemat\Documents\ECOLE\ECE\ING2\Info\cardGame\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\bemat\Documents\ECOLE\ECE\ING2\Info\cardGame\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -385,6 +385,33 @@ src/Class/Match/Joueur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s
 .PHONY : src/Class/Match/Joueur.cpp.s
 
+src/Class/Match/Match.obj: src/Class/Match/Match.cpp.obj
+
+.PHONY : src/Class/Match/Match.obj
+
+# target to build an object file
+src/Class/Match/Match.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj
+.PHONY : src/Class/Match/Match.cpp.obj
+
+src/Class/Match/Match.i: src/Class/Match/Match.cpp.i
+
+.PHONY : src/Class/Match/Match.i
+
+# target to preprocess a source file
+src/Class/Match/Match.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.i
+.PHONY : src/Class/Match/Match.cpp.i
+
+src/Class/Match/Match.s: src/Class/Match/Match.cpp.s
+
+.PHONY : src/Class/Match/Match.s
+
+# target to generate assembly for a file
+src/Class/Match/Match.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.s
+.PHONY : src/Class/Match/Match.cpp.s
+
 src/Class/Match/Pioche.obj: src/Class/Match/Pioche.cpp.obj
 
 .PHONY : src/Class/Match/Pioche.obj
@@ -411,6 +438,33 @@ src/Class/Match/Pioche.s: src/Class/Match/Pioche.cpp.s
 src/Class/Match/Pioche.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.s
 .PHONY : src/Class/Match/Pioche.cpp.s
+
+src/Class/Match/Plateau.obj: src/Class/Match/Plateau.cpp.obj
+
+.PHONY : src/Class/Match/Plateau.obj
+
+# target to build an object file
+src/Class/Match/Plateau.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj
+.PHONY : src/Class/Match/Plateau.cpp.obj
+
+src/Class/Match/Plateau.i: src/Class/Match/Plateau.cpp.i
+
+.PHONY : src/Class/Match/Plateau.i
+
+# target to preprocess a source file
+src/Class/Match/Plateau.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.i
+.PHONY : src/Class/Match/Plateau.cpp.i
+
+src/Class/Match/Plateau.s: src/Class/Match/Plateau.cpp.s
+
+.PHONY : src/Class/Match/Plateau.s
+
+# target to generate assembly for a file
+src/Class/Match/Plateau.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.s
+.PHONY : src/Class/Match/Plateau.cpp.s
 
 src/Class/Utilisateur.obj: src/Class/Utilisateur.cpp.obj
 
@@ -475,9 +529,15 @@ help:
 	@echo ... src/Class/Match/Joueur.obj
 	@echo ... src/Class/Match/Joueur.i
 	@echo ... src/Class/Match/Joueur.s
+	@echo ... src/Class/Match/Match.obj
+	@echo ... src/Class/Match/Match.i
+	@echo ... src/Class/Match/Match.s
 	@echo ... src/Class/Match/Pioche.obj
 	@echo ... src/Class/Match/Pioche.i
 	@echo ... src/Class/Match/Pioche.s
+	@echo ... src/Class/Match/Plateau.obj
+	@echo ... src/Class/Match/Plateau.i
+	@echo ... src/Class/Match/Plateau.s
 	@echo ... src/Class/Utilisateur.obj
 	@echo ... src/Class/Utilisateur.i
 	@echo ... src/Class/Utilisateur.s

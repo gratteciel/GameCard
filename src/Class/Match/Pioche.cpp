@@ -7,7 +7,12 @@
 /*
  * Constructeur et destructeur
  */
+Pioche::Pioche() {
 
+}
+Pioche::~Pioche() {
+
+}
 /*
  * Accesseurs et mutateurs
  */

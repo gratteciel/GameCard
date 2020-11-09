@@ -24,12 +24,10 @@ Utilisateur::~Utilisateur(){
 std::string Utilisateur::getPseudo() const {
     return m_pseudo;
 }
+void Utilisateur::affichageUtilisateur() {
+    std::cout << getPseudo();
 
-
-
-/*
- * Méthodes
- */
+}
 
 
 

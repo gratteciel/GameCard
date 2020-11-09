@@ -9,6 +9,7 @@
 #include <vector>
 #include <list>
 #include <deque>
+#include <set>
 
 
 #endif //CARDGAME_BIBLIO_H

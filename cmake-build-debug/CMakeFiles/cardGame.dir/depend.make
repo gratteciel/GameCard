@@ -11,7 +11,9 @@ CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Cartes/Deck.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Cartes/Energie.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Collection.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Match/Joueur.h
+CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Match/Match.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Match/Pioche.h
+CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Match/Plateau.h
 CMakeFiles/cardGame.dir/main.cpp.obj: ../src/Headers/Utilisateur.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj: ../biblio.h
@@ -74,6 +76,20 @@ CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Match/Jou
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Match/Pioche.h
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Headers/Utilisateur.h
 
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../biblio.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Class/Match/Match.cpp
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Cartes/Attaque.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Cartes/Deck.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Match/Joueur.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Match/Match.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Match/Pioche.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Match/Plateau.h
+CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Headers/Utilisateur.h
+
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Class/Match/Pioche.cpp
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Attaque.h
@@ -82,6 +98,10 @@ CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Cr
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Cartes/Energie.h
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Collection.h
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Headers/Match/Pioche.h
+
+CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: ../biblio.h
+CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: ../src/Class/Match/Plateau.cpp
+CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: ../src/Headers/Match/Plateau.h
 
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../biblio.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Class/Utilisateur.cpp
