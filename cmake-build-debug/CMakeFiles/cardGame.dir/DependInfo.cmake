@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/Affichage.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/Affichage.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/main.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/main.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Attaque.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Carte.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj"
@@ -14,7 +15,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Collection.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Game.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Joueur.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj"
+  "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Match.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Pioche.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj"
+  "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Plateau.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj"
   "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Utilisateur.cpp" "C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

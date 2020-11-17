@@ -142,6 +142,33 @@ cardGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/build
 .PHONY : cardGame/fast
 
+Affichage.obj: Affichage.cpp.obj
+
+.PHONY : Affichage.obj
+
+# target to build an object file
+Affichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.obj
+.PHONY : Affichage.cpp.obj
+
+Affichage.i: Affichage.cpp.i
+
+.PHONY : Affichage.i
+
+# target to preprocess a source file
+Affichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.i
+.PHONY : Affichage.cpp.i
+
+Affichage.s: Affichage.cpp.s
+
+.PHONY : Affichage.s
+
+# target to generate assembly for a file
+Affichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.s
+.PHONY : Affichage.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -412,6 +439,33 @@ src/Class/Match/Joueur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s
 .PHONY : src/Class/Match/Joueur.cpp.s
 
+src/Class/Match/Match.obj: src/Class/Match/Match.cpp.obj
+
+.PHONY : src/Class/Match/Match.obj
+
+# target to build an object file
+src/Class/Match/Match.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj
+.PHONY : src/Class/Match/Match.cpp.obj
+
+src/Class/Match/Match.i: src/Class/Match/Match.cpp.i
+
+.PHONY : src/Class/Match/Match.i
+
+# target to preprocess a source file
+src/Class/Match/Match.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.i
+.PHONY : src/Class/Match/Match.cpp.i
+
+src/Class/Match/Match.s: src/Class/Match/Match.cpp.s
+
+.PHONY : src/Class/Match/Match.s
+
+# target to generate assembly for a file
+src/Class/Match/Match.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.s
+.PHONY : src/Class/Match/Match.cpp.s
+
 src/Class/Match/Pioche.obj: src/Class/Match/Pioche.cpp.obj
 
 .PHONY : src/Class/Match/Pioche.obj
@@ -438,6 +492,33 @@ src/Class/Match/Pioche.s: src/Class/Match/Pioche.cpp.s
 src/Class/Match/Pioche.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.s
 .PHONY : src/Class/Match/Pioche.cpp.s
+
+src/Class/Match/Plateau.obj: src/Class/Match/Plateau.cpp.obj
+
+.PHONY : src/Class/Match/Plateau.obj
+
+# target to build an object file
+src/Class/Match/Plateau.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj
+.PHONY : src/Class/Match/Plateau.cpp.obj
+
+src/Class/Match/Plateau.i: src/Class/Match/Plateau.cpp.i
+
+.PHONY : src/Class/Match/Plateau.i
+
+# target to preprocess a source file
+src/Class/Match/Plateau.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.i
+.PHONY : src/Class/Match/Plateau.cpp.i
+
+src/Class/Match/Plateau.s: src/Class/Match/Plateau.cpp.s
+
+.PHONY : src/Class/Match/Plateau.s
+
+# target to generate assembly for a file
+src/Class/Match/Plateau.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.s
+.PHONY : src/Class/Match/Plateau.cpp.s
 
 src/Class/Utilisateur.obj: src/Class/Utilisateur.cpp.obj
 
@@ -475,6 +556,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cardGame
+	@echo ... Affichage.obj
+	@echo ... Affichage.i
+	@echo ... Affichage.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -505,9 +589,15 @@ help:
 	@echo ... src/Class/Match/Joueur.obj
 	@echo ... src/Class/Match/Joueur.i
 	@echo ... src/Class/Match/Joueur.s
+	@echo ... src/Class/Match/Match.obj
+	@echo ... src/Class/Match/Match.i
+	@echo ... src/Class/Match/Match.s
 	@echo ... src/Class/Match/Pioche.obj
 	@echo ... src/Class/Match/Pioche.i
 	@echo ... src/Class/Match/Pioche.s
+	@echo ... src/Class/Match/Plateau.obj
+	@echo ... src/Class/Match/Plateau.i
+	@echo ... src/Class/Match/Plateau.s
 	@echo ... src/Class/Utilisateur.obj
 	@echo ... src/Class/Utilisateur.i
 	@echo ... src/Class/Utilisateur.s

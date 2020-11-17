@@ -19,9 +19,7 @@ Match::~Match() {
 void Match::lancementmatch() {
     std::cout << "Le match commence"<<std::endl;
     getPlateau().affichageplateau();
-    for(auto elem:m_joueur){
-        elem.affichageJoueur();
-    }
+
 }
 Plateau Match::getPlateau() const {
     return m_plateau;
