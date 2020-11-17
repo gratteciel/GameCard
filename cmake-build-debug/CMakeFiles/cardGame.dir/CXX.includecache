@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.cpp
+Affichage.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.h
+
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.h
+biblio.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/biblio.h
+
 C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/biblio.h
 string
 -
@@ -19,9 +27,23 @@ deque
 -
 set
 -
+allegro.h
+-
 
-C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Class/Match/Match.cpp
-../../Headers/Match/Match.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/main.cpp
+main.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/main.h
+Affichage.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.h
+
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/main.h
+src/Headers/Match/Joueur.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Match/Joueur.h
+src/Headers/Cartes/Creature.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Cartes/Creature.h
+src/Headers/Cartes/Energie.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Cartes/Energie.h
+src/Headers/Match/Match.h
 C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Match/Match.h
 
 C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Cartes/Attaque.h
@@ -87,6 +109,8 @@ C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/H
 C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Match/Plateau.h
 ../../../biblio.h
 C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/biblio.h
+Pioche.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Match/Pioche.h
 
 C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Utilisateur.h
 ../../biblio.h

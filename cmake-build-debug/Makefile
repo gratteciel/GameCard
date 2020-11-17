@@ -142,6 +142,33 @@ cardGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/build
 .PHONY : cardGame/fast
 
+Affichage.obj: Affichage.cpp.obj
+
+.PHONY : Affichage.obj
+
+# target to build an object file
+Affichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.obj
+.PHONY : Affichage.cpp.obj
+
+Affichage.i: Affichage.cpp.i
+
+.PHONY : Affichage.i
+
+# target to preprocess a source file
+Affichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.i
+.PHONY : Affichage.cpp.i
+
+Affichage.s: Affichage.cpp.s
+
+.PHONY : Affichage.s
+
+# target to generate assembly for a file
+Affichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.s
+.PHONY : Affichage.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -502,6 +529,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cardGame
+	@echo ... Affichage.obj
+	@echo ... Affichage.i
+	@echo ... Affichage.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

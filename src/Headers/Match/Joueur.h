@@ -30,6 +30,7 @@ public:
     int getNumDeck() const;
     int getPdv()const;
     Utilisateur* getUser()const;
+    Pioche getPioche() const;
 
     void setNumDeck(int _numDeck);
 

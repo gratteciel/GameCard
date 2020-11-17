@@ -35,6 +35,9 @@ void Joueur::setNumDeck(int _numDeck) {
     if(_numDeck>0)
         m_numDeck=_numDeck;
 }
+Pioche Joueur::getPioche() const {
+    return m_pioche;
+}
 
 /*
  * Méthodes

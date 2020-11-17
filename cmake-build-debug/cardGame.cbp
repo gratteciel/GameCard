@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.h">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/biblio.h">
 			<Option target="cardGame"/>
 		</Unit>

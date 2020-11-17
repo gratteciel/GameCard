@@ -10,6 +10,8 @@
 #include <list>
 #include <deque>
 #include <set>
+#include <allegro.h>
+
 
 
 #endif //CARDGAME_BIBLIO_H

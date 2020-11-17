@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cardGame.dir/Affichage.cpp.obj"
   "CMakeFiles/cardGame.dir/main.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj"

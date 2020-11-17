@@ -20,7 +20,7 @@ private:
 public:
     //Constructeurs et Destructeurs
     Match();
-    Match(Utilisateur *_user1,Utilisateur *_user2,int _numDeck1,int _numDeck2);
+    Match(Utilisateur *_user1, Utilisateur *_user2, int _numDeck1, int _numDeck2);
     ~Match();
     //Méthodes
     void lancementmatch();
