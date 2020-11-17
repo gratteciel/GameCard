@@ -11,7 +11,7 @@
 //Hérite de Carte : nom et description
 class Attaque : public Carte{
     private:
-        short m_degat;
+        int m_degat;
         //Nombre de point demandés d'énergie pour lancer l'attaque
         std::vector<std::vector<short> > m_nbPoints;
     public:
@@ -20,7 +20,7 @@ class Attaque : public Carte{
         ~Attaque();
         //Méthodes
         void afficheDescription();
-
+        void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
         short getDegat() const;
 };

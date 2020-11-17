@@ -8,8 +8,17 @@
  * Constructeur et destructeur
  */
 
+//Constructeur pour le chargement des cartes au début du jeu
+Creature::Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial)
+        : Carte(_immatriculation,_id,_nom,_description), m_pdvInitial(_pdVInitial),m_pdv(_pdVInitial), m_vivant(true)
+
+{
+
+}
+
+//Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
 Creature::Creature(int _immatriculation)
-         : Carte(_immatriculation)
+         : Carte(_immatriculation), m_vivant(true)
 
 {
 
@@ -52,6 +61,15 @@ void Creature::setVivant(bool _vivant) {
  * Méthodes
  */
 
-void Creature::afficheDescription() {
-    std::cout << getDescription() <<std::endl;
+
+
+/*
+ * Permet d'ajouter une carte Creature dans le jeu:
+ *  ajout dans le fichier creatures.txt
+ */
+void Creature::creer(std::ofstream& fileOutput){
+    // Ajout dans le fichier creature
+    fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*" << std::to_string(getPdvInitial()) << "*";
+
 }
+

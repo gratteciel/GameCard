@@ -1,8 +1,8 @@
 #include "main.h"
 
 int main() {
-    Utilisateur user = Utilisateur("Mathis");
-
+    Game jeu;
+    jeu.connectionUser("Michel");
 
     return 0;
 }

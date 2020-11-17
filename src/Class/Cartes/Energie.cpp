@@ -8,6 +8,15 @@
  * Constructeur et destructeur
  */
 
+//Constructeur pour le chargement des cartes au début du jeu
+Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _description, char _domaine)
+        : Carte(_immatriculation,_id,_nom,_description),  m_domaine(_domaine)
+
+{
+
+}
+
+//Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
 Energie::Energie(int _immatriculation)
         :Carte(_immatriculation)
 {
@@ -23,7 +32,7 @@ Energie::~Energie() {
  * Accesseurs et mutateurs
  */
 
-short Energie::getDomaine() const{
+char Energie::getDomaine() const{
     return m_domaine;
 }
 
@@ -32,6 +41,13 @@ short Energie::getDomaine() const{
  * Méthodes
  */
 
-void Energie::afficheDescription() {
-    std::cout << getDescription() <<std::endl;
+
+
+/*
+ * Permet d'ajouter une carte Energie dans le jeu:
+ *  ajout dans le fichier energies.txt
+ */
+void Energie::creer(std::ofstream& fileOutput){
+    // Ajout dans le fichier energie
+    fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*" << getDomaine() << "*";
 }

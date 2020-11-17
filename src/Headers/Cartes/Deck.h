@@ -15,16 +15,16 @@ class Deck {
     private:
         //vecteur d'immatriculation
         std::vector<int> m_cartes;
+        static const unsigned int m_numCartes; //Nombre de cartes par deck
     public:
         //Constructeur et destructeur
-        Deck();
+        Deck(std::vector<int>& _cartes);
         ~Deck();
 
         //Méthodes
 
         //Accesseurs et mutateurs
-        bool getTailleConst() const;
-
+        static const unsigned int getNumCartes();
 };
 
 

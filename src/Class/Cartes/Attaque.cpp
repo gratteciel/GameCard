@@ -33,8 +33,9 @@ short Attaque::getDegat() const {
  * Méthodes
  */
 
-void Attaque::afficheDescription() {
-    std::cout << getDescription() <<std::endl;
+
+void Attaque::creer(std::ofstream& fileOutput){
+    //implementer ici
 }
 
 

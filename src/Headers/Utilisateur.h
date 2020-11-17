@@ -7,6 +7,7 @@
 
 #include "..\..\biblio.h"
 #include "Cartes/Deck.h"
+#include <sstream>
 
 class Utilisateur {
 private:
@@ -20,7 +21,10 @@ public:
     //Constructeur et destructeur
     Utilisateur(std::string _pseudo);
     ~Utilisateur();
+
     //Méthodes
+    void creerDatabase();
+    void chargerUtilisateur();
 
     //Accesseurs et mutateurs
     std::string getPseudo() const;

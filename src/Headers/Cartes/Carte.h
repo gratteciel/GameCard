@@ -16,16 +16,17 @@ class Carte{
     public :
         //Constructeur et destructeur
         Carte(int _immatriculation);
+        Carte(int _immatriculation, int _id, std::string _nom, std::string _description);
         virtual ~Carte();
 
         //Méthodes
-        // il va falloir metre une méthode virtuelle = 0
-        virtual void afficheDescription() = 0;
+        virtual void creer(std::ofstream& fileOutput) = 0;
         //Accesseurs et mutateurs
         std::string getNom() const;
         std::string getDescription() const;
 
         int getId() const;
+        int getImmatriculation() const;
 };
 
 

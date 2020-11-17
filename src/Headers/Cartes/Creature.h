@@ -12,8 +12,8 @@
 
 class Creature : public Carte{
     private:
-        short m_pdv; //point de vie
-        short m_pdvInitial; //pdv initial
+        int m_pdv; //point de vie
+        int m_pdvInitial; //pdv initial
         bool m_vivant; //pour savoir la carte est encore en vie
         //Ici il faudra mettre le tableau d'attaque
         std::vector<Attaque> m_attaques;
@@ -21,10 +21,13 @@ class Creature : public Carte{
     public:
         //Constructeur et destructeur
         Creature(int _immatriculation);
+        Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial);
+
         ~Creature();
 
         //Méthodes
-        void afficheDescription();
+
+        void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
         short getPdv() const;
         void setPdv(short _pdv);
