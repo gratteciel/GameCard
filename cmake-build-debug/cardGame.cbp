@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug"/>
+				<Option working_dir="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug"/>
+				<Option working_dir="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cardGame">
-				<Option output="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/cardGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug"/>
+				<Option output="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/cardGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -42,15 +42,15 @@
 					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 cardGame"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 cardGame"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cardGame/fast">
-				<Option output="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/cardGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug"/>
+				<Option output="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/cardGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,93 +63,93 @@
 					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin/../lib/gcc/mingw32/5.1.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 cardGame/fast"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 cardGame/fast"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug"/>
+				<Option working_dir="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/biblio.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/biblio.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/main.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/main.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/main.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Attaque.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Attaque.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Carte.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Carte.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Creature.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Creature.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Deck.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Deck.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Cartes/Energie.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Energie.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Collection.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Collection.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Game.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Game.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Joueur.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Joueur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Match/Pioche.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Pioche.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Class/Utilisateur.cpp">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Utilisateur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Attaque.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Carte.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Creature.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Deck.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Cartes/Energie.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Collection.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Game.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Joueur.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Match/Pioche.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/src/Headers/Utilisateur.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h">
 			<Option target="cardGame"/>
 		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/ECOLE/ECE/ING2/Info/cardGame/CMakeLists.txt">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
