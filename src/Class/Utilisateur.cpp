@@ -27,11 +27,6 @@ std::string Utilisateur::getPseudo() const {
 }
 
 
-
-/*
- * Méthodes
- */
-
 void Utilisateur::creerDatabase(){
     //1: Ajout dans l'utilisateur dans utilisateurs.txt
     std::ifstream fileInput("../database/utilisateurs/utilisateurs.txt");//permet juste de savoir si le fichier existe pour pas en créer un deuxième
