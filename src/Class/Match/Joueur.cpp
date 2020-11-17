@@ -16,7 +16,6 @@ Joueur::Joueur(Utilisateur *_user, int _numDeck)
 
 Joueur::~Joueur(){
 
-
 }
 /*
  * Accesseurs et mutateurs
@@ -39,7 +38,6 @@ void Joueur::setNumDeck(int _numDeck) {
 /*
  * Méthodes
  */
-
 
 
 

@@ -26,6 +26,7 @@ public:
     void creerDatabase();
     void chargerUtilisateur();
 
+    void affichageUtilisateur();
     //Accesseurs et mutateurs
     std::string getPseudo() const;
 };

@@ -3,12 +3,13 @@
 //
 
 #include "../../Headers/Match/Plateau.h"
-Plateau::Plateau(int i)
+Plateau::Plateau()
 {
+
 }
 Plateau::~Plateau() {
 
 }
-void Plateau::affichageplateau() {
-
+void Plateau::affichageplateau(){
+    std::cout << "Creation du plateau"<<std::endl;
 }
