@@ -4,7 +4,7 @@
 # compile CXX with C:/Program Files (x86)/CodeBlocks/MinGW/bin/g++.exe
 CXX_FLAGS = -g   -std=gnu++14
 
-CXX_DEFINES = 
+CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = 
+CXX_INCLUDES = @CMakeFiles/cardGame.dir/includes_CXX.rsp
 
