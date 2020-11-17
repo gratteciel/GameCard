@@ -5,7 +5,7 @@
 #ifndef CARDGAME_ATTAQUE_H
 #define CARDGAME_ATTAQUE_H
 
-#include "../../../biblio.h"
+#include "../../biblio.h"
 #include "Carte.h"
 
 //Hérite de Carte : nom et description

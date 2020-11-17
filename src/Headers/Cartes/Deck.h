@@ -5,7 +5,7 @@
 #ifndef CARDGAME_DECK_H
 #define CARDGAME_DECK_H
 
-#include "../../../biblio.h"
+#include "../../biblio.h"
 
 #include "Energie.h"
 #include "Creature.h"

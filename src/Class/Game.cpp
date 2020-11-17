@@ -32,7 +32,6 @@ void Game::chargerUsersPseudos(){
 
         while(std::getline(file,line)){
             m_usersPseudo.push_back(line);
-
         }
 
         file.close(); //fermuture du fichier
@@ -40,7 +39,6 @@ void Game::chargerUsersPseudos(){
     else{
         std::cout << "Impossible d'ouvrir le fichier : utilisateurs.txt"<< std::endl;
     }
-
 }
 
 void Game::connectionUser(std::string _pseudo){

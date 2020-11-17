@@ -36,7 +36,6 @@ void Collection::lectureVar(std::string &sImm, std::string line, int &i, int &te
     temp=i;
 }
 
-
 void Collection::chargerCartesFille(const std::string& _nomClassCarte){
     std::string _nomFichier = "../database/cartes/";
     int type=0, _imm=0;

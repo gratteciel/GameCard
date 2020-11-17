@@ -9,7 +9,7 @@
 
 #include "Joueur.h"
 #include "Plateau.h"
-#include "../../../biblio.h"
+#include "../../biblio.h"
 
 
 

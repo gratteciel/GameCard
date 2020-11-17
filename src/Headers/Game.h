@@ -5,7 +5,7 @@
 #ifndef CARDGAME_GAME_H
 #define CARDGAME_GAME_H
 
-#include "..\..\biblio.h"
+#include "../biblio.h"
 #include "Utilisateur.h"
 #include "Collection.h"
 
@@ -14,6 +14,7 @@ class Game {
         Collection m_collec;
         std::vector<Utilisateur> m_usersConnectes;
         std::vector<std::string> m_usersPseudo;
+
     public:
         //Constructeur et destructeur
         Game();

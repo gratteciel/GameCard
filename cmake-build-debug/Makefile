@@ -142,59 +142,32 @@ cardGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/build
 .PHONY : cardGame/fast
 
-Affichage.obj: Affichage.cpp.obj
+src/Class/Affichage.obj: src/Class/Affichage.cpp.obj
 
-.PHONY : Affichage.obj
-
-# target to build an object file
-Affichage.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.obj
-.PHONY : Affichage.cpp.obj
-
-Affichage.i: Affichage.cpp.i
-
-.PHONY : Affichage.i
-
-# target to preprocess a source file
-Affichage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.i
-.PHONY : Affichage.cpp.i
-
-Affichage.s: Affichage.cpp.s
-
-.PHONY : Affichage.s
-
-# target to generate assembly for a file
-Affichage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/Affichage.cpp.s
-.PHONY : Affichage.cpp.s
-
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
+.PHONY : src/Class/Affichage.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/Class/Affichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.obj
+.PHONY : src/Class/Affichage.cpp.obj
 
-main.i: main.cpp.i
+src/Class/Affichage.i: src/Class/Affichage.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Class/Affichage.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Class/Affichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.i
+.PHONY : src/Class/Affichage.cpp.i
 
-main.s: main.cpp.s
+src/Class/Affichage.s: src/Class/Affichage.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Class/Affichage.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Class/Affichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.s
+.PHONY : src/Class/Affichage.cpp.s
 
 src/Class/Cartes/Attaque.obj: src/Class/Cartes/Attaque.cpp.obj
 
@@ -547,6 +520,33 @@ src/Class/Utilisateur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.s
 .PHONY : src/Class/Utilisateur.cpp.s
 
+src/main.obj: src/main.cpp.obj
+
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -556,12 +556,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cardGame
-	@echo ... Affichage.obj
-	@echo ... Affichage.i
-	@echo ... Affichage.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/Class/Affichage.obj
+	@echo ... src/Class/Affichage.i
+	@echo ... src/Class/Affichage.s
 	@echo ... src/Class/Cartes/Attaque.obj
 	@echo ... src/Class/Cartes/Attaque.i
 	@echo ... src/Class/Cartes/Attaque.s
@@ -601,6 +598,9 @@ help:
 	@echo ... src/Class/Utilisateur.obj
 	@echo ... src/Class/Utilisateur.i
 	@echo ... src/Class/Utilisateur.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

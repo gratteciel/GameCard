@@ -84,19 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/Affichage.cpp">
-			<Option target="cardGame"/>
-		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/Affichage.h">
-			<Option target="cardGame"/>
-		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/biblio.h">
-			<Option target="cardGame"/>
-		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/main.cpp">
-			<Option target="cardGame"/>
-		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/main.h">
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage.cpp">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Attaque.cpp">
@@ -138,6 +126,9 @@
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Utilisateur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage.h">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h">
 			<Option target="cardGame"/>
 		</Unit>
@@ -175,6 +166,15 @@
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/CMakeLists.txt">

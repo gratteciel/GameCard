@@ -5,30 +5,35 @@
 #ifndef CARDGAME_UTILISATEUR_H
 #define CARDGAME_UTILISATEUR_H
 
-#include "..\..\biblio.h"
+#include "../biblio.h"
 #include "Cartes/Deck.h"
 #include <sstream>
 
 class Utilisateur {
-private:
-    std::string m_pseudo;
-    std::vector<Deck> m_decks;
+    private:
+        //Atrributs
+        std::string m_pseudo;
+        std::vector<Deck> m_decks;
+        std::vector<int> m_cartesSeul;//Ici sont stockés les immatriculations des cartes qui n'ont pas de deck
 
-    //Ici sont stockés les immatriculations des cartes qui n'ont pas de deck
-    std::vector<int> m_cartesSeul;
 
-public:
-    //Constructeur et destructeur
-    Utilisateur(std::string _pseudo);
-    ~Utilisateur();
+        //Méthodes privées
+        void creerFichierPseudo(const std::vector<int> _cartesSeuls);
 
-    //Méthodes
-    void creerDatabase();
-    void chargerUtilisateur();
 
-    void affichageUtilisateur();
-    //Accesseurs et mutateurs
-    std::string getPseudo() const;
+    public:
+        //Constructeur et destructeur
+        Utilisateur(std::string _pseudo);
+        ~Utilisateur();
+
+        //Méthodes
+        void chargerUtilisateur();
+        void creerDatabase(const std::vector<int> _cartesSeuls);
+
+        void affichageUtilisateur();
+
+        //Accesseurs et mutateurs
+        std::string getPseudo() const;
 };
 
 

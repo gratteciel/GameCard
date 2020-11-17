@@ -4,7 +4,7 @@
 
 #ifndef CARDGAME_AFFICHAGE_H
 #define CARDGAME_AFFICHAGE_H
-#include "biblio.h"
+#include "../biblio.h"
 
 
 class Affichage {//permet l'affichage sfml

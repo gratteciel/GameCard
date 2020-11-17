@@ -5,7 +5,7 @@
 #ifndef CARDGAME_COLLECTION_H
 #define CARDGAME_COLLECTION_H
 
-#include "..\..\biblio.h"
+#include "../biblio.h"
 #include "Cartes/Creature.h"
 #include "Cartes/Energie.h"
 #include "Cartes/Speciale.h"

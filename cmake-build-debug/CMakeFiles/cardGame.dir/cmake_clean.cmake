@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cardGame.dir/Affichage.cpp.obj"
-  "CMakeFiles/cardGame.dir/main.cpp.obj"
+  "CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj"
@@ -14,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj"
+  "CMakeFiles/cardGame.dir/src/main.cpp.obj"
   "cardGame.exe"
   "cardGame.exe.manifest"
   "cardGame.pdb"
