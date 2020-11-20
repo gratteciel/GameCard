@@ -9,15 +9,15 @@
 #include "Cartes/Creature.h"
 #include "Cartes/Energie.h"
 #include "Cartes/Speciale.h"
-
+#include <typeinfo>
 
 
 
 class Collection {
     private:
-        std::vector<Creature> m_creaturesBase;
-        std::vector<Energie> m_energiesBase;
-        std::vector<Speciale> m_specialesBase;
+        std::vector<Creature> m_creatures;
+        std::vector<Energie> m_energies;
+        std::vector<Speciale> m_speciales;
 
 
     public:
@@ -32,6 +32,14 @@ class Collection {
         void chargerEnergie(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
         void chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
         void lectureVar(std::string& _res, std::string line, int &i, int &temp);
+
+        void ajouterCreature(Creature _carte);
+        void ajouterEnergie(Energie _carte);
+        void ajouterSpeciale(Speciale _carte);
+
+        std::vector<Creature> getCreatures() const;
+        std::vector<Energie> getEnergies() const;
+        std::vector<Speciale> getSpeciales() const;
 
         void userCreerCarte();
 

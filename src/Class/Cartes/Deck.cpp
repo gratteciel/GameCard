@@ -30,7 +30,9 @@ const unsigned int Deck::getNumCartes()  {
  * Accesseurs et mutateurs
  */
 
-
+std::vector<int> Deck::getCartes() const{
+    return m_cartes;
+}
 
 /*
  * Méthodes

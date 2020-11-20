@@ -25,6 +25,7 @@ class Deck {
 
         //Accesseurs et mutateurs
         static const unsigned int getNumCartes();
+        std::vector<int> getCartes() const;
 };
 
 

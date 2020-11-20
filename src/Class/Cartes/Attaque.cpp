@@ -10,8 +10,8 @@
 
 
 
-Attaque::Attaque(int _immatriculation)
-        :Carte(_immatriculation)
+Attaque::Attaque(int _immatriculation, int _id)
+        :Carte(_immatriculation,_id)
 {
 
 }

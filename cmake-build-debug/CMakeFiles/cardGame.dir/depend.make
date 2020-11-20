@@ -60,6 +60,10 @@ CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Energie.h
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Cartes/Speciale.h
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Collection.h
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Game.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Match/Joueur.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Match/Match.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Match/Pioche.h
+CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Match/Plateau.h
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/Utilisateur.h
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/biblio.h

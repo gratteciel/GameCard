@@ -31,7 +31,7 @@ Utilisateur* Joueur::getUser() const {
     return m_user;
 }
 void Joueur::setNumDeck(int _numDeck) {
-    if(_numDeck>0)
+    if(_numDeck>=0)
         m_numDeck=_numDeck;
 }
 
@@ -39,5 +39,9 @@ void Joueur::setNumDeck(int _numDeck) {
  * Méthodes
  */
 
+void Joueur::chargerCartes(const Collection& _cartesBase){
+    m_pioche.chargerPioche(getUser()->getDeck(getNumDeck()).getCartes(),_cartesBase);
+
+}
 
 

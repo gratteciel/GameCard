@@ -15,18 +15,20 @@
 
 class Match {
 private:
+    Collection m_cartesBase;
     Plateau m_plateau;
     std::vector<Joueur> m_joueur;//set de joueur  car pas le meme nom
 public:
     //Constructeurs et Destructeurs
     Match();
-    Match(Utilisateur *_user1, Utilisateur *_user2, int _numDeck1, int _numDeck2);
     ~Match();
     //Méthodes
-    void lancementmatch();
+    void lancementmatch(Utilisateur *_user1, int numDeck1, Utilisateur *_user2, int numDeck2,  const Collection& _cartesBase);
+
 
     //Getter et Setter
     Plateau getPlateau() const;
+    void setJoueur(Utilisateur *_user, int numDeck);
 };
 
 

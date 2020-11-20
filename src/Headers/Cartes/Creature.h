@@ -8,7 +8,7 @@
 
 #include "Carte.h"
 #include "Attaque.h"
-
+#include "Creature.h"
 
 class Creature : public Carte{
     private:
@@ -20,7 +20,7 @@ class Creature : public Carte{
 
     public:
         //Constructeur et destructeur
-        Creature(int _immatriculation);
+        Creature(int _immatriculation, int _id, std::vector<int> _cartesBase);
         Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial);
 
         ~Creature();

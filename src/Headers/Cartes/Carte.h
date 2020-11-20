@@ -15,7 +15,7 @@ class Carte{
         int m_immatriculation;
     public :
         //Constructeur et destructeur
-        Carte(int _immatriculation);
+        Carte(int _immatriculation, int _id);
         Carte(int _immatriculation, int _id, std::string _nom, std::string _description);
         virtual ~Carte();
 

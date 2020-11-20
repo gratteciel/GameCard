@@ -23,7 +23,7 @@ public:
     ~Joueur();
     //Méthodes
     void affichageJoueur();//affichage de l'utilisateur avec son deck et les cartes
-
+    void chargerCartes(const Collection& _cartesBase);
 
     //Accesseurs et mutateurs
     //à faire, faire les getters et setters pour le user

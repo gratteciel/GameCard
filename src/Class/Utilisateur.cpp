@@ -25,6 +25,10 @@ std::string Utilisateur::getPseudo() const {
     return m_pseudo;
 }
 
+Deck Utilisateur::getDeck(int _numDeck) const {
+    return m_decks[_numDeck];
+}
+
 /*
  * Méthodes
  */

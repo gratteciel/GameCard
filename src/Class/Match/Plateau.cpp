@@ -10,6 +10,7 @@ Plateau::Plateau()
 Plateau::~Plateau() {
 
 }
+
 void Plateau::affichageplateau(){
     std::cout << "Creation du plateau"<<std::endl;
 }

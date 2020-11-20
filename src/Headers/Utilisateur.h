@@ -34,6 +34,7 @@ class Utilisateur {
 
         //Accesseurs et mutateurs
         std::string getPseudo() const;
+        Deck getDeck(int _numDeck) const;
 };
 
 

@@ -17,8 +17,8 @@ Creature::Creature(int _immatriculation, int _id, std::string _nom, std::string 
 }
 
 //Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
-Creature::Creature(int _immatriculation)
-         : Carte(_immatriculation), m_vivant(true)
+Creature::Creature(int _immatriculation, int _id, std::vector<int> _cartesBase)
+         : Carte(_immatriculation, _id), m_vivant(true)
 
 {
 

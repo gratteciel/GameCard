@@ -98,7 +98,7 @@ void Collection::chargerCreature(int _imm, std::string _nom, std::string _descri
     //Ici il faut ajouter LES ATTAQUES
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte creature du jeu
-    m_creaturesBase.push_back(Creature(_imm,0,_nom,_description,std::stoi(sPdvI)));
+    m_creatures.push_back(Creature(_imm,0,_nom,_description,std::stoi(sPdvI)));
 }
 
 void Collection::chargerEnergie(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
@@ -107,14 +107,14 @@ void Collection::chargerEnergie(int _imm, std::string _nom, std::string _descrip
     char _domaine=sDomaine[0];//conversion du string en char
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte energie du jeu
-    m_energiesBase.push_back(Energie(_imm,0,_nom,_description,_domaine));
+    m_energies.push_back(Energie(_imm,0,_nom,_description,_domaine));
 }
 
 void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
     //Ajouteur tous les attributs à speciale
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte energie du jeu
-    m_specialesBase.push_back(Speciale(_imm,0,_nom,_description));
+    m_speciales.push_back(Speciale(_imm,0,_nom,_description));
 }
 
 
@@ -127,7 +127,7 @@ void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _descri
 void Collection::userCreerCarte(){
     //int type=0;
     //La il peut cliquer sur le type qu'il veut
-    creerCarte(Energie(350,0,"Jean", "prout prout", 'A'), m_energiesBase);
+    creerCarte(Energie(350,0,"Jean", "prout prout", 'A'), m_energies);
 
 /*
     switch(type){
@@ -153,6 +153,32 @@ void Collection::userCreerCarte(){
 
 }
 
+void Collection::ajouterCreature(Creature _carte){
+    m_creatures.push_back(_carte);
+}
+
+void Collection::ajouterEnergie(Energie _carte){
+    m_energies.push_back(_carte);
+}
+
+void Collection::ajouterSpeciale(Speciale _carte){
+    m_speciales.push_back(_carte);
+}
+
+
 /*
  * Accesseur et mutateur
  */
+
+
+std::vector<Creature> Collection::getCreatures() const{
+    return m_creatures;
+}
+
+std::vector<Energie> Collection::getEnergies() const{
+    return m_energies;
+}
+
+std::vector<Speciale> Collection::getSpeciales() const{
+    return m_speciales;
+}

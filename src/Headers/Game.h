@@ -8,12 +8,13 @@
 #include "../biblio.h"
 #include "Utilisateur.h"
 #include "Collection.h"
-
+#include "Match/Match.h"
 class Game {
     private:
         Collection m_collec;
         std::vector<Utilisateur> m_usersConnectes;
         std::vector<std::string> m_usersPseudo;
+        Match m_match;
 
     public:
         //Constructeur et destructeur
@@ -22,6 +23,8 @@ class Game {
         //Méthodes
         void chargerUsersPseudos();
         void connectionUser(std::string _pseudo);
+
+
         //Accesseurs et mutateurs
 };
 

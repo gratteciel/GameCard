@@ -17,8 +17,8 @@ Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _d
 }
 
 //Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
-Energie::Energie(int _immatriculation)
-        :Carte(_immatriculation)
+Energie::Energie(int _immatriculation, int _id,  std::vector<int> _cartesBase)
+        :Carte(_immatriculation,_id)
 {
 
 

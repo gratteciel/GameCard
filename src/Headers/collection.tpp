@@ -46,3 +46,5 @@ void Collection::creerCarte(T _carte, std::vector<T>& vecteur){
 
 
 }
+
+

@@ -13,7 +13,7 @@
 
 class Plateau {
 private:
-    Pioche m_pioche;
+   
 public:
     //Constructeurs et Destructeurs
     Plateau();
