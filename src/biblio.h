@@ -11,5 +11,5 @@
 #include <deque>
 #include <set>
 #include <fstream>
-
+#include <sstream>
 #endif //CARDGAME_BIBLIO_H

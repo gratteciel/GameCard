@@ -23,9 +23,12 @@ Collection::~Collection() {
  */
 
 void Collection::chargerCartes() {
+    chargerCartesFille("attaques");
+
     chargerCartesFille("creatures");
     chargerCartesFille("energies");
     chargerCartesFille("speciales");
+
 }
 
 void Collection::lectureVar(std::string &sImm, std::string line, int &i, int &temp){
@@ -50,7 +53,8 @@ void Collection::chargerCartesFille(const std::string& _nomClassCarte){
         type=2;
     else if(_nomClassCarte == "energies")
         type=3;
-
+    else if(_nomClassCarte == "attaques")
+        type=4;
 
     if(file.is_open()){
         std::cout << "fichier ouvert : " << _nomClassCarte << std::endl;
@@ -78,6 +82,9 @@ void Collection::chargerCartesFille(const std::string& _nomClassCarte){
                 case 3: //Energie
                     chargerEnergie(_imm,_nom,_description,line,i,temp);
                     break;
+                case 4: //Attaque
+                    chargerAttaque(_imm,_nom,_description,line,i,temp);
+                    break;
                 default:
                     break;
             }
@@ -95,10 +102,29 @@ void Collection::chargerCartesFille(const std::string& _nomClassCarte){
 void Collection::chargerCreature(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
     std::string sPdvI;
     lectureVar(sPdvI, line, i, temp);
+
     //Ici il faut ajouter LES ATTAQUES
+    std::vector<Attaque*> _attaques;
+    std::string sAttaques;
+    lectureVar(sAttaques, line, i, temp);
+    std::istringstream ss(sAttaques);
+    int num;
+    while(ss >> num)
+    {
+        if(num>=400 && num<=499){ //Si bien attaque
+            for(auto& elem :m_attaques){
+                if(num==elem.getImmatriculation()){
+                    _attaques.push_back(&elem);
+                }
+            }
+        }
+        else{
+            std::cout << "Colelction::chargerCreature Erreur ce type d'immatriculation d'attaque ne peut exister ! " <<std::endl;
+        }
+    }
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte creature du jeu
-    m_creatures.push_back(Creature(_imm,0,_nom,_description,std::stoi(sPdvI)));
+    m_creatures.push_back(Creature(_imm,0,_nom,_description,std::stoi(sPdvI), _attaques));
 }
 
 void Collection::chargerEnergie(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
@@ -113,10 +139,33 @@ void Collection::chargerEnergie(int _imm, std::string _nom, std::string _descrip
 void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
     //Ajouteur tous les attributs à speciale
 
-    //Ajout de la carte au vecteur contenant un exemplaire de chaque carte energie du jeu
+    //Ajout de la carte au vecteur contenant un exemplaire de chaque carte speciale du jeu
     m_speciales.push_back(Speciale(_imm,0,_nom,_description));
 }
 
+void Collection::chargerAttaque(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
+    std::string sDegat;
+    lectureVar(sDegat, line, i, temp);
+
+    std::string sDomaines;
+
+    std::vector<t_nbPoints> _nbPoints;
+
+
+    lectureVar(sDomaines, line, i, temp);
+
+
+    for(int i=0; i<4; i++){
+        t_nbPoints x;
+        x.domaine = i+48; //domaine : char donc on traduit i (int) en char
+        x.nbPoints = sDomaines[i]-48; //code ascii
+        _nbPoints.push_back(x);
+    }
+
+
+    //Ajout de la carte au vecteur contenant un exemplaire de chaque carte attaque du jeu
+    m_attaques.push_back(Attaque(_imm,0,_nom,_description,std::stoi(sDegat), _nbPoints));
+}
 
 
 /*

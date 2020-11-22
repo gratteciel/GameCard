@@ -7,7 +7,7 @@
 
 #include "../biblio.h"
 #include "Cartes/Deck.h"
-#include <sstream>
+
 
 class Utilisateur {
     private:
@@ -15,7 +15,7 @@ class Utilisateur {
         std::string m_pseudo;
         std::vector<Deck> m_decks;
         std::vector<int> m_cartesSeul;//Ici sont stockés les immatriculations des cartes qui n'ont pas de deck
-
+        int m_deckActif;
 
         //Méthodes privées
         void creerFichierPseudo(const std::vector<int> _cartesSeuls);
@@ -35,6 +35,8 @@ class Utilisateur {
         //Accesseurs et mutateurs
         std::string getPseudo() const;
         Deck getDeck(int _numDeck) const;
+        void setDeckActif(int _deckActif);
+        int getDeckActif() const;
 };
 
 

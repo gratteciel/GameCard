@@ -9,6 +9,7 @@
 #include "Cartes/Creature.h"
 #include "Cartes/Energie.h"
 #include "Cartes/Speciale.h"
+
 #include <typeinfo>
 
 
@@ -18,7 +19,7 @@ class Collection {
         std::vector<Creature> m_creatures;
         std::vector<Energie> m_energies;
         std::vector<Speciale> m_speciales;
-
+        std::vector<Attaque> m_attaques;
 
     public:
         //Constructeur et destructeur
@@ -31,6 +32,7 @@ class Collection {
         void chargerCreature(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
         void chargerEnergie(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
         void chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
+        void chargerAttaque(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp);
         void lectureVar(std::string& _res, std::string line, int &i, int &temp);
 
         void ajouterCreature(Creature _carte);

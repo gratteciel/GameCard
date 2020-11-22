@@ -10,8 +10,8 @@
 
 
 
-Attaque::Attaque(int _immatriculation, int _id)
-        :Carte(_immatriculation,_id)
+Attaque::Attaque(int _immatriculation, int _id, std::string _nom, std::string _description, int _degat, std::vector<t_nbPoints>& _nbPoints)
+        :Carte(_immatriculation,_id,_nom,_description),m_degat(_degat), m_nbPoints(_nbPoints)
 {
 
 }
@@ -25,7 +25,7 @@ Attaque::~Attaque() {
  */
 
 
-short Attaque::getDegat() const {
+int Attaque::getDegat() const {
     return m_degat;
 }
 

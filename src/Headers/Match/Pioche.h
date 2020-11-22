@@ -22,16 +22,16 @@ class Pioche {
         Collection m_cartes;
 
     public:
+        //Constructeur et destructeur
         Pioche();
         ~Pioche();
-
-        //Constructeur et destructeur
 
         //Méthodes
         void chargerPioche(std::vector<int> _cartes, const Collection& _cartesBase);
         void setCartes(const Collection& _cartesBase);
+
         //Accesseurs et mutateurs
-        void setCartes(int type, t_carte temp);
+
 };
 
 

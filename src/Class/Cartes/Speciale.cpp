@@ -15,12 +15,7 @@ Speciale::Speciale(int _immatriculation, int _id, std::string _nom, std::string 
 
 }
 
-Speciale::Speciale(int _immatriculation, int _id,  std::vector<int> _cartesBase)
-         : Carte(_immatriculation,_id)
 
-{
-
-}
 
 Speciale::~Speciale() {
 

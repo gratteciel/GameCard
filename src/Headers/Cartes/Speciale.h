@@ -12,7 +12,7 @@ class Speciale : public Carte {
 
     public:
         //Constructeur et destructeur
-        Speciale(int _immatriculation, int _id, std::vector<int> _cartesBases);
+    
         Speciale(int _immatriculation, int _id, std::string _nom, std::string _description);
         ~Speciale();
 

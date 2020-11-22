@@ -11,9 +11,9 @@
 #include "Match/Match.h"
 class Game {
     private:
-        Collection m_collec;
+        Collection m_cartesBases;
         std::vector<Utilisateur> m_usersConnectes;
-        std::vector<std::string> m_usersPseudo;
+        std::set<std::string> m_usersPseudo;
         Match m_match;
 
     public:
@@ -22,8 +22,8 @@ class Game {
         ~Game();
         //Méthodes
         void chargerUsersPseudos();
-        void connectionUser(std::string _pseudo);
-
+        bool connectionUser(std::string _pseudo);
+        void lancerMatch(int user1, int user2);
 
         //Accesseurs et mutateurs
 };

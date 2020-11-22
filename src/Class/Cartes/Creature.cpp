@@ -9,8 +9,8 @@
  */
 
 //Constructeur pour le chargement des cartes au début du jeu
-Creature::Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial)
-        : Carte(_immatriculation,_id,_nom,_description), m_pdvInitial(_pdVInitial),m_pdv(_pdVInitial), m_vivant(true)
+Creature::Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial, std::vector<Attaque*> _attaques)
+        :Carte(_immatriculation,_id,_nom,_description), m_pdvInitial(_pdVInitial),m_pdv(_pdVInitial), m_vivant(true),m_attaques(_attaques)
 
 {
 
@@ -57,6 +57,10 @@ void Creature::setVivant(bool _vivant) {
     m_vivant = _vivant;
 }
 
+
+std::vector<Attaque*> Creature::getAttaques() {
+    return m_attaques;
+}
 /*
  * Méthodes
  */

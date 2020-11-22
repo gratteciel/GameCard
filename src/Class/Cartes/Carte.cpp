@@ -11,15 +11,13 @@
 Carte::Carte(int _immatriculation, int _id, std::string _nom, std::string _description)
         :m_immatriculation(_immatriculation), m_id(_id), m_nom(_nom), m_description(_description)
 {
-    //génération de l'id automatiquement
-    //Il faut qu'il y ait un systeme qui gere pour pas qu'il y ait deux fois le meme id
+
 }
 
 Carte::Carte(int _immatriculation, int _id)
       :m_immatriculation(_immatriculation), m_id(_id)
 {
-    //génération de l'id automatiquement
-    //Il faut qu'il y ait un systeme qui gere pour pas qu'il y ait deux fois le meme id
+
 }
 
 Carte::~Carte() {

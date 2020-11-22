@@ -16,12 +16,14 @@ class Creature : public Carte{
         int m_pdvInitial; //pdv initial
         bool m_vivant; //pour savoir la carte est encore en vie
         //Ici il faudra mettre le tableau d'attaque
-        std::vector<Attaque> m_attaques;
+        std::vector<Attaque*> m_attaques;
+
 
     public:
+
         //Constructeur et destructeur
         Creature(int _immatriculation, int _id, std::vector<int> _cartesBase);
-        Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial);
+        Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial, std::vector<Attaque*> _attaques);
 
         ~Creature();
 
@@ -36,6 +38,8 @@ class Creature : public Carte{
 
         bool getVivant() const;
         void setVivant(bool _vivant);
+        std::vector<Attaque*> getAttaques();
+
 
 };
 

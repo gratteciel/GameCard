@@ -9,7 +9,7 @@
  */
 
 Utilisateur::Utilisateur(std::string _pseudo)
-           :m_pseudo(_pseudo)
+           :m_pseudo(_pseudo),m_deckActif(0)
 {
 
 }
@@ -29,6 +29,17 @@ Deck Utilisateur::getDeck(int _numDeck) const {
     return m_decks[_numDeck];
 }
 
+void Utilisateur::setDeckActif(int _deckActif)
+{
+    if(_deckActif>=0 && _deckActif <m_decks.size()){
+        m_deckActif = _deckActif;
+    }
+
+}
+
+int Utilisateur::getDeckActif() const{
+    return m_deckActif;
+}
 /*
  * Méthodes
  */
