@@ -10,7 +10,7 @@
 #include "Cartes/Energie.h"
 #include "Cartes/Speciale.h"
 
-#include <typeinfo>
+
 
 
 

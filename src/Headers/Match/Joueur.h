@@ -7,15 +7,12 @@
 
 #include "../Utilisateur.h"
 #include "Pioche.h"
-#include <deque>
 
 class Joueur {
 private:
     int m_pdv;
     Utilisateur *m_user;
     Pioche m_pioche;
-
-
 
 public:
     //Constructeur et destructeur

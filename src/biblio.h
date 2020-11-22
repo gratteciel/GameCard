@@ -12,4 +12,6 @@
 #include <set>
 #include <fstream>
 #include <sstream>
+#include <typeinfo>
+#include <map>
 #endif //CARDGAME_BIBLIO_H

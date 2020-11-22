@@ -4,6 +4,8 @@
 
 #include "../Headers/Game.h"
 
+
+
 /*
  * Constructeur et destructeur
  */
@@ -41,15 +43,11 @@ void Game::chargerUsersPseudos(){
     }
 }
 
-bool Game::connectionUser(std::string _pseudo){
-
+bool Game::connectionUser(const std::string& _pseudo){
 
     //Vérifie si le user est deja connecté
-    for(const auto& elem : m_usersConnectes){
-        if(_pseudo == elem.getPseudo()) {//si déja connecté
-            std::cout << "Game::connectionUser : Deja connecte " << std::endl;
-            return false;
-        }
+    if(m_usersConnectes.find(_pseudo)!=m_usersConnectes.end()){
+        return false;
     }
 
 
@@ -61,7 +59,7 @@ bool Game::connectionUser(std::string _pseudo){
         _temp.chargerUtilisateur();
 
         //On ajoute l'utilisateur au vecteur d'users connectés
-        m_usersConnectes.push_back(_temp);
+        m_usersConnectes.insert(std::pair<std::string,Utilisateur>(_pseudo,_temp));
         return true; //l'utilisateur est connecté
 
     }
@@ -71,9 +69,13 @@ bool Game::connectionUser(std::string _pseudo){
 
 }
  
-void Game::lancerMatch(int user1, int user2){
-    if(user1>=0 && user1<m_usersConnectes.size()){ //Vérifie si l'utilisateur est bien connecté
-        m_match.lancementMatch(&(m_usersConnectes[user1]), &(m_usersConnectes[user2]), m_cartesBases);
+void Game::lancerMatch(std::string user1, std::string user2){
+    auto it1=m_usersConnectes.find(user1);
+    auto it2=m_usersConnectes.find(user1);
+
+    //Vérification si ils existent
+    if(it1!= m_usersConnectes.end() &&  it2 != m_usersConnectes.end()){
+        m_match.lancementMatch(&it1->second, &it2->second, m_cartesBases);
     }
 
 }

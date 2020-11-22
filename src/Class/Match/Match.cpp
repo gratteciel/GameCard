@@ -42,5 +42,6 @@ void Match::lancementMatch(Utilisateur *_user1, Utilisateur *_user2, const Colle
 
     m_joueur[0].setPioche(_cartesBase);
     m_joueur[1].setPioche(_cartesBase);
+
 }
 

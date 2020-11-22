@@ -7,10 +7,6 @@
 
 #include "../../biblio.h"
 
-#include "Energie.h"
-#include "Creature.h"
-#include "../Collection.h"
-
 class Deck {
     private:
         //vecteur d'immatriculation

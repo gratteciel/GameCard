@@ -22,14 +22,7 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Deck.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Energie.cpp
@@ -123,15 +116,8 @@ CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Utilisateur.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/main.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h

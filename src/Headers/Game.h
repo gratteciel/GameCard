@@ -6,13 +6,18 @@
 #define CARDGAME_GAME_H
 
 #include "../biblio.h"
+
 #include "Utilisateur.h"
 #include "Collection.h"
 #include "Match/Match.h"
+
+
+
 class Game {
+
     private:
         Collection m_cartesBases;
-        std::vector<Utilisateur> m_usersConnectes;
+        std::map<std::string, Utilisateur> m_usersConnectes;
         std::set<std::string> m_usersPseudo;
         Match m_match;
 
@@ -22,8 +27,8 @@ class Game {
         ~Game();
         //Méthodes
         void chargerUsersPseudos();
-        bool connectionUser(std::string _pseudo);
-        void lancerMatch(int user1, int user2);
+        bool connectionUser(const std::string& _pseudo);
+        void lancerMatch(std::string user1, std::string user2);
 
         //Accesseurs et mutateurs
 };

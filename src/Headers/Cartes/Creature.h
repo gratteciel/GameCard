@@ -8,7 +8,7 @@
 
 #include "Carte.h"
 #include "Attaque.h"
-#include "Creature.h"
+
 
 class Creature : public Carte{
     private:

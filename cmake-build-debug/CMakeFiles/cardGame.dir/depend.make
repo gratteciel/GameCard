@@ -21,14 +21,7 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj: ../src/Headers/Cartes
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj: ../src/biblio.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Class/Cartes/Deck.cpp
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Attaque.h
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Carte.h
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Creature.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Deck.h
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Energie.h
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Cartes/Speciale.h
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/Collection.h
-CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/biblio.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: ../src/Class/Cartes/Energie.cpp
@@ -122,15 +115,8 @@ CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: ../src/Headers/collecti
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: ../src/biblio.h
 
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Class/Utilisateur.cpp
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Attaque.h
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Carte.h
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Creature.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Deck.h
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Energie.h
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Cartes/Speciale.h
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Collection.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/Utilisateur.h
-CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/biblio.h
 
 CMakeFiles/cardGame.dir/src/main.cpp.obj: ../src/Headers/Cartes/Attaque.h
