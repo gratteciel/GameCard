@@ -48,7 +48,7 @@ public:
     /// \param size Size of the rectangle
     ///
     ////////////////////////////////////////////////////////////
-    explicit RectangleShape(const Vector2f& size = Vector2f(0, 0));
+    explicit RectangleShape(Vector2<float> size = Vector2f(0, 0));
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the size of the rectangle

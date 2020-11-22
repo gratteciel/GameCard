@@ -54,19 +54,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard"
+CMAKE_SOURCE_DIR = C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/cardGame.dir/clean
 CMakeFiles/cardGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target cardGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target cardGame"
 .PHONY : CMakeFiles/cardGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cardGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/cardGame.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/cardGame.dir/rule
 
 # Convenience name for target.

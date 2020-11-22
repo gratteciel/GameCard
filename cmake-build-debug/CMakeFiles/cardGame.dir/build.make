@@ -53,19 +53,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard"
+CMAKE_SOURCE_DIR = C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cardGame.dir/depend.make
@@ -79,212 +79,212 @@ include CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/main.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/main.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cardGame.dir/main.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\main.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cardGame.dir/main.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\main.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\main.cpp
 
 CMakeFiles/cardGame.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/main.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\main.cpp" > CMakeFiles\cardGame.dir\main.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\main.cpp > CMakeFiles\cardGame.dir\main.cpp.i
 
 CMakeFiles/cardGame.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/main.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\main.cpp" -o CMakeFiles\cardGame.dir\main.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\main.cpp -o CMakeFiles\cardGame.dir\main.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Class/Cartes/Carte.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Carte.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Carte.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Carte.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Carte.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Carte.cpp" > CMakeFiles\cardGame.dir\src\Class\Cartes\Carte.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Carte.cpp > CMakeFiles\cardGame.dir\src\Class\Cartes\Carte.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Carte.cpp" -o CMakeFiles\cardGame.dir\src\Class\Cartes\Carte.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Carte.cpp -o CMakeFiles\cardGame.dir\src\Class\Cartes\Carte.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj: ../src/Class/Cartes/Energie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Energie.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Energie.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Energie.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Energie.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Energie.cpp" > CMakeFiles\cardGame.dir\src\Class\Cartes\Energie.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Energie.cpp > CMakeFiles\cardGame.dir\src\Class\Cartes\Energie.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Energie.cpp" -o CMakeFiles\cardGame.dir\src\Class\Cartes\Energie.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Energie.cpp -o CMakeFiles\cardGame.dir\src\Class\Cartes\Energie.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj: ../src/Class/Cartes/Creature.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Creature.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Creature.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Creature.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Creature.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Creature.cpp" > CMakeFiles\cardGame.dir\src\Class\Cartes\Creature.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Creature.cpp > CMakeFiles\cardGame.dir\src\Class\Cartes\Creature.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Creature.cpp" -o CMakeFiles\cardGame.dir\src\Class\Cartes\Creature.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Creature.cpp -o CMakeFiles\cardGame.dir\src\Class\Cartes\Creature.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj: ../src/Class/Cartes/Attaque.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Attaque.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Attaque.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Attaque.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Attaque.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Attaque.cpp" > CMakeFiles\cardGame.dir\src\Class\Cartes\Attaque.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Attaque.cpp > CMakeFiles\cardGame.dir\src\Class\Cartes\Attaque.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Attaque.cpp" -o CMakeFiles\cardGame.dir\src\Class\Cartes\Attaque.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Attaque.cpp -o CMakeFiles\cardGame.dir\src\Class\Cartes\Attaque.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj: ../src/Class/Utilisateur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Utilisateur.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Utilisateur.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Utilisateur.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Utilisateur.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Utilisateur.cpp" > CMakeFiles\cardGame.dir\src\Class\Utilisateur.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Utilisateur.cpp > CMakeFiles\cardGame.dir\src\Class\Utilisateur.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Utilisateur.cpp" -o CMakeFiles\cardGame.dir\src\Class\Utilisateur.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Utilisateur.cpp -o CMakeFiles\cardGame.dir\src\Class\Utilisateur.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj: ../src/Class/Cartes/Deck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Deck.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Deck.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Deck.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Deck.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Deck.cpp" > CMakeFiles\cardGame.dir\src\Class\Cartes\Deck.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Deck.cpp > CMakeFiles\cardGame.dir\src\Class\Cartes\Deck.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Deck.cpp" -o CMakeFiles\cardGame.dir\src\Class\Cartes\Deck.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Deck.cpp -o CMakeFiles\cardGame.dir\src\Class\Cartes\Deck.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj: ../src/Class/Match/Joueur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Joueur.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Joueur.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Joueur.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Joueur.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Joueur.cpp" > CMakeFiles\cardGame.dir\src\Class\Match\Joueur.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Joueur.cpp > CMakeFiles\cardGame.dir\src\Class\Match\Joueur.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Joueur.cpp" -o CMakeFiles\cardGame.dir\src\Class\Match\Joueur.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Joueur.cpp -o CMakeFiles\cardGame.dir\src\Class\Match\Joueur.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj: ../src/Class/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Game.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Game.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Game.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Game.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Game.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Game.cpp" > CMakeFiles\cardGame.dir\src\Class\Game.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Game.cpp > CMakeFiles\cardGame.dir\src\Class\Game.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Game.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Game.cpp" -o CMakeFiles\cardGame.dir\src\Class\Game.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Game.cpp -o CMakeFiles\cardGame.dir\src\Class\Game.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj: ../src/Class/Match/Pioche.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Pioche.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Pioche.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Pioche.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Pioche.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Pioche.cpp" > CMakeFiles\cardGame.dir\src\Class\Match\Pioche.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Pioche.cpp > CMakeFiles\cardGame.dir\src\Class\Match\Pioche.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Pioche.cpp" -o CMakeFiles\cardGame.dir\src\Class\Match\Pioche.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Pioche.cpp -o CMakeFiles\cardGame.dir\src\Class\Match\Pioche.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj: ../src/Class/Collection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Collection.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Collection.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Collection.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Collection.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Collection.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Collection.cpp" > CMakeFiles\cardGame.dir\src\Class\Collection.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Collection.cpp > CMakeFiles\cardGame.dir\src\Class\Collection.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Collection.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Collection.cpp" -o CMakeFiles\cardGame.dir\src\Class\Collection.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Collection.cpp -o CMakeFiles\cardGame.dir\src\Class\Collection.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj: ../src/Class/Cartes/Speciale.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Speciale.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Speciale.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Cartes\Speciale.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Speciale.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Speciale.cpp" > CMakeFiles\cardGame.dir\src\Class\Cartes\Speciale.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Speciale.cpp > CMakeFiles\cardGame.dir\src\Class\Cartes\Speciale.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Cartes\Speciale.cpp" -o CMakeFiles\cardGame.dir\src\Class\Cartes\Speciale.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Cartes\Speciale.cpp -o CMakeFiles\cardGame.dir\src\Class\Cartes\Speciale.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj: ../src/Class/Match/Plateau.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Plateau.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Plateau.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Plateau.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Plateau.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Plateau.cpp" > CMakeFiles\cardGame.dir\src\Class\Match\Plateau.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Plateau.cpp > CMakeFiles\cardGame.dir\src\Class\Match\Plateau.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Plateau.cpp" -o CMakeFiles\cardGame.dir\src\Class\Match\Plateau.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Plateau.cpp -o CMakeFiles\cardGame.dir\src\Class\Match\Plateau.cpp.s
 
 CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj: ../src/Class/Match/Match.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Match.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Match.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\src\Class\Match\Match.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Match.cpp
 
 CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Match.cpp" > CMakeFiles\cardGame.dir\src\Class\Match\Match.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Match.cpp > CMakeFiles\cardGame.dir\src\Class\Match\Match.cpp.i
 
 CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\src\Class\Match\Match.cpp" -o CMakeFiles\cardGame.dir\src\Class\Match\Match.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\src\Class\Match\Match.cpp -o CMakeFiles\cardGame.dir\src\Class\Match\Match.cpp.s
 
 CMakeFiles/cardGame.dir/Affichage.cpp.obj: CMakeFiles/cardGame.dir/flags.make
 CMakeFiles/cardGame.dir/Affichage.cpp.obj: CMakeFiles/cardGame.dir/includes_CXX.rsp
 CMakeFiles/cardGame.dir/Affichage.cpp.obj: ../Affichage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/cardGame.dir/Affichage.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\Affichage.cpp.obj -c "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\Affichage.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/cardGame.dir/Affichage.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cardGame.dir\Affichage.cpp.obj -c C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\Affichage.cpp
 
 CMakeFiles/cardGame.dir/Affichage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardGame.dir/Affichage.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\Affichage.cpp" > CMakeFiles\cardGame.dir\Affichage.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\Affichage.cpp > CMakeFiles\cardGame.dir\Affichage.cpp.i
 
 CMakeFiles/cardGame.dir/Affichage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardGame.dir/Affichage.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\Affichage.cpp" -o CMakeFiles\cardGame.dir\Affichage.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\Affichage.cpp -o CMakeFiles\cardGame.dir\Affichage.cpp.s
 
 # Object files for target cardGame
 cardGame_OBJECTS = \
@@ -337,7 +337,7 @@ cardGame.exe: ../lib/SFML-2.5.1/lib/libfreetype.a
 cardGame.exe: CMakeFiles/cardGame.dir/linklibs.rsp
 cardGame.exe: CMakeFiles/cardGame.dir/objects1.rsp
 cardGame.exe: CMakeFiles/cardGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable cardGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable cardGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cardGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -350,6 +350,6 @@ CMakeFiles/cardGame.dir/clean:
 .PHONY : CMakeFiles/cardGame.dir/clean
 
 CMakeFiles/cardGame.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles\cardGame.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug C:\Users\mitue\OneDrive\Documents\ING2_info\Informatique\projetS2\GameCard\cmake-build-debug\CMakeFiles\cardGame.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cardGame.dir/depend
 

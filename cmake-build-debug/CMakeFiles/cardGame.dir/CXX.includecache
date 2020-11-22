@@ -676,7 +676,31 @@ SFML/Config.hpp
 
 ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/main.cpp
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/Affichage.cpp
+src/Headers/Affichage.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Affichage.h
+
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/biblio.h
+string
+-
 SFML/Graphics.hpp
 -
+math.h
+-
+iostream
+-
+vector
+-
+list
+-
+deque
+-
+set
+-
+fstream
+-
+
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/src/Headers/Affichage.h
+../../biblio.h
+C:/Users/mitue/OneDrive/Documents/ING2_info/Informatique/projetS2/GameCard/biblio.h
 
