@@ -16,7 +16,7 @@ Joueur::Joueur(Utilisateur *_user)
 
 Joueur::~Joueur(){
 
-  delete m_user;
+
 }
 
 /*
