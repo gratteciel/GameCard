@@ -10,7 +10,7 @@
 
 class Affichage {//permet l'affichage sfml
 private:
-
+    std::map <std::string, sf::Sprite> m_imageMap;
 public:
     //Constructeur et Destructeur
     Affichage();
@@ -19,13 +19,14 @@ public:
     //Methodes
     void sfml_initialisation();
     void sfml_lancement();
-    void sfml_play(std::map <std::string, sf::Texture> &imageMap);
-    void sfml_leave(std::map <std::string, sf::Texture> &imageMap);
-    void sfml_regles(std::map <std::string, sf::Texture> &imageMap);
-    std::map <std::string, sf::Texture> sfml_loadImages();
-    sf::Texture sfml_SearchingImages(std::map<std::string, sf::Texture> &imagesMap, std::string _nom);
+    void sfml_play();
+    void sfml_leave();
+    void sfml_regles();
+    void sfml_loadImages();
+    sf::Sprite sfml_SearchingImages(std::string _nom);
 
     //Getter et Setter
+    std::map <std::string, sf::Sprite> getImageMap() const;
 
 
 };
