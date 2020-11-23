@@ -6,7 +6,7 @@
 #define CARDGAME_PIOCHE_H
 
 
-#include "../../../biblio.h"
+#include "../../biblio.h"
 #include "../Collection.h"
 
 typedef struct t_carte{

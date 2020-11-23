@@ -5,7 +5,7 @@
 #ifndef CARDGAME_UTILISATEUR_H
 #define CARDGAME_UTILISATEUR_H
 
-#include "..\..\biblio.h"
+#include "../biblio.h"
 #include "Cartes/Deck.h"
 #include <sstream>
 

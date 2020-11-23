@@ -5,7 +5,7 @@
 #ifndef CARDGAME_GAME_H
 #define CARDGAME_GAME_H
 
-#include "..\..\biblio.h"
+#include "../biblio.h"
 #include "Utilisateur.h"
 #include "Collection.h"
 

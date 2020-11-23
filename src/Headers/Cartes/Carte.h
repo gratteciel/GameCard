@@ -5,7 +5,7 @@
 #ifndef CARDGAME_CARTE_H
 #define CARDGAME_CARTE_H
 
-#include "../../../biblio.h"
+#include "../../biblio.h"
 
 class Carte{
     private:
