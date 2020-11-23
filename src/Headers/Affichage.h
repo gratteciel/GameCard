@@ -11,22 +11,25 @@
 class Affichage {//permet l'affichage sfml
 private:
     std::map <std::string, sf::Sprite> m_imageMap;
+
 public:
     //Constructeur et Destructeur
     Affichage();
     ~Affichage();
 
     //Methodes
-    void sfml_initialisation();
-    void sfml_lancement();
-    void sfml_play();
-    void sfml_leave();
-    void sfml_regles();
-    void sfml_loadImages();
-    sf::Sprite sfml_SearchingImages(std::string _nom);
+    void sfmlMenuBase();
+    void sfmlLancement();
+    void sfmlPlay();
+    void sfmlLeave();
+    void sfmlRegles();
+    void sfmlLoadImages();
+    sf::Sprite recupSprite(const std::string& _nom);
+    void chargerImage(const std::string& _nomFichier, const std::string& _posFichier,const std::string& _type);
+    void setPos(int x, int y, const std::string& _nomFichier);
+    void afficheImage(const std::string& _nom);
 
     //Getter et Setter
-    std::map <std::string, sf::Sprite> getImageMap() const;
 
 
 };

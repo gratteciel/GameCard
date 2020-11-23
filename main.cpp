@@ -3,7 +3,7 @@
 int main() {
     Game jeu;
     Affichage test;
-    test.sfml_lancement();
+    test.sfmlLancement();
     jeu.connectionUser("Michel");
 
     return 0;

@@ -110,7 +110,7 @@ public:
     /// \see getTextureRect, setTexture
     ///
     ////////////////////////////////////////////////////////////
-    void setTextureRect(const IntRect& rectangle);
+    void setTextureRect(const IntRect &rectangle, int i, float d, float d1);
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the global color of the sprite
