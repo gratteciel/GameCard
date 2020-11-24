@@ -8,9 +8,9 @@
 void AfficheMatch::AnimationDebutDeCombat(){
     setPos(550,400,"Jouer_no");
     afficheImage("Jouer_no");
-    window.display();
+    m_window.display();
     sf::sleep(sf::seconds(2));
-    window.clear();
+    m_window.clear();
 
 }
 //faire un setter vis a vis de l'élement du terrain
@@ -19,10 +19,10 @@ void AfficheMatch::LancementPartieAffichage() {
 
     AnimationDebutDeCombat();
     while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-        window.clear();
+        m_window.clear();
         AffichageTerrain();
 
-        window.display();
+        m_window.display();
         sf::sleep(sf::milliseconds(10));
 
     }

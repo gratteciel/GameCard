@@ -41,10 +41,17 @@ std::string Menu::getBoutonActuel() const{
  * Méthodes
  */
 
+void Menu::gestionChangementMenu(){
+    if(getMenuActuel()>=0&&getMenuActuel()<=3)
+        setMenuActuel(0);
+    else if(getMenuActuel()==4)
+        setMenuActuel(1);
+}
+
 void Menu::sfmlMenuBase() {//fonction pour initialiser sfml
     bool fin=false;
     bool leave=false;
-
+    std::string pseudoCouleur;
     int temp=-2;
     while (!fin) {
         //obliger de le mettre dans la boucle pour réactualiser tout le temps
@@ -52,7 +59,7 @@ void Menu::sfmlMenuBase() {//fonction pour initialiser sfml
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
             if(getMenuActuel()!=0) {
                 sf::sleep(sf::milliseconds(150));
-                setMenuActuel(0);
+                gestionChangementMenu();
             }
             else
                 fin=true;
@@ -61,12 +68,12 @@ void Menu::sfmlMenuBase() {//fonction pour initialiser sfml
 
         getMousePosition();
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (m_window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
-                window.close();//permet de fermer la fenetre
+                m_window.close();//permet de fermer la fenetre
         }
 
-        if(getMenuActuel()!=temp || getMenuActuel()!=-1){
+        if(getMenuActuel()!=temp){
             temp=getMenuActuel();
             switch(getMenuActuel()){
                 case 0:
@@ -86,7 +93,7 @@ void Menu::sfmlMenuBase() {//fonction pour initialiser sfml
             }
         }
 
-        window.clear();
+        m_window.clear();
 
         //affiche le menu actuel + interaction
         switch(getMenuActuel()){
@@ -96,24 +103,29 @@ void Menu::sfmlMenuBase() {//fonction pour initialiser sfml
                 leave=true;
                 break;
             case 0://menu de base
-                menu0Affichage();
                 menu0Interaction();
+                menu0Affichage();
                 break;
             case 1://menu avec Insciription connection et lancement partie
-                menu1Affichage();
                 menu1Interaction();
+                menu1Affichage();
                 break;
             case 2:// menu avec les regles
-                menu2Affichage();
                 menu2Interaction();
+                menu2Affichage();
                 break;
             case 3 : //Parametres
-                menu3Affichage();
                 menu3Interaction();
+                menu3Affichage();
                 break;
+            case 4 : //Connexction
+                menu4Interaction(pseudoCouleur);
+                menu4Affichage(pseudoCouleur);
+                break;
+
         }
 
-        window.display();
+        m_window.display();
 
         if(leave)
             sf::sleep(sf::seconds(2));
@@ -249,7 +261,7 @@ void Menu::menu1Interaction() {
         getMousePosition().y < recupSprite("connecter_no").getPosition().y + 35 &&
         getMousePosition().y > recupSprite("connecter_no").getPosition().y) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-            sfmlConnection();
+            setMenuActuel(4);
         setBoutonActuel("connecter");
     }
 
@@ -257,8 +269,9 @@ void Menu::menu1Interaction() {
              getMousePosition().x > recupSprite("Inscription_no").getPosition().x &&
              getMousePosition().y < recupSprite("Inscription_no").getPosition().y + 35 &&
              getMousePosition().y > recupSprite("Inscription_no").getPosition().y) {
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-            sfmlInscription();
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+            //sfmlInscription();
+        }
         setBoutonActuel("Inscription");
     }
     else if(getMousePosition().x < recupSprite("Retour_no").getPosition().x + 270 &&
@@ -268,7 +281,7 @@ void Menu::menu1Interaction() {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 
             setMenuActuel(0);
-            sfmlMenuBase();
+
         }
         setBoutonActuel("Retour");
     }
@@ -277,7 +290,7 @@ void Menu::menu1Interaction() {
             getMousePosition().y < recupSprite("LancerPartie_no").getPosition().y + 35 &&
             getMousePosition().y > recupSprite("LancerPartie_no").getPosition().y){
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-            window.clear();
+            m_window.clear();
 
         }
         setBoutonActuel("LancerPartie");
@@ -310,7 +323,7 @@ void Menu::menu2Interaction(){
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 
             setMenuActuel(0);
-            sfmlMenuBase();
+
         }
         setBoutonActuel("Retour");
     }
@@ -361,7 +374,7 @@ void Menu::menu3Interaction() {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 
             setMenuActuel(0);
-            sfmlMenuBase();
+
         }
         setBoutonActuel("Retour");
     }
@@ -375,11 +388,66 @@ void Menu::creerUneCarte() {
 
 }
 
-void Menu::sfmlInscription() {
+
+void Menu::menu4Affichage(const std::string& pseudoCouleur) {
+    unsigned short i=0;
+
+    sf::Text _tempTexte;
+    _tempTexte.setFont(getFonts()[0]); // choix de la police
+    _tempTexte.setFillColor(sf::Color::White);//couleur du texte
+    _tempTexte.setCharacterSize(70); // choix de la taille des caractères exprimée en pixel
+    _tempTexte.setOutlineColor(sf::Color::Black); // Couleur du contour
+    _tempTexte.setOutlineThickness(1); //Taille des contours
+
+    sf::Text texte;
+    texte.setPosition(100,100);
+    texte.setFont(getFonts()[1]); // choix de la police
+    texte.setFillColor(sf::Color::White);//couleur du texte
+    texte.setCharacterSize(40); // choix de la taille des caractères exprimée en pixel
+    texte.setOutlineColor(sf::Color::Black); // Couleur du contour
+    texte.setOutlineThickness(1); //Taille des contours
+    texte.setString("LISTE DES PSEUDOS :");
+
+
+    afficheImage("Login");//Affiche l'image "login"
+    m_window.draw(texte);
+
+    for(auto& elem: m_jeu.getUsersPseudo()){
+
+        _tempTexte.setString(elem); //affiche le pseudo
+
+        _tempTexte.setPosition(200,200+70*i);
+        if(elem==pseudoCouleur)
+            _tempTexte.setFillColor(sf::Color::Red);//couleur du texte
+        else
+            _tempTexte.setFillColor(sf::Color::White);//couleur du texte
+        m_window.draw(_tempTexte);
+        i++;
+    }
 
 }
 
-void Menu::sfmlConnection() {
+void Menu::menu4Interaction(std::string& pseudoCouleur){
+    unsigned int i=0;
+    bool fin=false;
+    for(const auto& elem : m_jeu.getUsersPseudo()){
+        if (getMousePosition().x>(200) && getMousePosition().x<(200+elem.size()*24) &&
+            getMousePosition().y>(200+70*i) && getMousePosition().y<(200+70*i+70) ){
+
+            pseudoCouleur=elem;
+            fin=true;
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                m_jeu.connectionUser(pseudoCouleur);
+                sf::sleep(sf::milliseconds(50));
+            }
+
+            break;
+
+        }
+
+        i++;
+    }
+    if(!fin)
+        pseudoCouleur="none";
 
 }
-

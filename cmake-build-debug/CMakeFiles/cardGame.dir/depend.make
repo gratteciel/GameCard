@@ -235,6 +235,20 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../lib/SFML-2.5.1/incl
 CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Class/Affichage/Menu.cpp
 CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Affichage/Affichage.h
 CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Affichage/Menu.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Cartes/Attaque.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Cartes/Deck.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Cartes/Speciale.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Game.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Match/Joueur.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Match/Match.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Match/Pioche.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Match/Plateau.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/Utilisateur.h
+CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj: ../src/biblio.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj: ../lib/SFML-2.5.1/include/SFML/Config.hpp

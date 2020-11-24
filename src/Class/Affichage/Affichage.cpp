@@ -4,11 +4,15 @@
 
 #include "../../Headers/Affichage/Affichage.h"
 
+/*
+ * Initialisation des attributs statique
+ */
 
-sf::RenderWindow window(sf::VideoMode(1920, 1080), "GameCard", sf::Style::Fullscreen);//variable globale pour la fenetre afin de l'utiliser dans tous les programmes
+sf::RenderWindow Affichage::m_window(sf::VideoMode(1920, 1080), "GameCard", sf::Style::Fullscreen);//variable globale pour la fenetre afin de l'utiliser dans tous les programmes
 
-std::map <std::string, sf::Sprite> imageMap;
+std::map <std::string, sf::Sprite> Affichage::m_imageMap;
 
+std::vector<sf::Font> Affichage::m_fonts;
 /*
  * Constructeur et destructeur
  */
@@ -17,6 +21,7 @@ Affichage::Affichage()
 
 {
     sfmlLoadImages();
+    chargementFonts();
 }
 
 Affichage::~Affichage() {
@@ -27,6 +32,9 @@ sf::Vector2i Affichage::getMousePosition() const {
     return sf::Mouse::getPosition();
 }
 
+std::vector<sf::Font>& Affichage::getFonts(){
+    return m_fonts;
+}
 /*
  * Méthodes
  */
@@ -37,7 +45,7 @@ void Affichage::chargerImage(const std::string& _nomFichier, const std::string& 
 
     sf::Sprite sprite;
     sprite.setTexture(*img);
-    imageMap[_nomFichier] = sprite;
+    m_imageMap[_nomFichier] = sprite;
 }
 
 sf::Texture* Affichage::chargerTexture(const std::string& _nomFichier){
@@ -50,8 +58,8 @@ sf::Texture* Affichage::chargerTexture(const std::string& _nomFichier){
 }
 
 void Affichage::setPos(float x, float y, const std::string& _nomFichier){
-    auto it=imageMap.find(_nomFichier);
-    if(it!=imageMap.end()){
+    auto it=m_imageMap.find(_nomFichier);
+    if(it!=m_imageMap.end()){
         //Set la position du sprite
         it->second.setPosition(x,y);
     }
@@ -95,15 +103,30 @@ void Affichage::sfmlLoadImages() {
 }
 
 void Affichage::afficheImage(const std::string& _nom){
-    window.draw(recupSprite(_nom));
+    m_window.draw(recupSprite(_nom));
 }
 
 sf::Sprite Affichage::recupSprite(const std::string& _nom){
-    auto it=imageMap.find(_nom);
-    if(it!=imageMap.end())
+    auto it=m_imageMap.find(_nom);
+    if(it!=m_imageMap.end())
         return it->second;
 }
 
 
+void Affichage::chargementFonts(){
+    sf::Font font;
+    if (!font.loadFromFile("../Font/americanCaptain.ttf"))
+    {
+        std::cout << "Erreur : n'arrive pas à charger le font !" << std::endl;
+    }
+    else
+        m_fonts.push_back(font);
 
+    if (!font.loadFromFile("../Font/distantGalaxy.ttf"))
+    {
+        std::cout << "Erreur : n'arrive pas à charger le font !" << std::endl;
+    }
+    else
+        m_fonts.push_back(font);
+}
 

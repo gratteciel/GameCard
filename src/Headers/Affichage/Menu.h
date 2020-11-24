@@ -5,17 +5,20 @@
 #ifndef CARDGAME_MENU_H
 #define CARDGAME_MENU_H
 #include "Affichage.h"
+#include "../Game.h"
 
 class Menu : public Affichage {
 private:
     int m_menuActuel;
     std::string m_boutonActuel;
+    Game m_jeu;
 public:
     //Constructeur et destructeur
     Menu();
     ~Menu();
 
     //Methodes
+    void gestionChangementMenu();
 
     void sfmlMenuBase();
 
@@ -35,12 +38,15 @@ public:
     void menu3Interaction();
     void menu3Init();
 
+    void menu4Affichage(const std::string& pseudoCouleur);
+    void menu4Interaction(std::string& pseudoCouleur);
+    void menu4Init();
+
     void sfmlLeave();
 
     void creerUneCarte();
 
-    void sfmlInscription();
-    void sfmlConnection();
+
 
 
 

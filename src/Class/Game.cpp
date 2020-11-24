@@ -72,6 +72,7 @@ bool Game::connectionUser(const std::string& _pseudo){
 
         //On ajoute l'utilisateur au vecteur d'users connectés
         m_usersConnectes.insert(std::pair<std::string,Utilisateur>(_pseudo,_temp));
+
         return true; //l'utilisateur est connecté
 
     }
