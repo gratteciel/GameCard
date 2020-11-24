@@ -19,7 +19,7 @@ class Pioche {
         //Une unique clé
         //       immatricuation   id
         std::deque<t_carte> m_cartesId;
-        Collection m_cartes;
+
 
     public:
         //Constructeur et destructeur
@@ -27,9 +27,11 @@ class Pioche {
         ~Pioche();
 
         //Méthodes
-        void chargerPioche(std::vector<int> _cartes, const Collection& _cartesBase);
-        void setCartes(const Collection& _cartesBase);
-
+        void chargerPioche(std::vector<int> _cartes);
+        std::deque<t_carte> getCartesId() const;
+        t_carte piocher();
+        t_carte melanger();
+        void swap(t_carte& a, t_carte& b);
         //Accesseurs et mutateurs
 
 };

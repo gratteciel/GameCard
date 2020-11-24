@@ -29,8 +29,10 @@ class Game {
         void chargerUsersPseudos();
         bool connectionUser(const std::string& _pseudo);
         void lancerMatch(std::string user1, std::string user2);
-
+        void lancement();
         //Accesseurs et mutateurs
+        std::map<std::string, Utilisateur> getUsersConnectes() const;
+        std::set<std::string> getUsersPseudo() const;
 };
 
 

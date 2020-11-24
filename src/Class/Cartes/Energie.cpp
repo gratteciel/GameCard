@@ -9,7 +9,7 @@
  */
 
 //Constructeur pour le chargement des cartes au début du jeu
-Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _description, char _domaine)
+Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _description, int _domaine)
         : Carte(_immatriculation,_id,_nom,_description),  m_domaine(_domaine)
 
 {
@@ -32,7 +32,7 @@ Energie::~Energie() {
  * Accesseurs et mutateurs
  */
 
-char Energie::getDomaine() const{
+int Energie::getDomaine() const{
     return m_domaine;
 }
 

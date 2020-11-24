@@ -1,11 +1,19 @@
 #include "main.h"
+#include "Headers/Affichage/Menu.h"
 
 int main() {
-    Game jeu;
-    jeu.connectionUser("Dimitri");
-    jeu.connectionUser("Michel");
 
-    jeu.lancerMatch("Dimitri","Michel");
+    srand(time(NULL));
+
+    Menu menu;
+
+    menu.sfmlMenuBase();
+
+    //jeu.connectionUser("Dimitri");
+    //jeu.connectionUser("Michel");
+
+    //jeu.lancerMatch("Dimitri","Michel");
+
 
     return 0;
 }

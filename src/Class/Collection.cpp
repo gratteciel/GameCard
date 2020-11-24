@@ -133,7 +133,7 @@ void Collection::chargerEnergie(int _imm, std::string _nom, std::string _descrip
     char _domaine=sDomaine[0];//conversion du string en char
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte energie du jeu
-    m_energies.push_back(Energie(_imm,0,_nom,_description,_domaine));
+    m_energies.push_back(Energie(_imm,0,_nom,_description,_domaine-48));
 }
 
 void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
@@ -157,7 +157,7 @@ void Collection::chargerAttaque(int _imm, std::string _nom, std::string _descrip
 
     for(int i=0; i<4; i++){
         t_nbPoints x;
-        x.domaine = i+48; //domaine : char donc on traduit i (int) en char
+        x.domaine = i;
         x.nbPoints = sDomaines[i]-48; //code ascii
         _nbPoints.push_back(x);
     }

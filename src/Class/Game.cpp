@@ -17,9 +17,17 @@ Game::Game(){
 Game::~Game() {
 
 }
+
 /*
  * Accesseurs et mutateurs
  */
+
+std::map<std::string, Utilisateur> Game::getUsersConnectes() const{
+    return m_usersConnectes;
+}
+std::set<std::string> Game::getUsersPseudo() const{
+    return m_usersPseudo;
+}
 
 /*
  * Méthodes
@@ -44,6 +52,10 @@ void Game::chargerUsersPseudos(){
 }
 
 bool Game::connectionUser(const std::string& _pseudo){
+    if(m_usersConnectes.size()>=2){
+        std::cout << "Game::connectionUser : deja 2 joueurs connectes! " << std::endl;
+        return false;
+    }
 
     //Vérifie si le user est deja connecté
     if(m_usersConnectes.find(_pseudo)!=m_usersConnectes.end()){
@@ -68,14 +80,15 @@ bool Game::connectionUser(const std::string& _pseudo){
     return false;
 
 }
- 
+
 void Game::lancerMatch(std::string user1, std::string user2){
     auto it1=m_usersConnectes.find(user1);
-    auto it2=m_usersConnectes.find(user1);
+    auto it2=m_usersConnectes.find(user2);
 
     //Vérification si ils existent
     if(it1!= m_usersConnectes.end() &&  it2 != m_usersConnectes.end()){
         m_match.lancementMatch(&it1->second, &it2->second, m_cartesBases);
     }
-
 }
+
+

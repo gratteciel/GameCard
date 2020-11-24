@@ -17,42 +17,8 @@ Pioche::~Pioche() {
  * Accesseurs et mutateurs
  */
 
-void Pioche::setCartes(const Collection& _cartesBase){
-
-
-    for(const auto& elem : m_cartesId){
-        switch(elem.imm/100){
-            case 1: //Créature
-                for(auto& elem2 : _cartesBase.getCreatures()){
-                    if(elem2.getImmatriculation()==elem.imm){
-                        m_cartes.ajouterCreature(Creature(elem.imm, elem.id, elem2.getNom(), elem2.getDescription(), elem2.getPdvInitial(),elem2.getAttaques()));
-
-                        break;
-                    }
-                }
-                break;
-            case 2: //Speciale
-                for(const auto& elem2 : _cartesBase.getSpeciales()){
-                    if(elem2.getImmatriculation()==elem.imm){
-                        m_cartes.ajouterSpeciale(Speciale(elem.imm, elem.id, elem2.getNom(), elem2.getDescription()));
-                        break;
-                    }
-                }
-                break;
-            case 3: //Energie
-                for(const auto& elem2 : _cartesBase.getEnergies()){
-                    if(elem2.getImmatriculation()==elem.imm){
-                        m_cartes.ajouterEnergie(Energie(elem.imm, elem.id, elem2.getNom(), elem2.getDescription(),elem2.getDomaine()));
-                        break;
-                    }
-                }
-                break;
-            default:
-                std::cout << "Erreur : Pioche::setCartes" << std::endl;
-        }
-    }
-
-
+std::deque<t_carte> Pioche::getCartesId() const{
+    return m_cartesId;
 }
 
 /*
@@ -65,7 +31,7 @@ void Pioche::setCartes(const Collection& _cartesBase){
  * Parametre 1 : carte du deck 'numDeck' du user
  * Parametre 2 : Collection de cartes du deck 'numDeck' de user
  */
-void Pioche::chargerPioche(std::vector<int> _cartes, const Collection& _cartesBase){
+void Pioche::chargerPioche(std::vector<int> _cartes){
 
     for(unsigned int i=0; i<_cartes.size(); i++) {
         t_carte temp;
@@ -76,13 +42,38 @@ void Pioche::chargerPioche(std::vector<int> _cartes, const Collection& _cartesBa
         //On remplit le tableau d'entiers de cartes (immatriculation + id)
         m_cartesId.push_back(temp);
 
-
     }
-    setCartes(_cartesBase);
-
-
-
 }
 
+/*
+ * Permet de mélanger la pioche
+ * renvoie l'enjeu
+ */
+t_carte Pioche::melanger(){
+    int taille=m_cartesId.size();
+
+    for(const auto& elem: m_cartesId){
+        int a=rand()%(taille);
+        int b=rand()%(taille);
+        swap(m_cartesId[a], m_cartesId[b]);
+    }
+   t_carte enjeu=m_cartesId.front();
+
+   m_cartesId.pop_front();
+
+   return enjeu;
+}
+
+t_carte Pioche::piocher(){
+    t_carte temp=m_cartesId.front();
+    m_cartesId.pop_front();
+    return temp;
+}
+
+void Pioche::swap(t_carte& a, t_carte& b){
+    t_carte temp=a;
+    a=b;
+    b=temp;
+}
  
  

@@ -142,32 +142,86 @@ cardGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/build
 .PHONY : cardGame/fast
 
-src/Class/Affichage.obj: src/Class/Affichage.cpp.obj
+src/Class/Affichage/Affichage.obj: src/Class/Affichage/Affichage.cpp.obj
 
-.PHONY : src/Class/Affichage.obj
+.PHONY : src/Class/Affichage/Affichage.obj
 
 # target to build an object file
-src/Class/Affichage.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.obj
-.PHONY : src/Class/Affichage.cpp.obj
+src/Class/Affichage/Affichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Affichage.cpp.obj
+.PHONY : src/Class/Affichage/Affichage.cpp.obj
 
-src/Class/Affichage.i: src/Class/Affichage.cpp.i
+src/Class/Affichage/Affichage.i: src/Class/Affichage/Affichage.cpp.i
 
-.PHONY : src/Class/Affichage.i
+.PHONY : src/Class/Affichage/Affichage.i
 
 # target to preprocess a source file
-src/Class/Affichage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.i
-.PHONY : src/Class/Affichage.cpp.i
+src/Class/Affichage/Affichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Affichage.cpp.i
+.PHONY : src/Class/Affichage/Affichage.cpp.i
 
-src/Class/Affichage.s: src/Class/Affichage.cpp.s
+src/Class/Affichage/Affichage.s: src/Class/Affichage/Affichage.cpp.s
 
-.PHONY : src/Class/Affichage.s
+.PHONY : src/Class/Affichage/Affichage.s
 
 # target to generate assembly for a file
-src/Class/Affichage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage.cpp.s
-.PHONY : src/Class/Affichage.cpp.s
+src/Class/Affichage/Affichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Affichage.cpp.s
+.PHONY : src/Class/Affichage/Affichage.cpp.s
+
+src/Class/Affichage/AfficheMatch.obj: src/Class/Affichage/AfficheMatch.cpp.obj
+
+.PHONY : src/Class/Affichage/AfficheMatch.obj
+
+# target to build an object file
+src/Class/Affichage/AfficheMatch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.obj
+.PHONY : src/Class/Affichage/AfficheMatch.cpp.obj
+
+src/Class/Affichage/AfficheMatch.i: src/Class/Affichage/AfficheMatch.cpp.i
+
+.PHONY : src/Class/Affichage/AfficheMatch.i
+
+# target to preprocess a source file
+src/Class/Affichage/AfficheMatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.i
+.PHONY : src/Class/Affichage/AfficheMatch.cpp.i
+
+src/Class/Affichage/AfficheMatch.s: src/Class/Affichage/AfficheMatch.cpp.s
+
+.PHONY : src/Class/Affichage/AfficheMatch.s
+
+# target to generate assembly for a file
+src/Class/Affichage/AfficheMatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.s
+.PHONY : src/Class/Affichage/AfficheMatch.cpp.s
+
+src/Class/Affichage/Menu.obj: src/Class/Affichage/Menu.cpp.obj
+
+.PHONY : src/Class/Affichage/Menu.obj
+
+# target to build an object file
+src/Class/Affichage/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj
+.PHONY : src/Class/Affichage/Menu.cpp.obj
+
+src/Class/Affichage/Menu.i: src/Class/Affichage/Menu.cpp.i
+
+.PHONY : src/Class/Affichage/Menu.i
+
+# target to preprocess a source file
+src/Class/Affichage/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.i
+.PHONY : src/Class/Affichage/Menu.cpp.i
+
+src/Class/Affichage/Menu.s: src/Class/Affichage/Menu.cpp.s
+
+.PHONY : src/Class/Affichage/Menu.s
+
+# target to generate assembly for a file
+src/Class/Affichage/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.s
+.PHONY : src/Class/Affichage/Menu.cpp.s
 
 src/Class/Cartes/Attaque.obj: src/Class/Cartes/Attaque.cpp.obj
 
@@ -556,9 +610,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cardGame
-	@echo ... src/Class/Affichage.obj
-	@echo ... src/Class/Affichage.i
-	@echo ... src/Class/Affichage.s
+	@echo ... src/Class/Affichage/Affichage.obj
+	@echo ... src/Class/Affichage/Affichage.i
+	@echo ... src/Class/Affichage/Affichage.s
+	@echo ... src/Class/Affichage/AfficheMatch.obj
+	@echo ... src/Class/Affichage/AfficheMatch.i
+	@echo ... src/Class/Affichage/AfficheMatch.s
+	@echo ... src/Class/Affichage/Menu.obj
+	@echo ... src/Class/Affichage/Menu.i
+	@echo ... src/Class/Affichage/Menu.s
 	@echo ... src/Class/Cartes/Attaque.obj
 	@echo ... src/Class/Cartes/Attaque.i
 	@echo ... src/Class/Cartes/Attaque.s

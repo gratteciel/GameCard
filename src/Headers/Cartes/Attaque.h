@@ -9,7 +9,7 @@
 #include "Carte.h"
 
 typedef struct t_nbPoints{
-    char domaine;
+    int domaine;
     int nbPoints;
 }t_nbPoints;
 

@@ -22,7 +22,7 @@ class Creature : public Carte{
     public:
 
         //Constructeur et destructeur
-        Creature(int _immatriculation, int _id, std::vector<int> _cartesBase);
+        Creature();
         Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial, std::vector<Attaque*> _attaques);
 
         ~Creature();

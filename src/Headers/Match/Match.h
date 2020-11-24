@@ -15,7 +15,7 @@
 
 class Match {
 private:
-    Plateau m_plateau;
+    //Plateau m_plateau;
     std::vector<Joueur> m_joueur;//set de joueur  car pas le meme nom
 public:
     //Constructeurs et Destructeurs
@@ -28,6 +28,7 @@ public:
     //Getter et Setter
     Plateau getPlateau() const;
     void setJoueur(Utilisateur *_user);
+    void jeu();
 };
 
 

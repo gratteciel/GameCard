@@ -14,4 +14,8 @@
 #include <sstream>
 #include <typeinfo>
 #include <map>
+#include <time.h>
+#include <cstdlib>
+#include <SFML/Graphics.hpp>
+
 #endif //CARDGAME_BIBLIO_H

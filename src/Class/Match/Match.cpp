@@ -26,9 +26,6 @@ void Match::setJoueur(Utilisateur *_user) {
     m_joueur.push_back(Joueur(_user));
 }
 
-Plateau Match::getPlateau() const {
-    return m_plateau;
-}
 
 /*
  * Méthodes
@@ -36,12 +33,17 @@ Plateau Match::getPlateau() const {
 
 
 void Match::lancementMatch(Utilisateur *_user1, Utilisateur *_user2, const Collection& _cartesBase) {
-
     setJoueur(_user1);
     setJoueur(_user2);
-
     m_joueur[0].setPioche(_cartesBase);
     m_joueur[1].setPioche(_cartesBase);
-
+    jeu();
 }
 
+void Match::jeu(){
+    bool fin=false;
+
+    m_joueur[0].tour();
+    m_joueur[1].tour();
+
+}
