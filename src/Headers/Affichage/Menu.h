@@ -6,12 +6,14 @@
 #define CARDGAME_MENU_H
 #include "Affichage.h"
 #include "../Game.h"
+#include "AfficheMatch.h"
 
 class Menu : public Affichage {
 private:
     int m_menuActuel;
     std::string m_boutonActuel;
     Game m_jeu;
+    AfficheMatch m_affichageMatch;
 public:
     //Constructeur et destructeur
     Menu();
@@ -19,8 +21,13 @@ public:
 
     //Methodes
     void gestionChangementMenu();
+    void gestionInputCarac(sf::Event& event, std::string& pseudoInscription);
+    void affichePseudoUtilisateurs();
+    void interactionPseudoUtilisateurs();
+    void contrerResterAppuye(bool& ancienClick, bool& ancienEchap);
 
     void sfmlMenuBase();
+    void menuBaseAffichage(bool& fin, bool& leave, const std::string& pseudoCouleur,const std::string& pseudoInscription);
 
     void menu0Init();
     void menu0Interaction();
@@ -39,16 +46,17 @@ public:
     void menu3Init();
 
     void menu4Affichage(const std::string& pseudoCouleur);
-    void menu4Interaction(std::string& pseudoCouleur);
+    void menu4Interaction(std::string& pseudoCouleur, int& erreur);
     void menu4Init();
 
+    void menu5Affichage(const std::string& pseudoInscription);
+    void menu5Interaction();
+
+    void btnRetourAffichage();
+    bool btnRetourInteraction();
+
     void sfmlLeave();
-
-    void creerUneCarte();
-
-
-
-
+    void Erreur(int& erreur);
 
 
     //Getter et Setter

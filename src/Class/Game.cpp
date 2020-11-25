@@ -51,15 +51,15 @@ void Game::chargerUsersPseudos(){
     }
 }
 
-bool Game::connectionUser(const std::string& _pseudo){
+unsigned short Game::connectionUser(const std::string& _pseudo){
     if(m_usersConnectes.size()>=2){
         std::cout << "Game::connectionUser : deja 2 joueurs connectes! " << std::endl;
-        return false;
+        return 0;
     }
 
     //Vérifie si le user est deja connecté
     if(m_usersConnectes.find(_pseudo)!=m_usersConnectes.end()){
-        return false;
+        return 2;
     }
 
 
@@ -73,12 +73,12 @@ bool Game::connectionUser(const std::string& _pseudo){
         //On ajoute l'utilisateur au vecteur d'users connectés
         m_usersConnectes.insert(std::pair<std::string,Utilisateur>(_pseudo,_temp));
 
-        return true; //l'utilisateur est connecté
+        return 1; //l'utilisateur est connecté
 
     }
 
     std::cout << "Game::connectionUser : le pseudo n'existe pas " << std::endl;
-    return false;
+    return 3;
 
 }
 

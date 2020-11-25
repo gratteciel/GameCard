@@ -38,6 +38,12 @@ std::vector<int> Deck::getCartes() const{
  * Méthodes
  */
 
+bool Deck::getDeckActuValide(){
+    if(getCartes().size()==Deck::getNumCartes())
+        return true;
+    else
+        return false;
+}
 
 
  

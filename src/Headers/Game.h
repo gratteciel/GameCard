@@ -25,7 +25,7 @@ class Game {
         ~Game();
         //Méthodes
         void chargerUsersPseudos();
-        bool connectionUser(const std::string& _pseudo);
+        unsigned short connectionUser(const std::string& _pseudo);
         void lancerMatch(std::string user1, std::string user2);
 
         //Accesseurs et mutateurs
