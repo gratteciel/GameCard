@@ -84,6 +84,7 @@ void Affichage::sfmlLoadImages() {
     chargerImage("Parametres_yes","Bouton","png");
     chargerImage("Regles_yes", "Bouton", "png");
 
+
     chargerImage("connecter_yes", "Bouton", "png");
     chargerImage("Inscription_yes", "Bouton", "png");
     chargerImage("LancerPartie_yes","Bouton","png");
@@ -99,6 +100,12 @@ void Affichage::sfmlLoadImages() {
     chargerImage("Nature","Play/Terrain","jpg");
     chargerImage("Regles", "Regles","jpg");
     chargerImage("Leave", "Quitter","jpg");
+    chargerImage("Rectangle_bois", "Play/login", "png");
+    chargerImage("Erreur", "Play/login", "png");
+    chargerImage("rectInscription", "Intro", "png");
+    chargerImage("AreneDeBase", "Play/Terrain", "jpg");
+
+    chargerImage("Creature", "Cartes", "jpg");
 
 }
 

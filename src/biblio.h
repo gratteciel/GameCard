@@ -17,5 +17,6 @@
 #include <time.h>
 #include <cstdlib>
 #include <SFML/Graphics.hpp>
+#include <conio.h>
 
 #endif //CARDGAME_BIBLIO_H

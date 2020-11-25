@@ -9,7 +9,7 @@
  */
 
 Utilisateur::Utilisateur(std::string _pseudo)
-           :m_pseudo(_pseudo),m_deckActif(0)
+           :m_pseudo(_pseudo)
 {
 
 }
@@ -48,7 +48,7 @@ void Utilisateur::affichageUtilisateur() {
     std::cout << getPseudo();
 }
 
-void Utilisateur::creerDatabase(const std::vector<int> _cartesSeuls){
+void Utilisateur::creerDatabase(const std::vector<int>& _deck0){
     //1: Ajout dans l'utilisateur dans utilisateurs.txt
     std::ifstream fileUtilisateursInput("../database/utilisateurs/utilisateurs.txt");//permet juste de savoir si le fichier existe pour pas en créer un deuxième
     std::ofstream fileUtilisateursOutput("../database/utilisateurs/utilisateurs.txt",std::ios::app);
@@ -59,7 +59,7 @@ void Utilisateur::creerDatabase(const std::vector<int> _cartesSeuls){
         fileUtilisateursInput.close();//Fermeture du fichier utilisateurs.txt
 
         /* Fichier "pseudo.txt" */
-        creerFichierPseudo(_cartesSeuls);
+        creerFichierPseudo(_deck0);
 
     }
     else{
@@ -72,7 +72,7 @@ void Utilisateur::creerDatabase(const std::vector<int> _cartesSeuls){
  * Création du fichier 'pseudo'.txt
  * Ajout des cartes au fichier
  */
-void Utilisateur::creerFichierPseudo(const std::vector<int> _cartesSeuls){
+void Utilisateur::creerFichierPseudo(const std::vector<int>& _deck0){
     std::string nomFichierPseudo="../database/utilisateurs/cartes/";
     nomFichierPseudo+=getPseudo();
     nomFichierPseudo+=".txt";
@@ -81,7 +81,9 @@ void Utilisateur::creerFichierPseudo(const std::vector<int> _cartesSeuls){
 
     if (filePseudoOutput.is_open()) //Si fichier est bien créé
     {
-        for(const auto& elem : _cartesSeuls){
+        filePseudoOutput << "0" << std::endl << std::endl; //Aucune carte seules
+
+        for(const auto& elem : _deck0){
             filePseudoOutput << elem << " ";
         }
         filePseudoOutput.close();
@@ -96,11 +98,20 @@ void Utilisateur::chargerUtilisateur(){
     std::string nomFichier = "../database/utilisateurs/cartes/";
     nomFichier+=getPseudo();
     nomFichier+=".txt";
+
+
     std::ifstream filePseudo(nomFichier,std::ios::in);
+
     if(filePseudo.is_open()){//Si le fichier a réussit à s'ouvrir
         std::string line;
 
-        std::getline(filePseudo,line);//1ere ligne ->cartes seules
+
+        std::getline(filePseudo,line);//1ere ligne ->deck actif
+
+        m_deckActif=std::stoi(line); //set le deck actif de l'utilisateur
+                                     //Ici on n'appale pas setDeckActif() car le joueur ne possede pas encore de deck
+
+        std::getline(filePseudo,line);//2eme ligne ->cartes seules
         std::istringstream ss(line);
         int num;
         while(ss >> num)
@@ -148,4 +159,5 @@ void Utilisateur::chargerUtilisateur(){
     else{
         std::cout << "Impossible d'ouvrir le fichier : " << getPseudo() <<std::endl;
     }
+
 }

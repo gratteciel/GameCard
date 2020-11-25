@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cardGame.dir/src/Class/Affichage/Affichage.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj"
+  "CMakeFiles/cardGame.dir/src/Class/Affichage/MenuAffichage.cpp.obj"
+  "CMakeFiles/cardGame.dir/src/Class/Affichage/MenuInteraction.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj"

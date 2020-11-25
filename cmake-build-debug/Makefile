@@ -223,6 +223,60 @@ src/Class/Affichage/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.s
 .PHONY : src/Class/Affichage/Menu.cpp.s
 
+src/Class/Affichage/MenuAffichage.obj: src/Class/Affichage/MenuAffichage.cpp.obj
+
+.PHONY : src/Class/Affichage/MenuAffichage.obj
+
+# target to build an object file
+src/Class/Affichage/MenuAffichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/MenuAffichage.cpp.obj
+.PHONY : src/Class/Affichage/MenuAffichage.cpp.obj
+
+src/Class/Affichage/MenuAffichage.i: src/Class/Affichage/MenuAffichage.cpp.i
+
+.PHONY : src/Class/Affichage/MenuAffichage.i
+
+# target to preprocess a source file
+src/Class/Affichage/MenuAffichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/MenuAffichage.cpp.i
+.PHONY : src/Class/Affichage/MenuAffichage.cpp.i
+
+src/Class/Affichage/MenuAffichage.s: src/Class/Affichage/MenuAffichage.cpp.s
+
+.PHONY : src/Class/Affichage/MenuAffichage.s
+
+# target to generate assembly for a file
+src/Class/Affichage/MenuAffichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/MenuAffichage.cpp.s
+.PHONY : src/Class/Affichage/MenuAffichage.cpp.s
+
+src/Class/Affichage/MenuInteraction.obj: src/Class/Affichage/MenuInteraction.cpp.obj
+
+.PHONY : src/Class/Affichage/MenuInteraction.obj
+
+# target to build an object file
+src/Class/Affichage/MenuInteraction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/MenuInteraction.cpp.obj
+.PHONY : src/Class/Affichage/MenuInteraction.cpp.obj
+
+src/Class/Affichage/MenuInteraction.i: src/Class/Affichage/MenuInteraction.cpp.i
+
+.PHONY : src/Class/Affichage/MenuInteraction.i
+
+# target to preprocess a source file
+src/Class/Affichage/MenuInteraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/MenuInteraction.cpp.i
+.PHONY : src/Class/Affichage/MenuInteraction.cpp.i
+
+src/Class/Affichage/MenuInteraction.s: src/Class/Affichage/MenuInteraction.cpp.s
+
+.PHONY : src/Class/Affichage/MenuInteraction.s
+
+# target to generate assembly for a file
+src/Class/Affichage/MenuInteraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Affichage/MenuInteraction.cpp.s
+.PHONY : src/Class/Affichage/MenuInteraction.cpp.s
+
 src/Class/Cartes/Attaque.obj: src/Class/Cartes/Attaque.cpp.obj
 
 .PHONY : src/Class/Cartes/Attaque.obj
@@ -619,6 +673,12 @@ help:
 	@echo ... src/Class/Affichage/Menu.obj
 	@echo ... src/Class/Affichage/Menu.i
 	@echo ... src/Class/Affichage/Menu.s
+	@echo ... src/Class/Affichage/MenuAffichage.obj
+	@echo ... src/Class/Affichage/MenuAffichage.i
+	@echo ... src/Class/Affichage/MenuAffichage.s
+	@echo ... src/Class/Affichage/MenuInteraction.obj
+	@echo ... src/Class/Affichage/MenuInteraction.i
+	@echo ... src/Class/Affichage/MenuInteraction.s
 	@echo ... src/Class/Cartes/Attaque.obj
 	@echo ... src/Class/Cartes/Attaque.i
 	@echo ... src/Class/Cartes/Attaque.s

@@ -11,6 +11,7 @@ class Deck {
     private:
         //vecteur d'immatriculation
         std::vector<int> m_cartes;
+
         static const unsigned int m_numCartes; //Nombre de cartes par deck
     public:
         //Constructeur et destructeur
@@ -18,10 +19,12 @@ class Deck {
         ~Deck();
 
         //Méthodes
+        bool getDeckActuValide();
 
         //Accesseurs et mutateurs
         static const unsigned int getNumCartes();
         std::vector<int> getCartes() const;
+
 };
 
 
