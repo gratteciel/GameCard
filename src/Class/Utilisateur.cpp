@@ -81,10 +81,12 @@ void Utilisateur::creerFichierPseudo(const std::vector<int>& _deck0){
 
     if (filePseudoOutput.is_open()) //Si fichier est bien créé
     {
-        filePseudoOutput << "0" << std::endl << std::endl; //Aucune carte seules
+        filePseudoOutput << "0" << std::endl; //Aucune carte seules
 
-        for(const auto& elem : _deck0){
-            filePseudoOutput << elem << " ";
+        filePseudoOutput << _deck0[10] << std::endl;
+
+        for(unsigned int i=0; i<_deck0.size()-1;i++){
+            filePseudoOutput << _deck0[i] << " ";
         }
         filePseudoOutput.close();
     }

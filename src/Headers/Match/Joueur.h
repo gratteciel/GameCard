@@ -15,7 +15,6 @@ private:
     int m_pdv;
     Utilisateur *m_user;
 
-
     Collection m_cartes;
 
     t_carte m_enjeu;
@@ -23,6 +22,7 @@ private:
 
     Pioche m_pioche;
     t_carte m_active;
+
     std::vector<t_carte> m_main;
     std::vector<t_carte> m_cimetiere;
     std::vector<t_carte> m_cartesEnergie;
@@ -33,14 +33,16 @@ public:
     ~Joueur();
 
     //Méthodes
-    void tour();
-
+    void piocher();
     //Accesseurs et mutateurs
     int getPdv()const;
     Utilisateur* getUser()const;
     void setPioche(const Collection& _cartesBase);
+    Pioche& getPioche();
     void setCartes(const Collection& _cartesBase);
 
+    std::vector<t_carte>& getMain();
+    Collection& getCartes();
 
 
 };

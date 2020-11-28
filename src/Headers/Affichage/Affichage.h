@@ -5,8 +5,10 @@
 #ifndef CARDGAME_AFFICHAGE_H
 #define CARDGAME_AFFICHAGE_H
 #include "../../biblio.h"
+#include "../../Headers/Cartes/Creature.h"
+#include "../../Headers/Collection.h"
 
-
+class Collection;
 class Affichage {//permet l'affichage sfml
 protected:
     static sf::RenderWindow m_window;
@@ -19,18 +21,22 @@ public:
     ~Affichage();
 
     //Méthodes
-    static void sfmlLoadImages();
-    sf::Sprite recupSprite(const std::string& _nom);
-    static void chargerImage(const std::string& _nomFichier, const std::string& _posFichier,const std::string& _type);
-    static sf::Texture* chargerTexture(const std::string& _nomFichier);
+    void sfmlLoadImages();
+    static sf::Sprite recupSprite(const std::string& _nom);
+    void chargerImage(const std::string& _nomFichier, const std::string& _posFichier,const std::string& _type);
+    sf::Texture* chargerTexture(const std::string& _nomFichier);
     static void setPos(float x, float y, const std::string& _nomFichier);
-    void afficheImage(const std::string& _nom);
+    static void afficheImage(const std::string& _nom);
     void chargementFonts();
+    void chargerFont(const std::string& _nom);
+    static sf::Text chargerTexte(const std::string& _textEcrit,int _choixDePolice, sf::Color _couleurTexte,int _tailleCarac, int _x, int _y, sf::Color _couleurContourTexte = sf::Color::White, double _tailleContourTexte=0);
+    void afficheCarte(const Collection& _carteBase, int imm, int x, int y);
+
     //Getter et Setter
-    sf::Vector2i getMousePosition() const;
-    std::vector<sf::Font>& getFonts();
-
-
+    static sf::Vector2i getMousePosition();
+    static std::vector<sf::Font>& getFonts();
+    static sf::RenderWindow& getWindow();
+    static std::map<std::string, sf::Sprite>& getImageMap();
 };
 
 

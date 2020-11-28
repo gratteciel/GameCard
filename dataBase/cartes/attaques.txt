@@ -1,2 +1,13 @@
-400*Flamme*Lance du feu*200*2001*
-401*TurboWater*c'est de l'eau lol*300*0201*
+400*Coup de poing*description*70*1111*
+401*Déchainement Aquatique*description*50*0400*
+402*Coup Aquatique*description*25*0200*
+403*Typhon Cosmique*description*35*0210*
+404*Tir embrasé*description*25*1001*
+405*Colonne Pyrotechnique*description*35*3000*
+406*Allumette Eclatante*description*50*2010*
+407*Silicate Froudroyant*description*45*0111*
+408*Lanterne Charge*description*35*1020*
+409*Condensation Voltaïque*description*40*0030*
+410*Deferlement de Feuille*description*25*0001*
+411*Graine Empoisonnée*description*45*0012*
+412*Lianes Surgissantes*description*75*0004*

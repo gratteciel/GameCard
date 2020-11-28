@@ -1,4 +1,3 @@
-#include "main.h"
 #include "Headers/Affichage/Menu.h"
 
 int main() {
@@ -7,7 +6,7 @@ int main() {
 
     Menu menu;
 
-    menu.sfmlMenuBase();
+    menu.boucleBase();
 
     //jeu.connectionUser("Dimitri");
     //jeu.connectionUser("Michel");

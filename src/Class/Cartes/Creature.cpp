@@ -4,6 +4,7 @@
 
 #include "../../Headers/Cartes/Creature.h"
 
+
 /*
  * Constructeur et destructeur
  */
@@ -75,5 +76,20 @@ void Creature::creer(std::ofstream& fileOutput){
     // Ajout dans le fichier creature
     fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*" << std::to_string(getPdvInitial()) << "*";
 
+}
+
+void Creature::affiche(float x, float y)
+{
+    sf::Text texte;
+    Affichage::setPos(x,y, "Creature");
+    Affichage::afficheImage("Creature");
+
+    //Afiche le nom
+    texte=Affichage::chargerTexte(getNom(),1,sf::Color::White,19,x+30,y+43);
+    Affichage::getWindow().draw(texte);
+
+    //Affiche les pdv
+    texte=Affichage::chargerTexte(std::to_string(getPdv()),1,sf::Color::White,20,x+50,y+165);
+    Affichage::getWindow().draw(texte);
 }
 

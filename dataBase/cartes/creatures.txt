@@ -1,8 +1,16 @@
-101*Jimmy*vive la vie*100*400 401*
-102*Poutre*Aime les autres*300*400 401*
-105*Bob*oui.*300*400 401*
-105*FUN*ptdr t ki*80*400 401*
-109*boubezoul*ptdr t ki*80*400 401*
-130*Michel*vive la vie*100*400 401*
-131*Dimitrov*prout prout*100*400 401*
-132*Pierre*prout prout*100*400 401*
+100*Optio*destription*100*404 405*
+101*Pullo*destription*100*400 406*
+102*Gould*destription*100*405 400*
+103*Iona*destription*100*404 406*
+104*Graz*destription*100*401 400*
+105*Benatek*destription*100*402 403*
+106*Songe*destription*100*401 403*
+107*Hales*destription*100*400 402*
+108*Voltabla*destription*100*407 408*
+109*Honolulu*destription*100*400 409*
+110*Silla*destription*100*407 400*
+111*Pegasi*destription*100*408 409*
+112*Sonar*destription*100*410 411*
+113*Ross*destription*100*400 412*
+114*Trappi*destription*100*411 400*
+115*Procyon*destription*100*410 412*

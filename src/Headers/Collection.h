@@ -11,9 +11,7 @@
 #include "Cartes/Speciale.h"
 
 
-
-
-
+class Creature;
 class Collection {
     private:
         std::vector<Creature> m_creatures;
@@ -42,7 +40,7 @@ class Collection {
         std::vector<Creature> getCreatures() const;
         std::vector<Energie> getEnergies() const;
         std::vector<Speciale> getSpeciales() const;
-
+        std::vector<Attaque> getAttaques() const;
         void userCreerCarte();
 
         template <typename T>
