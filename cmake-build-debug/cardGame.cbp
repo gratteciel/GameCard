@@ -111,6 +111,9 @@
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Deck.cpp">
 			<Option target="cardGame"/>
 		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/DragCarte.cpp">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Energie.cpp">
 			<Option target="cardGame"/>
 		</Unit>
@@ -157,6 +160,9 @@
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h">

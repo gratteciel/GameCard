@@ -47,6 +47,16 @@ void Joueur::setPioche(const Collection& _cartesBase){
 
 }
 
+Pioche& Joueur::getPioche(){
+    return m_pioche;
+}
+
+std::vector<t_carte>& Joueur::getMain(){
+    return m_main;
+}
+Collection& Joueur::getCartes(){
+    return m_cartes;
+}
 
 /*
  * Méthodes
@@ -88,28 +98,7 @@ void Joueur::setCartes(const Collection& _cartesBase){
     }
 }
 
-void Joueur::tour(){
-    bool choix=true;//a changer
-    bool aPioche=false;
-    char a;
-    while(!choix){
-        std::cin >> a;
-
-        switch(a){
-            case 'P':
-                if(!aPioche){
-                    m_main.push_back(m_pioche.piocher());
-                    aPioche=true;
-                }
-                break;
-
-        }
-
-
-
-    }
-
-
-
-
+void Joueur::piocher(){
+    //On ajoute la carte à la pioche
+    getMain().push_back(getPioche().piocher());
 }

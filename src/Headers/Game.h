@@ -10,6 +10,7 @@
 #include "Utilisateur.h"
 #include "Collection.h"
 #include "Match/Match.h"
+#include "Affichage/AfficheMatch.h"
 
 class Game {
 
@@ -17,7 +18,7 @@ class Game {
         Collection m_cartesBases;
         std::map<std::string, Utilisateur> m_usersConnectes;
         std::set<std::string> m_usersPseudo;
-        Match m_match;
+        AfficheMatch m_affichageMatch;
 
     public:
         //Constructeur et destructeur
@@ -26,11 +27,14 @@ class Game {
         //Méthodes
         void chargerUsersPseudos();
         unsigned short connectionUser(const std::string& _pseudo);
-        void lancerMatch(std::string user1, std::string user2);
+        void deconnexionUser(const std::string& _pseudo);
+        void lancerMatch();
 
         //Accesseurs et mutateurs
         std::map<std::string, Utilisateur> getUsersConnectes() const;
-        std::set<std::string> getUsersPseudo() const;
+        std::set<std::string>& getUsersPseudo();
+        Collection getCartesBases() const;
+        AfficheMatch& getAffichageMatch();
 };
 
 

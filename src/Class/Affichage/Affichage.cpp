@@ -4,6 +4,8 @@
 
 #include "../../Headers/Affichage/Affichage.h"
 
+
+
 /*
  * Initialisation des attributs statique
  */
@@ -25,10 +27,12 @@ Affichage::Affichage()
 }
 
 Affichage::~Affichage() {
-
+    for(const auto& elem: m_imageMap){
+        delete elem.second.getTexture();
+    }
 }
 
-sf::Vector2i Affichage::getMousePosition() const {
+sf::Vector2i Affichage::getMousePosition(){
     return sf::Mouse::getPosition();
 }
 
@@ -44,6 +48,7 @@ void Affichage::chargerImage(const std::string& _nomFichier, const std::string& 
     sf::Texture* img= chargerTexture("../Images/"+_posFichier+"/"+_nomFichier+"."+_type);
 
     sf::Sprite sprite;
+
     sprite.setTexture(*img);
     m_imageMap[_nomFichier] = sprite;
 }
@@ -101,11 +106,15 @@ void Affichage::sfmlLoadImages() {
     chargerImage("Regles", "Regles","jpg");
     chargerImage("Leave", "Quitter","jpg");
     chargerImage("Rectangle_bois", "Play/login", "png");
+    chargerImage("Rectangle_deck", "Play/login", "png");
     chargerImage("Erreur", "Play/login", "png");
     chargerImage("rectInscription", "Intro", "png");
+    chargerImage("Background_utilisateur", "Intro", "png");
     chargerImage("AreneDeBase", "Play/Terrain", "jpg");
 
     chargerImage("Creature", "Cartes", "jpg");
+    chargerImage("Face_cache", "Cartes", "jpg");
+    chargerImage("IntroJeu", "Intro", "jpg");
 
 }
 
@@ -119,21 +128,59 @@ sf::Sprite Affichage::recupSprite(const std::string& _nom){
         return it->second;
 }
 
-
-void Affichage::chargementFonts(){
+void Affichage::chargerFont(const std::string& _nom){
     sf::Font font;
-    if (!font.loadFromFile("../Font/americanCaptain.ttf"))
+    if (!font.loadFromFile("../Font/"+_nom+".ttf"))
     {
         std::cout << "Erreur : n'arrive pas à charger le font !" << std::endl;
     }
     else
         m_fonts.push_back(font);
 
-    if (!font.loadFromFile("../Font/distantGalaxy.ttf"))
-    {
-        std::cout << "Erreur : n'arrive pas à charger le font !" << std::endl;
-    }
-    else
-        m_fonts.push_back(font);
 }
 
+void Affichage::chargementFonts(){
+    chargerFont("americanCaptain");
+    chargerFont("distantGalaxy");
+    chargerFont("scribish");
+}
+
+sf::Text Affichage::chargerTexte(const std::string& _textEcrit, int _choixDePolice, sf::Color _couleurTexte,
+                                 int _tailleCarac, int _x, int _y, sf::Color _couleurContourTexte,
+                                 double _tailleContourTexte) {
+    sf::Text _temp;
+    _temp.setPosition(_x,_y);
+    _temp.setFont(getFonts()[_choixDePolice]);
+    _temp.setCharacterSize(_tailleCarac);
+    _temp.setOutlineColor(_couleurContourTexte);
+    _temp.setOutlineThickness(_tailleContourTexte);
+    _temp.setFillColor(_couleurTexte);
+    _temp.setString(_textEcrit);
+
+    return _temp;
+}
+
+
+
+void Affichage::afficheCarte(const Collection& _carteBase, int imm, int x, int y) {
+    switch(imm/100){ //type
+        case 1://Créature
+            //Si Créature
+            for (auto &elem : _carteBase.getCreatures()) {
+                if (elem.getImmatriculation() == imm) {//Si meme immatriculation
+                    elem.affiche(x,y);
+
+                    break;
+                }
+
+            }
+            break;
+    }
+}
+
+sf::RenderWindow& Affichage::getWindow(){
+    return m_window;
+}
+std::map<std::string, sf::Sprite>& Affichage::getImageMap(){
+    return m_imageMap;
+}

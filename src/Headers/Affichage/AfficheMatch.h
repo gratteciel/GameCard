@@ -6,23 +6,26 @@
 #define CARDGAME_AFFICHEMATCH_H
 
 #include "Affichage.h"
+#include "../Match/Match.h"
 
 class AfficheMatch : public Affichage{
 private:
-    int m_typeTerrain;
 
+    Match m_match;
 public:
     //Constructeur et Destructeurs
     AfficheMatch();
     ~AfficheMatch();
     //Methodes
-    void LancementPartieAffichage();
-    void AnimationDebutDeCombat();
-    void AffichageTerrain();
+    void lancement(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase);
+    void boucleMatch();
+    void animationDebutDeCombat();
+    void affichageTerrain();
 
-    //Getter et Setter
-    int getTypeTerrain() const;
-    void setTypeTerrain(int _typeTerrain);
+    void affichePioche();
+    void afficheMain();
+    void afficheCaracJoueur();
+    //Getters et Setters
 
 
 

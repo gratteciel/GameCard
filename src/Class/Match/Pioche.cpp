@@ -21,6 +21,11 @@ std::deque<t_carte> Pioche::getCartesId() const{
     return m_cartesId;
 }
 
+std::deque<t_carte>& Pioche::getCartes(){
+    return m_cartesId;
+}
+
+
 /*
  * Méthodes
  */

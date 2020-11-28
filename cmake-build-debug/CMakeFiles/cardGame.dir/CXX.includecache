@@ -6,6 +6,180 @@
 
 #IncludeRegexTransform: 
 
+../lib/SFML-2.5.1/include/SFML/Audio.hpp
+SFML/System.hpp
+-
+SFML/Audio/InputSoundFile.hpp
+-
+SFML/Audio/Listener.hpp
+-
+SFML/Audio/Music.hpp
+-
+SFML/Audio/OutputSoundFile.hpp
+-
+SFML/Audio/Sound.hpp
+-
+SFML/Audio/SoundBuffer.hpp
+-
+SFML/Audio/SoundBufferRecorder.hpp
+-
+SFML/Audio/SoundFileFactory.hpp
+-
+SFML/Audio/SoundFileReader.hpp
+-
+SFML/Audio/SoundFileWriter.hpp
+-
+SFML/Audio/SoundRecorder.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/Audio/SoundStream.hpp
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+SFML/Audio/Export.hpp
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/Export.hpp
+SFML/Config.hpp
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/InputSoundFile.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+algorithm
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/Listener.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/Vector3.hpp
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/Music.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundStream.hpp
+-
+SFML/Audio/InputSoundFile.hpp
+-
+SFML/System/Mutex.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/OutputSoundFile.hpp
+SFML/Audio/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+string
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Time.hpp
+-
+cstdlib
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+set
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundBufferRecorder.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundBuffer.hpp
+-
+SFML/Audio/SoundRecorder.hpp
+-
+vector
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+vector
+-
+SFML/Audio/SoundFileFactory.inl
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.inl
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundFileReader.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundFileWriter.hpp
+SFML/Audio/Export.hpp
+-
+string
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundRecorder.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Thread.hpp
+-
+SFML/System/Time.hpp
+-
+vector
+-
+string
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Vector3.hpp
+-
+
+../lib/SFML-2.5.1/include/SFML/Audio/SoundStream.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Thread.hpp
+-
+SFML/System/Time.hpp
+-
+SFML/System/Mutex.hpp
+-
+cstdlib
+-
+
 ../lib/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h
 ../lib/SFML-2.5.1/include/SFML/TargetConditionals.h
@@ -676,85 +850,23 @@ SFML/Config.hpp
 
 ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/Affichage.cpp
-../../Headers/Affichage/Affichage.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/AfficheMatch.cpp
-../../Headers/Affichage/AfficheMatch.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/Menu.cpp
-../../Headers/Affichage/Menu.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
-
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/MenuAffichage.cpp
 ../../Headers/Affichage/Menu.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
 
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/MenuInteraction.cpp
-../../Headers/Affichage/Menu.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Attaque.cpp
-../../Headers/Cartes/Attaque.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Carte.cpp
-../../Headers/Cartes/Carte.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Creature.cpp
-../../Headers/Cartes/Creature.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Deck.cpp
-../../Headers/Cartes/Deck.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Energie.cpp
-../../Headers/Cartes/Energie.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Speciale.cpp
-../../Headers/Cartes/Speciale.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Collection.cpp
-../Headers/Collection.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Game.cpp
-../Headers/Game.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Joueur.cpp
-../../Headers/Match/Joueur.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Match.cpp
-../../Headers/Match/Match.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Pioche.cpp
-../../Headers/Match/Pioche.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Plateau.cpp
-../../Headers/Match/Plateau.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Utilisateur.cpp
-../Headers/Utilisateur.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
-
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
 ../../biblio.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+../../Headers/Cartes/Creature.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
+../../Headers/Collection.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
 
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
 Affichage.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
+../Match/Match.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
 
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
 Affichage.h
@@ -763,6 +875,8 @@ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/He
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
 AfficheMatch.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
+../Cartes/DragCarte.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
 
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
 ../../biblio.h
@@ -779,10 +893,18 @@ Carte.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
 Attaque.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
+../../Headers/Affichage/Affichage.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
 
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
 ../../biblio.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
+../Affichage/Affichage.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
+../Collection.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
 
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
 Carte.h
@@ -813,6 +935,8 @@ Collection.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
 Match/Match.h
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
+Affichage/AfficheMatch.h
+C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
 
 C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
 ../Utilisateur.h
@@ -875,16 +999,8 @@ cstdlib
 -
 SFML/Graphics.hpp
 -
+SFML/Audio.hpp
+-
 conio.h
 -
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.cpp
-main.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.h
-Headers/Affichage/Menu.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
-
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.h
-Headers/Game.h
-C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
 

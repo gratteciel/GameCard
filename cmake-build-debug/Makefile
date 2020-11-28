@@ -385,6 +385,33 @@ src/Class/Cartes/Deck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.s
 .PHONY : src/Class/Cartes/Deck.cpp.s
 
+src/Class/Cartes/DragCarte.obj: src/Class/Cartes/DragCarte.cpp.obj
+
+.PHONY : src/Class/Cartes/DragCarte.obj
+
+# target to build an object file
+src/Class/Cartes/DragCarte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/DragCarte.cpp.obj
+.PHONY : src/Class/Cartes/DragCarte.cpp.obj
+
+src/Class/Cartes/DragCarte.i: src/Class/Cartes/DragCarte.cpp.i
+
+.PHONY : src/Class/Cartes/DragCarte.i
+
+# target to preprocess a source file
+src/Class/Cartes/DragCarte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/DragCarte.cpp.i
+.PHONY : src/Class/Cartes/DragCarte.cpp.i
+
+src/Class/Cartes/DragCarte.s: src/Class/Cartes/DragCarte.cpp.s
+
+.PHONY : src/Class/Cartes/DragCarte.s
+
+# target to generate assembly for a file
+src/Class/Cartes/DragCarte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Cartes/DragCarte.cpp.s
+.PHONY : src/Class/Cartes/DragCarte.cpp.s
+
 src/Class/Cartes/Energie.obj: src/Class/Cartes/Energie.cpp.obj
 
 .PHONY : src/Class/Cartes/Energie.obj
@@ -691,6 +718,9 @@ help:
 	@echo ... src/Class/Cartes/Deck.obj
 	@echo ... src/Class/Cartes/Deck.i
 	@echo ... src/Class/Cartes/Deck.s
+	@echo ... src/Class/Cartes/DragCarte.obj
+	@echo ... src/Class/Cartes/DragCarte.i
+	@echo ... src/Class/Cartes/DragCarte.s
 	@echo ... src/Class/Cartes/Energie.obj
 	@echo ... src/Class/Cartes/Energie.i
 	@echo ... src/Class/Cartes/Energie.s

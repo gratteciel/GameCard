@@ -4,13 +4,13 @@
 
 #include "../../Headers/Affichage/Menu.h"
 
-void Menu::menuBaseAffichage(bool& fin, bool& leave,const std::string& pseudoCouleur,const std::string& pseudoInscription){
+void Menu::menuBaseAffichage(const std::string& pseudoCouleur){
     int menuActu=getMenuActuel();
     switch (menuActu) {
         case -1:
             sfmlLeave();
-            fin = true;
-            leave = true;
+            m_bool.fin = true;
+            m_bool.sleep = true;
             break;
         case 0://menu de base
             menu0Affichage();
@@ -28,7 +28,13 @@ void Menu::menuBaseAffichage(bool& fin, bool& leave,const std::string& pseudoCou
             menu4Affichage(pseudoCouleur);
             break;
         case 5:
-            menu5Affichage(pseudoInscription);
+            menu5Affichage();
+            break;
+        case 6:
+            menu6Affichage();
+            break;
+        case 7:
+            menu7Affichage();
             break;
     }
     //Affichage des utilisateurs
@@ -94,11 +100,16 @@ void Menu::menu2Affichage(){
 //Menu des paramètres
 void Menu::menu3Affichage() {
     afficheImage("Intro");
-
-    if(getBoutonActuel()=="Inscription")
-        afficheImage("Inscription_yes");
+    if(getBoutonActuel()=="Creer une Carte Creature"){
+        m_window.draw(chargerTexte("Creer une Carte Creature",1,sf::Color(230,213,23,255),40,150,350));
+    }
     else
-        afficheImage("Inscription_no");
+        m_window.draw(chargerTexte("Creer une Carte Creature",1,sf::Color(233,233,233,255),40,150,350));
+    if(getBoutonActuel()=="Creer une Carte Speciale"){
+        m_window.draw(chargerTexte("Creer une Carte Speciale",1,sf::Color(230,213,23,255),40,1100,350));
+    }
+    else
+        m_window.draw(chargerTexte("Creer une Carte Speciale",1,sf::Color(233,233,233,255),40,1100,350));
 
     btnRetourAffichage();
 
@@ -106,8 +117,6 @@ void Menu::menu3Affichage() {
 
 //Menu de connection
 void Menu::menu4Affichage(const std::string& pseudoCouleur) {
-
-    unsigned short i=0;
 
     sf::Text _tempTexte;
     _tempTexte.setFont(getFonts()[0]); // choix de la police
@@ -132,54 +141,159 @@ void Menu::menu4Affichage(const std::string& pseudoCouleur) {
 
 
     m_window.draw(texte);
-
+    unsigned short j=0;
+    unsigned short i=0;
     for(auto& elem: m_jeu.getUsersPseudo()){
+
+        if(i%10==0&&i!=0){
+            i=1;
+            j++;
+        }
 
         _tempTexte.setString(elem); //affiche le pseudo
 
-        _tempTexte.setPosition(200,200+70*i);
+        _tempTexte.setPosition(100+500*j,200+70*i);
         if(elem==pseudoCouleur)
             _tempTexte.setFillColor(sf::Color::Red);//couleur du texte
         else
             _tempTexte.setFillColor(sf::Color::White);//couleur du texte
         m_window.draw(_tempTexte);
+
         i++;
     }
 }
 
 //Menu d'inscription
-void Menu::menu5Affichage(const std::string& pseudoInscription){
+void Menu::menu5Affichage(){
     afficheImage("Login");//Affiche l'image "login"
-    btnRetourAffichage();
 
-    sf::Text texte;
+    //Affiche le bouton Retour
+    setPos(50,800,"Retour_no");
+    setPos(50,800,"Retour_yes");
+    btnRetourAffichage();
+    setPos(50,1000,"Retour_no");
+    setPos(50,1000,"Retour_yes");
 
     /*AFFICHE "ENTREZ VOTRE PSEUDO : */
-    texte.setPosition(100,100);
-    texte.setFont(getFonts()[1]); // choix de la police
-    texte.setFillColor(sf::Color::White);//couleur du texte
-    texte.setCharacterSize(50); // choix de la taille des caractères exprimée en pixel
-    texte.setOutlineColor(sf::Color::Black); // Couleur du contour
-    texte.setOutlineThickness(1); //Taille des contours
-    texte.setString("Entrez votre pseudo :");
+    sf::Text texte=chargerTexte("Entrez votre pseudo :",1,sf::Color(233,233,233,255),50,100,100,sf::Color::Black,1);
     texte.setStyle( sf::Text::Underlined);
     m_window.draw(texte);
+
+    //Affiche rectangle blanc pour écrire son pseudo
     afficheImage("rectInscription");
 
-    /*AFFICHE LE PSEUDO ECRIT*/
-    texte.setPosition(100,200);
-    texte.setFont(getFonts()[0]); // choix de la police
-    texte.setFillColor(sf::Color::Black);//couleur du texte
-    texte.setCharacterSize(70); // choix de la taille des caractères exprimée en pixel
-    texte.setString(pseudoInscription);
-    texte.setStyle( sf::Text::Regular);
+
+
+    //Affiche le deck actuel avec les cartes
+    texte=chargerTexte("Choisissez 11 cartes, les " + std::to_string(Deck::getNumCartes()) +" premieres formeront votre 1er deck.",1,sf::Color::White,30,600,815,sf::Color::Black,1);
+
+
+    /*AFFICHE LES CARTES DU DECK*/
     m_window.draw(texte);
+    setPos(10,855,"Rectangle_deck");
+    afficheImage("Rectangle_deck");
+    for(int i=0; i<m_choixInscription.imm.size();i++){
+        int x=65+155*i;
+        int y=865;
+        afficheCarte(m_jeu.getCartesBases(), m_choixInscription.imm[i], x, y);
+
+    }
+
+    /*SI INSCRIPTION EST VALIDE*/
+    if(m_choixInscription.valide){
+        texte=chargerTexte("Creer", 1, sf::Color(79,210,30,255),80,420, 720,sf::Color::Black, 2);
+        if(getBoutonActuel()=="Creer")
+            texte.setFillColor(sf::Color(198,27,27));
+        m_window.draw(texte);
+    }
 
 
+    if(m_choixInscription._choixTypeCarte=="none"){
+        /*AFFICHE LE PSEUDO ECRIT*/
+        texte=chargerTexte(m_choixInscription.pseudoInscription,0,sf::Color::Black,70,100,200,sf::Color::Black,0);
+        texte.setStyle( sf::Text::Regular);
+        m_window.draw(texte);
+
+        /*AFFICHE LES CLIQUABLE*/
+        setPos(1100,200, "Creature");
+        afficheImage("Creature");
+        texte=chargerTexte("Afficher",2,sf::Color::White,20,1120,275);
+        m_window.draw(texte);
+        texte=chargerTexte("CREATURES",2,sf::Color::White,20,1108,300);
+        m_window.draw(texte);
+
+    }
+    else{
+        if(m_choixInscription._choixTypeCarte=="Creature")
+            choixCreatureAffichage();
+
+        if(m_choixInscription.drag.getActif()) //Si le drag & drop est actif
+            afficheCarte(m_jeu.getCartesBases(), m_choixInscription.drag.getImm(),getMousePosition().x-75, getMousePosition().y-100);
+    }
 
 }
 
+void Menu::menu6Affichage()
+{
+    afficheImage("Intro");
+    m_window.draw(chargerTexte("Veuillez mettre le nom de la creature", 1, sf::Color::White, 35, 25, 100));
+    m_window.draw(chargerTexte("Veuillez mettre l'attaque 1 de la creature (IM) ", 1, sf::Color::White, 35, 25, 400));
+    m_window.draw(chargerTexte("Veuillez mettre l'attaque 2 de la creature (IM)", 1, sf::Color::White, 35, 25, 700));
+    setPos(85,170,"rectInscription");
+    afficheImage("rectInscription");
+    setPos(85,470,"rectInscription");
+    afficheImage("rectInscription");
+    setPos(85,770,"rectInscription");
+    afficheImage("rectInscription");
+    m_window.draw(chargerTexte(m_creationCarte.creaCarte[0], 1, sf::Color::Black, 40, 100, 180));
+    m_window.draw(chargerTexte(m_creationCarte.creaCarte[1], 1, sf::Color::Black, 40, 100, 480));
+    m_window.draw(chargerTexte(m_creationCarte.creaCarte[2], 1, sf::Color::Black, 40, 100, 780));
+    m_window.draw(chargerTexte("  Im    Nom                   Degats", 1, sf::Color::Red, 25,1100,10));
+    for(int i(0);i<m_jeu.getCartesBases().getAttaques().size();i++){
+        auto elem= m_jeu.getCartesBases().getAttaques()[i];
+        m_window.draw(chargerTexte("  " + std::to_string(elem.getImmatriculation()) +"   "+elem.getNom()+"      "+std::to_string(elem.getDegat()),1,sf::Color::White,25,1100,50+30*i));
+    }
+    btnRetourAffichage();
 
+}
+
+void Menu::menu7Affichage() {
+
+    afficheImage("Intro");
+    m_window.draw(chargerTexte("Veuillez mettre le nom de la speciale", 1, sf::Color::White, 35, 25, 100));
+    m_window.draw(chargerTexte("Veuillez mettre l'attaque 1 de la speciale (IM) ", 1, sf::Color::White, 35, 25, 400));
+    m_window.draw(chargerTexte("Veuillez mettre l'attaque 2 de la speciale (IM)", 1, sf::Color::White, 35, 25, 700));
+    setPos(85,170,"rectInscription");
+    afficheImage("rectInscription");
+    setPos(85,470,"rectInscription");
+    afficheImage("rectInscription");
+    setPos(85,770,"rectInscription");
+    afficheImage("rectInscription");
+    m_window.draw(chargerTexte(m_creationCarte.creaCarte[0], 1, sf::Color::Black, 40, 100, 180));
+    m_window.draw(chargerTexte(m_creationCarte.creaCarte[1], 1, sf::Color::Black, 40, 100, 480));
+    m_window.draw(chargerTexte(m_creationCarte.creaCarte[2], 1, sf::Color::Black, 40, 100, 780));
+    m_window.draw(chargerTexte("  Im    Nom                   Degats", 1, sf::Color::Red, 25,1100,10));
+    for(int i(0);i<m_jeu.getCartesBases().getAttaques().size();i++){
+        auto elem= m_jeu.getCartesBases().getAttaques()[i];
+        m_window.draw(chargerTexte("  " + std::to_string(elem.getImmatriculation()) +"   "+elem.getNom()+"      "+std::to_string(elem.getDegat()),1,sf::Color::White,25,1100,50+30*i));
+    }
+    btnRetourAffichage();
+
+}
+
+void Menu::choixCreatureAffichage(){
+    int i=1,j=0;
+    setPos(0,0,"Rectangle_bois");
+    afficheImage("Rectangle_bois");
+    for(auto& elem : m_jeu.getCartesBases().getCreatures()){
+        elem.affiche(-65+170*i, 40+210*j);
+        if(i%10==0){
+            i=0;
+            j++;
+        }
+        i++;
+    }
+}
 
 void Menu::btnRetourAffichage(){
     if(getBoutonActuel()=="Retour")
@@ -187,6 +301,7 @@ void Menu::btnRetourAffichage(){
     else
         afficheImage("Retour_no");
 }
+
 void Menu::affichePseudoUtilisateurs(){
     sf::Text _tempTexte;
     _tempTexte.setFont(getFonts()[0]); // choix de la police
@@ -212,7 +327,7 @@ void Menu::affichePseudoUtilisateurs(){
         else
             _tempTexte.setFillColor(sf::Color::White);//couleur du texte
 
-        _tempTexte.setPosition(600+elem.first.size()*40*i,970);
+        _tempTexte.setPosition(600+250*i,970);
         i++;
         m_window.draw(_tempTexte);
 
@@ -247,6 +362,29 @@ void Menu::affichePseudoUtilisateurs(){
             m_window.draw(texte);
         }
     }
+
+    /*GESTION DES UTILISATEURS (AFFICHAGE)*/
+    gestionUtilisateurAffichage();
+
+}
+
+void Menu::gestionUtilisateurAffichage(){
+    if(getGestionUtilisateur()!="none"){
+        afficheImage("Background_utilisateur");
+        /*AFFICHE LE PSEUDO*/
+        sf::Text texte=chargerTexte(getGestionUtilisateur(),0,sf::Color(198,27,27),100,10,10,sf::Color::White,0);
+        m_window.draw(texte);
+
+        /*AFFICHE le bouton de déconnexion*/
+        texte=chargerTexte("Deconnexion",1,sf::Color(233,233,233,255),20,20,120,sf::Color::Black,2);
+        texte.setString(L"Déconnexion");
+
+        if(getBoutonActuel()=="deconnexion")
+            texte.setFillColor(sf::Color(230,213,23));
+        m_window.draw(texte);
+    }
+
+
 }
 
 void Menu::sfmlLeave() {

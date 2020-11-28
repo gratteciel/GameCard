@@ -17,6 +17,9 @@ class Match {
 private:
     //Plateau m_plateau;
     std::vector<Joueur> m_joueur;//set de joueur  car pas le meme nom
+    int m_typeTerrain;
+    int m_joueurActuel;
+
 public:
     //Constructeurs et Destructeurs
     Match();
@@ -24,11 +27,19 @@ public:
 
     //Méthodes
     void lancementMatch(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase);
-
+    void interactionPioche();
     //Getter et Setter
-    Plateau getPlateau() const;
+
     void setJoueur(Utilisateur *_user);
-    void jeu();
+
+    void setTypeTerrain(int _typeTerrain);
+    int getTypeTerrain() const;
+    int getJoueurActuel() const;
+    void setJoueurActuel(int _joueurActuel);
+
+    Joueur& getJoueur();
+
+
 };
 
 

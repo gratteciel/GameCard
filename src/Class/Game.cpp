@@ -12,6 +12,7 @@
 Game::Game(){
     chargerUsersPseudos();
     m_cartesBases.chargerCartes();
+
 }
 
 Game::~Game() {
@@ -25,8 +26,16 @@ Game::~Game() {
 std::map<std::string, Utilisateur> Game::getUsersConnectes() const{
     return m_usersConnectes;
 }
-std::set<std::string> Game::getUsersPseudo() const{
+std::set<std::string>& Game::getUsersPseudo(){
     return m_usersPseudo;
+}
+
+Collection Game::getCartesBases() const{
+    return m_cartesBases;
+}
+
+AfficheMatch& Game::getAffichageMatch(){
+    return m_affichageMatch;
 }
 
 /*
@@ -82,14 +91,30 @@ unsigned short Game::connectionUser(const std::string& _pseudo){
 
 }
 
-void Game::lancerMatch(std::string user1, std::string user2){
-    auto it1=m_usersConnectes.find(user1);
-    auto it2=m_usersConnectes.find(user2);
+
+void Game::deconnexionUser(const std::string& _pseudo){
+
+    //Ici sauvegarder les éventuels changements
+
+    //Suppression de la map m_userConnectes
+    auto it=m_usersConnectes.find(_pseudo);
+    m_usersConnectes.erase(it);
+}
+
+void Game::lancerMatch(){
+    std::vector<std::string> users;
+    //Recuperation des pseudos des joeurs connectés
+    for(const auto& elem : m_usersConnectes){
+        users.push_back(elem.first);
+    }
+    auto it1=m_usersConnectes.find(users[0]);
+    auto it2=m_usersConnectes.find(users[0]);
 
     //Vérification si ils existent
     if(it1!= m_usersConnectes.end() &&  it2 != m_usersConnectes.end()){
-        m_match.lancementMatch(&it1->second, &it2->second, m_cartesBases);
+        m_affichageMatch.lancement(&it1->second, &it2->second, m_cartesBases);
     }
 }
+
 
 

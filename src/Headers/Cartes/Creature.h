@@ -8,7 +8,7 @@
 
 #include "Carte.h"
 #include "Attaque.h"
-
+#include "../../Headers/Affichage/Affichage.h"
 
 class Creature : public Carte{
     private:
@@ -30,6 +30,7 @@ class Creature : public Carte{
         //Méthodes
 
         void creer(std::ofstream& fileOutput);
+        void affiche(float x, float y);
         //Accesseurs et mutateurs
         short getPdv() const;
         void setPdv(short _pdv);

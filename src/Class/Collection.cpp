@@ -23,9 +23,11 @@ Collection::~Collection() {
  */
 
 void Collection::chargerCartes() {
+
     chargerCartesFille("attaques");
 
     chargerCartesFille("creatures");
+
     chargerCartesFille("energies");
     chargerCartesFille("speciales");
 
@@ -168,6 +170,7 @@ void Collection::chargerAttaque(int _imm, std::string _nom, std::string _descrip
 }
 
 
+
 /*
  * Permet à n'importe quel utilisateur d'ajouter une carte dans le jeu:
  * L'utilisateur clique sur l'interface allegro pour choisir la carte qu'il veut
@@ -230,4 +233,8 @@ std::vector<Energie> Collection::getEnergies() const{
 
 std::vector<Speciale> Collection::getSpeciales() const{
     return m_speciales;
+}
+
+std::vector<Attaque> Collection::getAttaques() const{
+    return m_attaques;
 }

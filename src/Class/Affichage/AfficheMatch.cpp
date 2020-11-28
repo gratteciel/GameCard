@@ -6,7 +6,6 @@
 
 //Constructeur et Destructeur
 AfficheMatch::AfficheMatch()
-        :m_typeTerrain(1)
 {
 
 }
@@ -15,8 +14,19 @@ AfficheMatch::~AfficheMatch() {
 
 }
 
-void AfficheMatch::AnimationDebutDeCombat(){
-    AffichageTerrain();
+void AfficheMatch::lancement(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase){
+    m_match.lancementMatch(_user1, _user2, _cartesBase);
+    animationDebutDeCombat();
+}
+
+void AfficheMatch::boucleMatch(){
+
+    affichageTerrain();
+    afficheCaracJoueur();
+}
+
+void AfficheMatch::animationDebutDeCombat(){
+    affichageTerrain();
     sf::Text texteDebutDeCombat;
     texteDebutDeCombat.setFont(getFonts()[1]);
     texteDebutDeCombat.setPosition(325,475);
@@ -26,32 +36,11 @@ void AfficheMatch::AnimationDebutDeCombat(){
     texteDebutDeCombat.setOutlineThickness(1); //Taille des contours
     texteDebutDeCombat.setString("Le Combat Commence !");
     m_window.draw(texteDebutDeCombat);
-    m_window.display();
-    sf::sleep(sf::seconds(2));
-    m_window.clear();
-
 }
 
-void AfficheMatch::LancementPartieAffichage() {//pourquoi obligatoire le static?
 
-
-    AnimationDebutDeCombat();
-
-    while (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-        m_window.clear();
-        AffichageTerrain();
-        m_window.display();
-        sf::sleep(sf::milliseconds(10));
-
-    }
-
-
-}
-
-void AfficheMatch::AffichageTerrain(){
-
-
-    switch (getTypeTerrain()) {
+void AfficheMatch::affichageTerrain(){
+    switch (m_match.getTypeTerrain()) {
         case 1 :
             afficheImage("AreneDeBase");
             break;
@@ -66,18 +55,27 @@ void AfficheMatch::AffichageTerrain(){
             break;
         case 5:
             afficheImage("Fire");
-
     }
 
+}
+
+void AfficheMatch::affichePioche(){
+    setPos(1700,800,"Face_cache");
+    afficheImage("Face_cache");
+    std::string nombreCartes = std::to_string(m_match.getJoueur().getPioche().getCartesId().size()) + " cartes";
+    m_window.draw(chargerTexte(nombreCartes,1,sf::Color::White,26,1700,1000));
 
 }
 
-void AfficheMatch::setTypeTerrain(int _typeTerrain) {
-    if(_typeTerrain>0)
-        m_typeTerrain=_typeTerrain;
-    else
-        std::cout << "Numero du terrain invalide" << std::endl;
+void AfficheMatch::afficheMain(){
+    for(const auto& elem: m_match.getJoueur().getMain()){
+        afficheCarte(m_match.getJoueur().getCartes(),elem.imm,700,800);
+    }
 }
-int AfficheMatch::getTypeTerrain() const {
-    return m_typeTerrain;
+
+void AfficheMatch::afficheCaracJoueur(){
+
+    affichePioche();
+    m_match.interactionPioche();
+    afficheMain();
 }

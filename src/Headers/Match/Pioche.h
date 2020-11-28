@@ -33,7 +33,7 @@ class Pioche {
         t_carte melanger();
         void swap(t_carte& a, t_carte& b);
         //Accesseurs et mutateurs
-
+        std::deque<t_carte>& getCartes();
 };
 
 
