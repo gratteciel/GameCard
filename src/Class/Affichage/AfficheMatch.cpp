@@ -15,14 +15,11 @@ AfficheMatch::~AfficheMatch() {
 }
 
 void AfficheMatch::lancement(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase){
+
     m_match.lancementMatch(_user1, _user2, _cartesBase);
+
     animationDebutDeCombat();
-}
 
-void AfficheMatch::boucleMatch(){
-
-    affichageTerrain();
-    afficheCaracJoueur();
 }
 
 void AfficheMatch::animationDebutDeCombat(){
@@ -39,10 +36,24 @@ void AfficheMatch::animationDebutDeCombat(){
 }
 
 
+int AfficheMatch::boucleMatch(){
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //POUR L'INSTANT
+        m_match.getJoueurs().clear();
+        return 1;
+    }
+    affichageTerrain();
+    afficheEnjeux();
+    m_match.getJoueurEnnemie().afficheModeEnnemie();
+    m_match.getJoueur().afficherSurTerrain();
+    m_match.interaction();
+    return 0;
+}
+
+
 void AfficheMatch::affichageTerrain(){
     switch (m_match.getTypeTerrain()) {
         case 1 :
-            afficheImage("AreneDeBase");
+            afficheImage("imageFond");
             break;
         case 2:
             afficheImage("Nature");
@@ -57,25 +68,15 @@ void AfficheMatch::affichageTerrain(){
             afficheImage("Fire");
     }
 
+    afficheImage("Terrain_cartes");
 }
 
-void AfficheMatch::affichePioche(){
-    setPos(1700,800,"Face_cache");
-    afficheImage("Face_cache");
-    std::string nombreCartes = std::to_string(m_match.getJoueur().getPioche().getCartesId().size()) + " cartes";
-    m_window.draw(chargerTexte(nombreCartes,1,sf::Color::White,26,1700,1000));
-
-}
-
-void AfficheMatch::afficheMain(){
-    for(const auto& elem: m_match.getJoueur().getMain()){
-        afficheCarte(m_match.getJoueur().getCartes(),elem.imm,700,800);
+void AfficheMatch::afficheEnjeux(){
+    sf::Text texte=chargerTexte("Enjeux", 1, sf::Color::White,20, 70, 700, sf::Color::Black, 1);
+    for(int i=0; i<2; i++){
+        setPos(50-10*i, 500-10*i,"Face_cache_no");
+        afficheImage("Face_cache_no");
     }
+    m_window.draw(texte);
 }
 
-void AfficheMatch::afficheCaracJoueur(){
-
-    affichePioche();
-    m_match.interactionPioche();
-    afficheMain();
-}

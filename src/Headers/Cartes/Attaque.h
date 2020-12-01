@@ -13,6 +13,7 @@ typedef struct t_nbPoints{
     int nbPoints;
 }t_nbPoints;
 
+
 //Hérite de Carte : nom et description
 class Attaque : public Carte{
     private:

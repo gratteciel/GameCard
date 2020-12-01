@@ -24,28 +24,34 @@ DragCarte::~DragCarte() {
  * Méthodes
  */
 
-void DragCarte::interaction(std::vector<int>& imm){
+int DragCarte::interaction(int x1, int y1, int x2, int y2){
     /*SI DRAG & DROP ACTIF*/
     if(getActif()){
         //Si plus appuyé sur le bouton de la souris
         if(!sf::Mouse::isButtonPressed(sf::Mouse::Left)){
             setActif(false); //On arrete le drag & drop
 
-            if(imm.size()<=10){ //Si il y a moins de 11 cartes
+
                 //Si le curseur est dans le deck du joueur
-                if(getMousePosition().x>=(recupSprite("Rectangle_deck").getPosition().x) && getMousePosition().x<=(
-                        recupSprite("Rectangle_deck").getPosition().x + 1900) &&
-                   getMousePosition().y>=(recupSprite("Rectangle_deck").getPosition().y) && getMousePosition().y<=(
-                        recupSprite("Rectangle_deck").getPosition().y+220)){
-                    imm.push_back(getImm()); //ON AJOUTE LA CARTE AU DECK INSCRIPITON
+                if(Affichage::getMousePosition().x>=x1 && Affichage::getMousePosition().x<=x1 + x2 &&
+                        Affichage::getMousePosition().y>=y1 && Affichage::getMousePosition().y<=y1+y2){
+                    return getId();
                 }
-            }
+
 
         }
 
     }
+    return 666;
 }
 
+
+void DragCarte::afficheCarte(const Collection &_cartesBase) {
+    if(getActif()){
+        Affichage::afficheCarte(_cartesBase, getImm(),Affichage::getMousePosition().x-75, Affichage::getMousePosition().y-100,getId());
+    } //Si le drag & drop est actif
+
+}
 
 
 /*
@@ -63,9 +69,16 @@ void DragCarte::setActif(bool _actif){
 }
 
 
+void DragCarte::setId(int _id){
+    m_id=_id;
+}
+
+int DragCarte::getId() const{
+    return m_id;
+}
+
 void DragCarte::setImm(int _imm){
-    if(_imm>=100 && _imm<=399)
-        m_imm=_imm;
+    m_imm=_imm;
 }
 
 int DragCarte::getImm() const{

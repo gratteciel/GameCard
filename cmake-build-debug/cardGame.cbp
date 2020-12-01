@@ -129,6 +129,12 @@
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Joueur.cpp">
 			<Option target="cardGame"/>
 		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/JoueurAffichage.cpp">
+			<Option target="cardGame"/>
+		</Unit>
+		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/JoueurInteraction.cpp">
+			<Option target="cardGame"/>
+		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Match.cpp">
 			<Option target="cardGame"/>
 		</Unit>
@@ -196,9 +202,6 @@
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.cpp">
-			<Option target="cardGame"/>
-		</Unit>
-		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.h">
 			<Option target="cardGame"/>
 		</Unit>
 		<Unit filename="C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/CMakeLists.txt">

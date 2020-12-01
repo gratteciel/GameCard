@@ -1,4 +1,8 @@
-200*Camembert*vive la vie*
-209*boi*jimmy notron*
-203*OUI*hehe boi*
-209*boi*jimmy notron*
+200*Nero*description*100*401 413*
+201*Nera*description*100*403 414*
+202*Ignar*description*100*405 415*
+203*Ignata*description*100*406 416*
+204*Dien*description*100*409 417*
+205*Dienna*description*100*407 418*
+206*Sylver*description*100*410 419*
+207*Sylva*description*100*411 420*

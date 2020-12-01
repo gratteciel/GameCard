@@ -183,7 +183,6 @@ void Menu::menu5Affichage(){
     afficheImage("rectInscription");
 
 
-
     //Affiche le deck actuel avec les cartes
     texte=chargerTexte("Choisissez 11 cartes, les " + std::to_string(Deck::getNumCartes()) +" premieres formeront votre 1er deck.",1,sf::Color::White,30,600,815,sf::Color::Black,1);
 
@@ -195,7 +194,7 @@ void Menu::menu5Affichage(){
     for(int i=0; i<m_choixInscription.imm.size();i++){
         int x=65+155*i;
         int y=865;
-        afficheCarte(m_jeu.getCartesBases(), m_choixInscription.imm[i], x, y);
+        afficheCarte(m_jeu.getCartesBases(), m_choixInscription.imm[i], x, y,m_choixInscription.imm[i]);
 
     }
 
@@ -214,21 +213,42 @@ void Menu::menu5Affichage(){
         texte.setStyle( sf::Text::Regular);
         m_window.draw(texte);
 
-        /*AFFICHE LES CLIQUABLE*/
+        /*AFFICHE LES CLIQUABLES*/
+
+        /* AFFICHE LES CLIQUABLES POUR LES CREATURES */
         setPos(1100,200, "Creature");
         afficheImage("Creature");
-        texte=chargerTexte("Afficher",2,sf::Color::White,20,1120,275);
+        texte=chargerTexte("Afficher",1,sf::Color::White,20,1120,275);
         m_window.draw(texte);
-        texte=chargerTexte("CREATURES",2,sf::Color::White,20,1108,300);
+        texte=chargerTexte("CREATURES",1,sf::Color::White,20,1108,300);
+        m_window.draw(texte);
+
+        /* AFFICHE LES CLIQUABLES POUR LES SPECIALES */
+        setPos(1300,200, "Speciale");
+        afficheImage("Speciale");
+        texte=chargerTexte("Afficher",1,sf::Color::White,20,1320,275);
+        m_window.draw(texte);
+        texte=chargerTexte("SPECIALES",1,sf::Color::White,20,1310,300);
+        m_window.draw(texte);
+
+        /* AFFICHE LES CLIQUABLES POUR LES ENERGIES */
+        setPos(1500,200, "Energie");
+        afficheImage("Energie");
+        texte=chargerTexte("Afficher",1,sf::Color::White,20,1520,275);
+        m_window.draw(texte);
+        texte=chargerTexte("ENERGIES",1,sf::Color::White,20,1510,300);
         m_window.draw(texte);
 
     }
     else{
         if(m_choixInscription._choixTypeCarte=="Creature")
             choixCreatureAffichage();
+        else if(m_choixInscription._choixTypeCarte=="Speciale")
+            choixSpecialeAffichage();
+        else if(m_choixInscription._choixTypeCarte=="Energie")
+            choixEnergieAffichage();
 
-        if(m_choixInscription.drag.getActif()) //Si le drag & drop est actif
-            afficheCarte(m_jeu.getCartesBases(), m_choixInscription.drag.getImm(),getMousePosition().x-75, getMousePosition().y-100);
+        m_choixInscription.drag.afficheCarte(m_jeu.getCartesBases());
     }
 
 }
@@ -249,7 +269,7 @@ void Menu::menu6Affichage()
     m_window.draw(chargerTexte(m_creationCarte.creaCarte[1], 1, sf::Color::Black, 40, 100, 480));
     m_window.draw(chargerTexte(m_creationCarte.creaCarte[2], 1, sf::Color::Black, 40, 100, 780));
     m_window.draw(chargerTexte("  Im    Nom                   Degats", 1, sf::Color::Red, 25,1100,10));
-    for(int i(0);i<m_jeu.getCartesBases().getAttaques().size();i++){
+    for(int i(0);i<m_jeu.getCartesBases().getAttaques().size()-8;i++){
         auto elem= m_jeu.getCartesBases().getAttaques()[i];
         m_window.draw(chargerTexte("  " + std::to_string(elem.getImmatriculation()) +"   "+elem.getNom()+"      "+std::to_string(elem.getDegat()),1,sf::Color::White,25,1100,50+30*i));
     }
@@ -286,6 +306,33 @@ void Menu::choixCreatureAffichage(){
     setPos(0,0,"Rectangle_bois");
     afficheImage("Rectangle_bois");
     for(auto& elem : m_jeu.getCartesBases().getCreatures()){
+        elem.affiche(-65+170*i, 40+210*j);
+        if(i%10==0){
+            i=0;
+            j++;
+        }
+        i++;
+    }
+}
+
+void Menu::choixSpecialeAffichage(){
+    int i=1,j=0;
+    setPos(0,0,"Rectangle_bois");
+    afficheImage("Rectangle_bois");
+    for(auto& elem : m_jeu.getCartesBases().getSpeciales()){
+        elem.affiche(-65+170*i, 40+210*j);
+        if(i%10==0){
+            i=0;
+            j++;
+        }
+        i++;
+    }
+}
+void Menu::choixEnergieAffichage(){
+    int i=1,j=0;
+    setPos(0,0,"Rectangle_bois");
+    afficheImage("Rectangle_bois");
+    for(auto& elem : m_jeu.getCartesBases().getEnergies()){
         elem.affiche(-65+170*i, 40+210*j);
         if(i%10==0){
             i=0;
@@ -382,6 +429,9 @@ void Menu::gestionUtilisateurAffichage(){
         if(getBoutonActuel()=="deconnexion")
             texte.setFillColor(sf::Color(230,213,23));
         m_window.draw(texte);
+
+
+
     }
 
 

@@ -283,6 +283,7 @@ void Menu::boucleBase() {//fonction pour initialiser sfml
 
     while (!getBool().fin) {
         getMousePosition();//obliger de le mettre dans la boucle pour réactualiser tout le temps
+        Affichage::getPosCartes().clear(); //On clear toutes les pos des cartes
         sf::Event event;
 
         while (m_window.pollEvent(event)) {
@@ -292,10 +293,13 @@ void Menu::boucleBase() {//fonction pour initialiser sfml
             gestionInputCarac(event);
         }
 
+
         if(getMode()==0)
             menuInit(temp);
 
         m_window.clear();
+
+       
 
         if(getMode()==2)
             introJeu();
@@ -304,10 +308,12 @@ void Menu::boucleBase() {//fonction pour initialiser sfml
         else{
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //POUR L'INSTANT
                 setMode(0);
+
             }
             m_jeu.getAffichageMatch().boucleMatch();
         }
 
+        //interactionDescriptionCarte();
 
         m_window.display();
 

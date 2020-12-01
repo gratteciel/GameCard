@@ -11,3 +11,11 @@
 410*Deferlement de Feuille*description*25*0001*
 411*Graine Empoisonnée*description*45*0012*
 412*Lianes Surgissantes*description*75*0004*
+413*Marée Dévastatrice*description*15*0200*
+414*Petite Sirène*description*30*0200*
+415*Deflagration*description*15*2000*
+416*Pyrolyse*description*30*2000*
+417*Appel de Zeus* description*15*0020*
+418*Tonerre Revitaliseur*description*30*0020*
+419*Reveil de la Jungle*description*15*0002*
+420*Appel de la foret*description*30*0002*

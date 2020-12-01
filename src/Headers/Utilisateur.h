@@ -34,6 +34,7 @@ class Utilisateur {
         void affichageUtilisateur();
 
         //Accesseurs et mutateurs
+        int getNombreDeck() const;
         std::string getPseudo() const;
         Deck getDeck(int _numDeck) const;
         void setDeckActif(int _deckActif);

@@ -18,13 +18,11 @@ public:
     ~AfficheMatch();
     //Methodes
     void lancement(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase);
-    void boucleMatch();
+    int boucleMatch();
     void animationDebutDeCombat();
     void affichageTerrain();
+    void afficheEnjeux();
 
-    void affichePioche();
-    void afficheMain();
-    void afficheCaracJoueur();
     //Getters et Setters
 
 

@@ -39,7 +39,9 @@ void Menu::interactionPseudoUtilisateurs() {
 
 
                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){//lancer le match
+
                    m_jeu.lancerMatch();
+
                    setMode(1);
                    m_bool.sleep=true;
                }
@@ -183,33 +185,38 @@ void Menu::menu4Interaction(std::string& pseudoCouleur){
 
     unsigned short i=0;
     unsigned short j=0;
-    for(const auto& elem : m_jeu.getUsersPseudo()){
 
-        if(i%10==0&&i!=0){
-            i=1;
-            j++;
-        }
+    if(getGestionUtilisateur()=="none"){
+        for(const auto& elem : m_jeu.getUsersPseudo()){
 
-        if (getMousePosition().x>(100+500*j) && getMousePosition().x<(100+500*j+elem.size()*24) &&
-        getMousePosition().y>(200+70*i) && getMousePosition().y<(200+70*i+70) ){
-            pseudoCouleur=elem;
-            fin=true;
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                int x = m_jeu.connectionUser(pseudoCouleur);
-
-                if(x==0||x==2)
-                    setErreur(x);
+            if(i%10==0&&i!=0){
+                i=1;
+                j++;
             }
-            break;
+
+            if (getMousePosition().x>(100+500*j) && getMousePosition().x<(100+500*j+elem.size()*24) &&
+                                                                         getMousePosition().y>(200+70*i) && getMousePosition().y<(200+70*i+70) ){
+                pseudoCouleur=elem;
+                fin=true;
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    int x = m_jeu.connectionUser(pseudoCouleur);
+
+                    if(x==0||x==2)
+                        setErreur(x);
+                }
+                break;
+            }
+            i++;
         }
-        i++;
     }
+
 
     if(!fin)
         pseudoCouleur="none";
 
 }
 
+//Menu inscription
 void Menu::menu5Interaction() {
     bool surQchose=false;
 
@@ -282,6 +289,19 @@ void Menu::menu5Interaction() {
                 m_choixInscription._choixTypeCarte="Creature";
             }
         }
+        if(getMousePosition().x>(1300) && getMousePosition().x<(1450) &&getMousePosition().y>(200) && getMousePosition().y<(400) ){//Pour les spéciales
+            surQchose=true;
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                m_choixInscription._choixTypeCarte="Speciale";
+            }
+        }
+        if(getMousePosition().x>(1500) && getMousePosition().x<(1650) &&getMousePosition().y>(200) && getMousePosition().y<(400) ){//Pour les énergies
+            surQchose=true;
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                m_choixInscription._choixTypeCarte="Energie";
+            }
+        }
+
     }
 
     /*SI DANS LA LISTE DES CARTES*/
@@ -289,8 +309,21 @@ void Menu::menu5Interaction() {
         if(m_choixInscription._choixTypeCarte=="Creature")/*SI DANS LA LISTE DES CREATURES*/
             choixCreatureInteraction();
 
+        if(m_choixInscription._choixTypeCarte=="Speciale")
+            choixSpecialeInteraction();
+
+        if(m_choixInscription._choixTypeCarte=="Energie")
+            choixEnergieInteraction();
+
         /*INTERACTION DU DRAG & DROP*/
-        m_choixInscription.drag.interaction(m_choixInscription.imm);
+        int x1=recupSprite("Rectangle_deck").getPosition().x;
+        int y1=recupSprite("Rectangle_deck").getPosition().y;
+        int immDrag=m_choixInscription.drag.interaction(x1,y1,1900,220);
+        if(immDrag!=666){ //Si ajout de cartes au deck
+            if(m_choixInscription.imm.size()<11) //Si moins de 11 cartes
+                m_choixInscription.imm.push_back(immDrag);
+        }
+
     }
 
     if(!surQchose)
@@ -361,7 +394,7 @@ void Menu::menu7Interaction(){
         m_window.draw(chargerTexte("Creer", 0,sf::Color::Green,100,1700,900,sf::Color::Black,2));
         if(getMousePosition().x>1700 && getMousePosition().x< 1700+190 && getMousePosition().y>900 && getMousePosition().y < 900+100){
             if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                if(m_creationCarte.creaCarte[1].size() <= 3 && m_creationCarte.creaCarte[1] <= "412" && m_creationCarte.creaCarte[1] >= "400" && m_creationCarte.creaCarte[2].size() <= 3 && m_creationCarte.creaCarte[2] <= "412" && m_creationCarte.creaCarte[2] >= "400" && m_creationCarte.creaCarte[1] != m_creationCarte.creaCarte[2]) {
+                if(m_creationCarte.creaCarte[1].size() <= 3 && m_creationCarte.creaCarte[1] <= "420" && m_creationCarte.creaCarte[1] >= "400" && m_creationCarte.creaCarte[2].size() <= 3 && m_creationCarte.creaCarte[2] <= "420" && m_creationCarte.creaCarte[2] >= "400" && m_creationCarte.creaCarte[1] != m_creationCarte.creaCarte[2]) {
                     // m_jeu.getCartesBases().ajouterCreature(Creature(413,0,m_creationCarte.creaCarte[0],"Description",100,);
                     setMenuActuel(0);
                 }
@@ -394,7 +427,60 @@ void Menu::choixCreatureInteraction(){
                 if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                     /*Initialisation du drag drop*/
                     m_choixInscription.drag.setActif(true); //Drag drop actif
+                    m_choixInscription.drag.setId(elem.getId());
                     m_choixInscription.drag.setImm(elem.getImmatriculation());
+                }
+            }
+        }
+
+        if(i%10==0){
+            i=0;
+            j++;
+        }
+        i++;
+    }
+}
+
+void Menu::choixSpecialeInteraction(){
+    int i=1,j=0;
+    for(const auto& elem : m_jeu.getCartesBases().getSpeciales()){
+        int x=-65+170*i;
+        int y=40+210*j;
+
+        if(!m_choixInscription.drag.getActif()){
+            if(getMousePosition().x>(x) && getMousePosition().x<(x+150) &&getMousePosition().y>(y) && getMousePosition().y<(y+200)){
+                //Si clique sur la carte
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    /*Initialisation du drag drop*/
+                    m_choixInscription.drag.setActif(true); //Drag drop actif
+                    m_choixInscription.drag.setImm(elem.getImmatriculation());
+                    m_choixInscription.drag.setId(elem.getId());
+                }
+            }
+        }
+
+        if(i%10==0){
+            i=0;
+            j++;
+        }
+        i++;
+    }
+}
+
+void Menu::choixEnergieInteraction(){
+    int i=1,j=0;
+    for(const auto& elem : m_jeu.getCartesBases().getEnergies()){
+        int x=-65+170*i;
+        int y=40+210*j;
+
+        if(!m_choixInscription.drag.getActif()){
+            if(getMousePosition().x>(x) && getMousePosition().x<(x+150) &&getMousePosition().y>(y) && getMousePosition().y<(y+200)){
+                //Si clique sur la carte
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    /*Initialisation du drag drop*/
+                    m_choixInscription.drag.setActif(true); //Drag drop actif
+                    m_choixInscription.drag.setImm(elem.getImmatriculation());
+                    m_choixInscription.drag.setId(elem.getId());
                 }
             }
         }
@@ -432,4 +518,16 @@ bool Menu::btnRetourInteraction(int menuBase){
         return true;
     }
   return false;
+}
+
+void Menu::interactionDescriptionCarte(){
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+        for(const auto elem : Affichage::getPosCartes()){
+            if(getMousePosition().x>=elem.x && getMousePosition().x<=elem.x+150 && getMousePosition().y>=elem.y && getMousePosition().y<=elem.y+200){
+                //m_jeu.getCartesBases().getCreatures()[0].afficheDescription();
+                std::cout << elem.imm << std::endl;
+            }
+        }
+    }
+
 }

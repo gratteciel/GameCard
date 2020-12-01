@@ -46,7 +46,6 @@ void Game::chargerUsersPseudos(){
     std::ifstream file ("../database/utilisateurs/utilisateurs.txt");
 
     if(file.is_open()){
-        std::cout << "fichier ouvert : utilisateurs.txt" << std::endl;
         std::string line;
 
         while(std::getline(file,line)){
@@ -108,7 +107,7 @@ void Game::lancerMatch(){
         users.push_back(elem.first);
     }
     auto it1=m_usersConnectes.find(users[0]);
-    auto it2=m_usersConnectes.find(users[0]);
+    auto it2=m_usersConnectes.find(users[1]);
 
     //Vérification si ils existent
     if(it1!= m_usersConnectes.end() &&  it2 != m_usersConnectes.end()){

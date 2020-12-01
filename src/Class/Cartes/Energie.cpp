@@ -16,13 +16,9 @@ Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _d
 
 }
 
-//Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
-Energie::Energie(int _immatriculation, int _id,  std::vector<int> _cartesBase)
-        :Carte(_immatriculation,_id)
-{
 
 
-}
+
 
 Energie::~Energie() {
 
@@ -50,4 +46,19 @@ int Energie::getDomaine() const{
 void Energie::creer(std::ofstream& fileOutput){
     // Ajout dans le fichier energie
     fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*" << getDomaine() << "*";
+}
+
+void Energie::affiche(float x, float y){
+
+    sf::Text texte;
+    Affichage::setPos(x,y, "Energie");//changer ici pour les energies
+    Affichage::afficheImage("Energie");//changer ici pour les energies
+
+    //Afiche le nom
+    texte=Affichage::chargerTexte(getNom(),1,sf::Color::White,19,x+30,y+43);
+    Affichage::getWindow().draw(texte);
+
+    //Affiche le domaine
+    texte=Affichage::chargerTexte(std::to_string(getDomaine()),1,sf::Color::White,20,x+50,y+165);
+    Affichage::getWindow().draw(texte);
 }

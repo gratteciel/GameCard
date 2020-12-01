@@ -31,6 +31,7 @@ class Creature : public Carte{
 
         void creer(std::ofstream& fileOutput);
         void affiche(float x, float y);
+        void afficheDescription();
         //Accesseurs et mutateurs
         short getPdv() const;
         void setPdv(short _pdv);

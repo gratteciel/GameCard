@@ -4,6 +4,8 @@
 
 #include "../../Headers/Match/Joueur.h"
 
+
+
 /*
  * Constructeur et destructeur
  */
@@ -19,7 +21,7 @@ Joueur::Joueur(Utilisateur *_user)
     temp.imm=-1;
 
     m_enjeu=temp;
-    m_active=temp;
+
 }
 
 Joueur::~Joueur(){
@@ -58,9 +60,39 @@ Collection& Joueur::getCartes(){
     return m_cartes;
 }
 
+void Joueur::setEndroitActu(const std::string& _endroitActu){
+    setEtreSurBouton(true);
+    m_prop.endroitActu=_endroitActu;
+}
+std::string Joueur::getEndroitActu() const{
+    return m_prop.endroitActu;
+}
+
+void Joueur::setEtreSurBouton(const bool& _etreSurBouton){
+    m_prop.etreSurBtn=_etreSurBouton;
+}
+bool Joueur::getEtreSurBouton() const{
+    return m_prop.etreSurBtn;
+}
+
+unsigned short Joueur::getClignotage() const{
+    return m_prop.clignotage;
+}
+
+void Joueur::setClignotage(unsigned short _clignotage){
+    m_prop.clignotage=_clignotage;
+}
+
+DragCarte& Joueur::getDrag(){
+    return m_drag;
+}
+
+
+
 /*
  * Méthodes
  */
+
 
 void Joueur::setCartes(const Collection& _cartesBase){
 
@@ -98,7 +130,17 @@ void Joueur::setCartes(const Collection& _cartesBase){
     }
 }
 
-void Joueur::piocher(){
-    //On ajoute la carte à la pioche
-    getMain().push_back(getPioche().piocher());
+void Joueur::initiatlisationProp(){
+    m_prop.aPioche=false;
+    getDrag().setActif(false);
+
+    setEndroitActu("none");
+    setClignotage(30);
 }
+
+void Joueur::piocher(){
+    //On ajoute la carte à la main
+    getMain().push_back(getPioche().piocher());
+    m_prop.aPioche=true;
+}
+

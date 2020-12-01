@@ -3,13 +3,12 @@
 //
 
 #include "../../Headers/Match/Match.h"
-#include "../../Headers/Affichage/Affichage.h"
+
 /*
  * Constructeur et destructeur
  */
 
 Match::Match()
-
 {
 
 }
@@ -47,22 +46,45 @@ Joueur& Match::getJoueur() {
     return m_joueur[getJoueurActuel()];
 }
 
+Joueur& Match::getJoueurEnnemie(){
+    if(getJoueurActuel()==0)
+        return m_joueur[1];
+    else
+        return m_joueur[0];
+}
+
+std::vector<Joueur>& Match::getJoueurs(){
+    return m_joueur;
+}
+
+
 /*
  * Méthodes
  */
 
+void Match::permuterJoueur(){
+    if(getJoueurActuel()==0)
+        setJoueurActuel(1);
+    else
+        setJoueurActuel(0);
+    getJoueur().initiatlisationProp();
+}
 
 void Match::lancementMatch(Utilisateur *_user1, Utilisateur *_user2, const Collection& _cartesBase) {
+
     setJoueur(_user1);
+
     setJoueur(_user2);
     m_joueur[0].setPioche(_cartesBase);
     m_joueur[1].setPioche(_cartesBase);
     setJoueurActuel(0);
+    getJoueur().initiatlisationProp();
     setTypeTerrain(1);
 }
 
-void Match::interactionPioche(){
 
 
+void Match::interaction(){
+    if(getJoueur().interaction())//Si fin de tour du joueurActuel
+        permuterJoueur();
 }
-

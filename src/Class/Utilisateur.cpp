@@ -44,9 +44,14 @@ int Utilisateur::getDeckActif() const{
  * Méthodes
  */
 
+int Utilisateur::getNombreDeck() const{
+    return m_decks.size();
+}
+
 void Utilisateur::affichageUtilisateur() {
     std::cout << getPseudo();
 }
+
 
 void Utilisateur::creerDatabase(const std::vector<int>& _deck0){
     //1: Ajout dans l'utilisateur dans utilisateurs.txt

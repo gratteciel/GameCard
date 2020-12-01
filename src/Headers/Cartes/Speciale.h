@@ -6,7 +6,7 @@
 #define CARDGAME_SPECIALE_H
 
 #include "Carte.h"
-
+#include "../../Headers/Affichage/Affichage.h"
 class Speciale : public Carte {
     private:
 
@@ -17,7 +17,7 @@ class Speciale : public Carte {
         ~Speciale();
 
         //Méthodes
-
+        void affiche(float x, float y);
         void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
 };

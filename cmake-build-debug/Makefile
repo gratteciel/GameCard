@@ -547,6 +547,60 @@ src/Class/Match/Joueur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s
 .PHONY : src/Class/Match/Joueur.cpp.s
 
+src/Class/Match/JoueurAffichage.obj: src/Class/Match/JoueurAffichage.cpp.obj
+
+.PHONY : src/Class/Match/JoueurAffichage.obj
+
+# target to build an object file
+src/Class/Match/JoueurAffichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.obj
+.PHONY : src/Class/Match/JoueurAffichage.cpp.obj
+
+src/Class/Match/JoueurAffichage.i: src/Class/Match/JoueurAffichage.cpp.i
+
+.PHONY : src/Class/Match/JoueurAffichage.i
+
+# target to preprocess a source file
+src/Class/Match/JoueurAffichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.i
+.PHONY : src/Class/Match/JoueurAffichage.cpp.i
+
+src/Class/Match/JoueurAffichage.s: src/Class/Match/JoueurAffichage.cpp.s
+
+.PHONY : src/Class/Match/JoueurAffichage.s
+
+# target to generate assembly for a file
+src/Class/Match/JoueurAffichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.s
+.PHONY : src/Class/Match/JoueurAffichage.cpp.s
+
+src/Class/Match/JoueurInteraction.obj: src/Class/Match/JoueurInteraction.cpp.obj
+
+.PHONY : src/Class/Match/JoueurInteraction.obj
+
+# target to build an object file
+src/Class/Match/JoueurInteraction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.obj
+.PHONY : src/Class/Match/JoueurInteraction.cpp.obj
+
+src/Class/Match/JoueurInteraction.i: src/Class/Match/JoueurInteraction.cpp.i
+
+.PHONY : src/Class/Match/JoueurInteraction.i
+
+# target to preprocess a source file
+src/Class/Match/JoueurInteraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.i
+.PHONY : src/Class/Match/JoueurInteraction.cpp.i
+
+src/Class/Match/JoueurInteraction.s: src/Class/Match/JoueurInteraction.cpp.s
+
+.PHONY : src/Class/Match/JoueurInteraction.s
+
+# target to generate assembly for a file
+src/Class/Match/JoueurInteraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.s
+.PHONY : src/Class/Match/JoueurInteraction.cpp.s
+
 src/Class/Match/Match.obj: src/Class/Match/Match.cpp.obj
 
 .PHONY : src/Class/Match/Match.obj
@@ -736,6 +790,12 @@ help:
 	@echo ... src/Class/Match/Joueur.obj
 	@echo ... src/Class/Match/Joueur.i
 	@echo ... src/Class/Match/Joueur.s
+	@echo ... src/Class/Match/JoueurAffichage.obj
+	@echo ... src/Class/Match/JoueurAffichage.i
+	@echo ... src/Class/Match/JoueurAffichage.s
+	@echo ... src/Class/Match/JoueurInteraction.obj
+	@echo ... src/Class/Match/JoueurInteraction.i
+	@echo ... src/Class/Match/JoueurInteraction.s
 	@echo ... src/Class/Match/Match.obj
 	@echo ... src/Class/Match/Match.i
 	@echo ... src/Class/Match/Match.s

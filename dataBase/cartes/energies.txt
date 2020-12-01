@@ -1,3 +1,4 @@
-300*Bobi*Trop le fun*1*
-309*porc*jimmy notron*1*
-350*Jean*prout prout*2*
+300*Feu*Element feu*0*
+301*Eau*Element eau*1*
+302*Electricite*Element electrique*2*
+303*Nature*Element nature*3*

@@ -20,27 +20,37 @@ private:
     int m_typeTerrain;
     int m_joueurActuel;
 
+
 public:
     //Constructeurs et Destructeurs
     Match();
+
     ~Match();
 
     //Méthodes
-    void lancementMatch(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase);
-    void interactionPioche();
+    void lancementMatch(Utilisateur *_user1, Utilisateur *_user2, const Collection &_cartesBase);
+
+    void interaction();
+
+    void permuterJoueur();
+
     //Getter et Setter
 
     void setJoueur(Utilisateur *_user);
 
     void setTypeTerrain(int _typeTerrain);
+
     int getTypeTerrain() const;
+
     int getJoueurActuel() const;
+
     void setJoueurActuel(int _joueurActuel);
 
-    Joueur& getJoueur();
+    Joueur &getJoueur();
 
+    Joueur &getJoueurEnnemie();
+
+    std::vector<Joueur> &getJoueurs();
 
 };
-
-
 #endif //CARDGAME_MATCH_H

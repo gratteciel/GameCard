@@ -4,6 +4,7 @@
 
 #include "../../Headers/Cartes/Speciale.h"
 
+
 /*
  * Constructeur et destructeur
  */
@@ -43,3 +44,17 @@ void Speciale::creer(std::ofstream& fileOutput){
 
 }
 
+void Speciale::affiche(float x, float y){
+
+    sf::Text texte;
+    Affichage::setPos(x,y, "Speciale");//changer ici pour les spéciales
+    Affichage::afficheImage("Speciale");//changer ici pour les spéciales
+
+    //Afiche le nom
+    texte=Affichage::chargerTexte(getNom(),1,sf::Color::White,19,x+30,y+43);
+    Affichage::getWindow().draw(texte);
+
+    //Affiche l'immatriculation
+    texte=Affichage::chargerTexte(std::to_string(getImmatriculation()),1,sf::Color::White,20,x+50,y+165);
+    Affichage::getWindow().draw(texte);
+}

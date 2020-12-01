@@ -17,13 +17,6 @@ Creature::Creature(int _immatriculation, int _id, std::string _nom, std::string 
 
 }
 
-//Constructeur pour la copie d'une carte en fonction de la collection de carte dans le jeu
-Creature::Creature()
-         : Carte(0, 0,"noname", "noDescription"), m_vivant(true)
-
-{
-
-}
 
 Creature::~Creature() {
 
@@ -80,6 +73,12 @@ void Creature::creer(std::ofstream& fileOutput){
 
 void Creature::affiche(float x, float y)
 {
+    t_posCartes temp;
+    temp.imm=getImmatriculation();
+    temp.x=x;
+    temp.y=y;
+    Affichage::getPosCartes().push_back(temp);//On ajoute la carte au vecteur de toutes les cartes
+
     sf::Text texte;
     Affichage::setPos(x,y, "Creature");
     Affichage::afficheImage("Creature");
@@ -93,3 +92,14 @@ void Creature::affiche(float x, float y)
     Affichage::getWindow().draw(texte);
 }
 
+void Creature::afficheDescription(){
+    sf::Text texte;
+    Affichage::setPos(480,270, "Background_carte");
+    Affichage::afficheImage("Background_carte");
+
+    //Afiche le nom
+    texte=Affichage::chargerTexte(getNom(),1,sf::Color::White,40,520,310,sf::Color::Black,1);
+    Affichage::getWindow().draw(texte);
+
+
+}

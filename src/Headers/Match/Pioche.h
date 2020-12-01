@@ -32,6 +32,8 @@ class Pioche {
         t_carte piocher();
         t_carte melanger();
         void swap(t_carte& a, t_carte& b);
+        void affiche(bool _ennemie,const std::string _endroiActu="ennemie");
+        bool etreSurLaPioche();
         //Accesseurs et mutateurs
         std::deque<t_carte>& getCartes();
 };

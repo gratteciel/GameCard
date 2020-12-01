@@ -10,7 +10,9 @@
 #include "Cartes/Energie.h"
 #include "Cartes/Speciale.h"
 
-
+class Energie;
+class Speciale;
+class Carte;
 class Creature;
 class Collection {
     private:

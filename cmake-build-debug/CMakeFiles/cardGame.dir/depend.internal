@@ -202,6 +202,7 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
@@ -1132,8 +1133,14 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Energie.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
@@ -1228,8 +1235,14 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Speciale.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
@@ -1432,6 +1445,7 @@ CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
@@ -1541,6 +1555,221 @@ CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.obj
+ ../lib/SFML-2.5.1/include/SFML/Audio.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/InputSoundFile.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Listener.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Music.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/OutputSoundFile.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundBufferRecorder.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.inl
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileReader.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileWriter.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundRecorder.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/Config.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Color.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Font.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Glsl.inl
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Image.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Rect.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Rect.inl
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Shader.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Shape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Text.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Texture.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Transform.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/View.hpp
+ ../lib/SFML-2.5.1/include/SFML/System.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Clock.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Err.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/FileInputStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/InputStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Lock.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Mutex.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/NonCopyable.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Sleep.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/String.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/String.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Thread.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Thread.inl
+ ../lib/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Time.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Utf.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Utf.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Vector2.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Vector2.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Vector3.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Vector3.inl
+ ../lib/SFML-2.5.1/include/SFML/Window.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Clipboard.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Context.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Cursor.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Event.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/GlResource.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Joystick.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Keyboard.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Mouse.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Sensor.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Touch.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/VideoMode.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/JoueurAffichage.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.obj
+ ../lib/SFML-2.5.1/include/SFML/Audio.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/InputSoundFile.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Listener.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Music.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/OutputSoundFile.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundBufferRecorder.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileFactory.inl
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileReader.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundFileWriter.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundRecorder.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
+ ../lib/SFML-2.5.1/include/SFML/Audio/SoundStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/Config.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Color.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Font.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Glsl.inl
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Image.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Rect.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Rect.inl
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Shader.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Shape.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Text.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Texture.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Transform.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp
+ ../lib/SFML-2.5.1/include/SFML/Graphics/View.hpp
+ ../lib/SFML-2.5.1/include/SFML/System.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Clock.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Err.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/FileInputStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/InputStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Lock.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Mutex.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/NonCopyable.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Sleep.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/String.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/String.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Thread.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Thread.inl
+ ../lib/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Time.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Utf.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Utf.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Vector2.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Vector2.inl
+ ../lib/SFML-2.5.1/include/SFML/System/Vector3.hpp
+ ../lib/SFML-2.5.1/include/SFML/System/Vector3.inl
+ ../lib/SFML-2.5.1/include/SFML/Window.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Clipboard.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Context.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Cursor.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Event.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Export.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/GlResource.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Joystick.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Keyboard.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Mouse.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Sensor.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Touch.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/VideoMode.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
+ ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/JoueurInteraction.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
@@ -1647,6 +1876,7 @@ CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
  C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h

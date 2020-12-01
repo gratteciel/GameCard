@@ -59,7 +59,6 @@ void Collection::chargerCartesFille(const std::string& _nomClassCarte){
         type=4;
 
     if(file.is_open()){
-        std::cout << "fichier ouvert : " << _nomClassCarte << std::endl;
         std::string line;
 
         while(std::getline(file,line)){
@@ -126,7 +125,7 @@ void Collection::chargerCreature(int _imm, std::string _nom, std::string _descri
     }
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte creature du jeu
-    m_creatures.push_back(Creature(_imm,0,_nom,_description,std::stoi(sPdvI), _attaques));
+    m_creatures.push_back(Creature(_imm,_imm,_nom,_description,std::stoi(sPdvI), _attaques));
 }
 
 void Collection::chargerEnergie(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
@@ -135,14 +134,14 @@ void Collection::chargerEnergie(int _imm, std::string _nom, std::string _descrip
     char _domaine=sDomaine[0];//conversion du string en char
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte energie du jeu
-    m_energies.push_back(Energie(_imm,0,_nom,_description,_domaine-48));
+    m_energies.push_back(Energie(_imm,_imm,_nom,_description,_domaine-48));
 }
 
 void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
     //Ajouteur tous les attributs à speciale
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte speciale du jeu
-    m_speciales.push_back(Speciale(_imm,0,_nom,_description));
+    m_speciales.push_back(Speciale(_imm,_imm,_nom,_description));
 }
 
 void Collection::chargerAttaque(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp) {
@@ -166,7 +165,7 @@ void Collection::chargerAttaque(int _imm, std::string _nom, std::string _descrip
 
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte attaque du jeu
-    m_attaques.push_back(Attaque(_imm,0,_nom,_description,std::stoi(sDegat), _nbPoints));
+    m_attaques.push_back(Attaque(_imm,_imm,_nom,_description,std::stoi(sDegat), _nbPoints));
 }
 
 

@@ -61,6 +61,7 @@ public:
     void affichePseudoUtilisateurs();
     void interactionPseudoUtilisateurs();
     void contrerResterAppuye();
+    void interactionDescriptionCarte();
 
     void menuInit(int& temp);
     void menuBase(std::string& pseudoCouleur);
@@ -104,6 +105,12 @@ public:
 
     void choixCreatureAffichage();
     void choixCreatureInteraction();
+
+    void choixSpecialeInteraction();
+    void choixSpecialeAffichage();
+
+    void choixEnergieInteraction();
+    void choixEnergieAffichage();
 
     void btnRetourAffichage();
     bool btnRetourInteraction(int menuBase);
