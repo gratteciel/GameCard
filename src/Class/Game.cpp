@@ -23,7 +23,7 @@ Game::~Game() {
  * Accesseurs et mutateurs
  */
 
-std::map<std::string, Utilisateur> Game::getUsersConnectes() const{
+std::vector<Utilisateur>& Game::getUsersConnectes(){
     return m_usersConnectes;
 }
 std::set<std::string>& Game::getUsersPseudo(){
@@ -66,8 +66,10 @@ unsigned short Game::connectionUser(const std::string& _pseudo){
     }
 
     //Vérifie si le user est deja connecté
-    if(m_usersConnectes.find(_pseudo)!=m_usersConnectes.end()){
-        return 2;
+    for(int i=0; i<getUsersConnectes().size() ; i++){
+        Utilisateur elem =getUsersConnectes()[i];
+        if(elem.getPseudo()==_pseudo)
+            return 2;
     }
 
 
@@ -79,7 +81,7 @@ unsigned short Game::connectionUser(const std::string& _pseudo){
         _temp.chargerUtilisateur();
 
         //On ajoute l'utilisateur au vecteur d'users connectés
-        m_usersConnectes.insert(std::pair<std::string,Utilisateur>(_pseudo,_temp));
+        m_usersConnectes.push_back(_temp);
 
         return 1; //l'utilisateur est connecté
 
@@ -91,28 +93,20 @@ unsigned short Game::connectionUser(const std::string& _pseudo){
 }
 
 
-void Game::deconnexionUser(const std::string& _pseudo){
+void Game::deconnexionUser(const int& _posUser){
 
     //Ici sauvegarder les éventuels changements
 
-    //Suppression de la map m_userConnectes
-    auto it=m_usersConnectes.find(_pseudo);
-    m_usersConnectes.erase(it);
+    //Suppression de la vecteur m_userConnectes
+    m_usersConnectes.erase(m_usersConnectes.begin()+_posUser);
+
+
 }
 
 void Game::lancerMatch(){
-    std::vector<std::string> users;
-    //Recuperation des pseudos des joeurs connectés
-    for(const auto& elem : m_usersConnectes){
-        users.push_back(elem.first);
-    }
-    auto it1=m_usersConnectes.find(users[0]);
-    auto it2=m_usersConnectes.find(users[1]);
 
-    //Vérification si ils existent
-    if(it1!= m_usersConnectes.end() &&  it2 != m_usersConnectes.end()){
-        m_affichageMatch.lancement(&it1->second, &it2->second, m_cartesBases);
-    }
+    m_affichageMatch.lancement(&(m_usersConnectes[0]), &(m_usersConnectes[1]), m_cartesBases);
+
 }
 
 

@@ -5,7 +5,7 @@
 #ifndef CARDGAME_AFFICHAGE_H
 #define CARDGAME_AFFICHAGE_H
 #include "../../biblio.h"
-#include "../../Headers/Cartes/Creature.h"
+
 #include "../../Headers/Collection.h"
 
 typedef struct t_posCartes{
@@ -15,6 +15,7 @@ typedef struct t_posCartes{
 }t_posCartes;
 
 class Collection;
+
 class Affichage {//permet l'affichage sfml
 protected:
     static sf::RenderWindow m_window;
@@ -38,7 +39,7 @@ public:
     void chargementFonts();
     void chargerFont(const std::string& _nom);
     static sf::Text chargerTexte(const std::string& _textEcrit,int _choixDePolice, sf::Color _couleurTexte,int _tailleCarac, int _x, int _y, sf::Color _couleurContourTexte = sf::Color::White, double _tailleContourTexte=0);
-    static void afficheCarte(const Collection& _carteBase, int imm, int x, int y, int i);
+    static void afficheCarte(const Collection& _carteBase, int imm, int x, int y, int id);
 
     //Getter et Setter
     static sf::Vector2i getMousePosition();

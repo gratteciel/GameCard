@@ -9,16 +9,12 @@
  */
 
 //Constructeur pour le chargement des cartes au début du jeu
-Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _description, int _domaine)
-        : Carte(_immatriculation,_id,_nom,_description),  m_domaine(_domaine)
+Energie::Energie(int _immatriculation, int _id, std::string _nom, std::string _description, int _domaine, int _domaine2)
+        : Carte(_immatriculation,_id,_nom,_description,_domaine), m_domaine2(_domaine2)
 
 {
 
 }
-
-
-
-
 
 Energie::~Energie() {
 
@@ -28,15 +24,14 @@ Energie::~Energie() {
  * Accesseurs et mutateurs
  */
 
-int Energie::getDomaine() const{
-    return m_domaine;
+int Energie::getDomaine2() const {
+    return m_domaine2;
 }
 
 
 /*
  * Méthodes
  */
-
 
 
 /*
@@ -50,15 +45,34 @@ void Energie::creer(std::ofstream& fileOutput){
 
 void Energie::affiche(float x, float y){
 
+    Carte::ajoutCarteDescription(x,y);
+
     sf::Text texte;
-    Affichage::setPos(x,y, "Energie");//changer ici pour les energies
-    Affichage::afficheImage("Energie");//changer ici pour les energies
+    Affichage::setPos(x,y, "Energie");
+    Affichage::afficheImage("Energie");
 
-    //Afiche le nom
-    texte=Affichage::chargerTexte(getNom(),1,sf::Color::White,19,x+30,y+43);
-    Affichage::getWindow().draw(texte);
 
-    //Affiche le domaine
-    texte=Affichage::chargerTexte(std::to_string(getDomaine()),1,sf::Color::White,20,x+50,y+165);
-    Affichage::getWindow().draw(texte);
+    if(getDomaine2()==getDomaine()){
+        sf::Text texte = Affichage::chargerTexte("2", 1, sf::Color::White,30, x+30, y+100, sf::Color::Black, 1);
+        Affichage::getWindow().draw(texte);
+        Carte::affiche(x+20,y);
+    }
+
+    else{
+        Carte::affiche(x-30,y);
+        //Affiche le domaine
+        std::string nomFichier = "Energie_"+std::to_string(getDomaine2());
+        Affichage::setPos(x+90,y+100,nomFichier);
+        Affichage::afficheImage(nomFichier);
+    }
+
+}
+
+void Energie::afficheDescription() {
+    Carte::afficheDescriptionCarte("Energie");
+
+    std::string nomFichier = "Energie_"+std::to_string(getDomaine2());
+    Affichage::setPos(1200,380,nomFichier);
+    Affichage::afficheImage(nomFichier);
+
 }

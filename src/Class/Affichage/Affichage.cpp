@@ -109,12 +109,14 @@ void Affichage::sfmlLoadImages() {
     chargerImage("Nature","Play/Terrain","jpg");
     chargerImage("Regles", "Regles","jpg");
     chargerImage("Leave", "Quitter","jpg");
-    chargerImage("Rectangle_bois", "Play/login", "png");
-    chargerImage("Rectangle_deck", "Play/login", "png");
+    chargerImage("Rectangle_inscription", "Play/login", "png");
+    chargerImage("Rectangle_deck", "Play/login", "jpg");
     chargerImage("Erreur", "Play/login", "png");
     chargerImage("rectInscription", "Intro", "png");
     chargerImage("Background_utilisateur", "Intro", "png");
-    chargerImage("Background_carte", "Cartes", "png");
+
+    chargerImage("afficheAttaque", "Play/Terrain", "png");
+
 
 
     chargerImage("Creature", "Cartes", "jpg");
@@ -127,10 +129,12 @@ void Affichage::sfmlLoadImages() {
     chargerImage("imageFond", "Play/Terrain", "jpg");
 
 
-    chargerImage("Energie_feu", "Cartes", "png");
-    chargerImage("Energie_eau", "Cartes", "png");
-    chargerImage("Energie_electrique", "Cartes", "png");
-    chargerImage("Energie_nature", "Cartes", "png");
+    chargerImage("Energie_0", "Cartes", "png");
+    chargerImage("Energie_1", "Cartes", "png");
+    chargerImage("Energie_2", "Cartes", "png");
+    chargerImage("Energie_3", "Cartes", "png");
+
+    chargerImage("changementDeTour", "Play/Terrain", "png");
 
 }
 

@@ -8,7 +8,8 @@
 
 #include "Carte.h"
 #include "Attaque.h"
-#include "../../Headers/Affichage/Affichage.h"
+
+
 
 class Creature : public Carte{
     private:
@@ -22,21 +23,29 @@ class Creature : public Carte{
     public:
 
         //Constructeur et destructeur
-        Creature();
-        Creature(int _immatriculation, int _id, std::string _nom, std::string _description, int _pdVInitial, std::vector<Attaque*> _attaques);
+
+        Creature(int _immatriculation, int _id, std::string _nom, std::string _description,int _domaine, int _pdVInitial, std::vector<Attaque*> _attaques);
 
         ~Creature();
 
         //Méthodes
 
-        void creer(std::ofstream& fileOutput);
-        void affiche(float x, float y);
-        void afficheDescription();
-        //Accesseurs et mutateurs
-        short getPdv() const;
-        void setPdv(short _pdv);
+        virtual void creer(std::ofstream& fileOutput);
+        virtual void affiche(float x, float y);
 
-        short getPdvInitial() const;//pas de setters : initialisation dans le constructeur
+        virtual void afficheDescription();
+        virtual void afficheAttaques(const int& _terrainActuel);
+        void afficheAttaqueConsommation(int xBase, int yBase, int i);
+        void afficheAttaqueNom(int xBase, int yBase, int i);
+        void afficheAttaqueDeBase(int i, const int& _terrainActuel);
+        void afficheAttaqueImage(int xBase, int yBase);
+        void afficheDescriptionHerited();
+        void afficheDegat(int xBase,int yBase,int i);
+        //Accesseurs et mutateurs
+        int getPdv() const;
+        void setPdv(int _pdv);
+
+        int getPdvInitial() const;//pas de setters : initialisation dans le constructeur
 
         bool getVivant() const;
         void setVivant(bool _vivant);

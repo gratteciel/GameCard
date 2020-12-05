@@ -42,13 +42,15 @@ private:
     int m_menuActuel;
     std::string m_boutonActuel;
     Game m_jeu;
-    std::string m_gestionUtilisateur;
+    int m_gestionUtilisateur;
     t_inscription m_choixInscription;
     int m_erreur;
     t_booleen m_bool;
     int m_mode; //=0 : Menu //=1 : Jeu //=2 : Start
     t_creationCarte m_creationCarte;
     t_intro m_intro;
+    int m_affichageDeck;
+    int m_modeAffichageJoueur;
 public:
     //Constructeur et destructeur
     Menu();
@@ -103,6 +105,9 @@ public:
     void gestionUtilisateurAffichage();
     void gestionUtilisateurInteraction();
 
+    void gestionInteractionDeckJoueur();
+    void gestionAffichageDeckJoueur();
+
     void choixCreatureAffichage();
     void choixCreatureInteraction();
 
@@ -114,6 +119,8 @@ public:
 
     void btnRetourAffichage();
     bool btnRetourInteraction(int menuBase);
+
+    void affichePermuterJoueurs();
 
     void sfmlLeave();
     void erreur();
@@ -127,12 +134,18 @@ public:
     std::string getBoutonActuel() const;
     void setErreur(int _erreur);
     int getErreur() const;
-    std::string getGestionUtilisateur() const;
-    void setGestionUtilisateur(std::string a);
+    int getGestionUtilisateur() const;
+    void setGestionUtilisateur(int a);
     int getMode() const;
     void setMode(int _mode);
 
     t_booleen getBool() const;
+    void setAffichageDeck(int _affichageDeck);
+    int getAffichageDeck() const;
+
+    int getModeAffichageJoueur()const;
+    void setModeAffichageJoueur(int _modeAffichageJoueur);
+
 };
 
 

@@ -303,8 +303,8 @@ void Menu::menu7Affichage() {
 
 void Menu::choixCreatureAffichage(){
     int i=1,j=0;
-    setPos(0,0,"Rectangle_bois");
-    afficheImage("Rectangle_bois");
+    setPos(0,0,"Rectangle_inscription");
+    afficheImage("Rectangle_inscription");
     for(auto& elem : m_jeu.getCartesBases().getCreatures()){
         elem.affiche(-65+170*i, 40+210*j);
         if(i%10==0){
@@ -317,8 +317,8 @@ void Menu::choixCreatureAffichage(){
 
 void Menu::choixSpecialeAffichage(){
     int i=1,j=0;
-    setPos(0,0,"Rectangle_bois");
-    afficheImage("Rectangle_bois");
+    setPos(0,0,"Rectangle_inscription");
+    afficheImage("Rectangle_inscription");
     for(auto& elem : m_jeu.getCartesBases().getSpeciales()){
         elem.affiche(-65+170*i, 40+210*j);
         if(i%10==0){
@@ -330,8 +330,8 @@ void Menu::choixSpecialeAffichage(){
 }
 void Menu::choixEnergieAffichage(){
     int i=1,j=0;
-    setPos(0,0,"Rectangle_bois");
-    afficheImage("Rectangle_bois");
+    setPos(0,0,"Rectangle_inscription");
+    afficheImage("Rectangle_inscription");
     for(auto& elem : m_jeu.getCartesBases().getEnergies()){
         elem.affiche(-65+170*i, 40+210*j);
         if(i%10==0){
@@ -360,16 +360,16 @@ void Menu::affichePseudoUtilisateurs(){
     int i=0;
     std::vector<std::string> decksPasValides;
     for(const auto& elem :m_jeu.getUsersConnectes()){
-        _tempTexte.setString(elem.first);
+        _tempTexte.setString(elem.getPseudo());
 
         //Vérifie si son deck est valide
-        if(!elem.second.getDeck(elem.second.getDeckActif()).getDeckActuValide()){
-            decksPasValides.push_back(elem.first);
+        if(!elem.getDeck(elem.getDeckActif()).getDeckActuValide()){
+            decksPasValides.push_back(elem.getPseudo());
         }
 
 
         //Si le curseur est sur le pseudo actuel
-        if(elem.first==getBoutonActuel())
+        if(elem.getPseudo()==getBoutonActuel())
             _tempTexte.setFillColor(sf::Color(230,213,23,255));//couleur du texte
         else
             _tempTexte.setFillColor(sf::Color::White);//couleur du texte
@@ -416,10 +416,11 @@ void Menu::affichePseudoUtilisateurs(){
 }
 
 void Menu::gestionUtilisateurAffichage(){
-    if(getGestionUtilisateur()!="none"){
+    if(getGestionUtilisateur()!=-1){
+
         afficheImage("Background_utilisateur");
         /*AFFICHE LE PSEUDO*/
-        sf::Text texte=chargerTexte(getGestionUtilisateur(),0,sf::Color(198,27,27),100,10,10,sf::Color::White,0);
+        sf::Text texte=chargerTexte(m_jeu.getUsersConnectes()[getGestionUtilisateur()].getPseudo(),0,sf::Color(198,27,27),100,10,10,sf::Color::White,0);
         m_window.draw(texte);
 
         /*AFFICHE le bouton de déconnexion*/
@@ -430,6 +431,7 @@ void Menu::gestionUtilisateurAffichage(){
             texte.setFillColor(sf::Color(230,213,23));
         m_window.draw(texte);
 
+        gestionAffichageDeckJoueur();
 
 
     }
@@ -437,6 +439,88 @@ void Menu::gestionUtilisateurAffichage(){
 
 }
 
+void Menu::gestionAffichageDeckJoueur(){
+    sf::Color couleur = sf::Color(233,233,233,255);
+
+
+    int nbreDecks= m_jeu.getUsersConnectes()[getGestionUtilisateur()].getNombreDeck();//affiche le deck 0 car un seul deck
+    switch (getModeAffichageJoueur()) {
+        case 1: //affiche les truc de bases
+            /* Cette partie permet d'afficher les cartes du deck du joueur selectionner */
+            if(getBoutonActuel()=="voir ses decks")
+                m_window.draw(chargerTexte("Voir ses decks",1,sf::Color(198,27,27),100,150,300));
+            else
+                m_window.draw(chargerTexte("Voir ses decks",1,sf::Color(233,233,233,255),100,150,300));
+
+            if(getBoutonActuel()=="creer un deck")
+                m_window.draw(chargerTexte("Creer un deck",1,sf::Color(198,27,27),100,950,500));
+            else
+                m_window.draw(chargerTexte("Creer un deck",1,sf::Color(233,233,233,255),100,950,500));
+            break;
+
+        case 2://quand on appuie sur voir ses decks et cliquer sur le deck qu'on veut afficher
+
+            for(int i(0);i<nbreDecks;i++){
+                std::string temp=  "Deck "+ std::to_string(i+1);
+                if(getBoutonActuel()=="choixDeck" + std::to_string(i)){
+                    couleur = sf::Color(198,27,27);
+                }
+                m_window.draw(chargerTexte(temp,1,couleur,40,100+150*i,200));
+            }
+
+            for(int i(0) ; i< m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().size();i++){
+                Affichage::afficheCarte(m_jeu.getCartesBases(),m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules()[i],50 + 170 * i,300,m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules()[i]);
+            }
+
+            if(getAffichageDeck()!=-1){//correspond a l'affichage du deck selectionné
+                /* On affichera toutes les disponibles du joueur et quand il cliquera sur une de ses cartes on fera un push back , on affichera les cartes de chaque type sur chaque de ligne et on fera des if avec || */
+                for(int j(0);j < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeck(getAffichageDeck()).getCartes().size();j++) {
+
+
+                    Affichage::afficheCarte(m_jeu.getCartesBases(), m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeck(getAffichageDeck()).getCartes()[j],50 + 170 * j, 700,m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeck(getAffichageDeck()).getCartes()[j]);
+
+                    if(getBoutonActuel()=="carteDecknum" + std::to_string(j)){
+                        sf::RectangleShape rectangle;
+                        rectangle.setSize(sf::Vector2f(150, 200));
+                        rectangle.setFillColor(sf::Color(255,255,255,30));
+                        rectangle.setOutlineColor(sf::Color(255,0,0,200));
+                        rectangle.setOutlineThickness(2);
+                        rectangle.setPosition(50 + 170 * j, 700);
+                        Affichage::getWindow().draw(rectangle);
+                    }
+
+
+                }
+            }
+            break;
+
+        case 3://quand on veut créer un deck
+            //affiche seulement les cartes seules
+
+            sf::Text texte;
+            //Affiche le deck actuel avec les cartes
+            texte=chargerTexte("Choisissez 11 cartes, les " + std::to_string(Deck::getNumCartes()) +" premieres formeront votre 1er deck.",1,sf::Color::White,30,600,815,sf::Color::Black,1);
+
+
+            /*AFFICHE LES CARTES DU DECK*/
+            m_window.draw(texte);
+            setPos(10,855,"Rectangle_deck");
+            afficheImage("Rectangle_deck");
+            std::string temp;
+            temp+= "Creation du deck numero "+ std::to_string(nbreDecks+1);
+            m_window.draw(chargerTexte(temp,1,sf::Color(198,100,200),40,50,200));
+
+            break;
+    }
+}
+
 void Menu::sfmlLeave() {
     afficheImage("Leave");
+}
+
+void Menu::affichePermuterJoueurs(){
+    Affichage::afficheImage("changementDeTour");
+    sf::Text texte=chargerTexte("Changement de joueur",1,sf::Color::White,80,400,300,sf::Color::Black,2);
+    getWindow().draw(texte);
+    m_bool.sleep=true;
 }

@@ -26,7 +26,7 @@ void Match::setJoueur(Utilisateur *_user) {
 }
 
 void Match::setTypeTerrain(int _typeTerrain) {
-    if(_typeTerrain>0)
+    if(_typeTerrain>=0)
         m_typeTerrain=_typeTerrain;
     else
         std::cout << "Numero du terrain invalide" << std::endl;
@@ -57,6 +57,9 @@ std::vector<Joueur>& Match::getJoueurs(){
     return m_joueur;
 }
 
+std::vector<int>& Match::getCimetiere(){
+    return m_cimetiere;
+}
 
 /*
  * Méthodes
@@ -79,12 +82,31 @@ void Match::lancementMatch(Utilisateur *_user1, Utilisateur *_user2, const Colle
     m_joueur[1].setPioche(_cartesBase);
     setJoueurActuel(0);
     getJoueur().initiatlisationProp();
-    setTypeTerrain(1);
+    setTypeTerrain(5);
 }
 
 
 
-void Match::interaction(){
-    if(getJoueur().interaction())//Si fin de tour du joueurActuel
+int Match::interaction(){
+    int temp = getTypeTerrain();
+
+    int returnInteraction = getJoueur().interaction(getJoueurEnnemie(),getCimetiere(),temp);
+
+    if(returnInteraction==1){ //Changement de tour
         permuterJoueur();
+        return 1;
+    }//Si fin de tour du joueurActuel
+
+    else if(returnInteraction==2){//QUITTER
+        getJoueurs().clear(); //On efface les joueurs
+        getCimetiere().clear();//on efface le cimetiere
+        return 2;
+    }
+
+
+    if(temp!=getTypeTerrain()){
+        setTypeTerrain(temp);
+    }
+    return 0;
 }
+

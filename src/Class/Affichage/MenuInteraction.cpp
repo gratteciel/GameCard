@@ -9,18 +9,18 @@ void Menu::interactionPseudoUtilisateurs() {
     bool fin=false, decksValides=true;
 
     for(const auto& elem :m_jeu.getUsersConnectes()){
-        if(!elem.second.getDeck(elem.second.getDeckActif()).getDeckActuValide())
+        if(!elem.getDeck(elem.getDeckActif()).getDeckActuValide())
             decksValides=false;
 
-        if (getMousePosition().x>(600+250*i) && getMousePosition().x<(600+250*i+elem.first.size()*24) && getMousePosition().y>(970) && getMousePosition().y<(970+70) ){
+        if (getMousePosition().x>(600+250*i) && getMousePosition().x<(600+250*i+elem.getPseudo().size()*24) && getMousePosition().y>(970) && getMousePosition().y<(970+70) ){
             fin=true;
-            setBoutonActuel(elem.first);
+            setBoutonActuel(elem.getPseudo());
 
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){//Si appuie sur pseudo
-                if(getGestionUtilisateur()=="none")
-                    setGestionUtilisateur(elem.first);
+                if(getGestionUtilisateur()==-1)
+                    setGestionUtilisateur(i);
                 else
-                    setGestionUtilisateur("none");
+                    setGestionUtilisateur(-1);
             }
             break;
         }
@@ -57,15 +57,17 @@ void Menu::interactionPseudoUtilisateurs() {
 }
 
 void Menu::gestionUtilisateurInteraction(){
-    if(getGestionUtilisateur()!="none"){
+    if(getGestionUtilisateur()!=-1){
         if(!btnRetourInteraction(40)){
+            gestionInteractionDeckJoueur();
+
             if(getMousePosition().x >20&& getMousePosition().x<20+170 && getMousePosition().y >120 &&
                getMousePosition().y<150){
                 setBoutonActuel("deconnexion");
 
                 if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                     m_jeu.deconnexionUser(getGestionUtilisateur());
-                    setGestionUtilisateur("none");
+                    setGestionUtilisateur(-1);
                 }
 
             }
@@ -73,9 +75,93 @@ void Menu::gestionUtilisateurInteraction(){
 
         }
     }
+    else{
+        //permet de refixe le numero du deck afin que le joueur suivant n'affiche le meme numero du deck que celui du précédent
+        setModeAffichageJoueur(1);
+        setAffichageDeck(-1);
+    }
 
 
 }
+
+void Menu::gestionInteractionDeckJoueur(){
+
+
+
+
+    switch (getModeAffichageJoueur()) {
+        case 1: //Premier sous-menu : Voir decks /Creer deck
+            if (getMousePosition().x > 150 && getMousePosition().x < 150 + 900 && getMousePosition().y > 300 &&
+                getMousePosition().y < 400) {
+                setBoutonActuel("voir ses decks");
+
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    setModeAffichageJoueur(2);
+                    setAffichageDeck(-1);
+                }
+            }
+            if (getMousePosition().x > 950 && getMousePosition().x < 950 + 900 && getMousePosition().y > 500 &&
+                getMousePosition().y < 600) {
+                setBoutonActuel("creer un deck");
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    setModeAffichageJoueur(3);
+                }
+            }
+
+
+            break;
+        case 2: //Deuxieme sous-menu : Interaction des N decks + interaction cartes seules + interaction modification d'un deck (getAffichageDeck)
+
+
+            for (int i(0); i < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable().size(); i++) {
+                if (getMousePosition().x > 100 + 150 * i && getMousePosition().x < 100 + 150 * i + 200 &&
+                    getMousePosition().y > 200 && getMousePosition().y < 200 + 40){
+                    setBoutonActuel("choixDeck" + std::to_string(i));
+                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {//faire en sorte que les cartes reste affiches
+                        if(getAffichageDeck()==i)
+                            setAffichageDeck(-1);
+                        else
+                            setAffichageDeck(i);
+
+                    }
+                }
+
+            }
+
+
+            if (getAffichageDeck() != -1) {
+
+                for (int j(0); j < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().size(); j++) {
+                    /* On enleve la carte qui est selectionné et on reload le deck pour l'affichage */
+                    if (getMousePosition().x > 50 + 170 * j && getMousePosition().x < 150 + 50 + 170 * j - 20 &&
+                        getMousePosition().y > 700 && getMousePosition().y < 700 + 200) {
+                        setBoutonActuel("carteDecknum" + std::to_string(j));
+                        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {//regler cette partie
+
+                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().push_back(m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes()[j]);
+
+                           m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().erase(m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().begin() +j);
+
+
+                        }
+                    }
+
+                }
+            }
+            break;
+
+        case 3:// a améliorer
+            bool surQchose = false;
+            /*INTERACTION DU DRAG & DROP*/
+            //m_choixInscription.drag.interaction(m_choixInscription.imm);
+
+            if (!surQchose)
+                setBoutonActuel("none");
+            break;
+    }
+
+}
+
 
 void Menu::menu0Interaction(){
 
@@ -186,7 +272,7 @@ void Menu::menu4Interaction(std::string& pseudoCouleur){
     unsigned short i=0;
     unsigned short j=0;
 
-    if(getGestionUtilisateur()=="none"){
+    if(getGestionUtilisateur()==-1){
         for(const auto& elem : m_jeu.getUsersPseudo()){
 
             if(i%10==0&&i!=0){
@@ -331,6 +417,7 @@ void Menu::menu5Interaction() {
 
 }
 
+/*Menu création de carte créature*/
 void Menu::menu6Interaction(){//menu 6 dans le getMenu
     //rectInscription correspond à l'encadré blanc pour écrire
     if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>170 && getMousePosition().y < 170+85)
@@ -354,6 +441,7 @@ void Menu::menu6Interaction(){//menu 6 dans le getMenu
             if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                 if(m_creationCarte.creaCarte[1].size() <= 3 && m_creationCarte.creaCarte[1] <= "412" && m_creationCarte.creaCarte[1] >= "400" && m_creationCarte.creaCarte[2].size() <= 3 && m_creationCarte.creaCarte[2] <= "412" && m_creationCarte.creaCarte[2] >= "400" && m_creationCarte.creaCarte[1] != m_creationCarte.creaCarte[2]) {
 
+                    //m_jeu.getCartesBases().creerCarte(Creature(116,116,m_creationCarte.creaCarte[0],"description",))
                     // m_jeu.getCartesBases().ajouterCreature(Creature(413,0,m_creationCarte.creaCarte[0],"Description",100,);
                     setMenuActuel(0);
                 }
@@ -504,14 +592,14 @@ bool Menu::btnRetourInteraction(int menuBase){
         setBoutonActuel("Retour");
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 
-            if(getGestionUtilisateur()=="none"){
+            if(getGestionUtilisateur()==-1){
                 if(getMenuActuel()!=40){ //Si pas affichage du gestion Utilisateur
                     setMenuActuel(menuBase);
                 }
             }
 
 
-            setGestionUtilisateur("none");
+            setGestionUtilisateur(-1);
 
             setBoutonActuel("none");
         }
@@ -523,10 +611,36 @@ bool Menu::btnRetourInteraction(int menuBase){
 void Menu::interactionDescriptionCarte(){
     if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
         for(const auto elem : Affichage::getPosCartes()){
+
             if(getMousePosition().x>=elem.x && getMousePosition().x<=elem.x+150 && getMousePosition().y>=elem.y && getMousePosition().y<=elem.y+200){
-                //m_jeu.getCartesBases().getCreatures()[0].afficheDescription();
-                std::cout << elem.imm << std::endl;
+                switch(elem.imm/100){
+                    case 1://Creéature
+                        for(auto& elem2 : m_jeu.getCartesBases().getCreatures()){
+                            if(elem.imm==elem2.getImmatriculation()){
+                                elem2.afficheDescription();
+                                break;
+                            }
+                        }
+                        break;
+                    case 2://Spéciales
+                        for(auto& elem2 : m_jeu.getCartesBases().getSpeciales()){
+                            if(elem.imm==elem2.getImmatriculation()){
+                                elem2.afficheDescription();
+                                break;
+                            }
+                        }
+                        break;
+                    case 3://Energie
+                        for(auto& elem2 : m_jeu.getCartesBases().getEnergies()){
+                            if(elem.imm==elem2.getImmatriculation()){
+                                elem2.afficheDescription();
+                                break;
+                            }
+                        }
+                        break;
+                }
             }
+
         }
     }
 

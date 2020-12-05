@@ -5,7 +5,7 @@
 #include "../../Headers/Affichage/Menu.h"
 
 Menu::Menu()
-     :Affichage(), m_menuActuel(0), m_boutonActuel("none"),m_erreur(-1),m_gestionUtilisateur("none"),m_mode(0)
+     :Affichage(), m_menuActuel(0), m_boutonActuel("none"),m_erreur(-1),m_gestionUtilisateur(-1),m_mode(0),m_affichageDeck(-1),m_modeAffichageJoueur(1)
 {
     m_choixInscription._choixTypeCarte="none";
     m_bool.ancienClick=false;
@@ -51,11 +51,11 @@ int Menu::getErreur() const{
     return m_erreur;
 }
 
-std::string Menu::getGestionUtilisateur() const{
+int Menu::getGestionUtilisateur() const{
     return m_gestionUtilisateur;
 }
 
-void Menu::setGestionUtilisateur(std::string a){
+void Menu::setGestionUtilisateur(int a){
     m_gestionUtilisateur=a;
 }
 
@@ -71,14 +71,32 @@ void Menu::setMode(int _mode){
 t_booleen Menu::getBool() const{
     return m_bool;
 }
+
+int Menu::getAffichageDeck() const {
+    return m_affichageDeck;
+}
+void Menu::setAffichageDeck(int _affichageDeck) {
+    if(_affichageDeck>=-1)
+        m_affichageDeck=_affichageDeck;
+}
+
+int Menu::getModeAffichageJoueur()const{
+    return m_modeAffichageJoueur;
+
+}
+void Menu::setModeAffichageJoueur(int _modeAffichageJoueur) {
+    if(_modeAffichageJoueur>0 && _modeAffichageJoueur<=3)
+        m_modeAffichageJoueur = _modeAffichageJoueur;
+}
+
 /*
  * Méthodes
  */
 
 void Menu::gestionChangementMenu(){
     //Si menu de gestion Utilisateurs
-    if(getGestionUtilisateur()!="none")
-        setGestionUtilisateur("none");
+    if(getGestionUtilisateur()!=-1)
+        setGestionUtilisateur(-1);
 
     else{
         if(getMenuActuel()>=0&&getMenuActuel()<=3)
@@ -281,10 +299,16 @@ void Menu::boucleBase() {//fonction pour initialiser sfml
     /*A REMETTRE */
     /*A REMETTRE */
 
+
+
     while (!getBool().fin) {
         getMousePosition();//obliger de le mettre dans la boucle pour réactualiser tout le temps
         Affichage::getPosCartes().clear(); //On clear toutes les pos des cartes
         sf::Event event;
+
+
+
+
 
         while (m_window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
@@ -306,14 +330,21 @@ void Menu::boucleBase() {//fonction pour initialiser sfml
         else if(getMode()==0)
             menuBase(pseudoCouleur);
         else{
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //POUR L'INSTANT
-                setMode(0);
+            int interact=0;
+            if(!m_bool.ancienEchap){ //permet d'éviter de rester appuyer sur Echap !
+                interact  = m_jeu.getAffichageMatch().getMatch().interaction();
+
+                if(interact==2)//si fin du match alors on revient au menux principaux
+                    setMode(0);
+                else if(interact==1)//Si permutation de joueur
+                    affichePermuterJoueurs();
 
             }
-            m_jeu.getAffichageMatch().boucleMatch();
+            if(interact==0)
+                m_jeu.getAffichageMatch().affichage(m_jeu.getCartesBases());//Afficge le jeu
         }
 
-        //interactionDescriptionCarte();
+        interactionDescriptionCarte();
 
         m_window.display();
 
@@ -333,8 +364,14 @@ void Menu::sleep(){
             sf::sleep(sf::seconds(4));
     }
 
-
-
+    else if(getMode()==1){
+        if(getBool().sleep){
+            sf::sleep(sf::seconds(1));
+            m_bool.sleep=false;
+        }
+        else
+            sf::sleep(sf::milliseconds(10));
+    }
     else{
         if(getBool().sleep){
             sf::sleep(sf::seconds(2));
@@ -361,8 +398,8 @@ void Menu::contrerResterAppuye(){
     }
     else
         m_bool.ancienClick=false;
-
 }
+
 
 void Menu::erreur(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
@@ -440,6 +477,7 @@ void Menu::menu3Init() {
 
 void Menu::menu4Init(){
     setPos(0,0,"Background_utilisateur");
+
 }
 
 void Menu::menu5Init(){

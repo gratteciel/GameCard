@@ -4,58 +4,126 @@
 
 #include "../../Headers/Match/Joueur.h"
 
-bool Joueur::interaction(){
+int Joueur::interaction(Joueur& _ennemie, std::vector<int>& _cimetiere, int& _typeTerrain){
     setEtreSurBouton(false);
 
-    if(interactionFinTour())
-        return true;
+    if(m_prop.propChoixAttaquer.id==-1){
+        m_prop.numAttaque=-1;
+        if(interactionFinTour())
+            return 1;
+        if(quitterOuPas())
+            return 2;
 
-    interactionPioche();
-    interactionMain();
-    interactionFromMainToActive();
+        if(getQuitter()==0){
+            if(m_prop.affichePtsEnergies==0){
+                interactionPioche();
+                interactionMain();
+                interactionFromMainToActive(_typeTerrain);
+            }
+            interactionPtsEnergies(_ennemie);
+        }
+    }
+
+    if(getQuitter()==0){
+        interactionActives();
+        interactionChoixAttaque(_ennemie, _cimetiere,_typeTerrain);
+    }
+
 
     if(!getEtreSurBouton())
         setEndroitActu("none");
+    incrementerClignotage();
 
     //Si pas fin de tour
+    return 0;
+}
+
+bool Joueur::quitterOuPas(){
+
+    if(m_prop.affichePtsEnergies==0){
+        sf::Vector2<int> souris=Affichage::getMousePosition();
+
+        if(getQuitter()==0){
+            //Si la souris est sur le "Quitter"
+            if(souris.x>=20&&souris.x<230 && souris.y>=700&&souris.y<=740){
+                setEndroitActu("quitter");
+
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && !getDrag().getActif()){
+                    sf::sleep(sf::milliseconds(200));
+                    setQuitter(1);
+                }
+            }
+        }
+
+
+        else if(getQuitter()==1){
+            //Si la souris est sur le "Quitter"
+            if(souris.x>=763&&souris.x<=920 && souris.y>=600&&souris.y<=640) {
+                setEndroitActu("quitter");
+
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && !getDrag().getActif()) {
+                    sf::sleep(sf::milliseconds(200));
+                    return true;
+                }
+            }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //Si appuie sur Echap
+                setQuitter(0);
+            }
+            if(souris.x>=1000&&souris.x<=1170 && souris.y>=600&&souris.y<=640) {
+                setEndroitActu("annuler");
+
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && !getDrag().getActif()) {
+                    setQuitter(0);
+                }
+            }
+
+
+        }
+    }
+
+
     return false;
 }
 
-
-
 void Joueur::interactionMain(){
-    for(int i=0; i<getMain().size(); i++){
-        auto elem=getMain()[i];
-        int sourisX=Affichage::getMousePosition().x;
-        int sourisY=Affichage::getMousePosition().y;
-        if(sourisX>580+155*i && sourisX<(580+155*i+150) &&sourisY>850 && sourisY<(850+200)){
-            //Si clique sur la carte
-            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                /*Initialisation du drag drop*/
-                getDrag().setActif(true); //Drag drop actif
-                getDrag().setId(elem.id);
-                getDrag().setImm(elem.imm);
+    if(!getDrag().getActif()){
+        for(int i=0; i<getMain().size(); i++){
+            auto elem=getMain()[i];
+            int sourisX=Affichage::getMousePosition().x;
+            int sourisY=Affichage::getMousePosition().y;
 
+            if(sourisX>580+155*i && sourisX<(580+155*i+150) &&sourisY>850 && sourisY<(850+200)){
+                //Si clique sur la carte
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    /*Initialisation du drag drop*/
+                    getDrag().setActif(true); //Drag drop actif
+                    getDrag().setId(elem.id);
+                    getDrag().setImm(elem.imm);
+
+                }
             }
         }
     }
 
 }
 
-
 bool Joueur::interactionFinTour(){
-    sf::Vector2<int> souris=Affichage::getMousePosition();
 
-    //Si la souris est sur la carte
-    if(souris.x>=1600&&souris.x<1920 && souris.y>=700&&souris.y<=740){
-        setEndroitActu("finPioche");
+    if(m_prop.affichePtsEnergies==0){
+        sf::Vector2<int> souris=Affichage::getMousePosition();
 
-        if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && !getDrag().getActif()){
-            sf::sleep(sf::milliseconds(200));
-            return true;
+        //Si la souris est sur le "Fin de tour"
+        if(souris.x>=1600&&souris.x<1920 && souris.y>=700&&souris.y<=740){
+            setEndroitActu("finPioche");
+
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && !getDrag().getActif()){
+
+                return true;
+            }
+
         }
-
     }
+
     return false;
 
 }
@@ -71,7 +139,7 @@ void Joueur::interactionPioche(){
     }
 }
 
-void Joueur::interactionFromMainToActive(){
+void Joueur::interactionFromMainToActive(int& _typeTerrain){
     int x1=Affichage::recupSprite("Terrain_cartes").getPosition().x;
     int y1=Affichage::recupSprite("Terrain_cartes").getPosition().y;
 
@@ -94,10 +162,22 @@ void Joueur::interactionFromMainToActive(){
                                 break;
                             case 2: //Spéciale
                                 m_actives.push_back(temp); //On ajoute la cartes aux actives
+                                for(auto& elem: getCartes().getSpeciales()){
+                                    if(elem.getId()==temp.id){
+                                        _typeTerrain = elem.getDomaine();
+                                        break;
+                                    }
+                                }
                                 break;
                             case 3://Energie
                                 m_cartesEnergie.push_back(temp);
-                                m_ptEnergie[temp.imm - 300]++;//On augmente le nombre d'énergie selon le domaine
+                                for(auto& elem: getCartes().getEnergies()){//On augmente le nombre d'énergie selon les 2 domaines
+                                    if(elem.getId()==temp.id){
+                                        m_ptEnergie[elem.getDomaine()]++;
+                                        m_ptEnergie[elem.getDomaine2()]++;
+                                        break;
+                                    }
+                                }
                                 break;
 
                         }
@@ -113,3 +193,357 @@ void Joueur::interactionFromMainToActive(){
 
 
 }
+
+void Joueur::interactionActives(){
+    int x= Affichage::recupSprite("Terrain_cartes").getPosition().x+230;
+    int y=Affichage::recupSprite("Terrain_cartes").getPosition().y;
+
+    if(!getDrag().getActif()){//Si le drag & drop n'est pas actif
+        if(m_prop.propChoixAttaquer.id==-1 && m_prop.numAttaque==-1 ){
+            for(int i=0; i<m_actives.size(); i++){
+                int posX=Affichage::getMousePosition().x;
+                int posY=Affichage::getMousePosition().y;
+
+                if(posX>=x+155*i && posX<=x+155*i+150 && posY>=y+350 && posY<=y+350+200){
+
+                    setEndroitActu("active"+std::to_string(i));
+
+                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                        m_prop.propChoixAttaquer.id=m_actives[i].id;
+                        m_prop.propChoixAttaquer.imm=m_actives[i].imm;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+void Joueur::interactionChoixAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere,const int& _typeTerrain){
+
+    if(m_prop.propChoixAttaquer.id!=-1){ //S choix d'attaque
+
+        int posX=Affichage::getMousePosition().x;
+        int posY=Affichage::getMousePosition().y;
+
+
+        if(m_prop.numAttaque==-1){ //Si pas encore choisi l'attaque
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //Si appuie sur Echap
+                m_prop.propChoixAttaquer.id=-1;
+            }
+            /*Interaciton du bouton retour*/
+            if(posX>=940 && posX<=970 && posY>=830 && posY<=830 + 180){
+                setEndroitActu("RETOUR");
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+
+                    m_prop.propChoixAttaquer.id=-1;
+                }
+            }
+
+
+
+            for(int i=0; i<2; i++){
+
+
+                int xBase =400 +650*i;
+                int yBase = 800;
+
+                if(posX>=xBase && posX<=xBase+453 && posY>=yBase && posY<=yBase + 241){
+                    setEndroitActu("attaque" + std::to_string(i));
+                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+
+                        /* VERIF SI A BIEN LES ENERGIES */
+                        if(verifIfPossedeEnergies(i)){
+                            if(m_prop.propChoixAttaquer.imm/100==2 && i==1){//Si spéciale
+                                specialAttaque(_ennemie,_cimetiere);
+                            }
+                            else
+                                m_prop.numAttaque=i;
+                        }
+
+                    }
+
+                }
+            }
+
+
+        }
+        else{ //Si a choisi l'attaque alors il va devoir choisir quelle carte ennemie il va attaquer
+            /*Interaciton du bouton retour*/
+            if(posX>=900 && posX<=1080 && posY>=900 && posY<=930){
+                setEndroitActu("RETOUR1");
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    sf::sleep(sf::milliseconds(100));
+                    m_prop.numAttaque=-1;
+
+                }
+            }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //Si appuie sur Echap alors on revient au choix des attaques
+                m_prop.numAttaque=-1;
+            }
+
+
+            int x= Affichage::recupSprite("Terrain_cartes").getPosition().x+230;
+            int y=Affichage::recupSprite("Terrain_cartes").getPosition().y-250;
+
+            if(m_prop.numAttaque!=66){ //Si pas attaque de la reine -> soigner
+                for(int i=0; i<_ennemie.getActives().size(); i++) {
+
+                    int xBase = x+ 155 * i;
+                    int yBase = y+350;
+
+                    if(posX>=xBase && posX<=xBase+150 && posY>=yBase && posY<=yBase + 200){
+                        setEndroitActu("ennemieActives"+std::to_string(i));
+                        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){ //Si clique sur une carte ennemie
+                            attaquer(i,_ennemie,_cimetiere,_typeTerrain);
+                        }
+
+                    }
+                }
+            }
+            else{//si attaque de la reine->soigner
+                for(int i=0; i<getActives().size(); i++) {//On choisit la carte alliée
+
+                    int xBase = x+ 155 * i;
+                    int yBase = y+250+350;
+
+                    if(posX>=xBase && posX<=xBase+150 && posY>=yBase && posY<=yBase + 200){
+                        setEndroitActu("active"+std::to_string(i));
+
+                        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){ //Si clique sur une carte ennemie
+                            if(getActives()[i].id!=m_prop.propChoixAttaquer.id) //Si n'essaye pas de se soigner
+                                specialAttaque(_ennemie,_cimetiere,i);
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}
+
+void Joueur::specialAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere, int posAllie){
+    int degat=0;
+    bool roi;
+    for(auto& elem: getCartes().getSpeciales()){ //Cherche la carte du joueur actuel pour savoir ses dégats
+        if(m_prop.propChoixAttaquer.id==elem.getId()){
+            degat= elem.getAttaques()[1]->getDegat();
+            roi=elem.getRoi();
+            break;
+        }
+    }
+
+    if(roi){
+
+        for(auto& elem: _ennemie.getActives()){
+            if(elem.imm/100==1){//Créature
+                for(auto& elem2 : _ennemie.getCartes().getCreaturesModif()){
+                    if(elem2.getId() == elem.id){
+                        elem2.setPdv(elem2.getPdv()-degat);
+                    }
+                }
+            }
+            else{//Spéciale
+                for(auto& elem2 : _ennemie.getCartes().getSpecialesModif()){
+                    if(elem2.getId() == elem.id){
+                        elem2.setPdv(elem2.getPdv()-degat);
+                    }
+                }
+            }
+        }
+
+        /*DIMINUE LES POINTS D'ENERGIES*/
+        diminuEnergieAfterAttaque(1);
+
+        m_prop.propChoixAttaquer.id=-1;
+        m_prop.propChoixAttaquer.imm=-1;
+        m_prop.numAttaque=-1;
+
+    }
+    else{
+        if(posAllie!=42){
+            if(getActives()[posAllie].id!=m_prop.propChoixAttaquer.id){ //Si n'essaye pas de se heal
+
+                switch(getActives()[posAllie].imm/100){
+                    case 1://Creature
+                        //On Cherche la carte de l'aliié qui coreespond à l'id de la carte healé
+                        for(auto& elem : getCartes().getCreaturesModif()){
+                            if(elem.getId()==getActives()[posAllie].id){
+                                elem.setPdv(elem.getPdv()+30);//Ses pdv diminue selon les dégats de l'attaque
+                                break;
+                            }
+                        }
+                        break;
+                    case 2:
+                        //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte healé
+                        for(auto& elem : getCartes().getSpecialesModif()){
+                            if(elem.getId()==getActives()[posAllie].id){
+                                elem.setPdv(elem.getPdv()+30);//Ses pdv diminue selon les dégats de l'attaque
+                                break;
+                            }
+                        }
+                        break;
+                }
+            }
+
+            /*DIMINUE LES POINTS D'ENERGIES*/
+            diminuEnergieAfterAttaque(1);
+
+            sf::sleep(sf::milliseconds(100));
+            m_prop.propChoixAttaquer.id=-1;
+            m_prop.propChoixAttaquer.imm=-1;
+            m_prop.numAttaque=-1;
+        }
+        else
+            m_prop.numAttaque=66;
+
+
+    }
+
+    /*VERIFIE SI DES CARTES SONT MORTES ET LES MET DANS LE CIMETIERE SI C'EST LE CAS*/
+    verifSiDead(_ennemie,_cimetiere);
+
+        
+
+}
+
+void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, const int& _typeTerrain ){
+    int _idEnnemieAttaque = _ennemie.getActives()[i].id;
+    int degat=0;
+
+    switch(m_prop.propChoixAttaquer.imm/100){//TYPE
+        case 1://Créature
+            for(auto& elem: getCartes().getCreatures()){ //Cherche la carte du joueur actuel pour savoir ses dégats
+                if(m_prop.propChoixAttaquer.id==elem.getId()){
+                    degat= elem.getAttaques()[m_prop.numAttaque]->getDegat();
+                    if(_typeTerrain==elem.getDomaine())
+                        degat+=5;
+                    break;
+                }
+            }
+
+
+            switch(_ennemie.getActives()[i].imm/100){
+                case 1:
+                    //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
+                    for(auto& elem : _ennemie.getCartes().getCreaturesModif()){
+                        if(elem.getId()==_idEnnemieAttaque){
+                            elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
+                            break;
+                        }
+                    }
+                    break;
+                case 2:
+                    //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
+                    for(auto& elem : _ennemie.getCartes().getSpecialesModif()){
+                        if(elem.getId()==_idEnnemieAttaque){
+                            elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
+                            break;
+                        }
+                    }
+                    break;
+            }
+
+            break;
+
+
+        case 2://Spéciale
+
+            for(auto& elem: getCartes().getSpeciales()){ //Cherche la carte du joueur actuel pour savoir ses dégats
+                if(m_prop.propChoixAttaquer.id==elem.getId()){
+                    degat= elem.getAttaques()[m_prop.numAttaque]->getDegat();
+                    if(_typeTerrain==elem.getDomaine())
+                        degat+=5;
+                    break;
+                }
+            }
+
+
+            if(m_prop.numAttaque==0){
+                switch(_ennemie.getActives()[i].imm/100){
+                    case 1:
+                        //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
+                        for(auto& elem : _ennemie.getCartes().getCreaturesModif()){
+                            if(elem.getId()==_idEnnemieAttaque){
+                                elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
+                                break;
+                            }
+                        }
+                        break;
+                    case 2:
+                        //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
+                        for(auto& elem : _ennemie.getCartes().getSpecialesModif()){
+                            if(elem.getId()==_idEnnemieAttaque){
+                                elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
+                                break;
+                            }
+                        }
+                        break;
+
+
+                }
+
+            }
+            else if(m_prop.numAttaque==1){
+                std::cout <<"beug Attaque " << std::endl;
+            }
+
+        break;
+    }
+
+    /*VERIFIE SI DES CARTES SONT MORTES ET LES MET DANS LE CIMETIERE SI C'EST LE CAS*/
+    verifSiDead(_ennemie,_cimetiere);
+
+    /*DIMINUE LES POINTS D'ENERGIES*/
+    diminuEnergieAfterAttaque(m_prop.numAttaque);
+
+    m_prop.propChoixAttaquer.id=-1;
+    m_prop.propChoixAttaquer.imm=-1;
+    m_prop.numAttaque=-1;
+
+}
+
+void Joueur::interactionPtsEnergies(Joueur& _ennemie){
+    int x=50,y=850+105;
+    int posX=Affichage::getMousePosition().x;
+    int posY=Affichage::getMousePosition().y;
+
+    if(m_prop.affichePtsEnergies==0){
+        if(posX>=x&&posX<=x+220 && posY>=y && posY<=y+30){
+            setEndroitActu("ptsEnergies");
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                m_prop.affichePtsEnergies=1;
+                _ennemie.setAffichePtsEnergies(1);
+            }
+        }
+    }
+    else if(m_prop.affichePtsEnergies==1){
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //Si appuie sur Echap
+            m_prop.affichePtsEnergies=0;
+            _ennemie.setAffichePtsEnergies(0);
+        }
+
+        if(posX>=800&&posX<=800+270 && posY>=700 && posY<=700+46){
+            setEndroitActu("RetourAfficheEnergies");
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                m_prop.affichePtsEnergies=0;
+                _ennemie.setAffichePtsEnergies(0);
+            }
+        }
+
+
+
+
+
+
+    }
+
+
+}
+

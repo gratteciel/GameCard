@@ -30,7 +30,7 @@ class Utilisateur {
         //Méthodes
         void chargerUtilisateur();
         void creerDatabase(const std::vector<int>& _deck0);
-
+        void sauvegardeFichierPseudo();
         void affichageUtilisateur();
 
         //Accesseurs et mutateurs
@@ -40,6 +40,8 @@ class Utilisateur {
         void setDeckActif(int _deckActif);
         int getDeckActif() const;
 
+        std::vector<Deck>& getDeckModifiable();
+        std::vector<int>& getCartesSeules();
 };
 
 
