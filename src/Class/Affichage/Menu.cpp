@@ -5,7 +5,7 @@
 #include "../../Headers/Affichage/Menu.h"
 
 Menu::Menu()
-     :Affichage(), m_menuActuel(0), m_boutonActuel("none"),m_erreur(-1),m_gestionUtilisateur("none"),m_mode(0)
+     :Affichage(), m_menuActuel(0), m_boutonActuel("none"),m_erreur(-1),m_gestionUtilisateur(-1),m_mode(2),m_affichageDeck(-1),m_modeAffichageJoueur(1),m_affichageCartes(0),m_immCarteShop(0)
 {
     m_choixInscription._choixTypeCarte="none";
     m_bool.ancienClick=false;
@@ -51,11 +51,11 @@ int Menu::getErreur() const{
     return m_erreur;
 }
 
-std::string Menu::getGestionUtilisateur() const{
+int Menu::getGestionUtilisateur() const{
     return m_gestionUtilisateur;
 }
 
-void Menu::setGestionUtilisateur(std::string a){
+void Menu::setGestionUtilisateur(int a){
     m_gestionUtilisateur=a;
 }
 
@@ -71,14 +71,51 @@ void Menu::setMode(int _mode){
 t_booleen Menu::getBool() const{
     return m_bool;
 }
+
+int Menu::getAffichageDeck() const {
+    return m_affichageDeck;
+}
+void Menu::setAffichageDeck(int _affichageDeck) {
+    if(_affichageDeck>=-1)
+        m_affichageDeck=_affichageDeck;
+}
+
+int Menu::getModeAffichageJoueur()const{
+    return m_modeAffichageJoueur;
+
+}
+void Menu::setModeAffichageJoueur(int _modeAffichageJoueur) {
+    if(_modeAffichageJoueur>0 && _modeAffichageJoueur<=4)
+        m_modeAffichageJoueur = _modeAffichageJoueur;
+}
+
+int Menu::getAffichageCartes() const{
+    return m_affichageCartes;
+}
+void Menu::setAffichageCartes(int _affichageCartes){
+    m_affichageCartes = _affichageCartes;
+
+}
+
+
+
+int Menu::getImCarteShop()const{
+    return m_immCarteShop;
+
+}
+
+void Menu::setImCarteShop(int _immCarteShop){
+    m_immCarteShop=_immCarteShop;
+
+}
 /*
  * Méthodes
  */
 
 void Menu::gestionChangementMenu(){
     //Si menu de gestion Utilisateurs
-    if(getGestionUtilisateur()!="none")
-        setGestionUtilisateur("none");
+    if(getGestionUtilisateur()!=-1)
+        setGestionUtilisateur(-1);
 
     else{
         if(getMenuActuel()>=0&&getMenuActuel()<=3)
@@ -102,7 +139,7 @@ void Menu::gestionInputCarac(sf::Event& event){
 
             if(getMenuActuel()==5&&m_choixInscription._choixTypeCarte=="none"){
                 //Si le pseudo n'est  pas trop grand
-                if(m_choixInscription.pseudoInscription.size()<=15){
+                if(m_choixInscription.pseudoInscription.size()<=7){
                     m_choixInscription.pseudoInscription+=carac;
                 }
             }
@@ -177,11 +214,9 @@ void Menu::menuBase(std::string& pseudoCouleur){
     //Affichage des menus
     menuBaseAffichage(pseudoCouleur);
 
+    setBoutonActuel("none");
     //Si il y a une erreur en cours
-    if(getErreur()>=0){
-        erreur();
-    }
-    else {
+    if(getErreur()<0) {
         //Si on ne reste pas appuyé sur échap
         if(!m_bool.ancienEchap){
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
@@ -232,6 +267,9 @@ void Menu::menuBase(std::string& pseudoCouleur){
         }
 
     }
+
+    if(getErreur()>=0)
+        erreur();
 }
 
 void Menu::initIntro(){
@@ -275,15 +313,22 @@ void Menu::introJeu() {
 void Menu::boucleBase() {//fonction pour initialiser sfml
     std::string pseudoCouleur;
     int temp=-2;
-    /*A REMETTRE */
-    /*A REMETTRE */
-    //initIntro();/*A REMETTRE */
-    /*A REMETTRE */
-    /*A REMETTRE */
+    bool matchFini=false;
+
+    initIntro();
+
+
+
 
     while (!getBool().fin) {
+
         getMousePosition();//obliger de le mettre dans la boucle pour réactualiser tout le temps
+        Affichage::getPosCartes().clear(); //On clear toutes les pos des cartes
         sf::Event event;
+
+
+
+
 
         while (m_window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
@@ -292,22 +337,49 @@ void Menu::boucleBase() {//fonction pour initialiser sfml
             gestionInputCarac(event);
         }
 
+
         if(getMode()==0)
             menuInit(temp);
 
         m_window.clear();
+
+       
 
         if(getMode()==2)
             introJeu();
         else if(getMode()==0)
             menuBase(pseudoCouleur);
         else{
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){ //POUR L'INSTANT
-                setMode(0);
+            int interact=0;
+            if(!m_bool.ancienEchap){ //permet d'éviter de rester appuyer sur Echap !
+                if(!matchFini)
+                    interact  = m_jeu.getAffichageMatch().getMatch().interaction();
+
+                if(interact==2)//si fin du match alors on revient au menux principaux
+                    setMode(0);
+                else if(interact==1)//Si permutation de joueur
+                    affichePermuterJoueurs();
+                else if(interact == 6 || interact == 7){
+                    sf::sleep(sf::milliseconds(400));
+                    matchFini=true;
+                }
+
             }
-            m_jeu.getAffichageMatch().boucleMatch();
+            if(interact==0 || matchFini)
+                m_jeu.getAffichageMatch().affichage(m_jeu.getCartesBases());//Afficge le jeu
+            if(matchFini){
+                if(m_jeu.getAffichageMatch().afficheFinPartie(matchFini)){
+                    setMode(0);//affiche la fin de partie
+
+                }
+
+            }
+
+
+
         }
 
+        interactionDescriptionCarte();
 
         m_window.display();
 
@@ -327,8 +399,14 @@ void Menu::sleep(){
             sf::sleep(sf::seconds(4));
     }
 
-
-
+    else if(getMode()==1){
+        if(getBool().sleep){
+            sf::sleep(sf::seconds(1));
+            m_bool.sleep=false;
+        }
+        else
+            sf::sleep(sf::milliseconds(10));
+    }
     else{
         if(getBool().sleep){
             sf::sleep(sf::seconds(2));
@@ -355,8 +433,8 @@ void Menu::contrerResterAppuye(){
     }
     else
         m_bool.ancienClick=false;
-
 }
+
 
 void Menu::erreur(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
@@ -381,7 +459,10 @@ void Menu::erreur(){
                 texte.setString(L"Ce pseudo est deja utilisé!");
                 break;
             case 4:
-                texte.setString(L"Une immatriculation est invalide!");
+                texte.setString(L"PDV pas valide");
+                break;
+            case 5:
+                texte.setString(L"Type pas valide");
                 break;
             default:
                 break;
@@ -434,6 +515,9 @@ void Menu::menu3Init() {
 
 void Menu::menu4Init(){
     setPos(0,0,"Background_utilisateur");
+    setPos(50,1000,"Retour_no");
+    setPos(50,1000,"Retour_yes");
+
 }
 
 void Menu::menu5Init(){
@@ -446,20 +530,29 @@ void Menu::menu5Init(){
 
 void Menu::menu6Init(){
     m_creationCarte.creaCarte.clear();
-    m_creationCarte.section = 3;
+    m_creationCarte.section = 0;
     m_creationCarte.creaCarte.push_back("");
     m_creationCarte.creaCarte.push_back("");
     m_creationCarte.creaCarte.push_back("");
     m_creationCarte.creaCarte.push_back("");
+    m_creationCarte.attaque1=0;
+    m_creationCarte.attaque2=0;
+    m_creationCarte.domaine='9';
+
 
 
 }
 
 void Menu::menu7Init(){
     m_creationCarte.creaCarte.clear();
-    m_creationCarte.section = 3;
+    m_creationCarte.section = 0;
     m_creationCarte.creaCarte.push_back("");
     m_creationCarte.creaCarte.push_back("");
     m_creationCarte.creaCarte.push_back("");
     m_creationCarte.creaCarte.push_back("");
+    m_creationCarte.creaCarte.push_back("");
+    m_creationCarte.attaque1=0;
+    m_creationCarte.attaque2=0;
+    m_creationCarte.domaine='9';
 }
+

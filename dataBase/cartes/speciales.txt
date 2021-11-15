@@ -1,4 +1,9 @@
-200*Camembert*vive la vie*
-209*boi*jimmy notron*
-203*OUI*hehe boi*
-209*boi*jimmy notron*
+200*Nero*description*1*30*401 413*1*
+201*Nera*description*1*35*403 414*0*
+202*Ignar*description*0*30*405 415*1*
+203*Ignata*description*0*35*406 416*0*
+204*Dien*description*2*30*409 417*1*
+205*Dienna*description*2*35*407 418*0*
+206*Sylver*description*3*30*410 419*1*
+207*Sylva*description*3*35*411 420*0*
+208*Defensa*Le mur : Permet de proteger ses cartes pendant un tour entier*3*1*411 420*2*

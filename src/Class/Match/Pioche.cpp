@@ -80,5 +80,51 @@ void Pioche::swap(t_carte& a, t_carte& b){
     a=b;
     b=temp;
 }
- 
- 
+
+void Pioche::affiche(bool _ennemie, const std::string _endroitActu){
+
+    if(getCartes().size()>0){//Si il y a des cartes dans la pioche
+        int x, y;
+        if(_ennemie){
+            x=120;
+            y=5;
+        }
+        else
+        {
+            x=1700;
+            y=800;
+
+
+        }
+
+        for(int i=getCartesId().size(); i>0 ; i--){
+            Affichage::setPos(x+2*i,y+2*i,"Face_cache_no");
+            Affichage::afficheImage("Face_cache_no");
+        }
+
+        Affichage::setPos(x,y,"Face_cache_no");
+        Affichage::setPos(x,y,"Face_cache_yes");
+
+        if(_endroitActu=="pioche")
+            Affichage::afficheImage("Face_cache_yes");
+        else
+            Affichage::afficheImage("Face_cache_no");
+
+        std::string nombreCartes = std::to_string(getCartesId().size()) + " cartes";
+        Affichage::getWindow().draw(Affichage::chargerTexte(nombreCartes,1,sf::Color::White,26,x,y+200));
+    }
+
+
+}
+
+
+bool Pioche::etreSurLaPioche(){
+    sf::Vector2<int> souris=Affichage::getMousePosition();
+    //Si la souris est sur la carte
+    if(souris.x>=1700&&souris.x<=1700+150 && souris.y>=800&&souris.y<=800+200){
+        return true;
+    }
+
+    return false;
+
+}

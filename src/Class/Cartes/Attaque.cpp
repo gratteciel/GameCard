@@ -10,8 +10,8 @@
 
 
 
-Attaque::Attaque(int _immatriculation, int _id, std::string _nom, std::string _description, int _degat, std::vector<t_nbPoints>& _nbPoints)
-        :Carte(_immatriculation,_id,_nom,_description),m_degat(_degat), m_nbPoints(_nbPoints)
+Attaque::Attaque(int _immatriculation, int _id, std::string _nom, std::string _description, int _domaine, int _degat, std::vector<t_nbPoints>& _nbPoints)
+        :Carte(_immatriculation,_id,_nom,_description, _domaine),m_degat(_degat), m_nbPoints(_nbPoints)
 {
 
 }
@@ -29,6 +29,10 @@ int Attaque::getDegat() const {
     return m_degat;
 }
 
+std::vector<t_nbPoints> Attaque::getNbPoints() const{
+    return m_nbPoints;
+}
+
 /*
  * Méthodes
  */
@@ -37,5 +41,6 @@ int Attaque::getDegat() const {
 void Attaque::creer(std::ofstream& fileOutput){
     //implementer ici
 }
+
 
 

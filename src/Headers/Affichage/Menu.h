@@ -28,6 +28,9 @@ typedef struct t_booleen{
 typedef struct t_creationCarte{
     int section;
     std::vector<std::string> creaCarte;
+    int attaque1;
+    int attaque2;
+    char domaine;
 }t_creationCarte;
 
 typedef struct t_intro{
@@ -42,13 +45,18 @@ private:
     int m_menuActuel;
     std::string m_boutonActuel;
     Game m_jeu;
-    std::string m_gestionUtilisateur;
+    int m_gestionUtilisateur;
     t_inscription m_choixInscription;
     int m_erreur;
     t_booleen m_bool;
     int m_mode; //=0 : Menu //=1 : Jeu //=2 : Start
     t_creationCarte m_creationCarte;
     t_intro m_intro;
+    int m_affichageDeck;
+    int m_modeAffichageJoueur;
+    int m_affichageCartes;
+    int m_immCarteShop;
+
 public:
     //Constructeur et destructeur
     Menu();
@@ -61,6 +69,7 @@ public:
     void affichePseudoUtilisateurs();
     void interactionPseudoUtilisateurs();
     void contrerResterAppuye();
+    void interactionDescriptionCarte();
 
     void menuInit(int& temp);
     void menuBase(std::string& pseudoCouleur);
@@ -99,33 +108,58 @@ public:
     void menu7Affichage();
     void menu7Interaction();
 
+    void afficheAttaqueCreationCarte();
+
     void gestionUtilisateurAffichage();
     void gestionUtilisateurInteraction();
+
+    void gestionInteractionDeckJoueur();
+    void gestionAffichageDeckJoueur();
 
     void choixCreatureAffichage();
     void choixCreatureInteraction();
 
+    void choixSpecialeInteraction();
+    void choixSpecialeAffichage();
+
+    void choixEnergieInteraction();
+    void choixEnergieAffichage();
+
     void btnRetourAffichage();
     bool btnRetourInteraction(int menuBase);
+
+    void affichePermuterJoueurs();
 
     void sfmlLeave();
     void erreur();
     void sleep();
 
+
+
     //Getter et Setter
 
+    int getImCarteShop()const;
+    void setImCarteShop(int _immCarteShop);
     void setMenuActuel(int _menuActuel);
     int getMenuActuel() const;
     void setBoutonActuel(const std::string& _boutonActuel);
     std::string getBoutonActuel() const;
     void setErreur(int _erreur);
     int getErreur() const;
-    std::string getGestionUtilisateur() const;
-    void setGestionUtilisateur(std::string a);
+    int getGestionUtilisateur() const;
+    void setGestionUtilisateur(int a);
     int getMode() const;
     void setMode(int _mode);
 
     t_booleen getBool() const;
+    void setAffichageDeck(int _affichageDeck);
+    int getAffichageDeck() const;
+
+    int getModeAffichageJoueur()const;
+    void setModeAffichageJoueur(int _modeAffichageJoueur);
+
+    int getAffichageCartes()const;
+    void setAffichageCartes(int _modeAffichageJoueur);
 };
 
 

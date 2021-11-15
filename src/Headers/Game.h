@@ -16,7 +16,7 @@ class Game {
 
     private:
         Collection m_cartesBases;
-        std::map<std::string, Utilisateur> m_usersConnectes;
+        std::vector<Utilisateur> m_usersConnectes;
         std::set<std::string> m_usersPseudo;
         AfficheMatch m_affichageMatch;
 
@@ -27,13 +27,13 @@ class Game {
         //Méthodes
         void chargerUsersPseudos();
         unsigned short connectionUser(const std::string& _pseudo);
-        void deconnexionUser(const std::string& _pseudo);
+        void deconnexionUser(const int& posUser);
         void lancerMatch();
 
         //Accesseurs et mutateurs
-        std::map<std::string, Utilisateur> getUsersConnectes() const;
+        std::vector<Utilisateur>& getUsersConnectes();
         std::set<std::string>& getUsersPseudo();
-        Collection getCartesBases() const;
+        Collection& getCartesBases();
         AfficheMatch& getAffichageMatch();
 };
 

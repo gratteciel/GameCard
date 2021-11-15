@@ -29,6 +29,14 @@ Deck Utilisateur::getDeck(int _numDeck) const {
     return m_decks[_numDeck];
 }
 
+std::vector<Deck>& Utilisateur::getDeckModifiable(){
+    return m_decks;
+}
+
+std::vector<int>& Utilisateur::getCartesSeules(){
+    return m_cartesSeul;
+}
+
 void Utilisateur::setDeckActif(int _deckActif)
 {
     if(_deckActif>=0 && _deckActif <m_decks.size()){
@@ -40,13 +48,30 @@ void Utilisateur::setDeckActif(int _deckActif)
 int Utilisateur::getDeckActif() const{
     return m_deckActif;
 }
+
+int Utilisateur::getArgent() const {
+    return m_argent;
+}
+void Utilisateur::setArgent(int _argent){
+    if(_argent>=0){
+        m_argent=_argent;
+    }
+
+}
+
+
 /*
  * Méthodes
  */
 
+int Utilisateur::getNombreDeck() const{
+    return m_decks.size();
+}
+
 void Utilisateur::affichageUtilisateur() {
     std::cout << getPseudo();
 }
+
 
 void Utilisateur::creerDatabase(const std::vector<int>& _deck0){
     //1: Ajout dans l'utilisateur dans utilisateurs.txt
@@ -81,7 +106,9 @@ void Utilisateur::creerFichierPseudo(const std::vector<int>& _deck0){
 
     if (filePseudoOutput.is_open()) //Si fichier est bien créé
     {
-        filePseudoOutput << "0" << std::endl; //Aucune carte seules
+        filePseudoOutput << "0" << std::endl; //Deck de base : 0
+
+        filePseudoOutput << "200"<< std::endl; //Argent de base : 200
 
         filePseudoOutput << _deck0[10] << std::endl;
 
@@ -95,6 +122,36 @@ void Utilisateur::creerFichierPseudo(const std::vector<int>& _deck0){
 }
 
 
+void Utilisateur::sauvegardeFichierPseudo(){
+    std::string nomFichierPseudo="../database/utilisateurs/cartes/";
+    nomFichierPseudo+=getPseudo();
+    nomFichierPseudo+=".txt";
+
+    std::ofstream filePseudoOutput(nomFichierPseudo);
+
+
+    if (filePseudoOutput.is_open()) //Si fichier est bien créé
+    {
+        /* AJOTUER LA MONEY */
+        filePseudoOutput << std::to_string(getDeckActif()) << std::endl; //Aucune carte seules
+        filePseudoOutput << std::to_string(getArgent()) << std::endl;
+
+
+        for(auto& elem:m_cartesSeul){
+            filePseudoOutput << std::to_string(elem) << " ";
+        }
+
+        for(int i=0; i<getNombreDeck(); i++){
+            filePseudoOutput << std::endl;
+            for(auto& elem: m_decks[i].getCartes()){
+                filePseudoOutput << std::to_string(elem) << " ";
+            }
+        }
+        filePseudoOutput.close();
+    }
+    else
+        std::cout << "Impossbile d'ouvrir le fichier de :" << getPseudo() << std::endl;
+}
 
 void Utilisateur::chargerUtilisateur(){
     std::string nomFichier = "../database/utilisateurs/cartes/";
@@ -112,6 +169,10 @@ void Utilisateur::chargerUtilisateur(){
 
         m_deckActif=std::stoi(line); //set le deck actif de l'utilisateur
                                      //Ici on n'appale pas setDeckActif() car le joueur ne possede pas encore de deck
+
+        std::getline(filePseudo,line);//2eme ligne ->argent
+        m_argent = std::stoi(line);
+
 
         std::getline(filePseudo,line);//2eme ligne ->cartes seules
         std::istringstream ss(line);

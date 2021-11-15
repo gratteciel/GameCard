@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj"
+  "CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.obj"
+  "CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj"
   "CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj"

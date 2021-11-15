@@ -19,5 +19,5 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <conio.h>
-
+#include <sstream>
 #endif //CARDGAME_BIBLIO_H

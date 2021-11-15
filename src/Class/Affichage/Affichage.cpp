@@ -15,6 +15,9 @@ sf::RenderWindow Affichage::m_window(sf::VideoMode(1920, 1080), "GameCard", sf::
 std::map <std::string, sf::Sprite> Affichage::m_imageMap;
 
 std::vector<sf::Font> Affichage::m_fonts;
+
+std::vector<t_posCartes> Affichage::m_posCartes;
+
 /*
  * Constructeur et destructeur
  */
@@ -23,6 +26,7 @@ Affichage::Affichage()
 
 {
     sfmlLoadImages();
+    initialisationPos();
     chargementFonts();
 }
 
@@ -105,18 +109,41 @@ void Affichage::sfmlLoadImages() {
     chargerImage("Nature","Play/Terrain","jpg");
     chargerImage("Regles", "Regles","jpg");
     chargerImage("Leave", "Quitter","jpg");
-    chargerImage("Rectangle_bois", "Play/login", "png");
-    chargerImage("Rectangle_deck", "Play/login", "png");
+    chargerImage("Rectangle_inscription", "Play/login", "png");
+    chargerImage("Rectangle_deck", "Play/login", "jpg");
     chargerImage("Erreur", "Play/login", "png");
     chargerImage("rectInscription", "Intro", "png");
     chargerImage("Background_utilisateur", "Intro", "png");
-    chargerImage("AreneDeBase", "Play/Terrain", "jpg");
+
+    chargerImage("afficheAttaque", "Play/Terrain", "png");
+
+
 
     chargerImage("Creature", "Cartes", "jpg");
-    chargerImage("Face_cache", "Cartes", "jpg");
+    chargerImage("Speciale", "Cartes", "jpg");
+    chargerImage("Energie", "Cartes", "jpg");
+    chargerImage("Face_cache_no", "Cartes", "jpg");
+    chargerImage("Face_cache_yes", "Cartes", "jpg");
     chargerImage("IntroJeu", "Intro", "jpg");
+    chargerImage("Terrain_cartes", "Play/Terrain", "png");
+    chargerImage("imageFond", "Play/Terrain", "jpg");
+
+
+    chargerImage("Energie_0", "Cartes", "png");
+    chargerImage("Energie_1", "Cartes", "png");
+    chargerImage("Energie_2", "Cartes", "png");
+    chargerImage("Energie_3", "Cartes", "png");
+
+    chargerImage("changementDeTour", "Play/Terrain", "png");
+    chargerImage("bouclier", "Play/Terrain", "png");
+    chargerImage("bouclier_petit", "Play/Terrain", "png");
 
 }
+
+void Affichage::initialisationPos(){
+    setPos(415,205,"Terrain_cartes");
+}
+
 
 void Affichage::afficheImage(const std::string& _nom){
     m_window.draw(recupSprite(_nom));
@@ -162,25 +189,49 @@ sf::Text Affichage::chargerTexte(const std::string& _textEcrit, int _choixDePoli
 
 
 
-void Affichage::afficheCarte(const Collection& _carteBase, int imm, int x, int y) {
-    switch(imm/100){ //type
+void Affichage::afficheCarte(const Collection& _carteBase, int imm, int x, int y, int id) {
+    int type=imm/100;
+
+    switch(type){ //type
         case 1://Créature
             //Si Créature
             for (auto &elem : _carteBase.getCreatures()) {
-                if (elem.getImmatriculation() == imm) {//Si meme immatriculation
+                if (elem.getId() == id) {//Si meme id
                     elem.affiche(x,y);
-
                     break;
                 }
 
             }
             break;
+        case 2:
+            for(auto &elem: _carteBase.getSpeciales()){
+                if(elem.getId() == id){
+                    elem.affiche(x,y);//faire l'affichage pour les spéciales
+                    break;
+                }
+            }
+            break;
+
+        case 3:
+            for(auto &elem: _carteBase.getEnergies()){
+                if(elem.getId() == id){
+                    elem.affiche(x,y);//faire l'affichage pour les spéciales
+                    break;
+                }
+            }
+            break;
     }
 }
+
+
 
 sf::RenderWindow& Affichage::getWindow(){
     return m_window;
 }
 std::map<std::string, sf::Sprite>& Affichage::getImageMap(){
     return m_imageMap;
+}
+
+std::vector<t_posCartes>& Affichage::getPosCartes(){
+    return m_posCartes;
 }

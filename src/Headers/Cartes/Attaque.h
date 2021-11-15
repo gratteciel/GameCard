@@ -13,6 +13,7 @@ typedef struct t_nbPoints{
     int nbPoints;
 }t_nbPoints;
 
+
 //Hérite de Carte : nom et description
 class Attaque : public Carte{
     private:
@@ -22,12 +23,13 @@ class Attaque : public Carte{
 
     public:
         //Constructeur et destructeur
-        Attaque(int _immatriculation, int _id, std::string _nom, std::string _description, int _degat, std::vector<t_nbPoints>& _nbPoints);
+        Attaque(int _immatriculation, int _id, std::string _nom, std::string _description, int _domaine, int _degat, std::vector<t_nbPoints>& _nbPoints);
         ~Attaque();
         //Méthodes
         void creer(std::ofstream& fileOutput);
         //Accesseurs et mutateurs
         int getDegat() const;
+        std::vector<t_nbPoints> getNbPoints() const;
 };
 
 

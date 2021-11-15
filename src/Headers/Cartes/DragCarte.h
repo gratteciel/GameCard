@@ -8,11 +8,14 @@
 
 #include "../Affichage/Affichage.h"
 #include "../Collection.h"
+#include "../Cartes/DragCarte.h"
 
 
-class DragCarte : public Affichage{
+class DragCarte{
 private:
+    int m_id;
     int m_imm;
+
     bool m_actif;
 public:
     //Constructeur et destucteur
@@ -22,12 +25,15 @@ public:
     //Méthodes
 
     void afficheCarte(const Collection& _cartesBase);
-    void interaction(std::vector<int>& imm);
+    int interaction(int x1, int y1,int x2, int y2);
     //Accessseurs et mutateurs
 
     bool getActif() const;
 
     void setActif(bool _actif);
+    void setId(int _id);
+
+    int getId() const;
     void setImm(int _imm);
 
     int getImm() const;

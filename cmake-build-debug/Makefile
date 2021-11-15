@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard"
+CMAKE_SOURCE_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\JEU S1\GameCard"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\JEU S1\GameCard\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\JEU S1\GameCard\cmake-build-debug\CMakeFiles" "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\JEU S1\GameCard\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\Programme C++\GameCard\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\bemat\Documents\PERSO\ECOLE\ECE\ING2\Info\JEU S1\GameCard\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -547,6 +547,60 @@ src/Class/Match/Joueur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.s
 .PHONY : src/Class/Match/Joueur.cpp.s
 
+src/Class/Match/JoueurAffichage.obj: src/Class/Match/JoueurAffichage.cpp.obj
+
+.PHONY : src/Class/Match/JoueurAffichage.obj
+
+# target to build an object file
+src/Class/Match/JoueurAffichage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.obj
+.PHONY : src/Class/Match/JoueurAffichage.cpp.obj
+
+src/Class/Match/JoueurAffichage.i: src/Class/Match/JoueurAffichage.cpp.i
+
+.PHONY : src/Class/Match/JoueurAffichage.i
+
+# target to preprocess a source file
+src/Class/Match/JoueurAffichage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.i
+.PHONY : src/Class/Match/JoueurAffichage.cpp.i
+
+src/Class/Match/JoueurAffichage.s: src/Class/Match/JoueurAffichage.cpp.s
+
+.PHONY : src/Class/Match/JoueurAffichage.s
+
+# target to generate assembly for a file
+src/Class/Match/JoueurAffichage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.s
+.PHONY : src/Class/Match/JoueurAffichage.cpp.s
+
+src/Class/Match/JoueurInteraction.obj: src/Class/Match/JoueurInteraction.cpp.obj
+
+.PHONY : src/Class/Match/JoueurInteraction.obj
+
+# target to build an object file
+src/Class/Match/JoueurInteraction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.obj
+.PHONY : src/Class/Match/JoueurInteraction.cpp.obj
+
+src/Class/Match/JoueurInteraction.i: src/Class/Match/JoueurInteraction.cpp.i
+
+.PHONY : src/Class/Match/JoueurInteraction.i
+
+# target to preprocess a source file
+src/Class/Match/JoueurInteraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.i
+.PHONY : src/Class/Match/JoueurInteraction.cpp.i
+
+src/Class/Match/JoueurInteraction.s: src/Class/Match/JoueurInteraction.cpp.s
+
+.PHONY : src/Class/Match/JoueurInteraction.s
+
+# target to generate assembly for a file
+src/Class/Match/JoueurInteraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cardGame.dir\build.make CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.s
+.PHONY : src/Class/Match/JoueurInteraction.cpp.s
+
 src/Class/Match/Match.obj: src/Class/Match/Match.cpp.obj
 
 .PHONY : src/Class/Match/Match.obj
@@ -736,6 +790,12 @@ help:
 	@echo ... src/Class/Match/Joueur.obj
 	@echo ... src/Class/Match/Joueur.i
 	@echo ... src/Class/Match/Joueur.s
+	@echo ... src/Class/Match/JoueurAffichage.obj
+	@echo ... src/Class/Match/JoueurAffichage.i
+	@echo ... src/Class/Match/JoueurAffichage.s
+	@echo ... src/Class/Match/JoueurInteraction.obj
+	@echo ... src/Class/Match/JoueurInteraction.i
+	@echo ... src/Class/Match/JoueurInteraction.s
 	@echo ... src/Class/Match/Match.obj
 	@echo ... src/Class/Match/Match.i
 	@echo ... src/Class/Match/Match.s
