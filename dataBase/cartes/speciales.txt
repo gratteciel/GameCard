@@ -6,3 +6,4 @@
 205*Dienna*description*2*35*407 418*0*
 206*Sylver*description*3*30*410 419*1*
 207*Sylva*description*3*35*411 420*0*
+208*Defensa*Le mur : Permet de proteger ses cartes pendant un tour entier*3*1*411 420*2*

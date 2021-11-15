@@ -30,7 +30,7 @@ std::set<std::string>& Game::getUsersPseudo(){
     return m_usersPseudo;
 }
 
-Collection Game::getCartesBases() const{
+Collection& Game::getCartesBases(){
     return m_cartesBases;
 }
 

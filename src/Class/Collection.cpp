@@ -167,18 +167,17 @@ void Collection::chargerSpeciale(int _imm, std::string _nom, std::string _descri
         }
     }
 
-    std::string sRoi;//string du Roi
-    bool _roi;
-    lectureVar(sRoi, line, i, temp);
+    std::string sType;//string du Type
+    int  _type;
+    lectureVar(sType, line, i, temp);
 
-    if(sRoi=="0")
-        _roi =false;
-    else
-        _roi =true;
+
+    _type = sType[0]-48;
+
 
 
     //Ajout de la carte au vecteur contenant un exemplaire de chaque carte speciale du jeu
-    m_speciales.push_back(Speciale(_imm,_imm,_nom,_description,_domaine,std::stoi(sPdvI), _attaques, _roi));
+    m_speciales.push_back(Speciale(_imm,_imm,_nom,_description,_domaine,std::stoi(sPdvI), _attaques, _type));
 }
 
 void Collection::chargerAttaque(int _imm, std::string _nom, std::string _description, const std::string& line, int i, int temp, int _domaine) {
@@ -271,7 +270,7 @@ std::vector<Speciale> Collection::getSpeciales() const{
     return m_speciales;
 }
 
-std::vector<Attaque> Collection::getAttaques() const{
+std::vector<Attaque>& Collection::getAttaques(){
     return m_attaques;
 }
 

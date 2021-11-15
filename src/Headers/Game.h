@@ -33,7 +33,7 @@ class Game {
         //Accesseurs et mutateurs
         std::vector<Utilisateur>& getUsersConnectes();
         std::set<std::string>& getUsersPseudo();
-        Collection getCartesBases() const;
+        Collection& getCartesBases();
         AfficheMatch& getAffichageMatch();
 };
 

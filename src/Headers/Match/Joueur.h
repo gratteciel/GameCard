@@ -13,6 +13,7 @@
 typedef struct t_propJoueur{
     std::string endroitActu;
     bool aPioche;
+    bool doitRepiocher;
     bool etreSurBtn;
     unsigned short clignotage;
     int numAttaque;
@@ -24,6 +25,7 @@ class Joueur {
 private:
     t_propJoueur m_prop;
     int m_pdv;
+    int m_statueLoose;
     Utilisateur *m_user;
 
     Collection m_cartes;
@@ -40,6 +42,9 @@ private:
 
     std::vector<t_carte> m_cartesEnergie;
     int m_quitter;
+    bool m_defense;
+    int m_nbAttaques;
+
 public:
     //Constructeur et destructeur
     Joueur(Utilisateur *_user);
@@ -59,7 +64,7 @@ public:
     bool interactionFinTour();
     void afficheFinTour();
 
-    void interactionFromMainToActive(int& _typeTerrain);
+    void interactionFromMainToActive(int& _typeTerrain,  Joueur& _ennemie, std::vector<int>& _cimetiere);
     void afficheActives(bool _ennemie, int _ennemieActive=0);
     void interactionActives();
 
@@ -83,13 +88,24 @@ public:
     bool quitterOuPas();
     void afficheQuitter();
 
+    void afficheDefense(bool _ennemie);
+
     void incrementerClignotage();
     void interactionPtsEnergies(Joueur& _ennemie);
+
+    bool possedeAtleastUneActive();
+    int verifFinPartie(Joueur &_ennemie);
     //Accesseurs et mutateurs
 
     std::vector<t_carte>& getActives();
+
     int getPdv()const;
-    Utilisateur* getUser()const;
+    void setPdv(int _pdv);
+
+    int getStatueLoose() const;
+    void setStatueLoose(int _vivant);
+
+    Utilisateur* getUser();
     void setPioche(const Collection& _cartesBase);
     Pioche& getPioche();
     void setCartes(const Collection& _cartesBase);
@@ -109,6 +125,14 @@ public:
     void setQuitter(int _nb);
     int getQuitter() const;
     void setAffichePtsEnergies(int _affichePtsEnergies);
+
+    bool getDefense() const;
+    void setDefense(bool _defense);
+
+    void setNbAttaques(int _nbAttaques);
+    int getNbAttaques() const;
+
+    t_carte getEnjeu() const;
 };
 
 

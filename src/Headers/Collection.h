@@ -53,7 +53,7 @@ class Collection {
         std::vector<Creature>& getCreaturesModif() ;
 
 
-        std::vector<Attaque> getAttaques() const;
+        std::vector<Attaque>& getAttaques();
         void userCreerCarte();
 
         template <typename T>

@@ -737,7 +737,14 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../lib/SFML-2.5.1/includ
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Class/Cartes/Carte.cpp
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Affichage/Affichage.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Cartes/Attaque.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Cartes/Carte.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Cartes/Creature.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Cartes/Energie.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Cartes/Speciale.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/Collection.h
+CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/Headers/collection.tpp
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj: ../src/biblio.h
 
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj: ../lib/SFML-2.5.1/include/SFML/Audio.hpp

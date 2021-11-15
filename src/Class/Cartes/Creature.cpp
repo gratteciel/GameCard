@@ -107,6 +107,12 @@ void Creature::afficheDescriptionHerited(){
     texte=Affichage::chargerTexte(getNom(),1,sf::Color(233,233,233,255),40,680,320,sf::Color::Black,1);
     Affichage::getWindow().draw(texte);
 
+    //Affiches les pdv initiaux
+    texte=Affichage::chargerTexte("PDV INITIAUX :",1,sf::Color(43,43,43,255),40,750,760,sf::Color::Black,1);
+    Affichage::getWindow().draw(texte);
+    texte=Affichage::chargerTexte(std::to_string(getPdvInitial()),1,sf::Color(233,233,233,255),40,1090,760,sf::Color::Black,1);
+    Affichage::getWindow().draw(texte);
+
     for(int i=0; i<2; i++){
         int xBase =490 +460*i;
         int yBase = 470;

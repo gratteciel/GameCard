@@ -19,6 +19,7 @@ public:
     //Methodes
     void lancement(Utilisateur *_user1, Utilisateur *_user2,  const Collection& _cartesBase);
     int interaction();
+    bool afficheFinPartie(bool& _matchFini);
     int affichage(const Collection& _cartesBase);
     void animationDebutDeCombat();
     void affichageTerrain();

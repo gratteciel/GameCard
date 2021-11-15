@@ -6,11 +6,20 @@
 
 int Joueur::interaction(Joueur& _ennemie, std::vector<int>& _cimetiere, int& _typeTerrain){
     setEtreSurBouton(false);
+    int verifFinDePartie=verifFinPartie(_ennemie);
+
+    if(verifFinDePartie==5 || verifFinDePartie==6 || verifFinDePartie==7)
+        return verifFinDePartie;
+
+    _ennemie.possedeAtleastUneActive();
 
     if(m_prop.propChoixAttaquer.id==-1){
         m_prop.numAttaque=-1;
-        if(interactionFinTour())
-            return 1;
+        if(possedeAtleastUneActive()){
+            if(interactionFinTour())
+                return 1;
+        }
+
         if(quitterOuPas())
             return 2;
 
@@ -18,15 +27,17 @@ int Joueur::interaction(Joueur& _ennemie, std::vector<int>& _cimetiere, int& _ty
             if(m_prop.affichePtsEnergies==0){
                 interactionPioche();
                 interactionMain();
-                interactionFromMainToActive(_typeTerrain);
+                interactionFromMainToActive(_typeTerrain,_ennemie,_cimetiere);
             }
             interactionPtsEnergies(_ennemie);
         }
     }
 
     if(getQuitter()==0){
-        interactionActives();
-        interactionChoixAttaque(_ennemie, _cimetiere,_typeTerrain);
+        if(m_prop.affichePtsEnergies==0) {
+            interactionActives();
+            interactionChoixAttaque(_ennemie, _cimetiere, _typeTerrain);
+        }
     }
 
 
@@ -34,9 +45,23 @@ int Joueur::interaction(Joueur& _ennemie, std::vector<int>& _cimetiere, int& _ty
         setEndroitActu("none");
     incrementerClignotage();
 
+
     //Si pas fin de tour
     return 0;
 }
+
+
+
+
+int Joueur::verifFinPartie(Joueur &_ennemie){
+    if(getStatueLoose()!=0)//Joueur actu a perdu
+        return 6;
+    else if(_ennemie.getStatueLoose()!=0)//l'ennemie a perdu
+        return 7;
+
+    return 0;//si tout se passe bien
+}
+
 
 bool Joueur::quitterOuPas(){
 
@@ -94,13 +119,16 @@ void Joueur::interactionMain(){
 
             if(sourisX>580+155*i && sourisX<(580+155*i+150) &&sourisY>850 && sourisY<(850+200)){
                 //Si clique sur la carte
-                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                    /*Initialisation du drag drop*/
-                    getDrag().setActif(true); //Drag drop actif
-                    getDrag().setId(elem.id);
-                    getDrag().setImm(elem.imm);
+                if(!m_prop.doitRepiocher || i!=(getMain().size()-1)){
+                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                        /*Initialisation du drag drop*/
+                        getDrag().setActif(true); //Drag drop actif
+                        getDrag().setId(elem.id);
+                        getDrag().setImm(elem.imm);
 
+                    }
                 }
+
             }
         }
     }
@@ -129,17 +157,23 @@ bool Joueur::interactionFinTour(){
 }
 
 void Joueur::interactionPioche(){
-    if(getPioche().etreSurLaPioche()){//Si curseur sur la pioche
-        setEndroitActu("pioche");
-        if(!m_prop.aPioche && getMain().size()<5){//Si n'a pas encore pioché & taille de la main <5
+    if(getPioche().getCartes().size()>0){ //Si il reste des cartes dans la pioche
+        if(getPioche().etreSurLaPioche()){//Si curseur sur la pioche
+            setEndroitActu("pioche");
+            if((!m_prop.aPioche && getMain().size()<5) || m_prop.doitRepiocher){//Si n'a pas encore pioché & taille de la main <5
 
-            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))//si appuie sur la pioche
-                piocher();
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){//si appuie sur la pioche
+                    piocher();
+                    sf::sleep(sf::milliseconds(200));
+                }
+
+            }
         }
     }
+
 }
 
-void Joueur::interactionFromMainToActive(int& _typeTerrain){
+void Joueur::interactionFromMainToActive(int& _typeTerrain, Joueur& _ennemie, std::vector<int>& _cimetiere){
     int x1=Affichage::recupSprite("Terrain_cartes").getPosition().x;
     int y1=Affichage::recupSprite("Terrain_cartes").getPosition().y;
 
@@ -155,35 +189,53 @@ void Joueur::interactionFromMainToActive(int& _typeTerrain){
                     temp.id = getMain()[i].id;
                     temp.imm= getMain()[i].imm;
 
-                    if(m_actives.size()<4||(temp.imm>=300&&temp.id<=399)) {//Si moins de 4 cartes dans les cartes actives ou carte énergie
-                        switch (temp.imm / 100) {
-                            case 1: //Créature
+                    bool effacerDeMain=false;
+                    switch (temp.imm / 100) {
+                        case 1: //Créature
+                            if(m_actives.size()<4){
                                 m_actives.push_back(temp); //On ajoute la cartes aux actives
-                                break;
-                            case 2: //Spéciale
-                                m_actives.push_back(temp); //On ajoute la cartes aux actives
-                                for(auto& elem: getCartes().getSpeciales()){
-                                    if(elem.getId()==temp.id){
-                                        _typeTerrain = elem.getDomaine();
-                                        break;
-                                    }
-                                }
-                                break;
-                            case 3://Energie
-                                m_cartesEnergie.push_back(temp);
-                                for(auto& elem: getCartes().getEnergies()){//On augmente le nombre d'énergie selon les 2 domaines
-                                    if(elem.getId()==temp.id){
-                                        m_ptEnergie[elem.getDomaine()]++;
-                                        m_ptEnergie[elem.getDomaine2()]++;
-                                        break;
-                                    }
-                                }
-                                break;
+                                effacerDeMain=true;
+                            }
 
-                        }
-                        m_main.erase(m_main.begin() + i); //on efface la carte de la main
+                            break;
+                        case 2: //Spéciale
+                            for(auto& elem: getCartes().getSpeciales()){
+                                if(elem.getId()==temp.id){
+                                    if(elem.getType()!=2 && m_actives.size()<4){
+                                        _typeTerrain = elem.getDomaine();
+                                        m_actives.push_back(temp); //On ajoute la cartes aux actives
+                                        effacerDeMain=true;
+                                    }
+                                    else{
+                                        setDefense(true);
+                                        elem.setPdv(0);
+                                        _cimetiere.push_back(elem.getImmatriculation());
+                                        effacerDeMain=true;
+                                    }
+
+                                    break;
+                                }
+                            }
+
+                            break;
+                        case 3://Energie
+                            effacerDeMain=true;
+                            m_cartesEnergie.push_back(temp);
+                            for(auto& elem: getCartes().getEnergies()){//On augmente le nombre d'énergie selon les 2 domaines
+                                if(elem.getId()==temp.id){
+                                    m_ptEnergie[elem.getDomaine()]++;
+                                    if(elem.getDomaine2()!=9)
+                                        m_ptEnergie[elem.getDomaine2()]++;
+                                    break;
+                                }
+                            }
+                            break;
 
                     }
+                    if(effacerDeMain)
+                        m_main.erase(m_main.begin() + i); //on efface la carte de la main
+
+
 
                     break;
                 }
@@ -253,15 +305,17 @@ void Joueur::interactionChoixAttaque(Joueur& _ennemie, std::vector<int>& _cimeti
                 if(posX>=xBase && posX<=xBase+453 && posY>=yBase && posY<=yBase + 241){
                     setEndroitActu("attaque" + std::to_string(i));
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-
-                        /* VERIF SI A BIEN LES ENERGIES */
-                        if(verifIfPossedeEnergies(i)){
-                            if(m_prop.propChoixAttaquer.imm/100==2 && i==1){//Si spéciale
-                                specialAttaque(_ennemie,_cimetiere);
+                        if(getNbAttaques()<2){//Si n'a pas fait ses 2 attaques par tour
+                            /* VERIF SI A BIEN LES ENERGIES */
+                            if(verifIfPossedeEnergies(i)&& !_ennemie.getDefense()){
+                                if(m_prop.propChoixAttaquer.imm/100==2 && i==1){//Si spéciale
+                                    specialAttaque(_ennemie,_cimetiere);
+                                }
+                                else
+                                    m_prop.numAttaque=i;
                             }
-                            else
-                                m_prop.numAttaque=i;
                         }
+
 
                     }
 
@@ -330,21 +384,24 @@ void Joueur::interactionChoixAttaque(Joueur& _ennemie, std::vector<int>& _cimeti
 
 void Joueur::specialAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere, int posAllie){
     int degat=0;
-    bool roi;
+    int degatExcendentaires=0;
+    int _type;
     for(auto& elem: getCartes().getSpeciales()){ //Cherche la carte du joueur actuel pour savoir ses dégats
         if(m_prop.propChoixAttaquer.id==elem.getId()){
             degat= elem.getAttaques()[1]->getDegat();
-            roi=elem.getRoi();
+            _type=elem.getType();
             break;
         }
     }
 
-    if(roi){
+    if(_type==1){//SI ROI
 
         for(auto& elem: _ennemie.getActives()){
             if(elem.imm/100==1){//Créature
                 for(auto& elem2 : _ennemie.getCartes().getCreaturesModif()){
                     if(elem2.getId() == elem.id){
+                        if(degat-elem2.getPdv()>0)
+                            degatExcendentaires+=degat-elem2.getPdv();
                         elem2.setPdv(elem2.getPdv()-degat);
                     }
                 }
@@ -352,15 +409,22 @@ void Joueur::specialAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere, int 
             else{//Spéciale
                 for(auto& elem2 : _ennemie.getCartes().getSpecialesModif()){
                     if(elem2.getId() == elem.id){
+                        if(degat-elem2.getPdv()>0)
+                            degatExcendentaires+=degat-elem2.getPdv();
                         elem2.setPdv(elem2.getPdv()-degat);
                     }
                 }
             }
         }
 
-        /*DIMINUE LES POINTS D'ENERGIES*/
-        diminuEnergieAfterAttaque(1);
+        /* LES DEGATS EXCEDENTAIRES IMPACTENT LES POINTS DE VIE DU JOUEUR*/
+        if(degatExcendentaires>0)//Si il y a eu des dégats excédentaires
+            _ennemie.setPdv(_ennemie.getPdv()-degatExcendentaires);
 
+        /*DIMINUE LES POINTS D'ENERGIES*/
+        //diminuEnergieAfterAttaque(1);
+
+        setNbAttaques(getNbAttaques()+1); //Augmente le nombre d'attaques
         m_prop.propChoixAttaquer.id=-1;
         m_prop.propChoixAttaquer.imm=-1;
         m_prop.numAttaque=-1;
@@ -393,7 +457,8 @@ void Joueur::specialAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere, int 
             }
 
             /*DIMINUE LES POINTS D'ENERGIES*/
-            diminuEnergieAfterAttaque(1);
+            //diminuEnergieAfterAttaque(1);
+            setNbAttaques(getNbAttaques()+1); //Augmente le nombre d'attaques
 
             sf::sleep(sf::milliseconds(100));
             m_prop.propChoixAttaquer.id=-1;
@@ -406,6 +471,8 @@ void Joueur::specialAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere, int 
 
     }
 
+
+
     /*VERIFIE SI DES CARTES SONT MORTES ET LES MET DANS LE CIMETIERE SI C'EST LE CAS*/
     verifSiDead(_ennemie,_cimetiere);
 
@@ -416,7 +483,7 @@ void Joueur::specialAttaque(Joueur& _ennemie, std::vector<int>& _cimetiere, int 
 void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, const int& _typeTerrain ){
     int _idEnnemieAttaque = _ennemie.getActives()[i].id;
     int degat=0;
-
+    int degatExcendentaires=0;
     switch(m_prop.propChoixAttaquer.imm/100){//TYPE
         case 1://Créature
             for(auto& elem: getCartes().getCreatures()){ //Cherche la carte du joueur actuel pour savoir ses dégats
@@ -434,6 +501,7 @@ void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, cons
                     //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
                     for(auto& elem : _ennemie.getCartes().getCreaturesModif()){
                         if(elem.getId()==_idEnnemieAttaque){
+                            degatExcendentaires=degat-elem.getPdv();
                             elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
                             break;
                         }
@@ -443,6 +511,7 @@ void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, cons
                     //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
                     for(auto& elem : _ennemie.getCartes().getSpecialesModif()){
                         if(elem.getId()==_idEnnemieAttaque){
+                            degatExcendentaires=degat-elem.getPdv();
                             elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
                             break;
                         }
@@ -471,6 +540,7 @@ void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, cons
                         //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
                         for(auto& elem : _ennemie.getCartes().getCreaturesModif()){
                             if(elem.getId()==_idEnnemieAttaque){
+                                degatExcendentaires=degat-elem.getPdv();
                                 elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
                                 break;
                             }
@@ -480,6 +550,7 @@ void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, cons
                         //On Cherche la carte de l'ennemie qui coreespond à l'id de la carte attaqué
                         for(auto& elem : _ennemie.getCartes().getSpecialesModif()){
                             if(elem.getId()==_idEnnemieAttaque){
+                                degatExcendentaires=degat-elem.getPdv();
                                 elem.setPdv(elem.getPdv()-degat);//Ses pdv diminue selon les dégats de l'attaque
                                 break;
                             }
@@ -497,12 +568,16 @@ void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, cons
         break;
     }
 
+    /* LES DEGATS EXCEDENTAIRES IMPACTENT LES POINTS DE VIE DU JOUEUR*/
+    if(degatExcendentaires>0)//Si il y a eu des dégats excédentaires
+        _ennemie.setPdv(_ennemie.getPdv()-degatExcendentaires);
+
     /*VERIFIE SI DES CARTES SONT MORTES ET LES MET DANS LE CIMETIERE SI C'EST LE CAS*/
     verifSiDead(_ennemie,_cimetiere);
 
     /*DIMINUE LES POINTS D'ENERGIES*/
-    diminuEnergieAfterAttaque(m_prop.numAttaque);
-
+    //diminuEnergieAfterAttaque(m_prop.numAttaque);
+    setNbAttaques(getNbAttaques()+1); //Augmente le nombre d'attaques
     m_prop.propChoixAttaquer.id=-1;
     m_prop.propChoixAttaquer.imm=-1;
     m_prop.numAttaque=-1;
@@ -510,7 +585,7 @@ void Joueur::attaquer(int i,Joueur& _ennemie, std::vector<int>& _cimetiere, cons
 }
 
 void Joueur::interactionPtsEnergies(Joueur& _ennemie){
-    int x=50,y=850+105;
+    int x=30,y=850+105;
     int posX=Affichage::getMousePosition().x;
     int posY=Affichage::getMousePosition().y;
 
@@ -534,12 +609,9 @@ void Joueur::interactionPtsEnergies(Joueur& _ennemie){
             if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                 m_prop.affichePtsEnergies=0;
                 _ennemie.setAffichePtsEnergies(0);
+                sf::sleep(sf::milliseconds(200));
             }
         }
-
-
-
-
 
 
     }

@@ -92,15 +92,33 @@ int Match::interaction(){
 
     int returnInteraction = getJoueur().interaction(getJoueurEnnemie(),getCimetiere(),temp);
 
-    if(returnInteraction==1){ //Changement de tour
-        permuterJoueur();
-        return 1;
-    }//Si fin de tour du joueurActuel
+    switch(returnInteraction){
+        case 0:
+            break;
+        case 1:
+            permuterJoueur();
+            return 1;
+            break;
+        case 2:
+            return 2;
+            break;
+        case 5: //Si égalité alors on ne fait rien !!
+            break;
+        case 6: //Joueur actuel a perdu
+            gestionEnjeu(getJoueurEnnemie(),getJoueur());
+            //Sauvegarde
+            getJoueur().getUser()->sauvegardeFichierPseudo();
+            getJoueurEnnemie().getUser()->sauvegardeFichierPseudo();
+            return 6;
+            break;
+        case 7: //Joueur ennemi a perdu
+            gestionEnjeu(getJoueur(),getJoueurEnnemie());
+            //Sauvegarde
+            getJoueur().getUser()->sauvegardeFichierPseudo();
+            getJoueurEnnemie().getUser()->sauvegardeFichierPseudo();
+            return 7;
+            break;
 
-    else if(returnInteraction==2){//QUITTER
-        getJoueurs().clear(); //On efface les joueurs
-        getCimetiere().clear();//on efface le cimetiere
-        return 2;
     }
 
 
@@ -110,3 +128,29 @@ int Match::interaction(){
     return 0;
 }
 
+void Match::effacerMatch(){
+    getJoueurs().clear(); //On efface les joueurs
+    getCimetiere().clear();//on efface le cimetiere
+}
+
+void Match::gestionEnjeu(Joueur& gagnant, Joueur& perdant){
+    //On ajoute l'enjeu aux cartes seules du joeur gagnant
+    gagnant.getUser()->getCartesSeules().push_back(perdant.getEnjeu().imm);
+
+    gagnant.getUser()->setArgent(gagnant.getUser()->getArgent()+100);
+
+    bool stop=false;
+    //Permet d'effacer la carte enjeu du joueur perdant
+    for(int i=0; i<perdant.getUser()->getDeckModifiable()[perdant.getUser()->getDeckActif()].getCartes().size(); i++){
+        int elem = perdant.getUser()->getDeckModifiable()[perdant.getUser()->getDeckActif()].getCartes()[i];
+        if(stop)
+            break;
+        if(elem == perdant.getEnjeu().imm && stop==false){
+            perdant.getUser()->getDeckModifiable()[perdant.getUser()->getDeckActif()].getCartes().erase(perdant.getUser()->getDeckModifiable()[perdant.getUser()->getDeckActif()].getCartes().begin()+i);
+            stop =true;
+            break;
+        }
+
+
+    }
+}

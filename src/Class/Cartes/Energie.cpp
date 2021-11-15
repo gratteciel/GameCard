@@ -51,28 +51,36 @@ void Energie::affiche(float x, float y){
     Affichage::setPos(x,y, "Energie");
     Affichage::afficheImage("Energie");
 
+    if(getDomaine2()!=9){
+        if(getDomaine2()==getDomaine()){
+            sf::Text texte = Affichage::chargerTexte("2", 1, sf::Color::White,30, x+30, y+100, sf::Color::Black, 1);
+            Affichage::getWindow().draw(texte);
+            Carte::affiche(x+20,y);
+        }
 
-    if(getDomaine2()==getDomaine()){
-        sf::Text texte = Affichage::chargerTexte("2", 1, sf::Color::White,30, x+30, y+100, sf::Color::Black, 1);
-        Affichage::getWindow().draw(texte);
-        Carte::affiche(x+20,y);
+        else{
+            Carte::affiche(x-30,y);
+            //Affiche le domaine
+            std::string nomFichier = "Energie_"+std::to_string(getDomaine2());
+            Affichage::setPos(x+90,y+100,nomFichier);
+            Affichage::afficheImage(nomFichier);
+        }
     }
-
     else{
-        Carte::affiche(x-30,y);
-        //Affiche le domaine
-        std::string nomFichier = "Energie_"+std::to_string(getDomaine2());
-        Affichage::setPos(x+90,y+100,nomFichier);
-        Affichage::afficheImage(nomFichier);
+        Carte::affiche(x,y);
     }
+
 
 }
 
 void Energie::afficheDescription() {
     Carte::afficheDescriptionCarte("Energie");
 
-    std::string nomFichier = "Energie_"+std::to_string(getDomaine2());
-    Affichage::setPos(1200,380,nomFichier);
-    Affichage::afficheImage(nomFichier);
+    if(getDomaine2()!=9){
+        std::string nomFichier = "Energie_"+std::to_string(getDomaine2());
+        Affichage::setPos(1200,380,nomFichier);
+        Affichage::afficheImage(nomFichier);
+
+    }
 
 }

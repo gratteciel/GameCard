@@ -10,11 +10,11 @@ class Creature;
 
 class Speciale : public Creature{
     private:
-        bool m_roi;
+        int m_type; //0 reine  //1 roi  //2 défence
     public:
         //Constructeur et destructeur
 
-        Speciale(int _immatriculation, int _id, std::string _nom, std::string _description,int _domaine, int _pdVInitial, std::vector<Attaque*> _attaques, bool _roi);
+        Speciale(int _immatriculation, int _id, std::string _nom, std::string _description,int _domaine, int _pdVInitial, std::vector<Attaque*> _attaques, int _type);
         ~Speciale();
 
         //Méthodes
@@ -25,7 +25,7 @@ class Speciale : public Creature{
         void afficheRoiReineDescription(int xBase, int yBase);
 
         //Accesseurs et mutateurs
-        bool getRoi() const;
+        int getType() const;
 };
 
 

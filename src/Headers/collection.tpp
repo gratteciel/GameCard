@@ -41,7 +41,7 @@ void Collection::creerCarte(T _carte, std::vector<T>& vecteur){
 
     }
     else{
-        std::cout << "Impossible d'ouvrir le fichier : creatures.txt " << std::endl;
+        std::cout << "Impossible d'ouvrir le fichier : " << _nomFichier <<  std::endl;
     }
 
 

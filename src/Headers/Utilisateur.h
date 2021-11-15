@@ -16,7 +16,7 @@ class Utilisateur {
         std::vector<Deck> m_decks;
         std::vector<int> m_cartesSeul;//Ici sont stockés les immatriculations des cartes qui n'ont pas de deck
         int m_deckActif;
-
+        int m_argent;
 
         //Méthodes privées
         void creerFichierPseudo(const std::vector<int>& _deck0);
@@ -42,6 +42,9 @@ class Utilisateur {
 
         std::vector<Deck>& getDeckModifiable();
         std::vector<int>& getCartesSeules();
+
+        int getArgent() const;
+        void setArgent(int _argent);
 };
 
 

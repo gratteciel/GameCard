@@ -135,6 +135,8 @@ void Affichage::sfmlLoadImages() {
     chargerImage("Energie_3", "Cartes", "png");
 
     chargerImage("changementDeTour", "Play/Terrain", "png");
+    chargerImage("bouclier", "Play/Terrain", "png");
+    chargerImage("bouclier_petit", "Play/Terrain", "png");
 
 }
 

@@ -34,6 +34,7 @@ public:
 
     void permuterJoueur();
 
+    void gestionEnjeu(Joueur& gagnant, Joueur& perdant);
     //Getter et Setter
 
     void setJoueur(Utilisateur *_user);
@@ -45,6 +46,8 @@ public:
     int getJoueurActuel() const;
 
     void setJoueurActuel(int _joueurActuel);
+
+    void effacerMatch();
 
     Joueur &getJoueur();
 

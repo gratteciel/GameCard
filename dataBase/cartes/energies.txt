@@ -8,3 +8,7 @@
 307*Nature+Feu*Element nature et feu*3*0*
 308*Feu+Eau*Element feu et eau*0*1*
 309*Eau+Electricite*Element eau et electricite*1*2*
+310*Feu*Element feu*0*9*
+311*Eau*Element eau*1*9*
+312*Electricite*Element electrique*2*9*
+313*Nature*Element nature*3*9*

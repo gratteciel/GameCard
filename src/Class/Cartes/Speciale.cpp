@@ -9,8 +9,8 @@
  * Constructeur et destructeur
  */
 
-Speciale::Speciale(int _immatriculation, int _id, std::string _nom, std::string _description,int _domaine, int _pdVInitial, std::vector<Attaque*> _attaques, bool _roi)
-        : Creature(_immatriculation,_id,_nom,_description, _domaine, _pdVInitial, _attaques), m_roi(_roi)
+Speciale::Speciale(int _immatriculation, int _id, std::string _nom, std::string _description,int _domaine, int _pdVInitial, std::vector<Attaque*> _attaques, int _type)
+        : Creature(_immatriculation,_id,_nom,_description, _domaine, _pdVInitial, _attaques), m_type(_type)
 
 {
 
@@ -28,8 +28,8 @@ Speciale::~Speciale() {
  * Accesseurs et mutateurs
  */
 
-bool Speciale::getRoi() const{
-    return m_roi;
+int Speciale::getType() const{
+    return m_type;
 }
 
 /*
@@ -43,9 +43,8 @@ bool Speciale::getRoi() const{
  */
 void Speciale::creer(std::ofstream& fileOutput){
     // Ajout dans le fichier energie
-    fileOutput << std::endl << std::to_string(getImmatriculation()) <<"*" << getNom() <<"*" << getDescription() << "*";
-
-
+    Creature::creer(fileOutput);
+    fileOutput << std::to_string(getType()) << "*";
 }
 
 void Speciale::affiche(float x, float y){
@@ -60,22 +59,34 @@ void Speciale::affiche(float x, float y){
     texte=Affichage::chargerTexte(getNom(),1,sf::Color::White,19,x+30,y+43);
     Affichage::getWindow().draw(texte);
 
-    //Affiche les pdv
-    texte=Affichage::chargerTexte(std::to_string(getPdv()),1,sf::Color::White,20,x+50,y+165);
-    Affichage::getWindow().draw(texte);
+    if(getType()!=2){
+        //Affiche les pdv
+        texte=Affichage::chargerTexte(std::to_string(getPdv()),1,sf::Color::White,20,x+50,y+165);
+        Affichage::getWindow().draw(texte);
+        //Affiche le domaine
+        Carte::affiche(x-30,y);
+    }
 
-    //Affiche roi ou renne
-    std::string type;
-    if(getRoi())
-        type="ROI";
-    else
-        type="Reine";
-    texte=Affichage::chargerTexte(type,1,sf::Color::White,20,x+55,y+105);
-    Affichage::getWindow().draw(texte);
+    if(getType()!=2){
+        //Affiche roi ou renne
+        std::string type;
+        if(getType()==1)
+            type="ROI";
+        else if(getType()==0)
+            type="Reine";
 
 
-    //Affiche le domaine
-    Carte::affiche(x-30,y);
+        texte=Affichage::chargerTexte(type,1,sf::Color::White,20,x+55,y+105);
+        Affichage::getWindow().draw(texte);
+    }
+    else{//SI defense
+        Affichage::setPos(x+50, y+90,"bouclier_petit");
+        Affichage::afficheImage("bouclier_petit");
+    }
+
+
+
+
 
 }
 
@@ -105,25 +116,37 @@ void Speciale::afficheAttaques(const int& _terrainActuel) {
 void Speciale::afficheDescription() {
     int xBase =490;
     int yBase = 470;
-    Carte::afficheDescriptionCarte("Speciale");
 
-    Creature::afficheDescriptionHerited();
 
-    afficheDegat(xBase,yBase,0);
-    xBase+=460;
+    if(getType()!=2){ //SI n'est pas de type defense
+        Carte::afficheDescriptionCarte("Speciale");
+        Creature::afficheDescriptionHerited();
 
-    afficheRoiReineDescription(xBase,yBase);
+        afficheDegat(xBase,yBase,0);
+        xBase+=460;
+
+        afficheRoiReineDescription(xBase,yBase);
+    }
+    else{ //Si de type defense
+        Carte::afficheDescriptionCarte("Speciale2");
+        //Afiche le nom
+        sf::Text texte=Affichage::chargerTexte("Nom :",1,sf::Color(43,43,43,255),40,530,320,sf::Color::Black,1);
+        Affichage::getWindow().draw(texte);
+        texte=Affichage::chargerTexte(getNom(),1,sf::Color(233,233,233,255),40,680,320,sf::Color::Black,1);
+        Affichage::getWindow().draw(texte);
+    }
+
 
 }
 
 void Speciale::afficheRoiReineDescription(int xBase, int yBase){
-    if(getRoi()){
-        sf::Text tempTexte=Affichage::chargerTexte("Inflige immediatement 15",1,sf::Color::White,20,xBase+30,yBase+90,sf::Color::Black,1);
+    if(getType()==1){ //Si roi
+        sf::Text tempTexte=Affichage::chargerTexte("Inflige immediatement 25",1,sf::Color::White,20,xBase+30,yBase+90,sf::Color::Black,1);
         Affichage::getWindow().draw(tempTexte);
         tempTexte=Affichage::chargerTexte("degats aux cartes adverses",1,sf::Color::White,20,xBase+30,yBase+110,sf::Color::Black,1);
         Affichage::getWindow().draw(tempTexte);
     }
-    else{
+    else if(getType()==0){ //si reine
         sf::Text tempTexte=Affichage::chargerTexte("Soigne une carte alliee",1,sf::Color::White,20,xBase+30,yBase+90,sf::Color::Black,1);
         Affichage::getWindow().draw(tempTexte);
         tempTexte=Affichage::chargerTexte("de 30 point de vie",1,sf::Color::White,20,xBase+30,yBase+110,sf::Color::Black,1);

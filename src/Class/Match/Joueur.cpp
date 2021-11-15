@@ -11,7 +11,7 @@
  */
 
 Joueur::Joueur(Utilisateur *_user)
-       :m_user(_user), m_pdv(100)
+       :m_user(_user), m_pdv(150),m_statueLoose(0)
 {
     for(int i=0; i<4; i++)
         m_ptEnergie.push_back(0);
@@ -21,9 +21,11 @@ Joueur::Joueur(Utilisateur *_user)
     temp.imm=-1;
 
     m_enjeu=temp;
+
     m_prop.propChoixAttaquer.id=-1;
     m_prop.propChoixAttaquer.imm=-1;
     m_prop.numAttaque=-1;
+    setDefense(false);
 }
 
 Joueur::~Joueur(){
@@ -39,7 +41,24 @@ Joueur::~Joueur(){
 int Joueur::getPdv() const {
     return m_pdv;
 }
-Utilisateur* Joueur::getUser() const {
+
+void Joueur::setPdv(int _pdv){
+    m_pdv = _pdv;
+    if(_pdv <=0)
+        setStatueLoose(2); //Plus de PDV
+
+}
+
+int Joueur::getStatueLoose() const { //1 : plus de carte qui puissent attaquer
+                                     //2 : plus de pdv
+    return m_statueLoose;
+}
+
+void Joueur::setStatueLoose(int _statueLoose) {
+    m_statueLoose = _statueLoose;
+}
+
+Utilisateur* Joueur::getUser() {
     return m_user;
 }
 
@@ -108,6 +127,24 @@ void Joueur::setAffichePtsEnergies(int _affichePtsEnergies) {
     m_prop.affichePtsEnergies=_affichePtsEnergies;
 }
 
+bool Joueur::getDefense() const{
+    return m_defense;
+}
+void Joueur::setDefense(bool _defense){
+    m_defense=_defense;
+}
+
+void Joueur::setNbAttaques(int _nbAttaques){
+    m_nbAttaques=_nbAttaques;
+}
+
+int Joueur::getNbAttaques() const{
+    return m_nbAttaques;
+}
+
+t_carte Joueur::getEnjeu() const{
+    return m_enjeu;
+}
 /*
  * Méthodes
  */
@@ -130,7 +167,7 @@ void Joueur::setCartes(const Collection& _cartesBase){
             case 2: //Speciale
                 for(auto& elem2 : _cartesBase.getSpeciales()){
                     if(elem2.getImmatriculation()==elem.imm){
-                        m_cartes.ajouterSpeciale(Speciale(elem.imm, elem.id, elem2.getNom(), elem2.getDescription(),elem2.getDomaine(), elem2.getPdvInitial(),elem2.getAttaques(),elem2.getRoi()));
+                        m_cartes.ajouterSpeciale(Speciale(elem.imm, elem.id, elem2.getNom(), elem2.getDescription(),elem2.getDomaine(), elem2.getPdvInitial(),elem2.getAttaques(),elem2.getType()));
                         break;
                     }
                 }
@@ -151,6 +188,7 @@ void Joueur::setCartes(const Collection& _cartesBase){
 
 void Joueur::initiatlisationProp(){
     m_prop.aPioche=false;
+    m_prop.doitRepiocher=false;
     getDrag().setActif(false);
     m_prop.propChoixAttaquer.id=-1;
     m_prop.propChoixAttaquer.imm=-1;
@@ -160,12 +198,74 @@ void Joueur::initiatlisationProp(){
     setClignotage(30);
     setQuitter(0);
     m_prop.affichePtsEnergies=0;
+    setDefense(false);
+    setNbAttaques(0);
 }
 
 void Joueur::piocher(){
-    //On ajoute la carte à la main
-    getMain().push_back(getPioche().piocher());
-    m_prop.aPioche=true;
+    if(getPioche().getCartes().size()>0){ //Si il reste des cartes dans la picohe
+        //On ajoute la carte à la main
+        if(m_prop.doitRepiocher){
+
+            getPioche().getCartes().push_back(getMain()[getMain().size()-1]);
+            getMain().pop_back();
+
+            m_prop.doitRepiocher=false;
+        }
+        getMain().push_back(getPioche().piocher());
+
+
+        m_prop.aPioche=true;
+    }
+
+}
+
+bool Joueur::possedeAtleastUneActive(){
+    if(m_actives.empty()){ //Si il n'y a aucune carte active
+        bool possedeCartesPouvantAttaquer = false;
+
+        //Vérifie que l'utilisateur possede dans sa main des cartes qui peuvent attaquer ( Créature ou Spéciale)
+        for(auto elem : m_main){
+            if((elem.imm>=100 && elem.imm<=299)&& elem.imm !=208){//208 = carte spéciale défense
+                possedeCartesPouvantAttaquer=true;//Le joueur peut alors poser une carte sur le terrain
+                m_prop.doitRepiocher=false;
+                break;
+            }
+        }
+
+        //Si possede aucune carte dans sa main pouvant attaquer alors il peut repiocher si il a une carte pouvant attaquer dans sa pioche
+        if(!possedeCartesPouvantAttaquer){
+            bool aDansSaMainBonneCarte=false;
+            for(auto& elem: getPioche().getCartes()) {
+                if ((elem.imm >= 100 && elem.imm <= 299) && elem.imm != 208) {//208 = carte spéciale défense
+                    aDansSaMainBonneCarte = true;//Le joueur possede alors dans sa pioche une carte pouvant attaquer
+                    break;
+                }
+            }
+
+            if(!aDansSaMainBonneCarte)//Si ne possede aucune carte dans sa pioche pouvant attaquer alors il a perdu
+                setStatueLoose(1);
+            else{
+
+                m_prop.doitRepiocher=true;
+            }
+
+
+        }
+
+        if(getMain().empty())
+            m_prop.doitRepiocher=false;
+
+        return false;
+    }
+
+
+    else{
+        m_prop.doitRepiocher=false;
+        return true;
+    }
+
+
 }
 
 

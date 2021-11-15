@@ -93,16 +93,16 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/Affichage.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/Affichage.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Affichage/Affichage.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -195,24 +195,24 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/AfficheMatch.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/AfficheMatch.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Affichage/AfficheMatch.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/AfficheMatch.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -305,26 +305,26 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/Menu.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/Menu.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Affichage/Menu.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/AfficheMatch.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Menu.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Game.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Affichage/MenuAffichage.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -417,26 +417,26 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/MenuAffichage.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/MenuAffichage.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Affichage/MenuAffichage.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/AfficheMatch.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Menu.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Game.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Affichage/MenuInteraction.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -529,26 +529,26 @@ CMakeFiles/cardGame.dir/src/Class/Affichage/MenuInteraction.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Affichage/MenuInteraction.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Affichage/MenuInteraction.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/AfficheMatch.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Menu.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Game.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -641,10 +641,10 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Attaque.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Attaque.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/Attaque.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -737,9 +737,16 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Carte.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Carte.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/Carte.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -832,16 +839,16 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Creature.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Creature.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/Creature.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -934,9 +941,9 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Deck.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Deck.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/Deck.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/DragCarte.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1029,17 +1036,17 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/DragCarte.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/DragCarte.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/DragCarte.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1132,16 +1139,16 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Energie.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Energie.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/Energie.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1234,16 +1241,16 @@ CMakeFiles/cardGame.dir/src/Class/Cartes/Speciale.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Cartes/Speciale.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Cartes/Speciale.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1336,16 +1343,16 @@ CMakeFiles/cardGame.dir/src/Class/Collection.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Collection.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Collection.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1438,25 +1445,25 @@ CMakeFiles/cardGame.dir/src/Class/Game.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Game.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Game.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/AfficheMatch.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Game.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1549,21 +1556,21 @@ CMakeFiles/cardGame.dir/src/Class/Match/Joueur.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Joueur.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Match/Joueur.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1656,21 +1663,21 @@ CMakeFiles/cardGame.dir/src/Class/Match/JoueurAffichage.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/JoueurAffichage.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Match/JoueurAffichage.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1763,21 +1770,21 @@ CMakeFiles/cardGame.dir/src/Class/Match/JoueurInteraction.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/JoueurInteraction.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Match/JoueurInteraction.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1870,23 +1877,23 @@ CMakeFiles/cardGame.dir/src/Class/Match/Match.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Match.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Match/Match.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -1979,17 +1986,17 @@ CMakeFiles/cardGame.dir/src/Class/Match/Pioche.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Pioche.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Match/Pioche.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -2082,18 +2089,18 @@ CMakeFiles/cardGame.dir/src/Class/Match/Plateau.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Match/Plateau.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Match/Plateau.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -2186,10 +2193,10 @@ CMakeFiles/cardGame.dir/src/Class/Utilisateur.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Class/Utilisateur.cpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Class/Utilisateur.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
 CMakeFiles/cardGame.dir/src/main.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Audio.hpp
  ../lib/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -2282,23 +2289,23 @@ CMakeFiles/cardGame.dir/src/main.cpp.obj
  ../lib/SFML-2.5.1/include/SFML/Window/Window.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  ../lib/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Affichage.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/AfficheMatch.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Affichage/Menu.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Attaque.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Carte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Creature.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Deck.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/DragCarte.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Energie.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Cartes/Speciale.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Collection.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Game.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Joueur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Match.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Pioche.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Match/Plateau.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/Utilisateur.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/Headers/collection.tpp
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/biblio.h
- C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/Programme C++/GameCard/src/main.cpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Affichage.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/AfficheMatch.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Affichage/Menu.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Attaque.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Carte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Creature.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Deck.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/DragCarte.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Energie.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Cartes/Speciale.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Collection.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Game.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Joueur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Match.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Pioche.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Match/Plateau.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/Utilisateur.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/Headers/collection.tpp
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/biblio.h
+ C:/Users/bemat/Documents/PERSO/ECOLE/ECE/ING2/Info/JEU S1/GameCard/src/main.cpp

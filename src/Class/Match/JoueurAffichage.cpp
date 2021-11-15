@@ -8,12 +8,13 @@ void Joueur::afficherSurTerrain(int _ennemieActives, const int& _terrainActuel){
     affichePioche();
     afficheMain(false);
     afficheFinTour();
+    afficheNom(false);
     afficheActives(false, _ennemieActives);
     afficheAttaques(_terrainActuel);
     afficheChoixAttaque(_ennemieActives);
     getDrag().afficheCarte(getCartes());
     afficheQuitter();
-    afficheNom(false);
+    afficheDefense(false);
 }
 
 void Joueur::afficheModeEnnemie(){
@@ -21,6 +22,7 @@ void Joueur::afficheModeEnnemie(){
     getPioche().affiche(true);
     afficheNom(true);
     afficheActives(true);
+    afficheDefense(true);
 
 }
 
@@ -78,6 +80,25 @@ void Joueur::afficheActives(bool _ennemie, int _ennemieActives){
 
 }
 
+void Joueur::afficheDefense(bool _ennemie){
+    if(m_prop.affichePtsEnergies==0){
+        if(getDefense()){
+            int x= Affichage::recupSprite("Terrain_cartes").getPosition().x+230;
+            int y=Affichage::recupSprite("Terrain_cartes").getPosition().y+400;
+
+            if(_ennemie)
+                y-=250;
+
+            Affichage::setPos(x-120,y,"bouclier");
+            Affichage::afficheImage("bouclier");
+
+
+
+        }
+
+
+    }
+}
 
 void Joueur::afficheAttaques(const int& _terrainActuel){
     int tempId = m_prop.propChoixAttaquer.id;
@@ -184,7 +205,7 @@ void Joueur::afficheChoixAttaque(int _ennemieActives){
 void Joueur::affichePioche(){
 
     if(getPioche().getCartes().size()>0){ //Si il y a des cartes dans la pioche
-        if(!m_prop.aPioche&& getMain().size()<5){
+        if((!m_prop.aPioche&& getMain().size()<5)||m_prop.doitRepiocher){
             if(getClignotage()>=30&&m_prop.affichePtsEnergies==0){
                 sf::RectangleShape rectangle;
                 rectangle.setSize(sf::Vector2f(230, 270));
@@ -278,7 +299,7 @@ void Joueur::afficheQuitter(){
 
 
 void Joueur::afficheNom(bool ennemie){
-    int x=50,y=850, taille=100,posPdv=10;
+    int x=30,y=850, taille=100,posPdv=10;
     if(ennemie){
         x=1600;
         y=30;
@@ -296,7 +317,19 @@ void Joueur::afficheNom(bool ennemie){
 
 
     affichePtsEnergies(x,y, taille, ennemie);
+    if(!ennemie){
 
+        std::string texte;
+        if(getNbAttaques()!=0)
+            texte="action restante";
+        else
+            texte="actions restantes";
+
+        tempTexte=Affichage::chargerTexte(std::to_string(2-getNbAttaques()),0, sf::Color::Red,45,x+765,y-105+posPdv,sf::Color::Black, 1);
+        Affichage::getWindow().draw(tempTexte);
+        tempTexte=Affichage::chargerTexte(texte,0, sf::Color::White,45,x+795,y-105+posPdv,sf::Color::Black, 1);
+        Affichage::getWindow().draw(tempTexte);
+    }
 }
 
 

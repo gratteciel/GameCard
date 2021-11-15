@@ -49,6 +49,15 @@ int Utilisateur::getDeckActif() const{
     return m_deckActif;
 }
 
+int Utilisateur::getArgent() const {
+    return m_argent;
+}
+void Utilisateur::setArgent(int _argent){
+    if(_argent>=0){
+        m_argent=_argent;
+    }
+
+}
 
 
 /*
@@ -97,7 +106,9 @@ void Utilisateur::creerFichierPseudo(const std::vector<int>& _deck0){
 
     if (filePseudoOutput.is_open()) //Si fichier est bien créé
     {
-        filePseudoOutput << "0" << std::endl; //Aucune carte seules
+        filePseudoOutput << "0" << std::endl; //Deck de base : 0
+
+        filePseudoOutput << "200"<< std::endl; //Argent de base : 200
 
         filePseudoOutput << _deck0[10] << std::endl;
 
@@ -123,6 +134,7 @@ void Utilisateur::sauvegardeFichierPseudo(){
     {
         /* AJOTUER LA MONEY */
         filePseudoOutput << std::to_string(getDeckActif()) << std::endl; //Aucune carte seules
+        filePseudoOutput << std::to_string(getArgent()) << std::endl;
 
 
         for(auto& elem:m_cartesSeul){
@@ -157,6 +169,10 @@ void Utilisateur::chargerUtilisateur(){
 
         m_deckActif=std::stoi(line); //set le deck actif de l'utilisateur
                                      //Ici on n'appale pas setDeckActif() car le joueur ne possede pas encore de deck
+
+        std::getline(filePseudo,line);//2eme ligne ->argent
+        m_argent = std::stoi(line);
+
 
         std::getline(filePseudo,line);//2eme ligne ->cartes seules
         std::istringstream ss(line);

@@ -47,8 +47,7 @@ void Menu::interactionPseudoUtilisateurs() {
                }
                setBoutonActuel("LancerPartie");
            }
-           else if(bouton!="connecter" && bouton!="Retour" && bouton !="Inscription")
-               setBoutonActuel("none");
+
        }
    }
 
@@ -84,83 +83,303 @@ void Menu::gestionUtilisateurInteraction(){
 
 }
 
-void Menu::gestionInteractionDeckJoueur(){
 
 
+void Menu::gestionInteractionDeckJoueur() {
 
+    /* Initialisation */
+    m_choixInscription.valide = false;
+    m_choixInscription.pseudoInscription = m_jeu.getUsersConnectes()[getGestionUtilisateur()].getPseudo();
+    int prix = 0;
 
     switch (getModeAffichageJoueur()) {
-        case 1: //Premier sous-menu : Voir decks /Creer deck
-            if (getMousePosition().x > 150 && getMousePosition().x < 150 + 900 && getMousePosition().y > 300 &&
-                getMousePosition().y < 400) {
+        case 1: //Premier sous-menu : Voir decks /Creer deck / shop
+            if ( getMousePosition().x > 150 && getMousePosition().x < 150 + 900 && getMousePosition().y > 300 &&
+                 getMousePosition().y < 400 ) {
                 setBoutonActuel("voir ses decks");
 
-                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
                     setModeAffichageJoueur(2);
                     setAffichageDeck(-1);
                 }
             }
-            if (getMousePosition().x > 950 && getMousePosition().x < 950 + 900 && getMousePosition().y > 500 &&
-                getMousePosition().y < 600) {
+            if ( getMousePosition().x > 950 && getMousePosition().x < 950 + 900 && getMousePosition().y > 500 &&
+                 getMousePosition().y < 600 ) {
                 setBoutonActuel("creer un deck");
-                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
                     setModeAffichageJoueur(3);
                 }
             }
-
-
+            if ( getMousePosition().x > 50 && getMousePosition().x < 50 + 200 && getMousePosition().y > 825 &&
+                 getMousePosition().y < 825 + 70 ) {
+                setBoutonActuel("shop");
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    setModeAffichageJoueur(4);
+                }
+            }
             break;
         case 2: //Deuxieme sous-menu : Interaction des N decks + interaction cartes seules + interaction modification d'un deck (getAffichageDeck)
 
 
             for (int i(0); i < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable().size(); i++) {
-                if (getMousePosition().x > 100 + 150 * i && getMousePosition().x < 100 + 150 * i + 200 &&
-                    getMousePosition().y > 200 && getMousePosition().y < 200 + 40){
+                if ( getMousePosition().x > 300 + 300 * i && getMousePosition().x < 300 + 300 * i + 200 &&
+                     getMousePosition().y > 20 && getMousePosition().y < 20 + 40 ) {
                     setBoutonActuel("choixDeck" + std::to_string(i));
-                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {//faire en sorte que les cartes reste affiches
-                        if(getAffichageDeck()==i)
+                    if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {//faire en sorte que les cartes reste affiches
+                        if ( getAffichageDeck() == i )
                             setAffichageDeck(-1);
                         else
                             setAffichageDeck(i);
-
                     }
                 }
-
             }
 
 
-            if (getAffichageDeck() != -1) {
 
-                for (int j(0); j < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().size(); j++) {
+            if ( getAffichageDeck() != -1 ) {
+                if ( getMousePosition().x > 500 && getMousePosition().x < 1250 &&
+                     getMousePosition().y > 500 && getMousePosition().y < 500 + 50 ) {
+                    setBoutonActuel("changerDeck");
+                    if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {//faire en sorte que les cartes reste affiches
+                        m_jeu.getUsersConnectes()[m_gestionUtilisateur].setDeckActif(getAffichageDeck());
+                        std::cout << getAffichageDeck() << std::endl;
+                    }
+                }
+
+                for (int j(0); j <
+                               m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().size(); j++) {
                     /* On enleve la carte qui est selectionné et on reload le deck pour l'affichage */
-                    if (getMousePosition().x > 50 + 170 * j && getMousePosition().x < 150 + 50 + 170 * j - 20 &&
-                        getMousePosition().y > 700 && getMousePosition().y < 700 + 200) {
+
+                    /* Ajout dans les cartes seules */
+                    if ( getMousePosition().x > 50 + 170 * j && getMousePosition().x < 150 + 50 + 170 * j - 20 &&
+                         getMousePosition().y > 700 && getMousePosition().y < 700 + 200 ) {
                         setBoutonActuel("carteDecknum" + std::to_string(j));
-                        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {//regler cette partie
+                        if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 
-                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().push_back(m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes()[j]);
-
-                           m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().erase(m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().begin() +j);
-
-
+                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().push_back(
+                                    m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes()[j]);
+                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().erase(
+                                    m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().begin() +
+                                    j);
                         }
                     }
 
+
+                }
+
+                /* Ajout dans le deck */
+                for (int j(0); j < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().size(); j++) {
+                    if ( getMousePosition().x > 50 + 170 * j && getMousePosition().x < 150 + 50 + 170 * j - 20 &&
+                         getMousePosition().y > 200 && getMousePosition().y < 200 + 200 &&
+                         m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().size() <
+                         10 ) {
+                        setBoutonActuel("cartesSeulesnum" + std::to_string(j));
+                        if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+
+                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable()[getAffichageDeck()].getCartes().push_back(
+                                    m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules()[j]);
+                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().erase(
+                                    m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().begin() + j);
+                        }
+                    }
+                }
+            }
+
+            break;
+
+        case 3://Creation du deck
+
+
+            /* Pour le shop */
+            if ( getMousePosition().x > 1650 && getMousePosition().x < 1650 + 200 && getMousePosition().y > 20 &&
+                 getMousePosition().y < 20 + 70 ) {
+                setBoutonActuel("shop");
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    setModeAffichageJoueur(4);
+                }
+            }
+
+            /* Pour la création du deck */
+
+            for (int j(0); j < m_choixInscription.imm.size(); j++) {
+
+                /* Ajout dans les cartes seules */
+                if ( getMousePosition().x > 50 + 170 * j && getMousePosition().x < 150 + 50 + 170 * j - 20 &&
+                     getMousePosition().y > 700 && getMousePosition().y < 700 + 200 ) {
+                    setBoutonActuel("carteDecknum" + std::to_string(j));
+                    if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+
+                        m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().push_back(
+                                m_choixInscription.imm[j]);
+                        m_choixInscription.imm.erase(m_choixInscription.imm.begin() + j);
+                    }
+                }
+            }
+            /* Ajout dans le deck */
+            for (int j(0); j < m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().size(); j++) {
+                if ( getMousePosition().x > 50 + 170 * j && getMousePosition().x < 150 + 50 + 170 * j - 20 &&
+                     getMousePosition().y > 200 && getMousePosition().y < 200 + 200 &&
+                     m_choixInscription.imm.size() < 10 ) {
+                    setBoutonActuel("cartesSeulesnum" + std::to_string(j));
+                    if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                        m_choixInscription.imm.push_back(
+                                m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules()[j]);
+                        m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().erase(
+                                m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().begin() + j);
+                    }
+                }
+            }
+
+            //Vérification du deck
+            if ( m_choixInscription.imm.size() == 10 ) {
+
+                m_choixInscription.valide = true;
+                if ( getMousePosition().x < 1900 &&
+                     getMousePosition().x > 1600 &&
+                     getMousePosition().y < 1055 &&
+                     getMousePosition().y > 975 ) {
+                    setBoutonActuel("Creer");
+                    if ( getBoutonActuel() == "Creer" ) {
+                        if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                            m_jeu.getUsersConnectes()[getGestionUtilisateur()].getDeckModifiable().push_back(
+                                    m_choixInscription.imm);
+                            m_choixInscription.imm.clear(); // permet d'éviter de créer 2 fois le meme deck
+                            std::cout << "Deck Creer" << std::endl;
+                        }
+
+                    }
+
                 }
             }
             break;
 
-        case 3:// a améliorer
-            bool surQchose = false;
-            /*INTERACTION DU DRAG & DROP*/
-            //m_choixInscription.drag.interaction(m_choixInscription.imm);
+        case 4://shop
+            // on affiche les differents set
+            int i = 1, j = 0, k=0;
+            if ( getMousePosition().x > (1100) && getMousePosition().x<(1250) && getMousePosition().y>(50) &&
+                 getMousePosition().y < (250)) {
 
-            if (!surQchose)
-                setBoutonActuel("none");
+                sf::RectangleShape rectangle;
+                rectangle.setSize(sf::Vector2f(150, 200));
+                rectangle.setFillColor(sf::Color(255, 255, 255, 30));
+                rectangle.setOutlineColor(sf::Color(255, 0, 0, 200));
+                rectangle.setOutlineThickness(2);
+                rectangle.setPosition(1100, 50);
+                getWindow().draw(rectangle);
+
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    setAffichageCartes(1);
+                }
+            }
+            if ( getAffichageCartes() == 1 ) {
+                prix= 30;
+                for (auto &elem : m_jeu.getCartesBases().getCreatures()) {
+                    if ( i % 6 == 0 ) {
+                        i = 0;
+                        j++;
+                    }
+                    i++;
+                    if ( getMousePosition().x > (-150 + 170 * i) && getMousePosition().x < (-150 + 170 * i + 150) &&
+                         getMousePosition().y > 200 + 220 * j && getMousePosition().y < 200 + 220 * j + 200 ) {
+                        setBoutonActuel("cartesShop" + std::to_string(i) + std::to_string(j));
+                        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                            setImCarteShop(elem.getImmatriculation());
+                    }
+                }
+            }
+
+
+            if ( getMousePosition().x > (1300) &&
+                 getMousePosition().x<(1450) && getMousePosition().y>(50) &&
+                 getMousePosition().y < (250)) {//Pour les spéciales
+
+                sf::RectangleShape rectangle;
+                rectangle.setSize(sf::Vector2f(150, 200));
+                rectangle.setFillColor(sf::Color(255, 255, 255, 30));
+                rectangle.setOutlineColor(sf::Color(255, 0, 0, 200));
+                rectangle.setOutlineThickness(2);
+                rectangle.setPosition(1300, 50);
+                getWindow().draw(rectangle);
+
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    setAffichageCartes(2);
+                }
+            }
+            if ( getAffichageCartes() == 2 ) {
+                prix = 20;
+                for (auto &elem : m_jeu.getCartesBases().getSpeciales()) {
+
+                    if ( i % 6 == 0 ) {
+                        i = 0;
+                        j++;
+                    }
+                    i++;
+                    if ( getMousePosition().x > (-150 + 170 * i) &&
+                         getMousePosition().x < (-150 + 170 * i + 150) && getMousePosition().y > 200 + 220 * j &&
+                         getMousePosition().y < 200 + 220 * j + 200 ) {
+                        setBoutonActuel("cartesShop" + std::to_string(i) + std::to_string(j));
+                        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                            setImCarteShop(elem.getImmatriculation());
+                    }
+                }
+            }
+
+            if ( getMousePosition().x > (1500) &&
+                 getMousePosition().x<(1650) && getMousePosition().y>(50) &&
+                 getMousePosition().y < (250)) {//Pour les énergies
+
+                sf::RectangleShape rectangle;
+                rectangle.setSize(sf::Vector2f(150, 200));
+                rectangle.setFillColor(sf::Color(255, 255, 255, 30));
+                rectangle.setOutlineColor(sf::Color(255, 0, 0, 200));
+                rectangle.setOutlineThickness(2);
+                rectangle.setPosition(1500, 50);
+                getWindow().draw(rectangle);
+
+                if ( sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    setAffichageCartes(3);
+                }
+            }
+            if ( getAffichageCartes() == 3 ) {
+                prix = 50;
+                for (auto &elem : m_jeu.getCartesBases().getEnergies()) {
+                    if ( i % 6 == 0 ) {
+                        i = 0;
+                        j++;
+                    }
+                    i++;
+                    if ( getMousePosition().x > (-150 + 170 * i) && getMousePosition().x < (-150 + 170 * i + 150) &&
+                         getMousePosition().y > 200 + 220 * j && getMousePosition().y < 200 + 220 * j + 200 ) {
+
+                        setBoutonActuel("cartesShop" + std::to_string(i) + std::to_string(j));
+                        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                            setImCarteShop(elem.getImmatriculation());
+                    }
+                }
+            }
+            if(getImCarteShop()!=0){
+                if(getMousePosition().x > 1000 && getMousePosition().x < 1000+500 && getMousePosition().y >800 &&  getMousePosition().y< 860){
+                    setBoutonActuel("curseurAcheter");
+                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                        setBoutonActuel("acheter");
+                    }
+
+                }
+                if(getBoutonActuel()=="acheter"){
+                    if (m_jeu.getUsersConnectes()[getGestionUtilisateur()].getArgent()>0) {
+                        m_jeu.getUsersConnectes()[getGestionUtilisateur()].setArgent(
+                                m_jeu.getUsersConnectes()[getGestionUtilisateur()].getArgent() - prix);
+                        m_jeu.getUsersConnectes()[getGestionUtilisateur()].getCartesSeules().push_back(
+                                getImCarteShop());
+                    }
+                }
+
+            }
             break;
     }
-
+    m_jeu.getUsersConnectes()[m_gestionUtilisateur].sauvegardeFichierPseudo();
 }
+
 
 
 void Menu::menu0Interaction(){
@@ -202,8 +421,7 @@ void Menu::menu0Interaction(){
         }
         setBoutonActuel("Parametres");
     }
-    else
-        setBoutonActuel("none");
+
 
 
 }
@@ -228,14 +446,16 @@ void Menu::menu1Interaction() {
         }
         setBoutonActuel("Inscription");
     }
-    else if(!btnRetourInteraction(0))
-        setBoutonActuel("none");
+    else if(!btnRetourInteraction(0)){
+        //ne fait rien x=)
+    }
+
 }
 
 void Menu::menu2Interaction(){
-    if(!btnRetourInteraction(0)){
-        setBoutonActuel("none");
-    }
+    btnRetourInteraction(0);
+
+
 
 }
 
@@ -255,7 +475,7 @@ void Menu::menu3Interaction() {
         setBoutonActuel("Creer une Carte Speciale");
     }
     else if(!btnRetourInteraction(0))
-        setBoutonActuel("none");
+    {}
 
 
 }
@@ -264,10 +484,7 @@ void Menu::menu3Interaction() {
 void Menu::menu4Interaction(std::string& pseudoCouleur){
     bool fin=false;
 
-    if(!btnRetourInteraction(1)){
-        setBoutonActuel("none");
-    }
-
+    btnRetourInteraction(1);
 
     unsigned short i=0;
     unsigned short j=0;
@@ -304,14 +521,13 @@ void Menu::menu4Interaction(std::string& pseudoCouleur){
 
 //Menu inscription
 void Menu::menu5Interaction() {
-    bool surQchose=false;
+
 
     /*BOUTON RETOUR*/
     if(getMousePosition().x < 50 + 270 &&
        getMousePosition().x > 50 &&
        getMousePosition().y < 800+ 46 &&
        getMousePosition().y > 800) {
-        surQchose=true;
         setBoutonActuel("Retour");
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
             if(m_choixInscription._choixTypeCarte=="none")
@@ -331,7 +547,7 @@ void Menu::menu5Interaction() {
            getMousePosition().y > 720)
         {
             setBoutonActuel("Creer");
-            surQchose=true;
+
 
             //SI APPUIE SUR CREER
             if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
@@ -370,19 +586,19 @@ void Menu::menu5Interaction() {
     /*SI DANS MENU DE BASE D'INSCRIPTION*/
     if(m_choixInscription._choixTypeCarte=="none"){
         if(getMousePosition().x>(1100) && getMousePosition().x<(1250) &&getMousePosition().y>(200) && getMousePosition().y<(400) ){
-            surQchose=true;
+
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                 m_choixInscription._choixTypeCarte="Creature";
             }
         }
         if(getMousePosition().x>(1300) && getMousePosition().x<(1450) &&getMousePosition().y>(200) && getMousePosition().y<(400) ){//Pour les spéciales
-            surQchose=true;
+
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                 m_choixInscription._choixTypeCarte="Speciale";
             }
         }
         if(getMousePosition().x>(1500) && getMousePosition().x<(1650) &&getMousePosition().y>(200) && getMousePosition().y<(400) ){//Pour les énergies
-            surQchose=true;
+
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                 m_choixInscription._choixTypeCarte="Energie";
             }
@@ -412,92 +628,233 @@ void Menu::menu5Interaction() {
 
     }
 
-    if(!surQchose)
-        setBoutonActuel("none");
+
+
 
 }
 
 /*Menu création de carte créature*/
 void Menu::menu6Interaction(){//menu 6 dans le getMenu
     //rectInscription correspond à l'encadré blanc pour écrire
-    if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>170 && getMousePosition().y < 170+85)
-    {
-        m_creationCarte.section = 0;
-    }
-    else if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>470 && getMousePosition().y < 470+85)
-    {
-        m_creationCarte.section = 1;
-    }
-    else if(getMousePosition().x>85 && getMousePosition().x< 85+500 && getMousePosition().y>770 && getMousePosition().y < 770+85)
-    {
-        m_creationCarte.section = 2;
 
+    //Permet de changer de rectangle
+    for(int i=0; i<m_creationCarte.creaCarte.size(); i++){
+        if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>60+150*i && getMousePosition().y < 60+150*i+85)
+        {
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                m_creationCarte.section = i;
+        }
     }
-    else
-        m_creationCarte.section = 3;
-    if(m_creationCarte.creaCarte[0] != "" && m_creationCarte.creaCarte[1] != "" && m_creationCarte.creaCarte[2] != ""){
-        m_window.draw(chargerTexte("Creer", 0,sf::Color::Green,100,1700,900,sf::Color::Black,2));
-        if(getMousePosition().x>1700 && getMousePosition().x< 1700+190 && getMousePosition().y>900 && getMousePosition().y < 900+100){
-            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                if(m_creationCarte.creaCarte[1].size() <= 3 && m_creationCarte.creaCarte[1] <= "412" && m_creationCarte.creaCarte[1] >= "400" && m_creationCarte.creaCarte[2].size() <= 3 && m_creationCarte.creaCarte[2] <= "412" && m_creationCarte.creaCarte[2] >= "400" && m_creationCarte.creaCarte[1] != m_creationCarte.creaCarte[2]) {
 
-                    //m_jeu.getCartesBases().creerCarte(Creature(116,116,m_creationCarte.creaCarte[0],"description",))
-                    // m_jeu.getCartesBases().ajouterCreature(Creature(413,0,m_creationCarte.creaCarte[0],"Description",100,);
-                    setMenuActuel(0);
+    //PErmet d'effacer les immatriculations des attaques
+    if(m_creationCarte.creaCarte[2].size()==1)
+    {
+        if(m_creationCarte.creaCarte[2][0] != m_creationCarte.domaine){
+            //Efface les attaques
+            m_creationCarte.attaque1=0;
+            m_creationCarte.attaque2=0;
+            m_creationCarte.domaine=m_creationCarte.creaCarte[2][0];
+        }
+    }
+    else{
+        //Efface les attaques
+        m_creationCarte.attaque1=0;
+        m_creationCarte.attaque2=0;
+        m_creationCarte.domaine=9;
+    }
+
+
+    //Permet d'ajouter les ataques
+    for(int i(0);i<m_jeu.getCartesBases().getAttaques().size()-8;i++){
+        auto elem= m_jeu.getCartesBases().getAttaques()[i];
+
+        if((m_creationCarte.domaine-48 == elem.getDomaine())||elem.getDomaine()<0){
+            if(getMousePosition().x>1050 && getMousePosition().x< 1050+80 && getMousePosition().y>120+30*i && getMousePosition().y < 120+30*i+25){
+                setBoutonActuel("imm"+std::to_string(i));
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    //Ajoute l'attaque
+                    if(m_creationCarte.attaque1==0){
+                        if(m_creationCarte.attaque2!=elem.getImmatriculation())
+                            m_creationCarte.attaque1=elem.getImmatriculation();
+                    }
+                    else{
+                        if(m_creationCarte.attaque1!=elem.getImmatriculation())
+                            m_creationCarte.attaque2=elem.getImmatriculation();
+                    }
                 }
-                else
-                    setErreur(4);
-
             }
         }
+    }
+
+    //Permet de creer la carte en vérifiant les données
+    if(m_creationCarte.creaCarte[0] != "" && m_creationCarte.creaCarte[1] != "" && m_creationCarte.creaCarte[2] != "" && m_creationCarte.creaCarte[3] != ""&& m_creationCarte.attaque1!=0 && m_creationCarte.attaque2!=0){
+
+        if(getMousePosition().x>1700 && getMousePosition().x< 1700+190 && getMousePosition().y>900 && getMousePosition().y < 900+100){
+            setBoutonActuel("creer");
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                //verif si bon domaine
+                if (m_creationCarte.creaCarte[2].size() == 1 && m_creationCarte.creaCarte[2][0] >= '0' &&
+                    m_creationCarte.creaCarte[2][0] <= '3') {
+                    bool pdvOK=true;
+                    //Verif si pdv bien des entiers
+                    for(int i=0; i<m_creationCarte.creaCarte[3].size(); i++){
+                        if(m_creationCarte.creaCarte[3][i]>='0' && m_creationCarte.creaCarte[3][i]<='9'){
+                            //OK
+                        }
+                        else
+                            pdvOK=false;
+                    }
+
+                    if(pdvOK){
+                        int pdv = std::stoi(m_creationCarte.creaCarte[3]);
+                        std::vector<Attaque*> _attaques;
+                        for(int i=0; i<m_jeu.getCartesBases().getAttaques().size(); i++){
+                            if(m_jeu.getCartesBases().getAttaques()[i].getImmatriculation()==m_creationCarte.attaque1 || m_jeu.getCartesBases().getAttaques()[i].getImmatriculation()==m_creationCarte.attaque2){
+                                _attaques.push_back(&(m_jeu.getCartesBases().getAttaques()[i]));
+                            }
+                        }
+
+                        Creature crea = Creature(m_jeu.getCartesBases().getCreaturesModif().size()+100,m_jeu.getCartesBases().getCreaturesModif().size()+100,m_creationCarte.creaCarte[0],m_creationCarte.creaCarte[1], m_creationCarte.domaine-48,pdv,_attaques);
+                        m_jeu.getCartesBases().creerCarte(crea,m_jeu.getCartesBases().getCreaturesModif());
+
+
+                            setMenuActuel(0);
+
+
+                    }
+                    else
+                        setErreur(4);
+
+
+                }
+            }
+
+        }
+
 
     }
 
 
 
-    if (!btnRetourInteraction(3))
-        setBoutonActuel("none");
+    btnRetourInteraction(3);
+
 
 
 }
 
 void Menu::menu7Interaction(){
     //rectInscription correspond à l'encadré blanc pour écrire
-    if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>170 && getMousePosition().y < 170+85)
-    {
-        m_creationCarte.section = 0;
-    }
-    else if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>470 && getMousePosition().y < 470+85)
-    {
-        m_creationCarte.section = 1;
-    }
-    else if(getMousePosition().x>85 && getMousePosition().x< 85+500 && getMousePosition().y>770 && getMousePosition().y < 770+85)
-    {
-        m_creationCarte.section = 2;
 
+    //Permet de changer de rectangle
+    for(int i=0; i<m_creationCarte.creaCarte.size(); i++){
+        if(getMousePosition().x>85 && getMousePosition().x<85+500 && getMousePosition().y>60+150*i && getMousePosition().y < 60+150*i+85)
+        {
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                m_creationCarte.section = i;
+        }
     }
-    else
-        m_creationCarte.section = 3;
-    if(m_creationCarte.creaCarte[0] != "" && m_creationCarte.creaCarte[1] != "" && m_creationCarte.creaCarte[2] != ""){
-        m_window.draw(chargerTexte("Creer", 0,sf::Color::Green,100,1700,900,sf::Color::Black,2));
-        if(getMousePosition().x>1700 && getMousePosition().x< 1700+190 && getMousePosition().y>900 && getMousePosition().y < 900+100){
-            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                if(m_creationCarte.creaCarte[1].size() <= 3 && m_creationCarte.creaCarte[1] <= "420" && m_creationCarte.creaCarte[1] >= "400" && m_creationCarte.creaCarte[2].size() <= 3 && m_creationCarte.creaCarte[2] <= "420" && m_creationCarte.creaCarte[2] >= "400" && m_creationCarte.creaCarte[1] != m_creationCarte.creaCarte[2]) {
-                    // m_jeu.getCartesBases().ajouterCreature(Creature(413,0,m_creationCarte.creaCarte[0],"Description",100,);
-                    setMenuActuel(0);
+
+    //PErmet d'effacer les immatriculations des attaques
+    if(m_creationCarte.creaCarte[2].size()==1)
+    {
+        if(m_creationCarte.creaCarte[2][0] != m_creationCarte.domaine){
+            //Efface les attaques
+            m_creationCarte.attaque1=0;
+            m_creationCarte.domaine=m_creationCarte.creaCarte[2][0];
+        }
+    }
+    else{
+        //Efface les attaques
+        m_creationCarte.attaque1=0;
+        m_creationCarte.domaine=9;
+    }
+
+
+    //Permet d'ajouter les ataques
+    for(int i(0);i<m_jeu.getCartesBases().getAttaques().size()-8;i++){
+        auto elem= m_jeu.getCartesBases().getAttaques()[i];
+
+        if((m_creationCarte.domaine-48 == elem.getDomaine())||elem.getDomaine()<0){
+            if(getMousePosition().x>1050 && getMousePosition().x< 1050+80 && getMousePosition().y>120+30*i && getMousePosition().y < 120+30*i+25){
+                setBoutonActuel("imm"+std::to_string(i));
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    //Ajoute l'attaque
+                    m_creationCarte.attaque1=elem.getImmatriculation();
                 }
-                else
-                    setErreur(4);
-
             }
         }
+    }
+
+    //Permet de creer la carte en vérifiant les données
+    if(m_creationCarte.creaCarte[0] != "" && m_creationCarte.creaCarte[1] != "" && m_creationCarte.creaCarte[2] != "" && m_creationCarte.creaCarte[3] != ""&& m_creationCarte.creaCarte[4] != ""&& m_creationCarte.attaque1!=0){
+
+        if(getMousePosition().x>1700 && getMousePosition().x< 1700+190 && getMousePosition().y>900 && getMousePosition().y < 900+100){
+            setBoutonActuel("creer");
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                //verif si bon domaine
+                if (m_creationCarte.creaCarte[2].size() == 1 && m_creationCarte.creaCarte[2][0] >= '0' &&
+                    m_creationCarte.creaCarte[2][0] <= '3') {
+                    bool pdvOK=true;
+                    //Verif si pdv bien des entiers
+                    for(int i=0; i<m_creationCarte.creaCarte[3].size(); i++){
+                        if(m_creationCarte.creaCarte[3][i]>='0' && m_creationCarte.creaCarte[3][i]<='9'){
+                            //OK
+                        }
+                        else
+                            pdvOK=false;
+                    }
+
+                    if(pdvOK){
+                        //Si type valide
+                        if(m_creationCarte.creaCarte[4].size()==1 && m_creationCarte.creaCarte[4][0]-48 == 0 || m_creationCarte.creaCarte[4][0]-48 == 1){
+                            int type=m_creationCarte.creaCarte[4][0]-48;
+
+                            int pdv = std::stoi(m_creationCarte.creaCarte[3]);
+                            std::vector<Attaque*> _attaques;
+
+                            for(int i=0; i<m_jeu.getCartesBases().getAttaques().size(); i++){
+                                if(m_jeu.getCartesBases().getAttaques()[i].getImmatriculation()==m_creationCarte.attaque1){
+                                    _attaques.push_back(&(m_jeu.getCartesBases().getAttaques()[i]));
+                                }
+                                if(i>=13){
+                                    if(m_jeu.getCartesBases().getAttaques()[i].getDomaine()==m_creationCarte.domaine-48){
+                                        if(type==0&&m_jeu.getCartesBases().getAttaques()[i].getDegat()==30){ //reine
+                                            _attaques.push_back(&(m_jeu.getCartesBases().getAttaques()[i]));
+                                        }
+                                        else if(type==1&&m_jeu.getCartesBases().getAttaques()[i].getDegat()==25){ //roi
+                                            _attaques.push_back(&(m_jeu.getCartesBases().getAttaques()[i]));
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            Speciale spe = Speciale(m_jeu.getCartesBases().getSpecialesModif().size()+200,m_jeu.getCartesBases().getSpecialesModif().size()+200,m_creationCarte.creaCarte[0],m_creationCarte.creaCarte[1], m_creationCarte.domaine-48,pdv,_attaques,type);
+                            m_jeu.getCartesBases().creerCarte(spe,m_jeu.getCartesBases().getSpecialesModif());
+
+                            setMenuActuel(0);
+
+                        }
+                        else
+                            setErreur(5);
+
+
+                    }
+                    else
+                        setErreur(4);
+
+
+                }
+            }
+
+        }
+
 
     }
 
 
 
-    if (btnRetourInteraction(3))
-        setBoutonActuel("none");
+    btnRetourInteraction(3);
 
 
 }
@@ -601,7 +958,7 @@ bool Menu::btnRetourInteraction(int menuBase){
 
             setGestionUtilisateur(-1);
 
-            setBoutonActuel("none");
+
         }
         return true;
     }

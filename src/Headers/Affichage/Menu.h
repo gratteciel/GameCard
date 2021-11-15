@@ -28,6 +28,9 @@ typedef struct t_booleen{
 typedef struct t_creationCarte{
     int section;
     std::vector<std::string> creaCarte;
+    int attaque1;
+    int attaque2;
+    char domaine;
 }t_creationCarte;
 
 typedef struct t_intro{
@@ -51,6 +54,9 @@ private:
     t_intro m_intro;
     int m_affichageDeck;
     int m_modeAffichageJoueur;
+    int m_affichageCartes;
+    int m_immCarteShop;
+
 public:
     //Constructeur et destructeur
     Menu();
@@ -102,6 +108,8 @@ public:
     void menu7Affichage();
     void menu7Interaction();
 
+    void afficheAttaqueCreationCarte();
+
     void gestionUtilisateurAffichage();
     void gestionUtilisateurInteraction();
 
@@ -126,8 +134,12 @@ public:
     void erreur();
     void sleep();
 
+
+
     //Getter et Setter
 
+    int getImCarteShop()const;
+    void setImCarteShop(int _immCarteShop);
     void setMenuActuel(int _menuActuel);
     int getMenuActuel() const;
     void setBoutonActuel(const std::string& _boutonActuel);
@@ -146,6 +158,8 @@ public:
     int getModeAffichageJoueur()const;
     void setModeAffichageJoueur(int _modeAffichageJoueur);
 
+    int getAffichageCartes()const;
+    void setAffichageCartes(int _modeAffichageJoueur);
 };
 
 
